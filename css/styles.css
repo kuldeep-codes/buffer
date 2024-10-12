@@ -1,0 +1,130 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: url('../assets/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 80px;
+    margin-right: 15px;
+}
+
+.company-name {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Main Content Area */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+}
+
+.hero-section .tagline {
+    font-size: 36px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    /* Removed the border-right line */
+}
+
+.cursor {
+    display: inline-block;
+    margin-left: 2px;
+    width: 2px; /* Added width to simulate the cursor better */
+    height: 100%; /* Set the height to match the text line */
+    background-color: white; /* Changed to background instead of border */
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+/* Content Sections (Static) */
+.content-section {
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    flex-grow: 1;
+}
+
+.content-section h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.content-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}
+
+/* Typing Animations */
+
+@keyframes blink-caret {
+    from, to { background-color: transparent; }
+    50% { background-color: white; }
+}
+@media (max-width: 768px) {
+    .hero-section .tagline {
+        font-size: 28px;
+    }
+
+    .content-section h3 {
+        font-size: 22px;
+    }
+
+    .content-section p {
+        font-size: 16px;
+    }
+}
