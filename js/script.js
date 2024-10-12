@@ -1,3 +1,12 @@
+window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    preloader.classList.add('fade-out');
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, 500); // Matches the fade-out transition duration
+});
+
+
 document.addEventListener("DOMContentLoaded", function() {
     const phrases = [
         { text: "Pure Water, Pure Life", lang: "en" },
