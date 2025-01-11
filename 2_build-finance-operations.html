@@ -1,7 +1,5 @@
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>With a downloadable virtual hard disk (VHD) for finance and operations apps, you can:</p>
 <ul>
@@ -16,15 +14,13 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Set up a VHD for first-time use</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Your first step is to locate the files for the VHD, which you can access from the Asset library of Lifecycle Services. To find the Asset library, select the dropdown menu in the upper-left corner, as shown in the following screenshot.</p>
 <p>The files that you need will be under the asset type <strong>Downloadable VHD</strong>. On the <strong>Downloadable VHD</strong> files page, an <strong>IMPORT</strong> button will display, which allows you to import the version of VHD that you’re trying to set up.</p>
 <p>The versions that are available from Microsoft vary depending on the latest version that’s available of the application overall.</p>
 <p>To set up the VHD for first-time use, select the <strong>IMPORT</strong> button and then add all parts of the VHD by selecting the <strong>Pick</strong> button in the sidebar for each part of the VHD.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/virtual-disk-download.png#lightbox"><img alt="Screenshot highlighting how to import and pick a downloadable virtual hard disk." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/set-up-vhd-finance-operations/media/virtual-disk-download.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/virtual-disk-download.png#lightbox"><img alt="Screenshot highlighting how to import and pick a downloadable virtual hard disk." data-linktype="relative-path" src="./rawmb500/media_virtual_disk_download.png"/></a></p>
 </div>
 <p>Then, download the parts of the VHD by selecting the highlighted text for each part of the VHD.</p>
 <div class="modular-content-container" hidden="" id="next-section">
@@ -32,8 +28,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Set up and manage a downloadable VHD for development</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>After you’ve downloaded the VHD files, double-click the <strong>part01</strong> file because it contains the .exe file that will extract all compressed files (part02 – part09) and will create a single virtual hard disk (.vhd) file. However, before the VHD file is created, you’ll need to accept the license agreement and specify a destination folder before selecting the <strong>Extract</strong> button.</p>
 <h2 id="enable-hyper-v-in-windows">Enable Hyper-V in Windows</h2>
@@ -61,21 +55,19 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Upgrade the VHD</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>As you continue to work on the virtual hard disk (VHD) and use it with your Lifecycle Services deployed environments, updates happen and make the local VHD out of date in comparison. Therefore, you might want to update your VHD to keep up with the environments in Lifecycle Services as they continue to move from version to version. The process to update the environments is similar to the process of deploying code packages to a Development topology environment that’s deployed from Lifecycle Services. For that reason, the process should be familiar to more technical resources.</p>
 <p>Your first step is to download the newest version of your update from Lifecycle Services in the Asset library onto the VHD.  To do this, sign in to Lifecycle Services by using your credentials. In the Lifecycle Services project, select an environment. On the <strong>Environment</strong> page, go to <strong>Available updates</strong>.</p>
 <p>Make sure that the .zip file is unlocked after it’s downloaded. To do so, locate the .zip file in your downloads, right-click the file, and then select <strong>Properties</strong>. The properties window contains a checkbox that you’ll need to select.</p>
 <p>When you’re finished, select <strong>OK</strong>.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/zip-properties.png#lightbox"><img alt="Screenshot showing the Properties windows of a .zip file that contains a checkbox." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/set-up-vhd-finance-operations/media/zip-properties.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/zip-properties.png#lightbox"><img alt="Screenshot showing the Properties windows of a .zip file that contains a checkbox." data-linktype="relative-path" src="./rawmb500/media_zip_properties.png"/></a></p>
 </div>
 <p>After you’ve unlocked the .zip file, you’ll need to extract its contents to a place on the VHD’s local drive. A good place to put these files is <strong>C:/Temp</strong> because it’s accessible from the command prompt and simple to navigate to. After the files are extracted in a secondary location, you’ll need to go to that folder. Open the Command Prompt tool as an administrator, from File Explorer or separately, and then go to the same folder.</p>
 <p>When in the folder, run the following command:</p>
 <p><code>AXUpdateInstaller.exe devinstall</code></p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/admin-command-prompt.png#lightbox"><img alt="Screenshot showing how to run the command when you are in a folder." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/set-up-vhd-finance-operations/media/admin-command-prompt.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/admin-command-prompt.png#lightbox"><img alt="Screenshot showing how to run the command when you are in a folder." data-linktype="relative-path" src="./rawmb500/media_admin_command_prompt.png"/></a></p>
 </div>
 <p>This process might take some time; it runs through the entire devinstall playbook that’s located inside the package that was downloaded. After the process has completed, you’ll need to complete a compile and sync through Visual Studio to ensure that the VHD is set up and operational after the update.</p>
 <p>For more information, see: <a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/deployment/install-deployable-package/?azure-portal=true">Install deployable packages from the command line</a>.</p>
@@ -84,8 +76,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Exercise – Install a virtual machine</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>In this exercise scenario, you're a developer at a company and need to download the virtual hard disk (VHD). You want to use your local resources on your laptop to run the VHD and to ensure that you can use it at your convenience. You're already in Lifecycle Services and have downloaded the files from the Asset library into your downloads folder, and Hyper-V has been enabled on your computer.</p>
 <p>To install the virtual machine, follow these steps:</p>
@@ -122,8 +112,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned.</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -245,8 +233,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>In this module, you’ve learned how to download and update a virtual hard disk (VHD) for finance and operations apps. Because you can use this environment for development and to work alongside the application, you also learned how to set up SQL Server Management Studio, Visual Studio, and more to use the VHD.</p>
 <div class="modular-content-container" hidden="" id="next-section">
@@ -254,20 +240,16 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>While users are typically working in the user interface, developers work in Visual Studio in their own developer environment. Developers use Visual Studio to create and customize elements and perform other developer operations. The new developer environment allows developers to work in their own environment while still having the ability to collaborate and work with other developers and teams by using source control. The Element Designer is used to create elements, while the Application Explorer is used to manage elements.</p>
 <p>It is important to synchronize any data changes with the database to
 Ensure that all elements are up to date in the Application Object Tree (AOT).</p>
-<p><a data-linktype="relative-path" href="media/visual-studio.png#lightbox"><img alt="Screenshot of the Visual Studio user interface." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/customize-visual-studio-finance-operations/media/visual-studio.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/visual-studio.png#lightbox"><img alt="Screenshot of the Visual Studio user interface." data-linktype="relative-path" src="./rawmb500/media_visual_studio.png"/></a></p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create and build projects</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Creating a project in Visual Studio is essential for organizing, managing, and deploying your code effectively. It groups related elements, manages dependencies, and controls builds, making it easier to navigate your solution. Projects also integrate with source control for version tracking, allow debugging and testing within Visual Studio, and prepare code for deployment to production or test environments. This structured approach streamlines development and reduces errors, ensuring your customizations work seamlessly with Dynamics 365. Projects in Visual Studio contain elements, which are stored as metadata when they are built. The metadata is then used by the application to run your extensions.</p>
 <p>In Visual Studio, a <strong>solution</strong> is a container that organizes one or more related projects, allowing you to manage them as a single unit. Solutions help developers coordinate multiple projects, which may represent different parts of an application, such as business logic, UI components, and services. By grouping projects within a solution, you can build, debug, and deploy them together, ensuring consistency across the entire application. Solutions also facilitate dependency management and make it easier to navigate complex projects with shared code, providing a centralized workspace for development.</p>
@@ -279,7 +261,7 @@ which models you might be using or extending elements from. If not, you
 can edit the model dependencies list later as you add elements. It's important to ensure that that model is correct from the start, as it will be difficult to change after files are added to the project.</p>
 <h2 id="build-rebuild-and-clean">Build, rebuild, and clean</h2>
 <p>To compile your code, you have multiple options: you can build, rebuild, or clean your project from the <strong>Solution Explorer</strong> by right-clicking and selecting the desired option. A <em>build</em> compiles any changes, a <em>rebuild</em> compiles all components from scratch, and <em>clean</em> removes previous build outputs, preparing for a fresh build. You can also access these options from the <strong>Build</strong> menu in Visual Studio.</p>
-<p><img alt="Screenshot of the Visual Studio Build menu." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/customize-visual-studio-finance-operations/media/build.png"/></p>
+<p><img alt="Screenshot of the Visual Studio Build menu." data-linktype="relative-path" src="./rawmb500/media_build.png"/></p>
 <p>Watch this video to learn how to create a new project in Visual Studio.</p>
 <div class="embeddedvideo"><iframe allowfullscreen="true" data-linktype="external" frameborder="0" src="https://learn-video.azurefd.net/vod/player?id=8259afe8-e4b2-46d6-af49-2e8c159ba4cc"></iframe></div>
 <div class="modular-content-container" hidden="" id="next-section">
@@ -287,8 +269,6 @@ can edit the model dependencies list later as you add elements. It's important t
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create and use label files</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can use label files to store text localizations for a user interface (UI).
 To fully support multiple languages for a UI, the best practice is to use labels for all text that’s used in the UI, including:</p>
@@ -307,18 +287,18 @@ To fully support multiple languages for a UI, the best practice is to use labels
 <li><p>Go to the <strong>Solution Explorer</strong> window and right-click the project or activate the context menu, and then select <strong>Add</strong>. <strong>New Item</strong>.</p>
 </li>
 <li><p>Select <strong>Label and Resources</strong>, <strong>Label file</strong>. The Label file Wizard will appear, as shown in the following screenshot.</p>
-<p><a data-linktype="relative-path" href="media/label-file-wizard.png#lightbox"><img alt="Screenshot of the Label file Wizard." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/customize-visual-studio-finance-operations/media/label-file-wizard.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/label-file-wizard.png#lightbox"><img alt="Screenshot of the Label file Wizard." data-linktype="relative-path" src="./rawmb500/media_label_file_wizard.png"/></a></p>
 </li>
 <li><p>Enter a value in <strong>Label file ID</strong>, and then select <strong>Next</strong> to select languages, but you can add them later, too. A summary preview of the label file creation process displays.</p>
 </li>
 <li><p>If your entries appear correct, select <strong>Next</strong>. In Solution Explorer, notice that one label file for each language is created in your project, as shown in the following screenshot.</p>
-<p><a data-linktype="relative-path" href="media/summary-preview.png#lightbox"><img alt="Screenshot of the summary preview." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/customize-visual-studio-finance-operations/media/summary-preview.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/summary-preview.png#lightbox"><img alt="Screenshot of the summary preview." data-linktype="relative-path" src="./rawmb500/media_summary_preview.png"/></a></p>
 </li>
 </ol>
 <p>To add labels into a label file, follow these steps:</p>
 <ol>
 <li><p>Open the file in the designer, which lists all labels for a label file and language, see the following screenshot.</p>
-<p><a data-linktype="relative-path" href="media/label-file.png#lightbox"><img alt="Screenshot of the file designer and the selection of a CustName label file." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/customize-visual-studio-finance-operations/media/label-file.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/label-file.png#lightbox"><img alt="Screenshot of the file designer and the selection of a CustName label file." data-linktype="relative-path" src="./rawmb500/media_label_file.png"/></a></p>
 </li>
 <li><p>To create a label, select <strong>New</strong>. A new row for labels is created.</p>
 </li>
@@ -365,8 +345,6 @@ To fully support multiple languages for a UI, the best practice is to use labels
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Manage metadata by using the Application Explorer</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>In Visual Studio, all objects that define the application's structure and functionality-such as tables, forms, classes, and workflows-are stored within the Application Object Tree (AOT). The AOT serves as a centralized repository, organizing these elements for easy access and management during development and customization. Metadata in existing models is available in the Application Explorer  as well.</p>
 <h1 id="metadata-types">Metadata types</h1>
@@ -383,10 +361,10 @@ which has two views: the model view and the classic view.
 To access these views, right-click the <strong>AOT</strong> node and select <strong>model view</strong> or <strong>classic view</strong>.</p>
 <h1 id="model-view">Model view</h1>
 <p>The model view organizes metadata by the model that contains it, which is useful when you are browsing for elements that are related to a certain model's features.</p>
-<p><a data-linktype="relative-path" href="media/model-view.png#lightbox"><img alt="Screenshot of the Application Object Tree model view." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/customize-visual-studio-finance-operations/media/model-view.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/model-view.png#lightbox"><img alt="Screenshot of the Application Object Tree model view." data-linktype="relative-path" src="./rawmb500/media_model_view.png"/></a></p>
 <h1 id="classic-view">Classic view</h1>
 <p>The classic view groups metadata elements by their type, which is more helpful when you know what kind of element that you need but not which module contains it.</p>
-<p><a data-linktype="relative-path" href="media/classic-view.png#lightbox"><img alt="Screenshot of the Application Object Tree classic view." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/customize-visual-studio-finance-operations/media/classic-view.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/classic-view.png#lightbox"><img alt="Screenshot of the Application Object Tree classic view." data-linktype="relative-path" src="./rawmb500/media_classic_view.png"/></a></p>
 <p>There are more elements in <strong>Application Explorer</strong> that are specific to building solutions, including:</p>
 <ul>
 <li><strong>Analytics</strong> - Use for aggregate dimensions, measurements, and Key Performance Indicators (KPIs).</li>
@@ -401,14 +379,12 @@ To access these views, right-click the <strong>AOT</strong> node and select <str
 <h1 id="use-queries-to-find-objects-in-the-aot">Use queries to find objects in the AOT</h1>
 <p>If these views aren't sufficient to help you find the elements that you need, you can also filter the AOT by entering the field name, followed by a colon and a space, and then followed by a value. If you are looking for a recently created element, but cannot find what you need, try using the <strong>Refresh</strong> button to make sure that the AOT has the latest data.</p>
 <p>To view the types of filters you can use in the AOT, select the <strong>Search</strong> field and begin typing in the Application explorer. The list of filters and a list of previously searched terms will appear.</p>
-<p><a data-linktype="relative-path" href="media/aot-filter.png#lightbox"><img alt="Screenshot of the Application Object Tree filter." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/customize-visual-studio-finance-operations/media/aot-filter.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/aot-filter.png#lightbox"><img alt="Screenshot of the Application Object Tree filter." data-linktype="relative-path" src="./rawmb500/media_aot_filter.png"/></a></p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Build deployment packages</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>To apply your code changes to a non-development environment, build a Software Deployable Package (SDP) and upload it to Lifecycle
 Services. This allows for a reliable and repeatable code
@@ -448,8 +424,6 @@ upload it to the Lifecycle Services Asset Library.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Synchronize data changes with the database</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>When you add or change elements, you must synchronize the
 database so that it knows in which fields (columns) that it needs to store these elements. To do that, select <strong>Synchronize Database</strong> from the <strong>Dynamics 365</strong> menu and then use the <strong>Synchronize</strong> button in the
@@ -461,10 +435,10 @@ database after a successful build. This option is handy  because you will need t
 <p>The following screenshots show the different options for synchronizing both your project and the overall code base with the database.</p>
 <ul>
 <li><p>Project</p>
-<p><img alt="Screenshot of the synchronize database option for a project." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/customize-visual-studio-finance-operations/media/database-sync-project.png"/></p>
+<p><img alt="Screenshot of the synchronize database option for a project." data-linktype="relative-path" src="./rawmb500/media_database_sync_project.png"/></p>
 </li>
 <li><p>Code base</p>
-<p><img alt="Screenshot of the synchronize database option for the code base." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/customize-visual-studio-finance-operations/media/database-sync-code-base.png"/></p>
+<p><img alt="Screenshot of the synchronize database option for the code base." data-linktype="relative-path" src="./rawmb500/media_database_sync_code_base.png"/></p>
 </li>
 </ul>
 <div class="modular-content-container" hidden="" id="next-section">
@@ -472,8 +446,6 @@ database after a successful build. This option is handy  because you will need t
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create new elements</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>If you are a developer for Dynamics 365, you may need to create new elements to meet the requirements of a customization or modification being made to the application. Creating a new object allows developers to tailor the system to meet specific business needs not covered by standard features. New objects like tables, forms, and classes enable custom data storage, workflows, and logic, ensuring the application aligns closely with unique organizational requirements.</p>
 <p>The Element Designer is the central development tool in Visual Studio, where you use it to edit and configure elements. New elements can be created and modified here, and existing elements within the AOT can be extended to fit specific needs within this window.</p>
@@ -493,14 +465,12 @@ database after a successful build. This option is handy  because you will need t
 <li><strong>Pattern Designer</strong>- Helps you match the existing form layouts and UI conventions in finance and operations apps. When you start building a form, you can apply a pattern by right-clicking the form node in the Form Designer and selecting <strong>Apply Pattern</strong>. This populates the pattern's requirements in the Pattern Designer so that you know what you need to add to complete the form.</li>
 </ul>
 <p>The image below is an example of the Form element designer.</p>
-<p><a data-linktype="relative-path" href="media/element-designer.png#lightbox"><img alt="Screenshot of an example of the Form Element designer." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/customize-visual-studio-finance-operations/media/element-designer.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/element-designer.png#lightbox"><img alt="Screenshot of an example of the Form Element designer." data-linktype="relative-path" src="./rawmb500/media_element_designer.png"/></a></p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Create a project and add an element</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2 id="read-this-first---before-you-start-the-lab">Read this first - before you start the lab!</h2>
 <div class="IMPORTANT">
@@ -566,8 +536,6 @@ Management company. The developer needs to create their own project in Visual St
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -713,8 +681,6 @@ Management company. The developer needs to create their own project in Visual St
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Visual Studio is the development home for finance and operations apps. It
 allows you to find, and extend existing functionality, or create your
@@ -733,8 +699,6 @@ Studio:</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>X++ has a user-friendly memory management model that is identical to .NET. A few areas where X++ differs from other managed languages are:</p>
 <ul>
@@ -758,8 +722,6 @@ developer environment and Visual Studio, you will also need a Visual Studio lice
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement base types and operators</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This unit explains the different data types and operators that are used in X++.</p>
 <h2 id="data-types">Data types</h2>
@@ -990,8 +952,6 @@ If x doesn't equal 5, the ternary operator assigns the value <strong>No</strong>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Common structured programming constructs of X++</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>X++ uses classes to define data and create objects. The data that is defined in a class represents the state of the object and is stored in variables. Classes also contain methods, which will tell the object what to do.</p>
 <p>The first piece of a class is the class declaration. The class
@@ -1059,8 +1019,6 @@ own class.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Collection classes</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>X++ in finance and operations apps provides distinct types of constructs that you can use to store data:</p>
 <ul>
@@ -1191,8 +1149,6 @@ Sets are good for small lists that you use to check values. For example, it coul
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Use X++ to write SQL statements</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can use SQL statements in X++ to retrieve and manipulate data in the Finance and operations database.</p>
 <h2 id="select-statements">Select statements</h2>
@@ -1327,8 +1283,6 @@ complex queries.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Use conditional and iterative statements</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Conditional statements are used to determine if a block of code should
 be run. Different conditional statements have different advantages
@@ -1509,8 +1463,6 @@ statement. If you have a break within a loop, you need to break out of the loop.
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Exception handling</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>While conditional statements are great for handling the running of
 different code blocks, exception handling is used to deal with errors.
@@ -1524,7 +1476,7 @@ you to use a label to display to the user in an Infolog, as shown in the followi
 <pre><code class="lang-xpp">throw error("This is an error.");
 </code></pre>
 <p>Here is what an error, warning, and info message looks like in the user interface:</p>
-<p><img alt="Screenshot showing error, warning, and info messages." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/get-started-xpp-finance-operations/media/error-1.png"/></p>
+<p><img alt="Screenshot showing error, warning, and info messages." data-linktype="relative-path" src="./rawmb500/media_error_1.png"/></p>
 <p>Static methods on the Global class can be called without the <code>Global::</code> prefix, so the <code>Global::error</code> method can also be called as shown in the following example:</p>
 <pre><code class="lang-xpp">error("This is an error.");
 </code></pre>
@@ -1580,7 +1532,7 @@ str jsonData = FormJsonSerializer::serializeClass(actionData);
 int64 messageId = Message::AddAction(MessageSeverity::Informational, "The Test batch job is not currently running", "Go to Batch jobs", MessageActionType::DisplayMenuItem, jsonData);
 </code></pre>
 <p>Here is the output:</p>
-<p><img alt="Screenshot showing the  output message The test batch job is not currently running." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/get-started-xpp-finance-operations/media/add-action-method-ss.png"/></p>
+<p><img alt="Screenshot showing the  output message The test batch job is not currently running." data-linktype="relative-path" src="./rawmb500/media_add_action_method_ss.png"/></p>
 <h2 id="exceptions-inside-transactions">Exceptions inside transactions</h2>
 <p>If an exception is thrown inside a transaction, the transaction is
 automatically aborted (a <code>ttsAbort</code> operation occurs). This applies
@@ -1595,8 +1547,6 @@ tested.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Use const values</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Constant values can be used to define a variable and assign it a value
 that does not change. You can define a constant variable by adding the
@@ -1609,8 +1559,6 @@ how to make a variable a constant variable.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement global functions in X++</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can implement global functions as static methods in the Global class, and you can use them in an application.</p>
 <h2 id="create-new-global-functions-in-x">Create new global functions in X++</h2>
@@ -1699,8 +1647,6 @@ However, you can call all global functions by using only the method name.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Use X++ runtime functions for common tasks</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>X++ provides several system functions that can be run with code. These
 functions run business operations, container operations, conversions,
@@ -1721,8 +1667,6 @@ operations, and string operations.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Call .NET libraries by using X++ code</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Finance and operations apps projects in Visual Studio contain X++ code that
 interacts smoothly with code that is written in other .NET languages.</p>
@@ -1740,8 +1684,6 @@ interacts smoothly with code that is written in other .NET languages.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -1957,8 +1899,6 @@ interacts smoothly with code that is written in other .NET languages.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Several pieces of X++ code come together to perform tasks.</p>
 <ul>
@@ -1974,8 +1914,6 @@ interacts smoothly with code that is written in other .NET languages.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Object-oriented programming (OOP) is a programming paradigm that is
 modeled around objects and how you manipulate them. Objects can be
@@ -1995,8 +1933,6 @@ and operations.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Explore inheritance and abstract classes</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Inheritance and abstract classes are two important programming
 constructs that are found in object-oriented programming languages. These
@@ -2006,7 +1942,7 @@ super class. Subclasses can also override the behavior of or add
 more functionality to methods that are inherited from the super class.</p>
 <h2 id="inheritance">Inheritance</h2>
 <p>To better understand the concept of inheritance in object-oriented programming, lets review a real-world example. In this example, <strong>Vehicle</strong> is the parent class. There are many different types of vehicles, for instance: cars, buses, and trucks. In this scenario, <strong>Vehicle</strong> is the parent class. Cars, buses, and trucks are derived classes that inherit from <strong>Vehicle</strong>. The <strong>Vehicle</strong> class has characteristics that  are shared across all the vehicle types (speed, color, and gears for example). The characteristics for each of the vehicles types may be different. For instance, a truck might have all-wheel drive, but a car does not.</p>
-<p><img alt="Diagram of the Inheritance from the Vehicle parent class to the car, bus, and truck derived classes." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/develop-object-oriented-code-finance-operations/media/inheritance.png"/></p>
+<p><img alt="Diagram of the Inheritance from the Vehicle parent class to the car, bus, and truck derived classes." data-linktype="relative-path" src="./rawmb500/media_inheritance.png"/></p>
 <h3 id="example">Example</h3>
 <p>The following example demonstrates how a class uses inheritance. The
 Car class extends the Vehicle class to get the height and width but
@@ -2084,8 +2020,6 @@ abstract class.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Use attributes</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Attributes represent or store metadata about the behaviors of classes
 and methods. An attribute can be attached by simply typing the name of
@@ -2159,8 +2093,6 @@ attribute class that you could create.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement Chain of Command</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Chain of Command (CoC) is a functionality for class extensions. You can
 use CoC to wrap X++ code around methods that are defined in the base class. CoC allows you to customize standard classes without using event
@@ -2208,8 +2140,6 @@ Methods that use the final keyword cannot be wrapped in an extension class. Priv
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement X++ scoping and access identifiers</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Scope is the area where an item is located or can be accessed. X++ variables and methods are within a defined scope. The scope can be set by the placement of declaration and the use of access identifiers.</p>
 <p>Access identifiers are <code>[public]</code>, <code>[protected]</code>, and <code>[private]</code>.</p>
@@ -2287,14 +2217,12 @@ local variable is changed.</p>
 </code></pre>
 <p>The following image shows how the <em>info</em> displays in the user interface.</p>
 <p><img alt="This screenshot shows how the info method displays in the user
-interface." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/develop-object-oriented-code-finance-operations/media/info.png"/></p>
+interface." data-linktype="relative-path" src="./rawmb500/media_info.png"/></p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Interfaces</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>An <em>interface</em> is a specification for a set of public instance methods.
 An interface defines and enforces similarities between unrelated classes
@@ -2374,8 +2302,6 @@ an <strong>IDrivable</strong> interface. The <code>is</code> keyword is supp
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Exercise - Create an extension by using Chain of Command</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You are a developer that must make a customization to the
 <code>CustTable</code> insert method. Upon customer creation, if the
@@ -2445,8 +2371,6 @@ final class CustTable_Extension
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned.</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -2549,8 +2473,6 @@ final class CustTable_Extension
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This module provided a basic overview of object-oriented
 programming.</p>
@@ -2562,8 +2484,6 @@ programming.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">ALM methodologies</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Application lifecycle management (ALM) has a broad perspective that continues until the application is no longer used. Methodologies for ALM can vary, so choosing the correct methodology for your needs is crucial for development. The goal of this module and ALM is to help increase developer productivity, improve collaboration between teams, and provide transparency for work items.</p>
 <p>This unit explores the methodologies for ALM and helps you determine
@@ -2572,7 +2492,7 @@ which methodology should be used based on software development needs.</p>
 disadvantages, depending on the type of project and software being used.</p>
 <p>The three common methodologies are Waterfall, Agile, and Spiral.</p>
 <h2 id="waterfall-methodology">Waterfall methodology</h2>
-<p><img alt="Diagram showing the five stages of the Waterfall methodology: requirements, system design, implementation, integration and testing, and maintenance." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/application-lifecycle-finance-operations/media/waterfall.jpg"/></p>
+<p><img alt="Diagram showing the five stages of the Waterfall methodology: requirements, system design, implementation, integration and testing, and maintenance." data-linktype="relative-path" src="./rawmb500/media_waterfall.jpg"/></p>
 <p>The Waterfall methodology is a sequential approach. The project is
 divided into different phases that flow from the previous phase to the
 next phase until the project is finished. Each phase is thoroughly
@@ -2587,7 +2507,7 @@ simple, the requirements are known and well-defined, the full scope of
 the project is not intended to change, and the project is implemented
 all at once.</p>
 <h2 id="agile-methodology">Agile methodology</h2>
-<p><img alt="Cyclical diagram showing the six steps in the Agile methodology: Plan, design, develop, test, release, and feedback." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/application-lifecycle-finance-operations/media/agile.jpg"/></p>
+<p><img alt="Cyclical diagram showing the six steps in the Agile methodology: Plan, design, develop, test, release, and feedback." data-linktype="relative-path" src="./rawmb500/media_agile.jpg"/></p>
 <p>The Agile methodology is iterative and focuses on continuous feedback to
 alter and add deliverables to the project. Unlike the Waterfall
 methodology, the Agile phases can loop back into each other. This means
@@ -2615,7 +2535,7 @@ project into smaller segments or cycles. At the beginning of each cycle,
 requirements and objectives are identified to create a prototype. Each
 cycle goes through the same steps to create a prototype. At the end of a
 cycle, the prototype is reviewed and the next cycle is planned.</p>
-<p><img alt="Diagram of the four areas of the spiral: Determine objectives, identify and resolve risks, development and test, and plan next iteration." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/application-lifecycle-finance-operations/media/spiral.jpg"/></p>
+<p><img alt="Diagram of the four areas of the spiral: Determine objectives, identify and resolve risks, development and test, and plan next iteration." data-linktype="relative-path" src="./rawmb500/media_spiral.jpg"/></p>
 <p>The Spiral methodology works well for large-scale, complex systems.
 Proper risk assessment is required to identify risk areas for issues.
 Without risk assessment, issues can appear in the software that might
@@ -2625,8 +2545,6 @@ increase costs.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Design and create models</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This unit reviews how to identify, apply, and manipulate a model, as
 well as providing an overview of models and their importance in
@@ -2667,8 +2585,6 @@ and dependencies of the model.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Plan the build, test, and quality control processes</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This unit reviews development processes that you can use to manage the build, test, and quality control processes. It also provides information about how to plan for managing these processes.</p>
 <h2 id="create-a-project-plan-for-builds">Create a project plan for builds</h2>
@@ -2718,7 +2634,7 @@ tasks to a development project solution. Then, you can use the task to track upd
 <li>Open <strong>Repos &gt; Repositories</strong>.</li>
 <li>Turn off the <strong>Disable creation of TFVC repositories</strong> toggle in the <strong>All Repository Settings</strong> section.</li>
 </ol>
-<p><img alt="Screenshot of the All Repository Settings section, showing the Disable creation of TFVC repositories option." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/application-lifecycle-finance-operations/media/all-repositories-settings.png"/></p>
+<p><img alt="Screenshot of the All Repository Settings section, showing the Disable creation of TFVC repositories option." data-linktype="relative-path" src="./rawmb500/media_all_repositories_settings.png"/></p>
 <p>You can create new Azure DevOps projects with TFVC as the version control system.</p>
 <h3 id="git">Git</h3>
 <p>Git is the recommended Microsoft default version control system for development.</p>
@@ -2729,8 +2645,6 @@ tasks to a development project solution. Then, you can use the task to track upd
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Identify upgrade scenarios and appropriate tools</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Upgrades, updates, and hotfixes can include moving to new product versions, code migration and upgrade, moving to an update, or deploying a hotfix.</p>
 <ul>
@@ -2759,8 +2673,6 @@ The process to upgrade from Microsoft Dynamics AX 2012 to finance and operations
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Plan the release, change, and risk management processes</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Microsoft releases regular updates to finance and operations apps. These
 releases come in Platform and Application releases. They can
@@ -2816,8 +2728,6 @@ determine what areas in finance and operations apps are changing and what change
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -2904,8 +2814,6 @@ determine what areas in finance and operations apps are changing and what change
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Implementing the correct Application Lifecycle Management (ALM)
 methodology will prepare you for the development process. Creating a
@@ -2921,8 +2829,6 @@ using ALM.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Extended Data Types (EDTs) and enumerations are essential components in finance and operations apps that enable developers to standardize, organize, and enhance the usability of data across the system. EDTs extend primitive data types with custom properties, making data structures more consistent and maintainable, while enumerations simplify the management of predefined sets of values. Together, these features contribute to a more efficient and user-friendly application experience.</p>
 <p>While base enums and EDTs are not new to all developers, it's important
@@ -2933,8 +2839,6 @@ to understand how these data types are used in development for finance and opera
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Extended data types and element properties</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>X++ data types are divided into primitive data types and composite data
 types. In the AOT, you can create EDTs and base enums that build on the
@@ -2989,15 +2893,13 @@ needed in the application.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Base enums and element properties</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>A base enum is a list of literals with an assigned value. You will need to create base enumerations in Visual Studio before you can use them in
 X++ code. Enum values are represented internally as integers, and they are stored in the database as a number instead of the value, which is useful because it saves space. The first literal has the number 0, the next has the number 1, and so on.</p>
 <p>Enums can be used as integers in expressions when you are writing code. Each literal or enumeration is assigned a text value through a label and name property. That property is displayed to users in the finance and operations user interface. The system automatically displays this conversion in the user interface, so no more programming is required on the forms that display to the user.</p>
 <p>To add a base enum to your project, right-click your project, select <strong>Add &gt; New Item</strong>. Then, under <strong>Dynamics 365 Items</strong>, select <strong>Data Types &gt; Base Enum</strong>.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/base-enum.png#lightbox"><img alt="Screenshot showing how to add a base enum to your project in the Solution Explorer window." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-edt-enums-finance-operations/media/base-enum.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/base-enum.png#lightbox"><img alt="Screenshot showing how to add a base enum to your project in the Solution Explorer window." data-linktype="relative-path" src="./rawmb500/media_base_enum.png"/></a></p>
 </div>
 <h2 id="examples">Examples</h2>
 <p>Many enumerable types are built into the standard finance
@@ -3019,8 +2921,6 @@ process of adding a base enum to a project is constant, you can adjust the displ
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Create a base enumeration, add elements, and update properties</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2 id="read-this-first---before-you-start-the-lab">Read this first - before you start the lab!</h2>
 <div class="IMPORTANT">
@@ -3089,7 +2989,7 @@ interface with the options for car, truck, SUV, and van.</p>
 <li><p>In the <strong>Properties</strong> window, in the <strong>Label</strong> field, enter
 <strong>Vehicle type</strong>.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/vehicle-type.png#lightbox"><img alt="Screenshot showing the VehicleType property." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-edt-enums-finance-operations/media/vehicle-type.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/vehicle-type.png#lightbox"><img alt="Screenshot showing the VehicleType property." data-linktype="relative-path" src="./rawmb500/media_vehicle_type.png"/></a></p>
 </div>
 </li>
 </ol>
@@ -3127,7 +3027,7 @@ interface with the options for car, truck, SUV, and van.</p>
 </li>
 <li><p>In the <strong>Properties</strong> window, enter <strong>Van</strong> in the <strong>Name</strong> field  and in the <strong>Label</strong> field.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/vehicle-types.png#lightbox"><img alt="Screenshot showing the three vehicle types." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-edt-enums-finance-operations/media/vehicle-types.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/vehicle-types.png#lightbox"><img alt="Screenshot showing the three vehicle types." data-linktype="relative-path" src="./rawmb500/media_vehicle_types.png"/></a></p>
 </div>
 </li>
 <li><p>Perform a build by right-clicking the project <strong>FleetManagementProject (ISV) [Fleet Management]</strong> in the <strong>Solution Explorer</strong> window and then selecting <strong>Build</strong>.</p>
@@ -3143,8 +3043,6 @@ interface with the options for car, truck, SUV, and van.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -3290,8 +3188,6 @@ interface with the options for car, truck, SUV, and van.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Visual Studio contains many primitive data types, including base enums and EDTs.</p>
 <p>EDTs are shown as text boxes, date fields, or numeric entries. We recommend that you use EDTs in development because they can be reused throughout the system and their code is easier to read. Base enums are represented as slider bars, drop-down menus, and option buttons.</p>
@@ -3302,8 +3198,6 @@ interface with the options for car, truck, SUV, and van.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The data model in finance and operations apps is the foundation of application development. It comprises key components such as tables, views, queries, and other elements that enable effective data management. All the data within these apps, whether related to company transactions, inventory, or journals, is stored in tables and maintained through the data model within Microsoft Visual Studio.</p>
 <p>Understanding and working with these components is essential important for creating robust, scalable solutions.</p>
@@ -3313,8 +3207,6 @@ interface with the options for car, truck, SUV, and van.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create tables and table fields</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Tables contain rows and columns, just like a spreadsheet. They are
 stored in a database and work together to deliver data to the user
@@ -3329,7 +3221,7 @@ create a table relation between the two tables.</p>
 <p>While many system tables exist, it's important to know how
 to create new tables and fields so you can personalize the finance and operations apps experience. Tables are added to a project through the <strong>Solution Explorer</strong> window by right-clicking the project and selecting <strong>Add &gt; New item</strong>. You can then modify these tables through the table designer and <strong>Properties</strong> windows.</p>
 <p>The screenshot below shows the CustTable (Customer Table).</p>
-<p><img alt="Screenshot of the Customer Table which is called CustTable." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-tables-finance-operations/media/cust-table.png"/></p>
+<p><img alt="Screenshot of the Customer Table which is called CustTable." data-linktype="relative-path" src="./rawmb500/media_cust_table.png"/></p>
 <p>The <strong>Table designer</strong> window contains a top-level node with the table name,
 and various components beneath it, such as:</p>
 <ul>
@@ -3368,11 +3260,9 @@ field. You would then specify in the <strong>Properties</strong> window which el
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Populate table and field properties</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>When a new element, such as a table or field, is added to a project, we recommend that you update and modify the element's properties.</p>
-<p><a data-linktype="relative-path" href="media/table-properties.png#lightbox"><img alt="Screenshot of the Properties page showing CustTable properties." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-tables-finance-operations/media/table-properties.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/table-properties.png#lightbox"><img alt="Screenshot of the Properties page showing CustTable properties." data-linktype="relative-path" src="./rawmb500/media_table_properties.png"/></a></p>
 <p>While many properties can be manipulated, only a few will commonly be used.</p>
 <ul>
 <li><strong>Table type</strong> - Determines if the table is considered a
@@ -3400,7 +3290,7 @@ property is set to <strong>Yes</strong>. The Extends property chooses the base
 table that will become the parent table to the current table.</li>
 </ul>
 <p>The following animation shows the <strong>Properties</strong> window for the CustTable that is opened from the <strong>Application Explorer</strong> window.</p>
-<p><a data-linktype="relative-path" href="media/table-properties.gif#lightbox"><img alt="Animated gif of the Properties window for the CustTable opened from the Application Explorer window" data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-tables-finance-operations/media/table-properties.gif"/></a></p>
+<p><a data-linktype="relative-path" href="media/table-properties.gif#lightbox"><img alt="Animated gif of the Properties window for the CustTable opened from the Application Explorer window" data-linktype="relative-path" src="./rawmb500/media_table_properties.gif"/></a></p>
 <p>Field properties are commonly adjusted at the element level instead of
 within the table. For example, if you added an EDT as a field to a
 table, you would open the EDT in the element designer to adjust
@@ -3411,8 +3301,6 @@ any properties before adding it to the table.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Add fields, field groups, indexes, and relations</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>When you create a table and fields, you add those fields to
 the table, and then create field groups to pool associated fields. Then, you drag fields, such as EDTs and enums, from the AOT or from your
@@ -3423,7 +3311,7 @@ automatically.</p>
 <p>Field groups improve consistency in form design and reduces occurrences of users having to individually choose fields for form patterns. When a modification is made to a field group, such as a changed property or a new added field, any forms that contain that field group automatically updates to show the new changes. Field groups are added through the table designer by right-clicking the Field groups node to select a new group. Then, you can drag fields from your table into the various field groups that are listed under the Field groups node.</p>
 <p>The following animation shows a field being selected and dragged from the
 <strong>Application Explorer</strong> window to the <strong>Fields</strong> node of a new table in the <strong>Table designer</strong> window.</p>
-<p><a data-linktype="relative-path" href="media/add-fields.gif#lightbox"><img alt="Animated gif of the CustTable in the Table designer window." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-tables-finance-operations/media/add-fields.gif"/></a></p>
+<p><a data-linktype="relative-path" href="media/add-fields.gif#lightbox"><img alt="Animated gif of the CustTable in the Table designer window." data-linktype="relative-path" src="./rawmb500/media_add_fields.gif"/></a></p>
 <h1 id="optimize-data-retrieval-with-table-indices-and-relations">Optimize data retrieval with table indices and relations</h1>
 <p>Indices are created on a table to improve efficiency with data
 retrieval. They are added by using the table designer. An index is defined by using one or more fields as the lookup criteria. When you are
@@ -3433,7 +3321,7 @@ joins, or fields that are often used to order or group results.</p>
 <p>The order of the columns in an index is important. For efficiency,
 an index should be organized from the most granular column (highest
 number of unique values) to the least granular column.</p>
-<p><a data-linktype="relative-path" href="media/table-index.png#lightbox"><img alt="Screenshot of the CustTable highlighting the Table indexes." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-tables-finance-operations/media/table-index.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/table-index.png#lightbox"><img alt="Screenshot of the CustTable highlighting the Table indexes." data-linktype="relative-path" src="./rawmb500/media_table_index.png"/></a></p>
 <p>The three types of indices that are used in finance and operations apps are:</p>
 <ul>
 <li><strong>Primary index</strong> - Provides a unique key to each
@@ -3531,8 +3419,6 @@ another parent table.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Table methods</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Tables are main elements of finance and operations apps development. Many standard tables are already available in the application. You can also create a new custom table.</p>
 <p>Each table has methods, which can be classified as standard methods or custom methods. Standard tables must have a <code>super()</code> call to run the framework logic. This requirement also applies to custom tables because they're derived from the same base type.</p>
@@ -3677,8 +3563,6 @@ final class CurrencyTable_Extension
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create, manage, and extend views</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Like tables, a view has rows and columns that deliver data to the user in outputs such as queries, forms, and reports. A view can have fields from joined tables, and it provides focused and simplified access to data.</p>
 <p>The components in views are similar to tables and include fields, field groups, indexes, relations, mappings, state machines, methods, and events.</p>
@@ -3806,7 +3690,7 @@ Using an unsynchronized view results in errors that display to the user.</p>
 <h2 id="extend-views">Extend views</h2>
 <p>You can change views by creating an extension.
 Extend a view by locating it in the <strong>Application Explorer</strong>, right-clicking it or activating the context menu, and then selecting <strong>Create extension</strong>.</p>
-<p><a data-linktype="relative-path" href="media/create-extensions.png#lightbox"><img alt=" Screenshot of the Application Explorer that shows the Create extension option." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-tables-finance-operations/media/create-extensions.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/create-extensions.png#lightbox"><img alt=" Screenshot of the Application Explorer that shows the Create extension option." data-linktype="relative-path" src="./rawmb500/media_create_extensions.png"/></a></p>
 <p>You can create extensions in a current project or a new one and then use them to complete the following tasks:</p>
 <ul>
 <li>Add new fields. You can’t add computed columns because you can’t add code to the view.</li>
@@ -3820,8 +3704,6 @@ Extend a view by locating it in the <strong>Application Explorer</strong>, right
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create, manage, and extend queries</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>In finance and operations, you can use query objects in the development platform to build SQL statements.</p>
 <p>You can predefine, build, or modify queries with code at run time. Use queries to render data into forms, reports, views, and more. Additionally, you can write SQL statements by using select queries.</p>
@@ -3829,7 +3711,7 @@ Extend a view by locating it in the <strong>Application Explorer</strong>, right
 Additionally, you can use Microsoft Visual Studio to create predefined queries.</p>
 <h2 id="create-queries">Create queries</h2>
 <p>To add predefined queries to a project, right-click the project or activate the context menu in the Solution Explorer window. Then, select <strong>Add</strong> &gt; <strong>New Item</strong> and <strong>Data Model</strong> &gt; <strong>Query</strong>.</p>
-<p><a data-linktype="relative-path" href="media/add-new-item.png#lightbox"><img alt=" Screenshot of the Solution Explorer that shows how to add a new item." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-tables-finance-operations/media/add-new-item.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/add-new-item.png#lightbox"><img alt=" Screenshot of the Solution Explorer that shows how to add a new item." data-linktype="relative-path" src="./rawmb500/media_add_new_item.png"/></a></p>
 <p>You can use the <strong>Designer</strong> and <strong>Properties</strong> windows to change a predefined query. The <strong>Designer</strong> window contains a top-level node with the view name.</p>
 <p>The following table lists the top-level properties for queries (options in bold are default values).</p>
 <table>
@@ -4001,7 +3883,7 @@ Additionally, you can use Microsoft Visual Studio to create predefined queries.<
 </tbody>
 </table>
 <p>You can modify and create queries from code by using the query class. The following example depicts a query being created with the name <code>MyCustTable</code>. It has only one data source <code>custTable</code>, with two fields: <strong>AccountNum</strong> and <strong>CustGroup</strong>. Then, you need to add the <strong>CustGroup</strong> to the range in code, which the following sample code illustrates.</p>
-<p><a data-linktype="relative-path" href="media/mycusttable.png#lightbox"><img alt=" Screenshot of the MyCustTable data source and CustGroup field." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-tables-finance-operations/media/mycusttable.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/mycusttable.png#lightbox"><img alt=" Screenshot of the MyCustTable data source and CustGroup field." data-linktype="relative-path" src="./rawmb500/media_mycusttable.png"/></a></p>
 <p>The following example shows the result in code:</p>
 <pre><code class="lang-xpp">
  internal final class MyCustTableQueryModifyInCode
@@ -4047,9 +3929,9 @@ ining/modules/build-reports-finance-operations/query-objects-query-builder /?azu
 <p>Before using a query or query extension, you need to build them.</p>
 <h2 id="extend-queries">Extend queries</h2>
 <p>To extend a query, locate it in the Application Explorer, right-click the view or activate the <strong>Context</strong> menu, and then select <strong>Create extension</strong>, as shown in the following screenshot.</p>
-<p><a data-linktype="relative-path" href="media/create-extension-project.png#lightbox"><img alt=" Screenshot of the Create extension and Create extension in new project options." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-tables-finance-operations/media/create-extension-project.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/create-extension-project.png#lightbox"><img alt=" Screenshot of the Create extension and Create extension in new project options." data-linktype="relative-path" src="./rawmb500/media_create_extension_project.png"/></a></p>
 <p>After you’ve created an extension for a query, it appears in the project in Solution Explorer. The name of the original query is appended to the extension name with the model name, as shown in the following screenshot.</p>
-<p><a data-linktype="relative-path" href="media/extension-name-model-name.png#lightbox"><img alt=" Screenshot of the CustTable simple query extension name." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-tables-finance-operations/media/extension-name-model-name.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/extension-name-model-name.png#lightbox"><img alt=" Screenshot of the CustTable simple query extension name." data-linktype="relative-path" src="./rawmb500/media_extension_name_model_name.png"/></a></p>
 <p>When extending a query, you can:</p>
 <ul>
 <li>Change labels.</li>
@@ -4068,8 +3950,6 @@ ining/modules/build-reports-finance-operations/query-objects-query-builder /?azu
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create, manage, and extend table maps</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Table maps define the fields and methods that operate on one or more record types.</p>
 <p>Using table maps that are defined in Application Explorer under Data Model and Maps is a way to capture commonalities between record types more safely. Additionally, using table maps can help prevent incompatible record assignments and simplify business logic for similar tables.</p>
@@ -4130,7 +4010,7 @@ The <strong>Table map designer</strong> window has a top-level node with a table
 <h2 id="extend-table-maps">Extend table maps</h2>
 <p>While you can extend tables and classes, you can’t extend table maps. To find the <strong>Create extension</strong> menu item, right-click the item or activate the context menu. No action occurs if you select <strong>Create extension</strong>. You must set up mappings in the table-to-table maps, and you can extend those tables.  Additionally, if you require special logic, you need to use an interface class.</p>
 <p>To set up mappings in a table, locate the table in Application Explorer and then open it in the designer. In the <strong>Mappings</strong> node, as the following image shows, right-click the table or activate the context menu, and then select <strong>New Mapping</strong>. Then, enter the map name and field mapping that you want to use.</p>
-<p><a data-linktype="relative-path" href="media/mappings.png#lightbox"><img alt=" Screenshot of the Mappings node." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-tables-finance-operations/media/mappings.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/mappings.png#lightbox"><img alt=" Screenshot of the Mappings node." data-linktype="relative-path" src="./rawmb500/media_mappings.png"/></a></p>
 <p>If you need special logic, create an abstract class for the interface. First, you need to create an abstract class for mapping by using the table-map name prefixed with <em>Interface</em>, as shown in the following code sample:</p>
 <pre><code class="lang-xpp">public abstract class MyCustVendMapInterface
 {
@@ -4293,8 +4173,6 @@ public class MyCustVendMapMyCustTable extends MyCustVendMapInterface
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Create a table, add fields, and create field groups</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2 id="read-this-first---before-you-start-the-lab">Read this first - before you start the lab!</h2>
 <div class="IMPORTANT">
@@ -4390,7 +4268,7 @@ customers</strong>.</li>
 </li>
 <li><p>Select <strong>Save</strong> in the ribbon.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/fleetcustomers-table.png#lightbox"><img alt="Screenshot showing the FleetCustomersTable." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-tables-finance-operations/media/fleetcustomers-table.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/fleetcustomers-table.png#lightbox"><img alt="Screenshot showing the FleetCustomersTable." data-linktype="relative-path" src="./rawmb500/media_fleetcustomers_table.png"/></a></p>
 </div>
 </li>
 <li><p>Right-click the project in the Solution Explorer and click <strong>Synchronize FleetManagementTableProject(ISV) [Fleet Management]with Database</strong>.</p>
@@ -4410,7 +4288,7 @@ customers</strong>.</li>
 <li>Right-click the new field group and rename it <strong>LocationInfo</strong>.</li>
 </ol>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/fleetcustomers-group.png#lightbox"><img alt="Screenshot showing the field groups in the FleetCustomersTable." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-tables-finance-operations/media/fleetcustomers-group.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/fleetcustomers-group.png#lightbox"><img alt="Screenshot showing the field groups in the FleetCustomersTable." data-linktype="relative-path" src="./rawmb500/media_fleetcustomers_group.png"/></a></p>
 </div>
 <ol start="9">
 <li>Expand the <strong>Fields</strong> node of <strong>FleetCustomersTable</strong>.</li>
@@ -4429,8 +4307,6 @@ customers</strong>.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned.</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -4595,8 +4471,6 @@ customers</strong>.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Tables are used when developing forms in Visual Studio, and they appear to the user as pages in finance and operations apps.</p>
 <p>Tables contain data such as transactional information, journal entries,
@@ -4619,8 +4493,6 @@ records in the primary or related table.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Finance and operations apps use an HTML web client that runs
 in all major browsers, including Microsoft Edge, Google Chrome, and Safari.</p>
@@ -4635,8 +4507,6 @@ have business applications with you always. With finance and operations apps, bu
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Add a new form to a project and apply a pattern</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Form patterns are an integrated part of the form development
 experience. These patterns provide form structure based on a style,
@@ -4666,7 +4536,7 @@ compatibility with patches, hotfixes, and upgrades.</p>
 <p>In Visual Studio, a form is added to a project in the Solution Explorer
 window. The form designer window looks different from other element
 designers because of the additional panes.</p>
-<p><a data-linktype="relative-path" href="media/form-designer.png#lightbox"><img alt="Screenshsot of the Visual Studio Form designer window." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-forms-optimize-finance-operations/media/form-designer.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/form-designer.png#lightbox"><img alt="Screenshsot of the Visual Studio Form designer window." data-linktype="relative-path" src="./rawmb500/media_form_designer.png"/></a></p>
 <p>The left and right panes are used to manage the form and design options, while the bottom pane shows the pattern design as well as a preview of how the form is viewed in the user interface. The form's left pane is used to manage methods, events,
 and data sources, while the right pane is used to apply patterns and
 subpatterns. The bottom pattern pane is like a wizard because it guides
@@ -4681,13 +4551,11 @@ build.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Add a data source to a form</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>To display content on a page in the user
 interface, a data source must be added to a form in the <strong>Form designer</strong> window of Visual Studio. You can select and drag a table or query from
 your project in the <strong>Solution Explorer</strong> window or drag a system table from the <strong>Application Explorer</strong> window. You can choose to use one table or many tables, depending on the number of fields that you will use for your form.</p>
-<p><a data-linktype="relative-path" href="media/data-source.png#lightbox"><img alt="Screenshsot of the Visual Studio Form designer window highlighting Data Sources options." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-forms-optimize-finance-operations/media/data-source.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/data-source.png#lightbox"><img alt="Screenshsot of the Visual Studio Form designer window highlighting Data Sources options." data-linktype="relative-path" src="./rawmb500/media_data_source.png"/></a></p>
 <h2 id="add-a-data-source-to-your-form-using-the-application-object-tree-aot">Add a data source to your form using the Application Object Tree (AOT)</h2>
 <p>Follow these steps to add a data source from the AOT to your form by using a select and drag process:</p>
 <ol>
@@ -4711,8 +4579,6 @@ your project in the <strong>Solution Explorer</strong> window or drag a system t
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Add grids, fields, and groups to a form</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>When a table is listed under the <strong>Data Sources</strong> node on the left pane
 of the Form designer window, it can then be used to add fields to the
@@ -4743,8 +4609,6 @@ and customer filters by applying a subpattern to the Group control.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Form methods</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Forms are main elements of finance and operations development. Many standard forms are already available in the application.</p>
 <p>You can also create new forms. Each form consists of form methods, which can be classified as standard methods or custom methods.
@@ -5096,8 +4960,6 @@ final class CustTableFormControlDirPartyEntityAssociationUpdate_Extension
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create, populate, and extend menu items</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Menu items are used in the finance and operations apps user interface to
 present the user with a button that will link to a page, dialog box,
@@ -5113,7 +4975,7 @@ to a page by selecting a button or link. The finance and operations apps
 navigation pane can be extended to add a new module or to add a page to
 an existing module.</p>
 <p>The screenshot shows a menu item that has been added to a form in the developer environment:</p>
-<p><a data-linktype="relative-path" href="media/form-designer.png#lightbox"><img alt="Screenshot of a menu item that has been added to a form in the developer environment." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-forms-optimize-finance-operations/media/form-designer.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/form-designer.png#lightbox"><img alt="Screenshot of a menu item that has been added to a form in the developer environment." data-linktype="relative-path" src="./rawmb500/media_form_designer.png"/></a></p>
 <h2 id="extend-menu-items">Extend menu items</h2>
 <p>You can use menu items in the UI to navigate forms, jobs, and reports, and you can make extensions of existing menu items to enable developers to make small adjustments to the UI.</p>
 <p>With menu item extensions, you can change the following on all three types of menu items:</p>
@@ -5129,13 +4991,11 @@ an existing module.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create and extend menus</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can create new menus in finance and operations apps. Then, you can connect them to menu items so that new customizations are available in the navigation pane for users.</p>
 <p>When you connect the display and output menu items, you can open forms and reports directly from the finance and operations apps user interface (UI). Similarly, you can run classes from the UI and connect action menu items to the menu.</p>
 <p>In finance and operations apps, the navigation pane is on the left side of the UI. Expanding the <strong>Modules</strong> section opens all menus to which you have access. Selecting a module opens the menu, as shown in the following screenshot.</p>
-<p><a data-linktype="relative-path" href="media/modules-navigation.png#lightbox"><img alt="Screenshot of the modules section in the navigation pane." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-forms-optimize-finance-operations/media/modules-navigation.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/modules-navigation.png#lightbox"><img alt="Screenshot of the modules section in the navigation pane." data-linktype="relative-path" src="./rawmb500/media_modules_navigation.png"/></a></p>
 <p>You can create all menus in Microsoft Visual Studio.</p>
 <h2 id="create-menus">Create menus</h2>
 <p>To add menus to a project, follow these steps:</p>
@@ -5190,15 +5050,13 @@ an existing module.</p>
 </ul>
 <p>You can move Menu item references from Solution Explorer or Application Explorer to the menu for quick creation.</p>
 <p>The following image shows the designer view of a standard menu with groups of submenus.</p>
-<p><a data-linktype="relative-path" href="media/designer-view-standard-menu.png#lightbox"><img alt="Screenshot of the designer view of a standard menu with groups of submenus." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-forms-optimize-finance-operations/media/designer-view-standard-menu.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/designer-view-standard-menu.png#lightbox"><img alt="Screenshot of the designer view of a standard menu with groups of submenus." data-linktype="relative-path" src="./rawmb500/media_designer_view_standard_menu.png"/></a></p>
 <p>If you can’t find a menu item, check whether extensions exist. You can add workspaces to a menu by using an extension in model workspaces.</p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Test form functionality and data connections</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>When the requirements for a form pattern have been completed, and before
 a form goes into production, you should test its functionality in Visual
@@ -5216,8 +5074,6 @@ components, ensuring that the correct fields are showing in a grid and the filte
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Diagnose and optimize client performance</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can use various browser-based tools and the Performance timer tool
 to diagnose and optimize client performance of finance and operations apps.</p>
@@ -5262,8 +5118,6 @@ server time, as well as the total time when selecting a page. The Performance ti
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Optimize form loading and performance</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>When navigating in finance and operations apps, users want pages to load
 quickly and performance to be high. While development or sandbox
@@ -5286,8 +5140,6 @@ operations apps, and then Visual Studio will automatically exit debugging mode.<
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Create a form</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2 id="read-this-first---before-you-start-the-lab">Read this first - before you start the lab!</h2>
 <div class="IMPORTANT">
@@ -5358,7 +5210,7 @@ the <code>CustTable</code> element.</p>
 <li>Enter <strong>FleetCustomersForm</strong> in the <strong>Name</strong> field.</li>
 <li>Select <strong>Add</strong>. The <strong>FleetCustomersForm</strong> form opens in the form designer window.</li>
 </ol>
-<p><a data-linktype="relative-path" href="media/create-form.png#lightbox"><img alt="Screenshsot of the FleetCustomersForm form in the form designer window." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-forms-optimize-finance-operations/media/create-form.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/create-form.png#lightbox"><img alt="Screenshsot of the FleetCustomersForm form in the form designer window." data-linktype="relative-path" src="./rawmb500/media_create_form.png"/></a></p>
 <h2 id="add-a-pattern-and-data-source-to-the-form">Add a pattern and data source to the form</h2>
 <ol>
 <li>In the form designer window, right-click the <strong>Design</strong> node of the Simple List on the right pane.</li>
@@ -5404,7 +5256,7 @@ the <code>CustTable</code> element.</p>
 <li><p>On the right pane of the form designer, collapse the <strong>Filters</strong> node.</p>
 </li>
 <li><p>Select <strong>Save</strong>.</p>
-<p><a data-linktype="relative-path" href="media/quick-filter.png#lightbox"><img alt="Screenshsot of the QuickFilter property." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-forms-optimize-finance-operations/media/quick-filter.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/quick-filter.png#lightbox"><img alt="Screenshsot of the QuickFilter property." data-linktype="relative-path" src="./rawmb500/media_quick_filter.png"/></a></p>
 </li>
 <li><p>Right-click the main <strong>Design</strong> node on the right pane of the form designer.</p>
 </li>
@@ -5417,7 +5269,7 @@ the <code>CustTable</code> element.</p>
 <li><p>Select and drag the <strong>Party</strong>, <strong>SalesGroup</strong>, <strong>CustGroup</strong>, and <strong>AccountNum</strong> fields from the <strong>Fields</strong> node onto the <strong>MainGrid</strong> node on the right pane.</p>
 </li>
 <li><p>Select <strong>Save</strong>.</p>
-<p><a data-linktype="relative-path" href="media/accountnum.png#lightbox"><img alt="Screenshsot of the AccountNum fields." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-forms-optimize-finance-operations/media/accountnum.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/accountnum.png#lightbox"><img alt="Screenshsot of the AccountNum fields." data-linktype="relative-path" src="./rawmb500/media_accountnum.png"/></a></p>
 </li>
 <li><p>Perform a build by right-clicking the project <strong>FleetManagementFormProject (ISV)</strong> in the <strong>Solution Explorer</strong> window and then selecting <strong>Build.</strong></p>
 </li>
@@ -5429,7 +5281,7 @@ the <code>CustTable</code> element.</p>
 <li>Select <strong>Ctrl + F5</strong> or select <strong>Start</strong> in the ribbon to begin running the project. Microsoft Edge opens to display the newly created form (this can take a couple of minutes).</li>
 <li>Add a few records to the form by selecting the <strong>New</strong> button in the Action Pane.</li>
 </ol>
-<p><a data-linktype="relative-path" href="media/fleetcustomersform.png#lightbox"><img alt="Screenshsot of the FleetCustomersForm page." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-forms-optimize-finance-operations/media/fleetcustomersform.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/fleetcustomersform.png#lightbox"><img alt="Screenshsot of the FleetCustomersForm page." data-linktype="relative-path" src="./rawmb500/media_fleetcustomersform.png"/></a></p>
 <h2 id="close-the-lab-environment">Close the lab environment</h2>
 <ol>
 <li>Select <strong>Done</strong> in the <strong>Instructions</strong> pane in the lab side bar.</li>
@@ -5440,8 +5292,6 @@ the <code>CustTable</code> element.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions and see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -5571,8 +5421,6 @@ the <code>CustTable</code> element.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Forms in Visual Studio are composed of elements such as fields, tables,
 filters, and grids, which display to a finance and operations apps user as
@@ -5613,8 +5461,6 @@ times, a developer can ensure that the user has the navigation experience that t
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Classes contain data and methods that represent the state and the
 behavior of an object. Some elements in the Application Object Tree
@@ -5628,8 +5474,6 @@ functionality of finance and operations apps.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Add a class to a project</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>A class is a software construct that expresses the data and methods of
 the objects, which are later constructed from that class. These objects
@@ -5664,14 +5508,12 @@ method. You can manually add methods to your class, including a main
 method. Methods will be described in further detail in the next unit.
 The following screenshot shows the code editor window when you create a
 runnable class named <code>RunnableClass1</code>.</p>
-<p><img alt="This screenshot shows the code displayed when a runnable class is added to a project." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/create-classes-finance-operations/media/runnable-class.png"/></p>
+<p><img alt="This screenshot shows the code displayed when a runnable class is added to a project." data-linktype="relative-path" src="./rawmb500/media_runnable_class.png"/></p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement the global cache and singleton</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can use caching to improve the performance of your code. The benefits increase for frequently used data or code. You can implement global caching on a specific client session or apply it to all clients on a server. In some scenarios, you can use global caching for extra parameters in a method signature because method signatures are unchangeable with extensions.</p>
 <div class="IMPORTANT">
@@ -5893,8 +5735,6 @@ final class SalesPool_MB500_Extension
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Add code and methods to meet business requirements</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Finance and operations apps use X++ development language in its classes.
 X++ is an object-oriented language. If you haven't used it before, but
@@ -5949,8 +5789,6 @@ affected by the following accessor keywords.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Data manipulation</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can write code to manipulate data that is stored in the database.</p>
 <ul>
@@ -6022,8 +5860,6 @@ private void DeleteCustomer()
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Insert records by using a runnable class</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2 id="read-this-first---before-you-start-the-lab">Read this first - before you start the lab!</h2>
 <div class="IMPORTANT">
@@ -6133,8 +5969,6 @@ insert two records into the <code>FMCustomer</code> table.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -6323,8 +6157,6 @@ insert two records into the <code>FMCustomer</code> table.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Classes for finance and operations apps use the X++ development language, which is an object-oriented programming language. Classes contain data that define an object's state and methods that define an object's behavior. Elements such as tables and forms contain classes out of the box. These elements can be modified through extension to add more methods that control the element's behavior. Through the <strong>Solution Explorer</strong> window in Visual Studio, you can add a new class or runnable
 class to your project.</p>
@@ -6357,27 +6189,25 @@ class to your project.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement Business document management</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Business document management in finance and operations apps allows you to set up business documents, such as invoices within the web client. In the <strong>Business document</strong> workspace, you can edit business document templates by using the Microsoft 365 service or an appropriate Microsoft Office desktop application. Edits to the documents might include changing business document designs and adding placeholders for extra data, without you needing to complete source code changes and new deployments. The tool is dependent on the Electronic reporting framework for setting up the document, and it uses the Print management framework to link the custom document to the printing option.</p>
 <p>Business document management allows users to create and modify output documents, without relying on SQL Server Reporting Services (SSRS) report development. Business document management currently supports output to Microsoft Word, Microsoft Excel, and PDF.</p>
 <h2 id="set-up-parameters">Set up parameters</h2>
 <p>Before setting up Business document management, you'll need to set up the required document type in the <strong>Document management framework</strong>. Use the <strong>Template</strong> document type to specify a temporary storage of documents in Office formats (Excel and Word) that are used as templates for Electronic reporting reports. Then, make sure that you provide the SharePoint address for the temporary storage. You can edit the temporary storage template by using the Office desktop applications.</p>
 <div class="mx-imgBorder">
-<p>[<img alt="Screenshot of the Document types page, showing a template." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-reports-finance-operations/media/document-management-template.svg"/>](../media/document-management-template.svg    #lightbox)</p>
+<p>[<img alt="Screenshot of the Document types page, showing a template." data-linktype="relative-path" src="./rawmb500/media_document_management_template.svg"/>](../media/document-management-template.svg    #lightbox)</p>
 </div>
 <p>You can set up basic Business document management parameters on the <strong>Business document parameters</strong> page. Only specific users can access the page. On the <strong>Attachments</strong> tab of the <strong>Business document parameters</strong> page, you'll need to define the document type in the <strong>SharePoint document type</strong> field. This document type is the one that you should use to temporarily store templates in Office formats while they're edited by using the Office desktop applications. The selected document type is company-specific and will be used when the user is working with Business document management in the company for which the selected document type is set up.</p>
 <h2 id="use-business-document-management-to-edit-a-template">Use Business document management to edit a template</h2>
 <p>Business users can access business document templates for editing in the <strong>Business document management</strong> workspace.</p>
 <p>Follow these procedures to edit a document template in the <strong>Business document management</strong> workspace. For the initial setup, you can import the template from Microsoft Dynamics Lifecycle Services, such as Electronic reporting. Additionally, you can create a new template by selecting <strong>Create template</strong>. The selected template is then imported from the global repository and created in the <strong>Business document management</strong> workspace. When you import the template, you will see a list of templates that are specific to your user role.  The system will not download the templates that are not applicable to your assigned role.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/lifecycle-services-shared-asset-library.png#lightbox"><img alt="Screenshot of the Shared asset library in Lifecycle Services, with GER Configuration highligted." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-reports-finance-operations/media/lifecycle-services-shared-asset-library.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/lifecycle-services-shared-asset-library.png#lightbox"><img alt="Screenshot of the Shared asset library in Lifecycle Services, with GER Configuration highligted." data-linktype="relative-path" src="./rawmb500/media_lifecycle_services_shared_asset_library.png"/></a></p>
 </div>
 <p>The Business document management module works with the <em>tags</em> functionality to structure documents, which is expanded with a new tag called <strong>Business Document Type</strong>. The <strong>Business Document Type</strong> tag determines the output document for which current configuration will be used. After you've added this tag, you can link the document to Print management.</p>
 <p>You can edit a business document from the <strong>Business document management</strong> workspace when it's set up with Electronic reporting. You can edit Excel and Word files directly from the workspace.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/business-document-management-workspace.png#lightbox"><img alt="Screenshot of the Business document management workspace." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-reports-finance-operations/media/business-document-management-workspace.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/business-document-management-workspace.png#lightbox"><img alt="Screenshot of the Business document management workspace." data-linktype="relative-path" src="./rawmb500/media_business_document_management_workspace.png"/></a></p>
 </div>
 <h2 id="set-up-access-permissions">Set up access permissions</h2>
 <p>By default, when access to Business document management permissions isn't enabled, every user with access to the Business document management workspace can view all Electronic reporting solution templates that are available. The <strong>Business document management</strong> workspace will show only those templates that reside in Electronic reporting format configurations and that are marked by a <strong>Business Document Type</strong> tag.</p>
@@ -6393,8 +6223,6 @@ Only the following users can access the page:</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create and modify reports that use SSRS</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Many pre-generated SSRS reports come out of the box with finance and
 operations apps. SSRS reports allow you to print reports to different
@@ -6452,8 +6280,6 @@ without affecting the standard report solutions. This means that you can still u
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement query objects and query builder</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>In Dynamics 365, you can use query objects in the development platform to build SQL statements. You can use these queries to render data into forms, reports, views, and more. Additionally, you can write SQL statements by using select queries. The query object helps you create the SQL dynamically at runtime.</p>
 <p>We recommend that you use query objects in forms instead of using tables directly. By using query objects, you can select those fields that you want to display in the form, unlike tables. This approach will help reduce the size of the SQL statement that's running behind the form, and it helps improve performance. The same notion applies for reports and views also.</p>
@@ -6590,8 +6416,6 @@ without affecting the standard report solutions. This means that you can still u
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create and modify reports by using Power BI</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Power BI is a tool that promotes data exploration. By using Power BI tools, you can interactively explore data to truly understand it. You can
 pivot columns, change the shape of charts, filter data, and share
@@ -6624,8 +6448,6 @@ to filter data as you need it.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create and modify reports by using Excel</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Excel can be used for viewing and analyzing transactional data. Finance
 and operations uses an out-of-the-box application called the Excel Data
@@ -6679,8 +6501,6 @@ space should be between each data field and group.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Exercise - Create and deploy a report</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This exercise uses the standard demo data set available in finance and operations apps.</p>
 <p>First, you need to create a query.</p>
@@ -6736,8 +6556,6 @@ space should be between each data field and group.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -6891,8 +6709,6 @@ space should be between each data field and group.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>SSRS, Power BI, and Excel are powerful tools that offer finance and
 operations apps developers and power users the ability to design, create, and
@@ -6904,27 +6720,23 @@ BI reports, and Excel reports by using finance and operations apps data.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Workspaces in finance and operations apps are links, tiles, and lists specific to each user to help aid in completing their role at their organization. You can use Workspaces as a single point of entry into the application.</p>
 <p>In workspaces you can design and embed KPIs to monitor business performance and use Report Definition Language (RDL) to create reusable report functions. Workspaces can be used to manage day to day responsibilities specific to each user.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/dashboard.svg#lightbox"><img alt="Screenshot of the finance and operations dashboard showing a workspace." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-workspaces-finance-operations/media/dashboard.svg"/></a></p>
+<p><a data-linktype="relative-path" href="media/dashboard.svg#lightbox"><img alt="Screenshot of the finance and operations dashboard showing a workspace." data-linktype="relative-path" src="./rawmb500/media_dashboard.svg"/></a></p>
 </div>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Design KPIs</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>KPIs can be created in the developer environment and then embedded into
 workspaces to provide users with key measurable values that
 allow them to see how business is performing. The below image shows an example of a KPI tile in a workspace.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/kpi.png#lightbox"><img alt="Screenshot of the KPI tile in a workspace." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-workspaces-finance-operations/media/kpi.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/kpi.png#lightbox"><img alt="Screenshot of the KPI tile in a workspace." data-linktype="relative-path" src="./rawmb500/media_kpi.png"/></a></p>
 </div>
 <p>KPIs should have clear objectives that are periodically reviewed to ensure that the objectives are being met. KPIs can be created by using aggregate data contained in aggregate measurements, which is a model that contains a collection of measures and their corresponding dimensions. The
 measures that are used are aggregate numbers, such as total sales. Aggregate measurements can be set to measure the sum, minimum, maximum, count, distinct count, or average by using the Default aggregate property.</p>
@@ -6940,7 +6752,7 @@ measure to the Entity store and have the data refreshed periodically.</li>
 aggregate measurements and dimensions, you can create an
 aggregate data entity. You can use the aggregate data to define a KPI
 by using X++. After the KPI has been defined, users can customize it at run time.</p>
-<p><img alt="Diagram of the relation between aggregate measurements and dimensions and the KPI that they define." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-workspaces-finance-operations/media/measure-dimension.png"/></p>
+<p><img alt="Diagram of the relation between aggregate measurements and dimensions and the KPI that they define." data-linktype="relative-path" src="./rawmb500/media_measure_dimension.png"/></p>
 <h2 id="create-a-new-project-in-visual-studio">Create a new project in Visual studio</h2>
 <p>To create a new project in Visual studio, follow these steps:</p>
 <ol>
@@ -6954,7 +6766,7 @@ by using X++. After the KPI has been defined, users can customize it at run time
 <li>In the <strong>Solution explorer</strong>, right-click your project and select
 <strong>Add &gt; New item</strong>.</li>
 <li>Under <strong>Dynamics 365 Items</strong> select <strong>Analytics &gt; Aggregate Measurement</strong>.
-<a data-linktype="relative-path" href="media/aggregate-measurement.png#lightbox"><img alt="Screenshot of the Aggregate Measurement option." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-workspaces-finance-operations/media/aggregate-measurement.png"/></a></li>
+<a data-linktype="relative-path" href="media/aggregate-measurement.png#lightbox"><img alt="Screenshot of the Aggregate Measurement option." data-linktype="relative-path" src="./rawmb500/media_aggregate_measurement.png"/></a></li>
 <li>Open <strong>Application Explorer</strong> by going to <strong>View &gt; Application Explorer</strong> if it does not already show up on your page.</li>
 <li>Go to <strong>Data Model &gt; Views</strong> and select the <strong>FMVehicleExtendedView</strong> view to create measurements. Because the project model is Fleet Management the <strong>FMVehicleExtendedView</strong> view is compatible.</li>
 <li>In the <strong>FMVehicleExtendedView</strong> pane, under fields, drag and drop the <strong>FMVehicleExtendedView</strong> view in the <strong>MeasureGroup1</strong> group for the <strong>Aggregate</strong> measure.</li>
@@ -6978,7 +6790,7 @@ by using X++. After the KPI has been defined, users can customize it at run time
 <ol>
 <li>In the <strong>Solution explorer</strong>, right-click your project and select <strong>Add &gt; New Item</strong>.</li>
 <li>Under <strong>Dynamics 365 Items</strong> select <strong>Analytics &gt; Aggregate Dimension</strong>, and then select <strong>Add</strong>.
-<a data-linktype="relative-path" href="media/aggregate-dimension.png#lightbox"><img alt="Screenshot of the Aggregate Dimension option." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-workspaces-finance-operations/media/aggregate-dimension.png"/></a></li>
+<a data-linktype="relative-path" href="media/aggregate-dimension.png#lightbox"><img alt="Screenshot of the Aggregate Dimension option." data-linktype="relative-path" src="./rawmb500/media_aggregate_dimension.png"/></a></li>
 <li>In the <strong>Application Explorer</strong>, go to <strong>Data model &gt; Views</strong> and select the **FMVehicleExtendedView ** view to pull measurements.</li>
 <li>Drag the selected item onto the root of the <strong>AggregateDimensions</strong> object that you’ve created.</li>
 <li>If you don’t have an attribute or didn’t change the <strong>Dimension</strong> field on the original attribute, drag the <strong>Model</strong> field from the view into <strong>Aggregate dimension &gt; Attribute</strong>s.</li>
@@ -6992,7 +6804,7 @@ by using X++. After the KPI has been defined, users can customize it at run time
 <li>Select the newly created dimension, and then right-click and select <strong>New relation</strong>.</li>
 <li>Name the new relation.</li>
 <li>Right-click on the relation, go to properties and then change the <strong>Dimension attribute</strong> to <strong>Model</strong>.
-<a data-linktype="relative-path" href="media/model.png#lightbox"><img alt="Screenshot of the DimensionRelation." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-workspaces-finance-operations/media/model.png"/></a></li>
+<a data-linktype="relative-path" href="media/model.png#lightbox"><img alt="Screenshot of the DimensionRelation." data-linktype="relative-path" src="./rawmb500/media_model.png"/></a></li>
 <li>Save all.</li>
 </ol>
 <h2 id="deploy-aggregate-measurements">Deploy aggregate measurements</h2>
@@ -7055,8 +6867,6 @@ by using X++. After the KPI has been defined, users can customize it at run time
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create drill-through workspace elements</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Drill-through elements might be necessary in a workspace to help you view
 additional data within the page. For instance, you might have a view on
@@ -7071,7 +6881,7 @@ information and a menu item that uses that query. Then, you must create a
 tile that uses the menu item. On the <strong>Workspace</strong> form, you can add a
 <strong>Tile</strong> button to the workspace that points at the tile.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/tiles.svg#lightbox"><img alt="Screenshot of the Personnel management workspace page." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-workspaces-finance-operations/media/tiles.svg"/> </a></p>
+<p><a data-linktype="relative-path" href="media/tiles.svg#lightbox"><img alt="Screenshot of the Personnel management workspace page." data-linktype="relative-path" src="./rawmb500/media_tiles.svg"/> </a></p>
 </div>
 <h2 id="add-a-tile-button-to-your-workspace-in-the-user-interface">Add a tile button to your workspace in the user interface</h2>
 <p>To add a <strong>Tile</strong> button to your workspace in the user interface, follow these steps:</p>
@@ -7143,8 +6953,6 @@ pane.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create custom reusable report functions by using RDL</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Report Definition Language (RDL) is an XML representation of an SQL Server Reporting Services (SSRS) report definition. A report definition contains data retrieval and layout information for a report. You can add your own custom functions for controlling report item values, styles, and formatting by accessing code assemblies within report definition files.</p>
 <p>RDL can be used to define charts, graphs, calculations, text, images, and other report objects. RDLs can be created by using the Microsoft .Net Framework classes. Specifically, the XmlTextWriter class can write an RDL. You can also extend existing RDLs to add items with custom properties. The reports that are created by using RDL can be exported as a .rdl file, which contains the report data, calculations, and report layout. All SSRS reports generate a .rdl file.</p>
@@ -7153,8 +6961,6 @@ pane.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement built-in KPIs, charts, and other reporting components</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Workspaces can contain main elements, such as those discussed in this
 module. Workspaces can also include built-in KPIs, charts, and other
@@ -7167,7 +6973,7 @@ List, and Link. The <strong>Tile</strong> option has additional configuration wh
 you can enter the tile name and display the record count. Before
 creating the tile, you can filter the form to view only the records that you want to see on the tile. The <strong>List</strong> option allows you to name the tab and select the list style. You can also select the columns that you want to display. The <strong>Link</strong> option will create a hyperlink to the workspace so you can quickly access other form.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/customize.svg#lightbox"><img alt="Screenshot of the Add to workspace form in the Personalize group under the Options tab." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/build-workspaces-finance-operations/media/customize.svg"/> </a></p>
+<p><a data-linktype="relative-path" href="media/customize.svg#lightbox"><img alt="Screenshot of the Add to workspace form in the Personalize group under the Options tab." data-linktype="relative-path" src="./rawmb500/media_customize.svg"/> </a></p>
 </div>
 <p>In the developer environment, developers can create KPI tiles that
 display calculated measures. To create a KPI in the developer
@@ -7194,8 +7000,6 @@ dashboards, and then publish the report and pin it to the workspace.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Exercise - Create a workspace and add a tile, list, link, and Power BI element</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Watch this video to see how to build a custom workspace.</p>
 <div class="embeddedvideo"><iframe allowfullscreen="true" data-linktype="external" frameborder="0" src="https://learn-video.azurefd.net/vod/player?id=7e75e180-3180-43df-82ae-a7c7adda5c30"></iframe></div>
@@ -7291,8 +7095,6 @@ reports. Select the <strong>Sales</strong> tab.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned.</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -7446,8 +7248,6 @@ reports. Select the <strong>Sales</strong> tab.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Workspaces increase users' productivity by helping them make decisions based on real-time data and quickly view reporting and
 analytics. This module
@@ -7459,8 +7259,6 @@ what they need.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>With role-based security, access to finance and operations apps is not granted to individual users, but to security roles to which users are
 assigned. A user who is assigned to a security role has access to the
@@ -7478,8 +7276,6 @@ change.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create and modify duties, privileges, and permissions</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Finance and operations apps offers many duties, privileges, and permissions out of the box. If needed, you can create a new role, duty, privilege, or permission in Visual Studio.</p>
 <p>While you can manage security roles in finance and operations apps, we recommend that you have a system administrator
@@ -7489,7 +7285,7 @@ environment. Each role has various duties assigned to it. A privilege
 can be directly assigned to a role, but it is best practice to assign a
 privilege to a duty. Within each privilege, various permissions are assigned. Permissions represent the most granular access to
 finance and operations apps.</p>
-<p><img alt="This flow shows the hierarchy of security in finance and operations apps from role to duty to privilege to permission." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/role-security-finance-operations/media/hierarchy-1.png"/></p>
+<p><img alt="This flow shows the hierarchy of security in finance and operations apps from role to duty to privilege to permission." data-linktype="relative-path" src="./rawmb500/media_hierarchy_1.png"/></p>
 <p>Permissions represent access to individual securable objects, such as
 menu items and tables. Privileges are composed of permissions, and they
 represent tasks, such as generating a sales order. Privileges give the user access to perform a specific action. For example, one
@@ -7531,14 +7327,12 @@ Privilege</strong>, depending on the type of element that you need to create.</l
 <li>Enter a <strong>Name</strong> for the security element.</li>
 <li>Select <strong>Add</strong> to add this element to your project. The element will now be open in the element designer window.</li>
 </ol>
-<p><a data-linktype="relative-path" href="media/security-element.png#lightbox"><img alt="Screenshot showing the steps to create a new security element." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/role-security-finance-operations/media/security-element.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/security-element.png#lightbox"><img alt="Screenshot showing the steps to create a new security element." data-linktype="relative-path" src="./rawmb500/media_security_element.png"/></a></p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Enforce permissions policy</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Permissions policies are used in role-based security to grant access to
 users for specific purposes. The most common type of security policy
@@ -7553,19 +7347,17 @@ certain field. After you create the profile, you can assign users or teams to th
 <code>RetailCustomer</code> security policy that uses the
 <code>RoleName</code> context type. The <strong>Role Name</strong> property has been filled in to specify that the <code>RetailStoreManager</code> role is
 associated with this policy.</p>
-<p><a data-linktype="relative-path" href="media/retail-policy.png#lightbox"><img alt="RetailCustomer security policy Properties window." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/role-security-finance-operations/media/retail-policy.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/retail-policy.png#lightbox"><img alt="RetailCustomer security policy Properties window." data-linktype="relative-path" src="./rawmb500/media_retail_policy.png"/></a></p>
 <p>The following image is the <strong>Properties</strong> window of the
 <code>FMSelfServ</code> security policy that uses the
 <code>ContextString</code> context type. Notice that different fields
 are used as you select a different context type.</p>
-<p><a data-linktype="relative-path" href="media/fm-policy.png#lightbox"><img alt="Properties window for the FMSelfServpolicy." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/role-security-finance-operations/media/fm-policy.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/fm-policy.png#lightbox"><img alt="Properties window for the FMSelfServpolicy." data-linktype="relative-path" src="./rawmb500/media_fm_policy.png"/></a></p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Extensible data security framework</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>To grant access to tables, fields, and rows in the finance and operations apps user interface, authorization is used. To restrict or deny
 access to those elements, you need to use data security. You can assign data security policies to security roles by using the extensible data security (XDS) framework.</p>
@@ -7583,11 +7375,9 @@ Microsoft Dynamics AX 2012 and earlier versions. The XDS framework in finance an
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Apply security permissions</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Users are assigned to security roles in the System administration module in finance and operations apps by going to <strong>Security administration &gt; Security &gt; Security configuration.</strong></p>
-<p><a data-linktype="relative-path" href="media/security-1.png#lightbox"><img alt="Screenshot of the Security configuration page." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/role-security-finance-operations/media/security-1.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/security-1.png#lightbox"><img alt="Screenshot of the Security configuration page." data-linktype="relative-path" src="./rawmb500/media_security_1.png"/></a></p>
 <p>You can automatically assign users to roles by using queries from Visual Studio, or you can manually assign an individual user to a role. Additionally, you can choose to have a user excluded from automatic role assignment by resetting her or his status.</p>
 <p>Follow these steps to assign users to roles automatically:</p>
 <ol>
@@ -7607,8 +7397,6 @@ Navigation pane by selecting the menu icon in the top-left corner of the page.</
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Create a new security role and add duties</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2 id="read-this-first---before-you-start-the-lab">Read this first - before you start the lab!</h2>
 <div class="IMPORTANT">
@@ -7683,14 +7471,12 @@ Management company to create a new role based on a new position that they are fi
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Microsoft Entra ID and OAuth 2.0 authentication</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Finance and operations apps use Microsoft Entra ID (formerly Microsoft Azure Active Directory) for authentication. OAuth 2.0 authentications allow integrations on behalf of a user. OAuth is an abbreviation for “Open Authorization.”</p>
 <p>To access finance and operations apps and be assigned to a role, a user must have an authenticated Microsoft Entra ID account. By default, only authenticated users with user rights can establish a connection.</p>
 <p>Microsoft Entra ID is a primary identity provider. To access the system, users must be provisioned into a finance and operations apps instance and should have a valid Microsoft Entra ID account in an authorized tenant.</p>
 <p>OAuth 2.0 is a standard that allows a website or application to access resources, on behalf of a user, that other web apps are hosting, as shown in the following diagram.</p>
-<p><a data-linktype="relative-path" href="media/diagram-security.png#lightbox"><img alt="Diagram of how Microsoft Entra ID and OAuth 2.0 work with data security in finance and operations apps." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/role-security-finance-operations/media/diagram-security.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/diagram-security.png#lightbox"><img alt="Diagram of how Microsoft Entra ID and OAuth 2.0 work with data security in finance and operations apps." data-linktype="relative-path" src="./rawmb500/media_diagram_security.png"/></a></p>
 <p>For finance and operations apps, OAuth 2.0 provides authentication for the web application programming interface (API), services, and integrations.</p>
 <h2 id="oauth-20">OAuth 2.0</h2>
 <p>In finance and operations apps, OAuth 2.0 is used for integrations to allow external systems to access it in the following scenarios:</p>
@@ -7710,7 +7496,7 @@ Management company to create a new role based on a new position that they are fi
 <li><p>Choose the appropriate option under <strong>Supported Account Type</strong>. The most common option is <strong>Single tenant</strong>.</p>
 </li>
 <li><p>Enter the applicable Redirect URI, which should be your environment’s URL and your environment’s URL + /OAuth, as the following image depicts.</p>
-<p><a data-linktype="relative-path" href="media/redirect-urls.png#lightbox"><img alt="Screenshots of Redirect URLs." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/role-security-finance-operations/media/redirect-urls.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/redirect-urls.png#lightbox"><img alt="Screenshots of Redirect URLs." data-linktype="relative-path" src="./rawmb500/media_redirect_urls.png"/></a></p>
 </li>
 <li><p>Select <strong>Register</strong>, and then select <strong>Certificates &amp; secrets</strong> in the navigation pane.</p>
 </li>
@@ -7745,8 +7531,6 @@ Management company to create a new role based on a new position that they are fi
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -7892,8 +7676,6 @@ Management company to create a new role based on a new position that they are fi
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The security structure in finance and operations apps is role-based, and all users must be assigned a role to gain access to the application.</p>
 <p>Role-based security uses a hierarchy, with permissions representing the most granular security control and roles representing the least granular
@@ -7932,8 +7714,6 @@ window.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>People use computers because they can complete tasks accurately and
 quickly. When a certain task takes a computer too long to complete, it can be frustrating, distracting, and cause lower productivity. Therefore, considering optimal computer performance should be a requirement in any project. Doing so will ensure that finance and operations apps run as efficiently as possible.</p>
@@ -7945,8 +7725,6 @@ optimized for performance.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Identify and apply caching mechanisms</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Cached data is information that’s retrieved from an outside source,
 such as a website, app, or database that’s stored on your computer.
@@ -8001,8 +7779,6 @@ Another way to activate caching is to use <strong>[SysClientCacheDataMethodAttri
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Optimize temporary table usage</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This unit explains temporary tables, the different types of temporary
 tables, and when they should be used.</p>
@@ -8014,7 +7790,7 @@ data. The two types of temporary tables are:</p>
 </ul>
 <p>The table type can be determined on the table's <code>TableType</code>
 property.</p>
-<p><a data-linktype="relative-path" href="media/tables-1.png#lightbox"><img alt="Screenshot of the Properties table page highlighting the Table Type property." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/apply-basic-performance-optimization-finance-operations/media/tables-1.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/tables-1.png#lightbox"><img alt="Screenshot of the Properties table page highlighting the Table Type property." data-linktype="relative-path" src="./rawmb500/media_tables_1.png"/></a></p>
 <p><code>InMemory</code> tables use an indexed sequential access method
 (ISAM) file that exists on the client tier or the AOS tier. Microsoft
 SQL Server has no connection to the ISAM file. The data is stored in
@@ -8058,8 +7834,6 @@ Additionally, <code>TempDB</code> tables are commonly used on reports to manipul
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create or modify temporary tables to optimize data</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The system stores <code>InMemory</code> tables in memory, so you might find them useful for a small number of records. You can’t use <code>InMemory</code> tables in a query because they don’t exist on SQL Server. Records in a temporary table of the <code>InMemory</code> type exist as long as the object in which you create the table exists.</p>
 <p>The following code shows an example of how to insert data into a temporary table.</p>
@@ -8153,8 +7927,6 @@ Additionally, <code>TempDB</code> tables are commonly used on reports to manipul
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">When to use set-based statements and row-based operations</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Set-based statements are used to update, insert, or delete multiple
 records of data from a table.</p>
@@ -8211,8 +7983,6 @@ Insert_recordset custTable (accountNum, custGroup, paymMode, currency)
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Query optimization principles</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Poorly created queries can cause performance issues. You can apply a few best practices to queries to help avoid unnecessary impacts, including:</p>
 <ul>
@@ -8275,8 +8045,6 @@ environments</strong> page and select the <strong>Full details</strong> link.</p
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Modify the scope of a variable</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The scope of a variable defines where the variable can be accessed.
 Variables that are declared in the class declarations are called <em>instance variables</em>. Instance variables, if they aren't declared private, can be accessed from any method in the class and from methods within a class that are extended from the original class.</p>
@@ -8317,8 +8085,6 @@ variables at the smallest scope possible to optimize memory efficiency.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Analyze and optimize concurrency</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Concurrency is used to control when data is available for other
 processes. finance and operations apps uses two concurrency models:</p>
@@ -8347,14 +8113,12 @@ model on the <code>OccEnabled</code> table property. Additionally, you can
 override the table concurrency model in a <strong>Select</strong> statement. After
 the keyword <em>Select</em>, you can use the keyword <em>optimisticLock</em> or
 <em>pessimisticLock</em> to replace the keyword <code>forUpdate</code>.</p>
-<p><img alt="Screenshot of the Properties page, highlighting the Concurrency model dropdown menu." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/apply-basic-performance-optimization-finance-operations/media/concurrency-1.png"/></p>
+<p><img alt="Screenshot of the Properties page, highlighting the Concurrency model dropdown menu." data-linktype="relative-path" src="./rawmb500/media_concurrency_1.png"/></p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Apply parallel processing algorithms</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can use different approaches to batch processing by using parallel
 processing algorithms. Developers typically use three different types of
@@ -8418,8 +8182,6 @@ items in the staging table can affect performance.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement the Async framework</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Long-running processes can time out in finance and operations apps. To overcome this issue, asynchronous processing lets users continue working while the process runs in the background.</p>
 <p>For example, you might need to run processing in the application that deals with a large amount of data or transactions, and you don’t want to interrupt daily business processes. Therefore, you can use the asynchronous framework to run these processes in the background while users continue their work without interruption.</p>
@@ -8529,8 +8291,6 @@ method displays the message immediately. If you use the
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Develop Windows PowerShell scripts</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can develop Windows PowerShell scripts to interact with finance and operations apps and consume management functions.</p>
 <p>Windows PowerShell is a task-based command-line shell and scripting language built on .NET. PowerShell helps system administrators and power-users to rapidly automate tasks that manage operating systems (Linux, macOS, and Windows) and processes.</p>
@@ -8570,8 +8330,6 @@ Write-Output "Service restarted successfully: $(Get-Date)" | Out-File "ServiceLo
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Create runnable classes in Visual Studio to test code</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2 id="read-this-first---before-you-start-the-lab">Read this first - before you start the lab!</h2>
 <div class="IMPORTANT">
@@ -8674,8 +8432,6 @@ Write-Output "Service restarted successfully: $(Get-Date)" | Out-File "ServiceLo
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -8848,8 +8604,6 @@ Write-Output "Service restarted successfully: $(Get-Date)" | Out-File "ServiceLo
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Optimizing finance and operations apps is important during development, to
 ensure proper system performance. Without optimization, system

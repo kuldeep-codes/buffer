@@ -1,7 +1,5 @@
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This module helps developers and solution architects make
 thoughtful decisions about data integration scenarios when implementing
@@ -37,8 +35,6 @@ Explore common data integration scenarios and their challenges, such as:</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Data integration overview</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Finance and operations apps contain multiple APIs that support file-based integration scenarios:</p>
 <ul>
@@ -93,8 +89,6 @@ integrations you can do the following:</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Synchronous integration</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Data integrations can be either synchronous or asynchronous.</p>
 <p>Synchronous integration patterns use the Open Data Protocol (OData) with a continuous flow of data. They follow a blocking request and response pattern, meaning the caller is blocked until the request is completed and a response is returned. In the case of custom services and synchronous integration patterns, business logic is run immediately when the APIs are called.</p>
@@ -137,8 +131,6 @@ integrations you can do the following:</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Asynchronous integration</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Asynchronous integration patterns use batch data APIs, running through a batch service. It's a nonblocking pattern, meaning the caller submits the request and continues without waiting for the response. Batch data APIs are suited for asynchronous integration because they handle large-volume data imports and exports. When these APIs are called, the import or export process runs in a batch. One advantage of using batch data APIs is their ability to handle large volumes of data, especially when business logic runs concurrently with the import or export process. As a best practice, when dealing with several hundred records, a batch data API integration should be used.</p>
 <p>Like synchronous patterns, REST and SOAP integration APIs in finance and operations apps can also be invoked asynchronously.</p>
@@ -179,8 +171,6 @@ integrations you can do the following:</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned.</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -294,8 +284,6 @@ integrations you can do the following:</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Understanding data integrations and scenarios for the various types of
 integrations is one of the first steps to determining your data
@@ -312,8 +300,6 @@ continue with the Connect to finance and operations apps learning path.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>As a developer, you're usually part of the data integration scenarios
 during and after a finance and operations apps
@@ -333,8 +319,6 @@ validation checklist</strong> workspace to verify data during an implementation,
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Develop an entity and enable it for data export</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>A data entity is a de-normalized view of data that is spread across
 multiple normalized tables. The abstracted nature of a data entity
@@ -407,11 +391,11 @@ wizard in Visual Studio.</p>
 </code></pre>
 </li>
 <li><p>Run the job with the debugger. The following screenshot depicts what you should observe in the Infolog.</p>
-<p><a data-linktype="relative-path" href="media/infolog.png#lightbox"><img alt="Screenshot showing the infolog after running the debugger." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/integration-concepts-finance-operations/media/infolog.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/infolog.png#lightbox"><img alt="Screenshot showing the infolog after running the debugger." data-linktype="relative-path" src="./rawmb500/media_infolog.png"/></a></p>
 </li>
 </ol>
 <p>The data entity can be accessed with OData by entering the <strong>you base url for dynamics/data/MySalesPoolEntities</strong> URL, which the following screenshot shows.</p>
-<p><a data-linktype="relative-path" href="media/data-entity.png#lightbox"><img alt="Screenshot showing the code that is shown after entering the url." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/integration-concepts-finance-operations/media/data-entity.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/data-entity.png#lightbox"><img alt="Screenshot showing the code that is shown after entering the url." data-linktype="relative-path" src="./rawmb500/media_data_entity.png"/></a></p>
 <p>To add an action to the data entity, follow these steps.</p>
 <ol>
 <li><p>In Solution Explorer, right-click <strong>mySalesPoolEntity</strong> or activate the context menu and then select <strong>View code</strong>.</p>
@@ -434,7 +418,7 @@ wizard in Visual Studio.</p>
 </li>
 <li><p>Test the action on the data entity by using the <strong>https://base url.axcloud.dynamics.com/data/MySalesPoolEntities/Microsoft.Dynamics.DataEntities.Check</strong> URL.</p>
 <p>If you have a body with the parameter for <strong>_salesPoolId = “my01”</strong>, the following output appears.</p>
-<p><a data-linktype="relative-path" href="media/salespool-id.png#lightbox"><img alt="Screenshot showing the output if you have a body with the parameter salespoolid." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/integration-concepts-finance-operations/media/salespool-id.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/salespool-id.png#lightbox"><img alt="Screenshot showing the output if you have a body with the parameter salespoolid." data-linktype="relative-path" src="./rawmb500/media_salespool_id.png"/></a></p>
 </li>
 </ol>
 <p>To find metadata and actions on a data entity, use the <strong>https://base url.axcloud.dynamics.com/Metadata/PublicEntities/</strong> URL.</p>
@@ -443,8 +427,6 @@ wizard in Visual Studio.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Extend a data entity</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>When you add fields to tables, you need to ensure that the corresponding data entity includes these fields. Additionally, you can extend existing data entities with these new fields.
 Data entities have two parts:</p>
@@ -471,7 +453,7 @@ Data entities have two parts:</p>
 <li><p>Select <strong>Save all</strong>. Right-click your project in Solution Explorer to open the context menu, and then select <strong>Build</strong>.</p>
 </li>
 <li><p>Right-click your project again to open the context menu, and then select <strong>Synchronize &lt;your project&gt; With Database</strong> (if available). The <strong>CustCustomerV3Entity</strong> data entity shows as extended and includes the <strong>PhoneMobile</strong> field.</p>
-<p><a data-linktype="relative-path" href="media/extend-data-entity.png#lightbox"><img alt="Screenshot showing the new PhoneMobile field." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/integration-concepts-finance-operations/media/extend-data-entity.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/extend-data-entity.png#lightbox"><img alt="Screenshot showing the new PhoneMobile field." data-linktype="relative-path" src="./rawmb500/media_extend_data_entity.png"/></a></p>
 </li>
 </ol>
 <p>You can create code extensions by finding the data entity in Application Explorer, right-clicking it to open the context menu, and then selecting <strong>Create Code Extension</strong>.</p>
@@ -503,8 +485,6 @@ Refreshing the entity list ensures all entities are available in the environment
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement custom services</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can develop custom services for finance and operations apps to expose X++ functionality to external clients. Existing code can be exposed as a custom service by adding an attribute to the code. The attribute is set on the data contract class and its members to automatically serialize and deserialize data that is sent and received across a network connection.</p>
 <p>You can use custom service when the schema for the entity can be written as a simple data contract class with relevant data member attributes set. X++ data contract serialization and deserialization are specified by using the attributes <code>DataContractAttribute</code> and <code>DataMemberAttribute</code>.</p>
@@ -520,8 +500,6 @@ Refreshing the entity list ensures all entities are available in the environment
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement custom services and the Batch OData API</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can use custom services to expose business logic to an external service. Data contracts help you pass complex business logic.</p>
 <p>The Batch OData application programming interface (API) provides an interface that you can use to reschedule batch jobs by using OData.</p>
@@ -670,7 +648,7 @@ Refreshing the entity list ensures all entities are available in the environment
 <li><p>Right-click the <strong>Service Operations</strong> node to open the context menu, and then select <strong>New Service Operation</strong>.</p>
 </li>
 <li><p>Select your method in the service class in the properties for service operation, and then set the name to the same value.</p>
-<p><a data-linktype="relative-path" href="media/service-operation-summarize.png#lightbox"><img alt="Screenshot showing the Service Operation summarize properties." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/integration-concepts-finance-operations/media/service-operation-summarize.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/service-operation-summarize.png#lightbox"><img alt="Screenshot showing the Service Operation summarize properties." data-linktype="relative-path" src="./rawmb500/media_service_operation_summarize.png"/></a></p>
 </li>
 <li><p>Select <strong>Save all</strong>.</p>
 </li>
@@ -731,14 +709,12 @@ Refreshing the entity list ensures all entities are available in the environment
 <li>Save the flow.</li>
 </ol>
 <p>The following image shows that the business event for <strong>Batch job failed</strong> triggers a flow. Afterward, the system sets the batch job ID to <strong>Waiting</strong>, which means that it runs the flow again.</p>
-<p><a data-linktype="relative-path" href="media/flow.png#lightbox"><img alt="Screenshot showing the result of the flow." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/integration-concepts-finance-operations/media/flow.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/flow.png#lightbox"><img alt="Screenshot showing the result of the flow." data-linktype="relative-path" src="./rawmb500/media_flow.png"/></a></p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Expose OData endpoints from data entities</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>OData is a standard protocol for creating and consuming data. OData
 provides a protocol that is based on Representational State Transfer
@@ -763,8 +739,6 @@ Insomnia, go to <a data-linktype="absolute-path" href="/en-us/power-apps/develop
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Consume external web services</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can consume web services in finance and operations apps to receive data from external systems, without the need for an external library. Consuming web services should happen in a safer way.</p>
 <h2 id="set-up-key-vault-parameters">Set up key vault parameters</h2>
@@ -889,8 +863,6 @@ class MyConsumeExternalWebServiceResponseContract
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Integrate finance and operations apps with Microsoft Excel</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>By using the <strong>Dynamics 365</strong> add-in for Excel, entity data can be opened in
 Excel to view, update, and add the data. You can open data either from
@@ -932,8 +904,6 @@ the row that you want to delete and selecting <strong>Delete</strong>.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Integrate finance and operations apps with external applications by using Power Apps</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Finance and operations apps integrate with Microsoft Power Apps, which is a
 service for developers and non-technical users to build custom business
@@ -959,7 +929,7 @@ outside of finance and operations apps, which you can also use for Power Apps ap
 <li><p>Select the <strong>Power Apps</strong> button in the right-corner of the Action Pane. When you embed a Power Apps app to be launched by using the <strong>Power Apps</strong> button, a menu item for the Power Apps app appears, and the app will open in a side pane.</p>
 </li>
 <li><p>Display a Power Apps app on a page as a new tab, FastTab, blade, or new section in a workspace. The following screenshot is from the <strong>All vendors</strong> page in the finance and operations apps user interface that shows the <strong>Power Apps</strong> button. Because there is no Power Apps app on the <strong>All vendors</strong> page, you are prompted to insert one.</p>
-<p><a data-linktype="relative-path" href="media/insert-powerapp.png#lightbox"><img alt='All vendors page that highlights the PowerApp button. When selected, this button opens to a menu option to "Insert a PowerApp".' data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/integration-concepts-finance-operations/media/insert-powerapp.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/insert-powerapp.png#lightbox"><img alt='All vendors page that highlights the PowerApp button. When selected, this button opens to a menu option to "Insert a PowerApp".' data-linktype="relative-path" src="./rawmb500/media_insert_powerapp.png"/></a></p>
 </li>
 </ul>
 <p>As a developer, you're able to control where a Power Apps app can be embedded.
@@ -978,8 +948,6 @@ implementing two methods:</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Download electronic document interchange solutions</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Integrating electronic document interchange (EDI) with finance and operations apps lets you format EDI transactions so that they comply with
 specific requirements from your partners.</p>
@@ -991,14 +959,12 @@ specific requirements from your partners.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Verify source and target data for auditing</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The <strong>Data validation checklist</strong> workspace is used to track data
 validation processes during a new implementation, after an upgrade, or
 after a migration.</p>
 <p>The following screenshot shows the <strong>Data validation checklist</strong> workspace, and highlights the drop-down menu where you select your <strong>Project name</strong>.  When you’ve selected your project, you'll see data load into the <strong>Summary</strong>  and <strong>Tasks and Status</strong> sections.</p>
-<p><a data-linktype="relative-path" href="media/data-checklist.png#lightbox"><img alt="Screenshot showing the Data validation checklist workspace, highlighting the Project name drop-down menu" data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/integration-concepts-finance-operations/media/data-checklist.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/data-checklist.png#lightbox"><img alt="Screenshot showing the Data validation checklist workspace, highlighting the Project name drop-down menu" data-linktype="relative-path" src="./rawmb500/media_data_checklist.png"/></a></p>
 <p>Depending on your view, you'll see only tasks that are assigned to you, or all tasks and statuses for a data validation project. In the workspace, select a data validation project at the top of the page. The data will then be filtered by the project that you selected.</p>
 <p>The tiles in the <strong>Summary</strong> section show an overview of the process,
 which helps you keep the data validation process on track. There are
@@ -1019,14 +985,12 @@ fields are automatically filled in when a worker completes the task.</p>
 <p>To set up a project in the workspace, select the <strong>Data
 validation project</strong> page.
 The following screenshot shows the <strong>Data validation project</strong> page where you can add new <strong>Tasks</strong>, <strong>Legal entities</strong>, and <strong>Task areas</strong>.</p>
-<p><a data-linktype="relative-path" href="media/configure-project.png#lightbox"><img alt="Screenshot of the Configure data validation project page." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/integration-concepts-finance-operations/media/configure-project.png"/> </a></p>
+<p><a data-linktype="relative-path" href="media/configure-project.png#lightbox"><img alt="Screenshot of the Configure data validation project page." data-linktype="relative-path" src="./rawmb500/media_configure_project.png"/> </a></p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Debug with JSON Web Tokens</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can use various procedures to troubleshoot service authentication issues. A common procedure is to inspect the JSON Web Tokens (JWTs).</p>
 <p>The first option is to capture the JWT from an HTTP request. You
@@ -1047,8 +1011,6 @@ the input section. Next, you can view the contents as name-value pairs and then 
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -1186,8 +1148,6 @@ the input section. Next, you can view the contents as name-value pairs and then 
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>In this module, you learned about the following concepts that allow you
 to be a better-equipped developer to create data integration solutions:</p>
@@ -1205,8 +1165,6 @@ to be a better-equipped developer to create data integration solutions:</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The Data management framework's package Representational state transfer
 (REST) application programming interface (API) lets you integrate with
@@ -1223,8 +1181,6 @@ API can be used with cloud deployments and on-premises deployments.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Import and export APIs</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Developers can import and export APIs between finance and operations apps and
 on-premises deployments. Keep in mind that there are some key differences with these processes for on-premises and cloud deployments:</p>
@@ -1289,8 +1245,6 @@ BODY
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Monitor the status of APIs</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can use <code>GetExecutionSummaryStatus</code> for both import and
 export jobs. This is used to check the status of a data project
@@ -1317,8 +1271,6 @@ BODY
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Manage entity change tracking</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The change tracking functionality allows you to incrementally export
 data from finance and operations apps by using the Data management framework.
@@ -1343,7 +1295,7 @@ workspace by selecting <strong>Change tracking</strong> on the entity.</p>
 <li><p>Select <strong>Change tracking</strong>.</p>
 <p><a data-linktype="relative-path" href="media/workspace-change-tracking.png#lightbox"> <img alt="This screenshot shows the data management workspace, and
 highlights the Change tracking option in the Action
-Pane." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/data-package-api-finance-operations/media/workspace-change-tracking.png"/> </a></p>
+Pane." data-linktype="relative-path" src="./rawmb500/media_workspace_change_tracking.png"/> </a></p>
 </li>
 <li><p>You can select from several options for change tracking for your environment:</p>
 <ul>
@@ -1358,8 +1310,6 @@ Pane." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/trai
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create wrapper classes to consume external web services</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>To consume external web services within finance and operations apps, you can
 use wrapper classes. You can wrap logic around methods that are defined
@@ -1389,8 +1339,6 @@ can do this by wrapping a service endpoint in Visual Studio and then adding the 
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create wrapper classes with C#</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>To create a wrapper class, you'll need to use some .NET programming language to consume an external web service. finance and operations can create a reference of the wrapper class and can access the external web service through the wrapper class.</p>
 <p>The following code shows an example of creating a C# class library. A service reference of the SOAP web service will be set up in the class library.</p>
@@ -1420,8 +1368,6 @@ namespace &lt;WebServiceProviderName&gt;
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned.</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -1551,8 +1497,6 @@ namespace &lt;WebServiceProviderName&gt;
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The Data management framework allows integrations with APIs by using
 data packages, which are supported for cloud and on-premises
@@ -1564,8 +1508,6 @@ change tracking can also be used for on-premises and cloud deployments to increm
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Integrations support many types of document formats, source mapping, and
 filters. This support allows you to use secure representational state transfer (REST)
@@ -1578,14 +1520,12 @@ on data entities and the Data management framework.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Set up a data project and recurring data job</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The <strong>Data management</strong> workspace allows users to set up recurring data
 jobs within a project for finance and operations apps. Within this workspace,
 you can set up an import or export project that will point to a specific
 data entity.</p>
-<p><a data-linktype="relative-path" href="media/data-management.png#lightbox"><img alt="Screenshot of the Data management workspace." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/data-integrations-finance-operations/media/data-management.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/data-management.png#lightbox"><img alt="Screenshot of the Data management workspace." data-linktype="relative-path" src="./rawmb500/media_data_management.png"/></a></p>
 <p>The three main components of setting up a recurring data project
 in the <strong>Data management</strong> workspace are:</p>
 <ul>
@@ -1636,8 +1576,6 @@ endpoints overview</a>.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Exercise - Create a data project and recurring data job</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You have been asked to create a new data
 project that will import data on a recurring basis, for the Fleet
@@ -1684,8 +1622,6 @@ Visual Studio.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement authorization to support integration</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The Data management framework's package API uses OAuth 2.0 to authorize
 access. For you to use the API, it must be connected with a valid OAuth
@@ -1732,8 +1668,6 @@ client_id=
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Monitor status and availability of entities</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>A data entity is a combination of one or multiple tables that are related to each other, and it facilitates the abstraction of an internal communication between those tables. Data entities play an important part in the integration process. You can run a synchronous integration through OData endpoints by using a data entity.</p>
 <p>The Data management framework can run asynchronous data transfer by using a data entity. Make sure that you monitor the run status, availability, and performance of a data entity while a large amount of data is being transmitted in the integration process.</p>
@@ -1775,8 +1709,6 @@ client_id=
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Develop data transformation</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Data management is an important feature to help you asynchronously import or export data with other systems. The <strong>Data entity</strong> element in the Application Object Tree (AOT) runs the data transfer operations. As part of the export or import process, you're required to perform intermediate data transformation to prepare the data for the target application. You can transform data through configuration. Additionally, options are available to help you develop code to perform complex transformations.</p>
 <h2 id="transformation-using-configuration">Transformation using configuration</h2>
@@ -1784,7 +1716,7 @@ client_id=
 <h2 id="data-transformation-between-the-external-data-source-and-staging-table">Data transformation between the external data source and staging table</h2>
 <p>When a new <strong>Export</strong> or <strong>Import</strong> project is created in Data management, an icon will appear in the project line in the <strong>View map</strong> column. When you select this icon, the mapping visualization between the staging table and the external data source appears, as shown in the following screenshot. The <strong>Mapping details</strong> tab, next to the <strong>Mapping visualization</strong> tab, provides the source-to-target field mapping details and an option for basic transformation of the data.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/staging-external.png#lightbox"><img alt="Screenshot of the Mapping visualization tab, showing Entity (sourced) and Target entities." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/data-integrations-finance-operations/media/staging-external.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/staging-external.png#lightbox"><img alt="Screenshot of the Mapping visualization tab, showing Entity (sourced) and Target entities." data-linktype="relative-path" src="./rawmb500/media_staging_external.png"/></a></p>
 </div>
 <p>The functionalities that you can achieve from the <strong>Mapping details</strong> page include:</p>
 <ul>
@@ -1806,7 +1738,7 @@ For example, the customer entity can have the party number be auto generated dur
 <h2 id="data-transformation-between-finance-and-operations-apps-and-the-staging-table">Data transformation between finance and operations apps and the Staging table</h2>
 <p>You can access a data entity from the <strong>Data entities</strong> tile in the <strong>Data management</strong> workspace. To add data transformation logic, select the <strong>Modify target mapping</strong> button in the command bar for the selected data entity. The <strong>Mapping details</strong> page should appear.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/staging-finance-operations.png#lightbox"><img alt="Screenshot of the Map staging to target page, showing the Mapping details tab." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/data-integrations-finance-operations/media/staging-finance-operations.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/staging-finance-operations.png#lightbox"><img alt="Screenshot of the Map staging to target page, showing the Mapping details tab." data-linktype="relative-path" src="./rawmb500/media_staging_finance_operations.png"/></a></p>
 </div>
 <p>Options to create virtual fields and computed columns are available in the data entity. These fields will appear in the <strong>Staging</strong> field, which you can map with the <strong>Target</strong> fields in finance and operations. You can develop the data transformation logic in virtual fields or computed columns by writing X++ code.</p>
 <h3 id="computed-columns">Computed columns</h3>
@@ -1831,8 +1763,6 @@ For example, the customer entity can have the party number be auto generated dur
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Microsoft Dataverse integrations</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can use Microsoft Dataverse to enable the flow of data between
 finance and operations apps and Dynamics 365 Sales, and Dynamics 365 Customer Service. Because
@@ -1848,7 +1778,7 @@ mappings is a good starting point for an integration project.</p>
 <p>The following graphic shows the behind-the-scenes architecture of the
 synchronous approach to data integrations. Data flows between finance
 and operations apps and Dataverse in a bi-directional pattern in nearly real time. This functionality is available out of the box and is the preferred data integration approach.</p>
-<p><img alt="Diagram of the architecture for the synchronous approach to data integrations between Dataverse and finance and operations apps." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/data-integrations-finance-operations/media/synch-arch.png"/></p>
+<p><img alt="Diagram of the architecture for the synchronous approach to data integrations between Dataverse and finance and operations apps." data-linktype="relative-path" src="./rawmb500/media_synch_arch.png"/></p>
 <p>To learn more about synchronous data integration, go to <a data-linktype="absolute-path" href="/en-us/dynamics365/supply-chain/sales-marketing/accounts-template-mapping-direct/?azure-portal=true">Synchronize accounts directly from Sales to customers in Supply Chain Management</a>, which provides an example of the prospect-to-cash flow that is used to synchronize data from Sales to Dynamics 365 Supply Chain Management.</p>
 <p>To set up a data integration project and create a connection, follow these high-level steps:</p>
 <ol>
@@ -1867,8 +1797,6 @@ Summary unit of this module for references.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Integrate Dataverse by using virtual entities</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>In finance and operations apps, you can use virtual entities as virtual data sources in Microsoft Dataverse. As a result, you can create, read, update, and delete (CRUD) operations from Dataverse and Microsoft Power Platform.</p>
 <p>Virtual entities, dual-write, business events, and data events comprise the shared data layer for the convergence of finance and operations apps and the Microsoft Dataverse platform. They’re complementary technologies that are intended for working together.</p>
@@ -1876,14 +1804,14 @@ Summary unit of this module for references.</p>
 <p>Virtual entities don’t copy data between systems. Instead, the system accesses the data directly through the standard virtual entity infrastructure to which Microsoft Power Platform technologies already bind. Virtual entities give no data inconsistency because data only exists in finance and operations apps.</p>
 <p>Before you complete CRUD operations in Dataverse, make sure that you make the virtual entity available in Dataverse. All Open Data (OData) Protocol entities are available as virtual entities in Dataverse.</p>
 <p>The following image illustrates the architecture of virtual entities.</p>
-<p><a data-linktype="relative-path" href="media/architecture-virtual-entities.png#lightbox"><img alt="Diagram of the architecture of virtual entities." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/data-integrations-finance-operations/media/architecture-virtual-entities.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/architecture-virtual-entities.png#lightbox"><img alt="Diagram of the architecture of virtual entities." data-linktype="relative-path" src="./rawmb500/media_architecture_virtual_entities.png"/></a></p>
 <p>All calls between Dataverse and finance and operations apps (that are part of virtual entities) are done as service-to-service calls behind the scenes. To use virtual entities, make sure that you enable the <strong>Power Platform Integration</strong> feature.</p>
 <h2 id="enable-power-platform-integration">Enable Power Platform Integration</h2>
 <p>For Tier-2+ environments, you can enable the <strong>Power Platform Integration</strong> feature after the finance and operation apps deployment. However, for Tier-1 (development environment), you need to enable Power Platform Integration during deployment.</p>
 <p>You can only enable the Power Platform Integration feature for Azure-hosted environments; meaning, you can’t enable it for virtual hard drive (VHD) development environments.</p>
 <p>For Tier-2+ environments, go to your sandbox or production environment and then select the <strong>Power Platform Integration</strong> FastTab. If the <strong>Setup</strong> button is available, you can set up your connection to Dataverse. You can choose to continue your setup on the environment that was provisioned automatically for you, or you can choose a preexisting Microsoft Power Platform environment.</p>
 <p>For Tier-1 environments, when you’re deploying the environment in Microsoft Dynamics 365 Lifecycle Services, go to <strong>Advanced settings</strong> &gt; <strong>Power Platform Integration</strong>. In the <strong>Deployment settings</strong> window, set the <strong>Configure Power Platform Environment</strong> toggle to <strong>Yes</strong>, select the applicable <strong>Power Platform template</strong> and <strong>Environment Type</strong>, and then select the <strong>Agree</strong> checkbox, as shown in the following image.</p>
-<p><a data-linktype="relative-path" href="media/power-platform-integration.png#lightbox"><img alt="Screenshot of the Deployment settings window and Power Platform Integration." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/data-integrations-finance-operations/media/power-platform-integration.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/power-platform-integration.png#lightbox"><img alt="Screenshot of the Deployment settings window and Power Platform Integration." data-linktype="relative-path" src="./rawmb500/media_power_platform_integration.png"/></a></p>
 <p>After completing the <strong>Advanced deployment</strong> settings, select <strong>Done</strong> and then continue deploying the environment.</p>
 <p>Now, the finance and operations apps and Microsoft Power Platform environment show as deployed.</p>
 <p>If you need to install dual-write to your deployed environment, select <strong>Setup Dual-write application</strong> under <strong>Power Platform Integration</strong>. This selection opens a dialog in which you need to select <strong>I agree</strong> and then <strong>Configure</strong> to start data-entity mapping.</p>
@@ -1923,8 +1851,6 @@ Summary unit of this module for references.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Work with composite data entities</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>A composite entity is a concept that allows you to build a single entity
 by using multiple entities that are related to each other. Usually, you'd use the
@@ -2026,8 +1952,6 @@ workspace.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Azure Data Lake and Entity Store</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Microsoft Azure Data Lake Storage is a no-limits data lake that enables organizations to power intelligent action. It removes the complexities of ingesting and storing all your data while making it faster to get operational with batch, streaming, and interactive analytics.</p>
 <p>Azure Data Lake Storage enables you to have cloud storage that is less expensive than the cloud storages that relational databases provide. This data includes business data that is traditionally stored in business systems and data warehouses, in addition to device and sensor data, such as signals from devices. In addition, Data Lake Storage supports a range of tools and programming languages that enable large amounts of data to be reported on, queried, and transformed.</p>
@@ -2041,7 +1965,7 @@ workspace.</li>
 <li><p>The <strong>Entity Store</strong> page includes all <strong>Aggregate measures</strong> in the left pane. Select one of the records.</p>
 </li>
 <li><p>Change the <strong>Automatic refresh enabled</strong> toggle to <strong>Yes</strong>.</p>
-<p><a data-linktype="relative-path" href="media/refresh-ss.png#lightbox"> <img alt="Screenshot of the Automatic refresh enabled toggle set to Yes." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/data-integrations-finance-operations/media/refresh-ss.png"/> </a></p>
+<p><a data-linktype="relative-path" href="media/refresh-ss.png#lightbox"> <img alt="Screenshot of the Automatic refresh enabled toggle set to Yes." data-linktype="relative-path" src="./rawmb500/media_refresh_ss.png"/> </a></p>
 <div class="IMPORTANT">
 <p>Important</p>
 <p>This action is not reversable. When you switch to automated Entity Store refresh, you can't revert to the old user interface experience.</p>
@@ -2077,8 +2001,6 @@ workspace.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Connect to Azure Data Lake Storage</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Connecting to Microsoft Azure Data Lake Storage unlocks hidden insights in your data. Azure Data Lake Storage organizes data by using the Common Data Model (CDM) metadata system in an Azure storage account.</p>
 <p>Using Azure Data Lake Storage has advantages compared to using a <em>bring your own database</em> (BYOD) system, including:</p>
@@ -2127,8 +2049,6 @@ workspace.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Change data in Azure Data Lake</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>When you select the <strong>Enable near real-time data changes</strong> option, data is inserted, updated, and deleted in your data lake in near real-time. As data changes in your finance and operations environment, the same data is updated in the data lake within a few minutes. You also get the data changes in a separate <strong>Change feed</strong> folder.</p>
 <p>Change data in a data lake lets you build near-real-time data pipelines that react to data changes in finance and operations apps. The <strong>Change feed</strong> folder in the data lake contains every data change in finance and operations apps. This folder is automatically created and maintained by the <strong>Export to Data Lake</strong> feature.</p>
@@ -2158,8 +2078,6 @@ workspace.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Power Platform convergence</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Microsoft Power Platform integration removes the barriers to entry for customers to fully harness the Microsoft Power Platform stack with each of their finance and operations environments. Features such as dual-write become a one-click experience to set up. Add-ins are unlocked for an environment using Microsoft Power Platform integration. Virtual entities are also made available by default in the environment. Business events and create/update/delete (CUD) events in finance and operations apps are also integrated with Microsoft Dataverse.</p>
 <div class="NOTE">
@@ -2178,8 +2096,6 @@ workspace.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you've learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -2411,8 +2327,6 @@ workspace.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The exchange of documents and files within finance and operations apps
 is important for most organizations. In this module, you learned that integrations
@@ -2455,8 +2369,6 @@ business.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>When it’s time to migrate data, the more you know, the easier it is to control operational complexity, and reduce costs. Your customer’s business continuity must be your priority. In this module, you will learn how to prepare data for a successful migration, by identifying important factors such as legacy systems, static, and common data.</p>
 <p>In this module, you will learn how to:</p>
@@ -2478,8 +2390,6 @@ business.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Select a data integration (import/export) strategy</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This unit explores integration patterns, scenarios, and solutions for finance and operations. Although this unit does not include technical details about how to use or set up every integration pattern or how to work with sample code, it is always wise to be aware of available integration tools.</p>
 <p>The following integration patterns are available for finance and operations apps:</p>
@@ -2534,8 +2444,6 @@ business.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Common migration scenarios and tools</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The following are two scenarios, and recommendations for which integration pattern to use.</p>
 <h2 id="scenario-1">Scenario 1</h2>
@@ -2566,8 +2474,6 @@ business.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Bring your own database (BYOD)</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The BYOD feature lets administrators configure their own database, and then export one or more data entities, that are available in finance and operations apps, into it. Specifically, this feature lets you complete the following tasks:</p>
 <ul>
@@ -2586,7 +2492,7 @@ business.</p>
 <p>If you have integration solutions that require direct T-SQL access to the database, BYOD is the recommended upgrade path.</p>
 <p>Before you can configure the export option and use the BYOD feature, you must create an SQL database for production environments by using Azure portal.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/azure-side-bar.png#lightbox"><img alt="Screenshot of the Azure portal SQL databases menu item." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-data-migration-finance-operations/media/azure-side-bar.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/azure-side-bar.png#lightbox"><img alt="Screenshot of the Azure portal SQL databases menu item." data-linktype="relative-path" src="./rawmb500/media_azure_side_bar.png"/></a></p>
 </div>
 <p>You should also create a SQL user account for sign-in to the database. Make sure to record and save the server name, database name, and the SQL user ID and password. You will use these values when you configure the entity export option.</p>
 <p>If you're using the BYOD feature for integration with a business intelligence (BI) tool, consider creating an SQL premium database. Premium databases support clustered columnstore indexes (CCIs). CCIs are in-memory indexes that improve the performance of read queries that are typical in analytical and reporting workloads.</p>
@@ -2595,7 +2501,7 @@ business.</p>
 <ol>
 <li><p>Go to the <strong>Data management</strong> workspace and select the <strong>Configure entity export to database</strong> tile.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/configure-entity.png#lightbox"><img alt="Screenshot of the Configure entity export to database tile." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-data-migration-finance-operations/media/configure-entity.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/configure-entity.png#lightbox"><img alt="Screenshot of the Configure entity export to database tile." data-linktype="relative-path" src="./rawmb500/media_configure_entity.png"/></a></p>
 </div>
 </li>
 <li><p>If you've already configured any databases, a list is shown, and you will need to select a database. Then, skip step 3.</p>
@@ -2626,11 +2532,9 @@ business.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Test a data migration and validate output</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>To prepare for data migration, the first step is to identify relevant (legacy) systems that the customer is currently using. Then, you need to identify and import static data that is common between industries.</p>
-<p><img alt="Diagram of the steps to Migrate data and validate output." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-data-migration-finance-operations/media/data-migrate.png"/></p>
+<p><img alt="Diagram of the steps to Migrate data and validate output." data-linktype="relative-path" src="./rawmb500/media_data_migrate.png"/></p>
 <h2 id="identify-relevant-legacy-systems">Identify relevant (legacy) systems</h2>
 <p>A legacy system is a business solution that has a few common characteristics with current solutions in the market, such as being based on outdated technology or design, being incompatible or difficult and costly to integrate with current systems, and a potential inability of being purchased from vendors because it is unavailable and discontinued.</p>
 <p>Each legacy system might have a different data export format option that must be considered as part of the planning for data migration, and you should be prepared for data extraction from legacy data sources.</p>
@@ -2657,17 +2561,17 @@ business.</p>
 <p>Typically, manual cleansing will be done before migration starts, while automated cleansing might be done before or as part of the migration’s initial phase.</p>
 <h2 id="generate-field-mapping-between-source-and-target-data-structures">Generate field mapping between source and target data structures</h2>
 <p>First, you need to identify the format of the data source. You can view the formats in Data management from the <strong>Configure data source</strong> tile.</p>
-<p><img alt="Screenshot of the Configure Data Source tile." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-data-migration-finance-operations/media/configure-data-source.png"/></p>
+<p><img alt="Screenshot of the Configure Data Source tile." data-linktype="relative-path" src="./rawmb500/media_configure_data_source.png"/></p>
 <p>In <strong>Configure data source</strong>, you can create and modify sources of data for migrations. If you have identified the data sources and their relevant entities, you can use different types of data sources depending on the format exported from external systems, some of which are legacy systems.</p>
-<p><a data-linktype="relative-path" href="media/data-source-types.png#lightbox"><img alt="Screenshot of the Data Source Types list." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-data-migration-finance-operations/media/data-source-types.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/data-source-types.png#lightbox"><img alt="Screenshot of the Data Source Types list." data-linktype="relative-path" src="./rawmb500/media_data_source_types.png"/></a></p>
 <p>Upon adding an entity into the Data management project for either import or export, finance and operations apps creates field mapping between the source data and the target table for each data entity, which matches the schema of the table associated with the data entity.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/maps-1.png#lightbox"><img alt="Screenshot of the Map Entity source to target page." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-data-migration-finance-operations/media/maps-1.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/maps-1.png#lightbox"><img alt="Screenshot of the Map Entity source to target page." data-linktype="relative-path" src="./rawmb500/media_maps_1.png"/></a></p>
 </div>
 <p>The type of the field, and whether it is a required field, are examples of the metadata of the table that is being shown in the <strong>Mapping details</strong> tab. Here, you can choose to ignore blank values and select a text identifier to properly use the text values from the source data field.</p>
 <p>Alternatively, you can use the label for the enumerator fields instead of its value.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/maps-details.svg#lightbox"><img alt="Screenshot of the Map staging to target page details." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-data-migration-finance-operations/media/maps-details.svg"/></a></p>
+<p><a data-linktype="relative-path" href="media/maps-details.svg#lightbox"><img alt="Screenshot of the Map staging to target page details." data-linktype="relative-path" src="./rawmb500/media_maps_details.svg"/></a></p>
 </div>
 <h2 id="support-the-transition-between-the-existing-and-migrated-systems">Support the transition between the existing and migrated systems</h2>
 <p>Analyzing the data between what is in the legacy system and what has been imported to finance and operations apps is an important part of data migration. This provides an overview of the source data and its corresponding target table that is represented by data entities in finance and operations apps.</p>
@@ -2677,8 +2581,6 @@ business.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -2870,8 +2772,6 @@ business.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This module explained how to identify common migration scenarios and import static data that is common between industries. You learned about some of the tools in finance and operations apps, such as Data management and the BYOD feature.</p>
 <p>As part of selecting a data integration (import/export) strategy, you were able to observe how important it is to identify relevant (legacy) systems, create, and review test plans for data migration. You also learned about identifying and extracting source data, and its relevant data entities and elements.</p>
@@ -2882,8 +2782,6 @@ business.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can use the Entity Store to perform basic reporting and data
 analysis. To access data in Finance and
@@ -2897,8 +2795,6 @@ options, and needs of each option for your business.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Identify report data source requirements for external sources</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You have two options when considering the external sources that you can use for finance and operations apps. If you are only looking into using data for Power BI reporting and analytical workspaces that are in finance and operations, then the best option is to use the Entity Store.</p>
 <p>For more information on Power BI integration with the Entity Store, go to <a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/analytics/power-bi-integration-entity-store/?azure-portal=true">Power BI integration with Entity store</a>.</p>
@@ -2911,8 +2807,6 @@ options, and needs of each option for your business.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create and manage custom data sources</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Both BYOD and Entity store depend on the creation and management of custom entities and data sources to provide the correct data for your
 organization's reporting or analyzing needs. To learn more about
@@ -2956,8 +2850,6 @@ Synchronization.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Optimize data entities to achieve better performance</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>When you are implementing data entities, performance is a major factor. The architecture of your entities is key when it comes to performance.</p>
 <p>You should create an entity that provides a holistic object that
@@ -2992,8 +2884,6 @@ performance and easy maintenance.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Create a data entity</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2 id="read-this-first---before-you-start-the-lab">Read this first - before you start the lab!</h2>
 <div class="IMPORTANT">
@@ -3070,8 +2960,6 @@ integrations.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -3158,8 +3046,6 @@ integrations.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can use the Entity Store to perform basic reporting and data
 analysis. To access data in finance and operations apps from outside of the
@@ -3178,8 +3064,6 @@ uses, options, and needs of each option for your business.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Integrating finance and operations apps with Microsoft Azure opens many possibilities for enhancing your business operations. By using Azure’s powerful cloud capabilities, you can streamline processes, improve data accessibility, and scale solutions to meet your organization’s needs. This integration empowers businesses to unlock advanced analytics, automate workflows, and create customized solutions that drive efficiency and innovation across all departments. Let’s explore how you can easily connect finance and operations apps with Microsoft Azure to take your project to the next level.</p>
 <div class="modular-content-container" hidden="" id="next-section">
@@ -3187,8 +3071,6 @@ uses, options, and needs of each option for your business.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Develop and integrate by using Logic Apps</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Logic Apps is a cloud service that helps you automate and orchestrate
 tasks, business processes, and workflows when you need to integrate
@@ -3199,7 +3081,7 @@ application integration (EAI), and business-to-business (B2B)
 communication, whether in the cloud, on-premises, or both. You can build
 and edit logic apps from your Azure portal at <a data-linktype="external" href="https://portal.azure.com/?azure-portal=true">Microsoft
 Azure</a>.</p>
-<p><a data-linktype="relative-path" href="media/logic-apps.png#lightbox"><img alt="Screenshot of the Microsoft Azure Logic apps page." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/integrate-azure-finance-operations/media/logic-apps.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/logic-apps.png#lightbox"><img alt="Screenshot of the Microsoft Azure Logic apps page." data-linktype="relative-path" src="./rawmb500/media_logic_apps.png"/></a></p>
 <p>The following are examples of workloads that you can automate with logic apps:</p>
 <ul>
 <li>Process and route orders across on-premises systems and cloud services.</li>
@@ -3218,8 +3100,6 @@ that securely access and process data in real time.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Develop and integrate Microsoft Power Platform</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Finance and operations apps also integrates with Microsoft Power Platform.
 Power Automate supports this integration through its connectors, whereas
@@ -3235,10 +3115,10 @@ in the finance and operations apps database.</p>
 <li><p>At the top of the page, select <strong>New connection</strong></p>
 </li>
 <li><p>In the list of available connections, choose the connection that you want to set up (such as Microsoft Power BI) by selecting the plus sign (+)..
-<a data-linktype="relative-path" href="media/new-connection.png#lightbox"><img alt="A screenshot showing the plus sign to create a new connection." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/integrate-azure-finance-operations/media/new-connection.png"/></a></p>
+<a data-linktype="relative-path" href="media/new-connection.png#lightbox"><img alt="A screenshot showing the plus sign to create a new connection." data-linktype="relative-path" src="./rawmb500/media_new_connection.png"/></a></p>
 </li>
 <li><p>Select <strong>Create</strong>.</p>
-<p><a data-linktype="relative-path" href="media/create-connection.png#lightbox"><img alt="A screenshot showing the Create option." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/integrate-azure-finance-operations/media/create-connection.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/create-connection.png#lightbox"><img alt="A screenshot showing the Create option." data-linktype="relative-path" src="./rawmb500/media_create_connection.png"/></a></p>
 </li>
 <li><p>Follow the steps to enter your credentials to configure the connection.</p>
 </li>
@@ -3251,7 +3131,7 @@ in the finance and operations apps database.</p>
 <li><p>Select the <strong>Other</strong> category.</p>
 </li>
 <li><p>Select <strong>OData Feed</strong>.</p>
-<p><a data-linktype="relative-path" href="media/power-bi.png#lightbox"><img alt="This screenshot from the Power BI Desktop app shows the Get Data screen to connect to an OData Feed." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/integrate-azure-finance-operations/media/power-bi.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/power-bi.png#lightbox"><img alt="This screenshot from the Power BI Desktop app shows the Get Data screen to connect to an OData Feed." data-linktype="relative-path" src="./rawmb500/media_power_bi.png"/></a></p>
 </li>
 <li><p>Click <strong>Connect</strong>.</p>
 </li>
@@ -3276,7 +3156,7 @@ in the finance and operations apps database.</p>
 <li><p>Select <strong>Create</strong>.</p>
 </li>
 <li><p>You will now need to select the instance (finance and operations apps environments) and Table (data entity) that you want to connect to. You need to ensure you are an admin user for the environment you select and you have permissions to access the table (data entity) you are selecting.</p>
-<p><a data-linktype="relative-path" href="media/power-apps.png#lightbox"><img alt="This Power Apps screenshot shows selecting Data sources in the ribbon and connecting to finance and operations apps data." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/integrate-azure-finance-operations/media/power-apps.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/power-apps.png#lightbox"><img alt="This Power Apps screenshot shows selecting Data sources in the ribbon and connecting to finance and operations apps data." data-linktype="relative-path" src="./rawmb500/media_power_apps.png"/></a></p>
 </li>
 </ol>
 <div class="modular-content-container" hidden="" id="next-section">
@@ -3284,8 +3164,6 @@ in the finance and operations apps database.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Integrate finance and operations apps with enterprise applications</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Like other Microsoft products, Microsoft 365 can integrate directly with
 finance and operations apps. In Microsoft Excel, this is enabled through the Data Connector add-in.</p>
@@ -3310,8 +3188,6 @@ finance and operations apps. In Microsoft Excel, this is enabled through the Dat
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Automate EAI, B2B, EDI, and business processes with Logic Apps</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Businesses and organizations electronically communicate with each other
 by using industry-standard message protocols and formats, such as
@@ -3346,8 +3222,6 @@ connector's functionality includes the following options:</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Consume data from the Azure Machine Learning service</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>One advantage of finance and operations apps is the seamless integration with Azure Machine Learning, such as Demand Forecasting, where it is used to
 predict demand from sales orders in Dynamics 365 Supply Chain Management. To generate the baseline forecast, a
@@ -3359,8 +3233,6 @@ Learning service that is hosted on Azure.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Enable connectivity with external services</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Thanks to data entities and OData, finance and operations apps can connect to several external services. However, to do that, the services must be registered with the Microsoft Entra ID.</p>
 <p>To register a service with the Microsoft Entra ID, follow these steps:</p>
@@ -3401,8 +3273,6 @@ Learning service that is hosted on Azure.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Optimize data entities to achieve better performance</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>One method of improving the performance of integrations is to change the
 behavior of data entities. When bringing in entities that are not
@@ -3418,8 +3288,6 @@ environment is capable.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -3557,8 +3425,6 @@ environment is capable.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Finance and operations apps connect to a variety of services. In addition to
 the direct connections to machine learning services and the reporting
@@ -3570,8 +3436,6 @@ enable an endless array of integrations and automations.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Connect your finance and operations apps data using Power Automate</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Power Automate is part of Microsoft Power Platform, which enables
 you to connect to data and services and automate tasks.</p>
@@ -3582,7 +3446,7 @@ sources like SharePoint and Microsoft SQL Server.</p>
 <p>Finance and operations apps have a connector that comes with
 Power Automate. Keep in mind, if you want to connect to data from finance and operations apps, your data must be in a data entity, and that entity must be configured to enable public API. You can find this property on the data entity object in Visual Studio.</p>
 <p>In the following screenshot, notice that the <strong>IsPublic</strong> property is set to <strong>Yes</strong>.</p>
-<p><img alt="This image shows how to verify that the data entity view is public." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/connect-power-platform-finance-operations/media/properties.png"/></p>
+<p><img alt="This image shows how to verify that the data entity view is public." data-linktype="relative-path" src="./rawmb500/media_properties.png"/></p>
 <p>When you have identified the entities that you need to use to access the finance and operations apps data, you can begin creating your flow.</p>
 <p>To get started with Power Automate, follow these high-level steps:</p>
 <ol>
@@ -3602,7 +3466,7 @@ Power Automate. Keep in mind, if you want to connect to data from finance and op
 </li>
 <li><p>Choose from one of several options on the menu.</p>
 <div class="mx-imgBorder">
-<p><img alt="This image shows how to create a new app in the My flows section." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/connect-power-platform-finance-operations/media/flow-new-button.png"/></p>
+<p><img alt="This image shows how to create a new app in the My flows section." data-linktype="relative-path" src="./rawmb500/media_flow_new_button.png"/></p>
 </div>
 </li>
 <li><p>When you decide how you are going to create your flow, you will need to sign in to the finance and operations apps connection with your login credentials. When authenticated, you can begin building your flow.</p>
@@ -3610,7 +3474,7 @@ Power Automate. Keep in mind, if you want to connect to data from finance and op
 <li><p>Select the <strong>Instance</strong>, which is your <strong>finance and operations apps Environment</strong>.</p>
 </li>
 <li><p>Select the entity that you want to work with. The following screenshot shows a flow that inserts a record into finance and operations apps when a record is added in Dynamics 365 Sales. The instance has been specified and the entities that the Flow user has access to can be used for the Flow. Notice in the following example that <strong>Customers</strong> is selected in the <strong>Entity name</strong> field.</p>
-<p><img alt="This image shows how to initiate a flow creation by linking to the finance and operations apps environment." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/connect-power-platform-finance-operations/media/flow-entity.png"/></p>
+<p><img alt="This image shows how to initiate a flow creation by linking to the finance and operations apps environment." data-linktype="relative-path" src="./rawmb500/media_flow_entity.png"/></p>
 </li>
 <li><p>Finish setting up your flow when the Sales <strong>accountnumber</strong> is populated into the <strong>Customer account</strong> field in the <strong>Customers</strong> entity. The <strong>Name</strong> field from Sales is populated into the <strong>Name</strong> field of the <strong>Customers</strong> entity in finance and operations apps, and so on. These fields are specified in the flow by using Dynamics fields.</p>
 </li>
@@ -3623,8 +3487,6 @@ Power Automate. Keep in mind, if you want to connect to data from finance and op
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Triggers and actions used in Power Automate for finance and operations apps</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Power Automate includes several triggers that you can use with finance and operations apps:</p>
 <ul>
@@ -3671,7 +3533,7 @@ Power Automate. Keep in mind, if you want to connect to data from finance and op
 </li>
 <li><p>Add a new <strong>Send me a mobile notification</strong> step, and then use the value from JSON for the text. Your flow should resemble the following screenshot.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/send-mobile-notification-flow.png#lightbox"><img alt="Screenshot of the flow that you created in use case two." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/connect-power-platform-finance-operations/media/send-mobile-notification-flow.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/send-mobile-notification-flow.png#lightbox"><img alt="Screenshot of the flow that you created in use case two." data-linktype="relative-path" src="./rawmb500/media_send_mobile_notification_flow.png"/></a></p>
 </div>
 </li>
 <li><p>Save your flow and test it by running it manually. This step starts the <strong>Export project CustGroupExport</strong> in the <strong>Data management framework</strong> in finance and operations apps. You can control the output by looking at the job history.</p>
@@ -3688,7 +3550,7 @@ Power Automate. Keep in mind, if you want to connect to data from finance and op
 </li>
 <li><p>Set the variable to search for a name from the entity, and then add another step in the <strong>Apply to each</strong> action that sends an email with content. The flow should resemble the following screenshot.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/flow-use-case-3.png#lightbox"><img alt="Screenshot of the flow that you created in use case three." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/connect-power-platform-finance-operations/media/flow-use-case-3.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/flow-use-case-3.png#lightbox"><img alt="Screenshot of the flow that you created in use case three." data-linktype="relative-path" src="./rawmb500/media_flow_use_case_3.png"/></a></p>
 </div>
 </li>
 </ol>
@@ -3697,8 +3559,6 @@ Power Automate. Keep in mind, if you want to connect to data from finance and op
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Connect to your finance and operations apps data with Power Apps</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Power Apps is a suite of apps, services, connectors, and a data platform
 that provides you with an opportunity to build custom apps for your
@@ -3738,7 +3598,7 @@ Power Apps:</p>
 <li><p>In the <strong>Start with your data</strong> section, select <strong>New connection</strong> to add your connection.</p>
 </li>
 <li><p>Select <strong>Dynamics 365 for Fin &amp; Ops</strong> from the connections list:</p>
-<p><img alt="Screenshot showing how to set up a new connection to Dynamics 365 Finance using Power Apps." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/connect-power-platform-finance-operations/media/connect.png"/></p>
+<p><img alt="Screenshot showing how to set up a new connection to Dynamics 365 Finance using Power Apps." data-linktype="relative-path" src="./rawmb500/media_connect.png"/></p>
 </li>
 <li><p>Select <strong>Create</strong>.</p>
 </li>
@@ -3755,7 +3615,7 @@ Power Apps:</p>
 <p>You can embed the Power Apps you create in finance and operations apps pages. To embed a Power App on a page, follow these steps:</p>
 <ol>
 <li><p>Within any page in the application, select the <strong>Power Apps</strong> icon in the top-right corner of the page:</p>
-<p><img alt="Screenshot showing the position of the Power Apps icon." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/connect-power-platform-finance-operations/media/power-apps-icon-ss.png"/></p>
+<p><img alt="Screenshot showing the position of the Power Apps icon." data-linktype="relative-path" src="./rawmb500/media_power_apps_icon_ss.png"/></p>
 </li>
 <li><p>Select <strong>Add an app</strong>.</p>
 </li>
@@ -3779,8 +3639,6 @@ Power Apps:</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Finance and operations data on Common Data Model and Microsoft Dataverse</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The Common Data Model lets you bring data from multiple systems and applications together. When you need to bring data from multiple places, this process can be expensive and time consuming. The Common Data Model allows you to bring your data together in a simplified process by providing a shared data language for business and analytical application to use. The Common Data Model metadata system makes it possible for data and its meaning to be shared across multiple platforms and business processes like Microsoft Power Platform applications.</p>
 <p>The Common Data Model includes extensible data schemes that are predefined and can be used as needed. The schemas include entities, attributes, semantic metadata, and relationships that represent commonly used concepts within organization such as <strong>Account</strong>, or <strong>Case</strong>. You can use the standard entities, extend the standard entities to fit your needs, or create custom entities.</p>
@@ -3792,7 +3650,7 @@ Power Apps:</p>
 To learn more about creating and working with entities for the Common Data Model, refer to the <a data-linktype="absolute-path" href="/en-us/training/modules/get-started-with-powerapps-common-data-service/?azure-portal=true">Get started with Microsoft Dataverse</a> module.</p>
 <h2 id="dataverse-and-dual-write">Dataverse and dual-write</h2>
 <p>If you are using both model-driven apps in Dynamics 365, and finance and operations apps, dual-write lets you seamlessly integrate data between the two applications. For example, you may be using Dynamics 365 Sales, and finance and operations apps. Both applications store your customer data. By using dual-write, when a new customer record is added in Sales, the customer record will also be added in finance and operations apps in near real time. The direction of the data flow is synchronous and bidirectional. This means you can have data going in and out of both applications.</p>
-<p><img alt="Diagram showing the Dual-write flow of data." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/connect-power-platform-finance-operations/media/common-data-service-dual-write.png"/></p>
+<p><img alt="Diagram showing the Dual-write flow of data." data-linktype="relative-path" src="./rawmb500/media_common_data_service_dual_write.png"/></p>
 <p>The dual-write framework is also extensible to allow for organizations to modify the functionality to work according to their unique processes. You can use custom entities, and add extensions to existing entities to enable full use of the Dataverse and tools for your organization. To learn more about dual-write, go to <a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/data-entities/dual-write/dual-write-overview/?azure-portal=true">Dual-write overview</a>.</p>
 <h2 id="enable-dual-write-in-finance-and-operations-apps">Enable dual-write in finance and operations apps</h2>
 <p>To use and configure dual write, you start by linking your finance and operations apps environment to the Dataverse by using the <strong>Dual-write wizard</strong>, and then enable the entity maps.</p>
@@ -3801,7 +3659,7 @@ To learn more about creating and working with entities for the Common Data Model
 <li>Log in to finance and operations apps.</li>
 <li>Navigate to the <strong>Data management</strong> workspace.</li>
 <li>From the <strong>Data management</strong> workspace, select the <strong>Dual Write</strong> tile.
-<a data-linktype="relative-path" href="media/dual-write-tile-ss.png#lightbox"><img alt="Screenshot of the Dual Write tile on the Data management page." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/connect-power-platform-finance-operations/media/dual-write-tile-ss.png"/></a></li>
+<a data-linktype="relative-path" href="media/dual-write-tile-ss.png#lightbox"><img alt="Screenshot of the Dual Write tile on the Data management page." data-linktype="relative-path" src="./rawmb500/media_dual_write_tile_ss.png"/></a></li>
 <li>Select <strong>New link to environment</strong>. This will launch the <strong>Setup link to Dataverse</strong> wizard.</li>
 <li>On the <strong>Choose environment</strong> page, you will select the environment to link to. This page will display all the Dataverse environments that the signed in user is an administrator for.</li>
 <li>Select your legal entities to link. A health check will then run to verify that your system meets the requirements for enabling dual-write.</li>
@@ -3815,8 +3673,6 @@ To learn more about creating and working with entities for the Common Data Model
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned.</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -3911,8 +3767,6 @@ To learn more about creating and working with entities for the Common Data Model
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>As a developer, you are provided with many tools that help make your development
 process easier and more efficient. Microsoft services like Power Apps and

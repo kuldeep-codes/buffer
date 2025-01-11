@@ -1,7 +1,5 @@
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>To reduce build time and ensure that you're always running the latest
 version of finance and operations apps, you can't modify base code and no
@@ -16,8 +14,6 @@ Application Object Tree (AOT) by using Visual Studio. When a customization can't
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Customization models</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Extensions provide a seamless update process for developers. While it
 can take less time to modify base code, this isn't an option in finance
@@ -28,7 +24,7 @@ are made by using overlaying require code upgrades, more time to
 recompile code, and extensive, costly testing. The costs that are involved in these tasks can make upgrading to newer versions of the applications daunting. Because models with overlayered customizations are contained in the same package as the base objects, the compile cycles take longer to perform and package distributions are larger.</p>
 <p>Most elements in the AOT can be extended if you're referencing the
 necessary models. If you attempt to create an extension and notice that the <strong>Create extension</strong> option appears dimmed, this is an indication that you need to update your model parameters.</p>
-<p><a data-linktype="relative-path" href="media/create-new-extension.png#lightbox"><img alt="Graphic showing the create extension option not available." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/explore-extensions-framework-finance-operations/media/create-new-extension.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/create-new-extension.png#lightbox"><img alt="Graphic showing the create extension option not available." data-linktype="relative-path" src="./rawmb500/media_create_new_extension.png"/></a></p>
 <p>You can update the models that you're referencing through the <strong>Model
 management</strong> option by selecting <strong>Update model parameters</strong>. A dialog
 box will open, allowing you to choose the model that you want your
@@ -69,8 +65,6 @@ Directory.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Extension points for frameworks</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>When a change needs to be propagated through the entire application, you should create an extension of that element to modify properties or components.</p>
 <p>The following is an overview of common element types and the reasons for creating an extension of an element:</p>
@@ -107,8 +101,6 @@ are detected.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Develop code to extend a framework</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>When you need to change the behavior of an element, you create an
 extension of that element. Some elements require code to be written to
@@ -134,7 +126,7 @@ final class InventTableNew_Extension
 <p>The following are methods for event handlers that are pulled from the <code>CustTable</code> table. These methods can be copied and added to your extended element or class by right-clicking the event in the element designer window and selecting <strong>Copy event handler method</strong>.</p>
 <p><a data-linktype="relative-path" href="media/copy-event-handler.png#lightbox"><img alt="Visual Studio screenshot showing how to copy event handler method from
 the table designer
-window." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/explore-extensions-framework-finance-operations/media/copy-event-handler.png"/></a></p>
+window." data-linktype="relative-path" src="./rawmb500/media_copy_event_handler.png"/></a></p>
 <ul>
 <li><strong><code>OnDeleted</code> event</strong> - This is a post-event handler that triggers when a record is deleted in the table. You could use this, for example, to display an Infolog message after a record is deleted.</li>
 </ul>
@@ -198,8 +190,6 @@ and, finally, the original implementation is always called. This process ensures
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create pre-event and post-event handler classes</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can use event handler classes for pre-handlers and post-handlers to extend an application, like how you’d use Chain of Command (CoC) for method wrapping.</p>
 <p>An event handler class is another way to extend an application, and you use it as you would other event handler classes. You can use pre-handlers and post-handlers in a class where the original method has a pre-handler that runs before the original method and a post-handler that you would implement afterward. Handlers surround the original method. Additionally, you can use attributes to prevent or allow extending pre-handlers and post-handlers.</p>
@@ -208,7 +198,7 @@ and, finally, the original implementation is always called. This process ensures
 <p>Enter a descriptive name for the pre-event and post-event class, such as <strong>CustTableTableEventHandler</strong>. It’s best practice to use the object name as a starting point, such as <strong>CustTable</strong>, and then add the object type, such as <strong>Table</strong>, because CustTable could be a table or a form. Then, you can append it with <strong>EventHandler</strong>. For example, you could have two event handler classes that are named <strong>CustTableTableEventHandler</strong> and <strong>CustTableFormEventHandler</strong>.</p>
 <p>To add a pre-event or post-event, make sure that the method that’s in the event handler class is discoverable. On the method, right-click or activate the context menu, select <strong>Copy event handler method</strong>, and then select <strong>Pre-event handler</strong>, as the following image depicts.</p>
 <p><a data-linktype="relative-path" href="media/copy-eventhandler-method.png#lightbox"><img alt="Visual Studio screenshot showing how to copy event handler method from
-and then select Pre-event handler." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/explore-extensions-framework-finance-operations/media/copy-eventhandler-method.png"/></a></p>
+and then select Pre-event handler." data-linktype="relative-path" src="./rawmb500/media_copy_eventhandler_method.png"/></a></p>
 <p>After you select the pre-event handler, go to the event handler class, and then paste the method. Return to the method, select the post-event handler, and then paste it in the event handler class.</p>
 <p>Two methods for pre-events and post-events should display, and the original method is called between these two methods (super call), as the following code sample illustrates:</p>
 <pre><code class="lang-xpp">internal final class CustTableTableEventHandler
@@ -279,8 +269,6 @@ and then select Pre-event handler." data-linktype="relative-path" src="https://l
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement the SysOperationSandbox framework</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Finance and operations apps provides several ways for you to run time-consuming operations.</p>
 <ul>
@@ -349,8 +337,6 @@ and then select Pre-event handler." data-linktype="relative-path" src="https://l
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement the workflow framework</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>A workflow is a system or business process that defines how a document flows through a system by showing who must complete a task, make a decision, or approve a document. You can configure workflows in the applicable system or create them in a development environment.</p>
 <p>In this unit, you learn how to create a flow and its elements from a development environment. Workflow elements include:</p>
@@ -470,7 +456,7 @@ and then select Pre-event handler." data-linktype="relative-path" src="https://l
 </li>
 </ul>
 <blockquote>
-<p><a data-linktype="relative-path" href="media/add-workflow-type.png#lightbox"><img alt="Screenshot of the Workflow Type page, showing the fields to fill out." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/explore-extensions-framework-finance-operations/media/add-workflow-type.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/add-workflow-type.png#lightbox"><img alt="Screenshot of the Workflow Type page, showing the fields to fill out." data-linktype="relative-path" src="./rawmb500/media_add_workflow_type.png"/></a></p>
 </blockquote>
 </li>
 <li><p>The <strong>Preview</strong> window lists the workflow type artifacts (classes and menu items). Select <strong>Next</strong> to create the workflow type and artifacts. The <strong>Add New Items</strong> window opens again, and you can close it by selecting <strong>Cancel</strong>. Several new elements should now be added to your project.</p>
@@ -671,7 +657,7 @@ and then select Pre-event handler." data-linktype="relative-path" src="https://l
 </li>
 <li><p>Select <strong>Next</strong>. The <strong>Workflow Approval</strong> page should appear.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/workflow-approval.png#lightbox"><img alt="Screenshot of the Workflow Approval page, showing the result of the steps." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/explore-extensions-framework-finance-operations/media/workflow-approval.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/workflow-approval.png#lightbox"><img alt="Screenshot of the Workflow Approval page, showing the result of the steps." data-linktype="relative-path" src="./rawmb500/media_workflow_approval.png"/></a></p>
 </div>
 </li>
 <li><p>Select <strong>Next</strong> to have the system create all classes and menu items or select <strong>Cancel</strong> to close the window. The system adds the classes and menu items to your project, but you must modify it.</p>
@@ -768,7 +754,7 @@ and then select Pre-event handler." data-linktype="relative-path" src="https://l
 <li>Select <strong>Assignments</strong> for the user assignment, and then select <strong>User</strong> to go to the <strong>User</strong> tab.</li>
 <li>Select <strong>Admin</strong> as the user, and then select <strong>Close</strong>.
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/my-workflow-type.png#lightbox"><img alt="Screenshot of the Workflow design." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/explore-extensions-framework-finance-operations/media/my-workflow-type.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/my-workflow-type.png#lightbox"><img alt="Screenshot of the Workflow design." data-linktype="relative-path" src="./rawmb500/media_my_workflow_type.png"/></a></p>
 </div>
 </li>
 <li>Select <strong>Save and close</strong> (shrink the window so you can find it in the lower part), and then enter <strong>Version notes</strong>.</li>
@@ -776,7 +762,7 @@ and then select Pre-event handler." data-linktype="relative-path" src="https://l
 <li>Under <strong>Manage</strong>, select <strong>Versions</strong>.</li>
 <li>Verify that your workflow is active. If it’s not, select <strong>Active</strong> to activate it. Finance and operations apps should show your workflow as activated, and a new action should appear in the form
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/view-workflow-form.png#lightbox"><img alt="Screenshot of the MyWorkflowTableForm." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/explore-extensions-framework-finance-operations/media/view-workflow-form.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/view-workflow-form.png#lightbox"><img alt="Screenshot of the MyWorkflowTableForm." data-linktype="relative-path" src="./rawmb500/media_view_workflow_form.png"/></a></p>
 </div>
 </li>
 </ol>
@@ -786,8 +772,6 @@ and then select Pre-event handler." data-linktype="relative-path" src="https://l
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Extend an EDT</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2 id="read-this-first---before-you-start-the-lab">Read this first - before you start the lab!</h2>
 <div class="IMPORTANT">
@@ -867,8 +851,6 @@ Management company to change a number-entry field on the <strong>Customer</stron
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -1049,8 +1031,6 @@ Management company to change a number-entry field on the <strong>Customer</stron
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Creating extensions can be a simple process to help customize the finance and operations apps user interface. Because finance and operations apps are provided as an Infrastructure as a service (IaaS) application, updates are made regularly. Overlaying base code can cause update conflicts and issues and can create extra work for developers. Extensions often save you money because you don't have to spend time fixing overlayered code that broke during an update.</p>
 <p>For these reasons, overlaying is not allowed in finance and operations apps, and extensions are the preferred practice for customizations.</p>
@@ -1088,8 +1068,6 @@ Management company to change a number-entry field on the <strong>Customer</stron
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Development for finance and operations apps is extension-based and does not allow customizing base code and elements. This method of development for finance and operations apps allows developers to modify the application behavior and elements in a less intrusive manner. This approach enables organizations to continuously update the application with lower costs and minimum code errors.</p>
 <p>An element in the Application Object Tree (AOT) can be extended and
@@ -1109,8 +1087,6 @@ variables to an existing table or form.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Add a table extension to a project</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>If you want to modify the fields, field groups, indexes, mappings, or
 relations of a table, you can create an extension of the table and make the necessary changes. Additionally, you can add fields and add fields to field groups.</p>
@@ -1124,7 +1100,7 @@ from <strong>AOT &gt; Data Types &gt; Extended Data Types</strong> to the <stron
 of the <strong><code>FMCustomer.myExtension</code></strong> table.</p>
 <p><img alt="This is a screenshot from Visual Studio showing the AccountNum field
 has been added to an extension of the FMCustomer
-table." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/extend-elements-finance-operations/media/table-extension.png"/></p>
+table." data-linktype="relative-path" src="./rawmb500/media_table_extension.png"/></p>
 <h2 id="table-indexes">Table indexes</h2>
 <p>An <strong>index</strong> can speed up database searches. If you add fields to a table,
 you might also want to add a dedicated index. You can use existing
@@ -1169,8 +1145,6 @@ from an event handler. The following is an example of an <code>InventTable</code
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Add a form extension to a project</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>To add new functionality to a form, you need to create an extension of that form. Of the many reasons that you would extend a form, you can add a new control, enable or disable an existing control, or change a control's visibility. For example, you can add a new <strong>FastTab</strong> to a <strong>Details Master</strong> form or make a <strong>FastTab</strong> not visible.</p>
 <p>You can modify properties for the form and its controls, such as the
@@ -1186,7 +1160,7 @@ indicating that you cannot change it.</p>
 <p>The following screenshot shows the addition of a tab to the Action Pane for the <code>FMCustomer</code> form extension, named <strong>FMCustomer.myExtension</strong>. A <strong>Button Group</strong> and <strong>Menu Item Button</strong> have also been added to the <strong>Action Pane Tab</strong> control. The existing elements in a form extension are shown in italic type, while the changed or added items are displayed in bold type.</p>
 <p><a data-linktype="relative-path" href="media/form-extend.png#lightbox"><img alt="This is a screenshot from Visual Studio of an FMCustomer form
 extension with an added Action Pane Tab, Button Group, and Menu Item
-Button." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/extend-elements-finance-operations/media/form-extend.png"/></a></p>
+Button." data-linktype="relative-path" src="./rawmb500/media_form_extend.png"/></a></p>
 <p>If a form doesn't have the needed data sources or fields, you can create a form extension to make the necessary modifications. After you've created an extension of the form, add a data source in the same manner that you would add a data source to a new form. Depending on the form pattern that is used, you can use the fields in the new table or data entity to populate the <strong>Grid</strong> control.</p>
 <p>Follow these steps to create a form extension and add a new data source:</p>
 <ol>
@@ -1215,8 +1189,6 @@ drag fields to the <strong>Grid</strong> control in the design pane.</li>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Extend a form and add controls</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2 id="read-this-first---before-you-start-the-lab">Read this first - before you start the lab!</h2>
 <div class="IMPORTANT">
@@ -1315,16 +1287,14 @@ Management company to adjust the appearance and functionality of the <strong>Cus
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Extend menus</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>With finance and operations apps, you can connect menu items by changing existing menus with extensions.</p>
 <p>Customizing an existing menu provides users with a more natural appearance and behavior because the new menu is like others that users interact with. You can create menu extensions in Microsoft Visual Studio.</p>
 <p>In finance and operations apps, you can expand the <strong>Modules</strong> menu in the navigation pane and the menu for the module, as shown in the following screenshot.</p>
-<p><a data-linktype="relative-path" href="media/modules-navigation-pane.png#lightbox"><img alt="Screenshot showing the Modules menu in the navigation pane." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/extend-elements-finance-operations/media/modules-navigation-pane.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/modules-navigation-pane.png#lightbox"><img alt="Screenshot showing the Modules menu in the navigation pane." data-linktype="relative-path" src="./rawmb500/media_modules_navigation_pane.png"/></a></p>
 <h2 id="add-menu-extensions-to-a-project">Add menu extensions to a project</h2>
 <p>You can add menu extensions to a project by using the <strong>Solution Explorer</strong> window. Locate the applicable menu in <strong>Application Explorer</strong>, right-click or activate the context menu, select the menu, and then select <strong>Create Extension</strong>. The system adds a menu extension to the project by using the same menu name and appending the model name, as shown in the following screenshot example.</p>
-<p><a data-linktype="relative-path" href="media/menu-extension.png#lightbox"><img alt="Screenshot showing the Menu Extensions folder." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/extend-elements-finance-operations/media/menu-extension.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/menu-extension.png#lightbox"><img alt="Screenshot showing the Menu Extensions folder." data-linktype="relative-path" src="./rawmb500/media_menu_extension.png"/></a></p>
 <p>As another example, if you’re creating a menu extension for Accounts Payable for model MB500, you’d add a number to the postfix. Additionally, you can complete the following actions:</p>
 <ul>
 <li>Create extensions for standard menus. However, in the extended menu, you can’t change any property of the parent menu, except tags.</li>
@@ -1334,15 +1304,13 @@ Management company to adjust the appearance and functionality of the <strong>Cus
 <li>Set a property’s view to false. However, you can’t remove menu or submenu items.</li>
 </ul>
 <p>In the Designer view, modifications to menu extensions are indicated with bold font, as the following screenshot shows.</p>
-<p><a data-linktype="relative-path" href="media/modifications-bold-font.png#lightbox"><img alt="Screenshot showing the bold font of the menu extensions in the Designer view." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/extend-elements-finance-operations/media/modifications-bold-font.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/modifications-bold-font.png#lightbox"><img alt="Screenshot showing the bold font of the menu extensions in the Designer view." data-linktype="relative-path" src="./rawmb500/media_modifications_bold_font.png"/></a></p>
 <p>You must build menu extensions before they can be active and available for use.</p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement delegates</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>When you’re creating extensible solutions, you can use delegates by subscribing to the delegate in X++.</p>
 <p>Delegates are composite data types that are part of how finance and operations apps can create extensions. You can define delegates on a method. Then, when the method is called, it'll also call their subscriber methods.</p>
@@ -1418,8 +1386,6 @@ Management company to adjust the appearance and functionality of the <strong>Cus
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -1522,8 +1488,6 @@ Management company to adjust the appearance and functionality of the <strong>Cus
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Extensions are a way to customize the finance and operations apps user
 experience. If you need to adjust the performance, behavior, or
@@ -1563,8 +1527,6 @@ just one adjustment. With most elements, you can't make all the adjustments that
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Business events occur when a business process is run. During a business
 process, users who participate in it perform business actions to
@@ -1579,7 +1541,7 @@ systems can use in integration and notification scenarios.</p>
 external systems to receive notifications from finance and operations apps.</p>
 <p>To find existing business events in the instance you’re using, go to <strong>System administration &gt; Setup &gt; Business events &gt; Business event catalog</strong>. As shown in the  following screenshot, here you will find a list of all the business events that are available for use. You can also apply filters to search in each of the columns.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/business-events.png#lightbox"><img alt="Screenshot of the Business events page." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/business-events-finance-operations/media/business-events.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/business-events.png#lightbox"><img alt="Screenshot of the Business events page." data-linktype="relative-path" src="./rawmb500/media_business_events.png"/></a></p>
 </div>
 <p>The next units will explore the business event framework and which steps to take to create a new business event.</p>
 <div class="modular-content-container" hidden="" id="next-section">
@@ -1587,8 +1549,6 @@ external systems to receive notifications from finance and operations apps.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Business event framework</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The business events framework determines whether a business event is
 published to a finance and operations apps user. It is best practice to have
@@ -1597,7 +1557,7 @@ business event is enabled or not. If significant additional logic is needed, or 
 <p>Business events can be activated on the <strong>Business events</strong> page in the <strong>System administration</strong> module. In the catalog, all the business events can be viewed along with their status. By default, business events won’t be set to <strong>Active</strong> so they must go through an activation process.
 To activate a business event, select one or multiple business events, and then select <strong>+Activate</strong> at the top left of the screen as shown in the following screenshot.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/activate-event.png#lightbox"><img alt="Screenshot of the Business events page, showing the +Activate button." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/business-events-finance-operations/media/activate-event.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/activate-event.png#lightbox"><img alt="Screenshot of the Business events page, showing the +Activate button." data-linktype="relative-path" src="./rawmb500/media_activate_event.png"/></a></p>
 </div>
 <p>When you have activated the business event, you can specify if this applies to multiple legal entities or just one. After a business event has been activated, it will appear in the <strong>Active business events</strong> tab  of the <strong>Business events</strong> page, and can be deactivated at anytime. If you deactivate it, it  will be listed in the <strong>Inactive business events</strong> tab.</p>
 <p>Instead of deleting a business event, setting it to an <strong>Inactive</strong> status lets you retain the history of errors for that event, and can be activated later.</p>
@@ -1648,8 +1608,6 @@ To activate a business event, select one or multiple business events, and then s
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create a new business event</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>To implement a new business event, you need to build a contract, build the event, and then add code to send the event.</p>
 <p>Two classes are implemented for a new event: a business event class and
@@ -1762,8 +1720,6 @@ public CustInvoiceAccount parmInvoiceAccount(CustInvoiceAccount_invoiceAccount =
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Activate business events</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Business events in the business event catalog aren't active by default. From the catalog, you can activate any business events that you require. Select one or more business events, and then select <strong>Activate</strong>.</p>
 <p>Business events can be activated either in all legal entities or in specific legal entities. If you leave the <strong>Legal entity</strong> field blank, the selected business events will be activated in all legal entities. If a business event is required only for specific legal entities, it must be configured separately for each legal entity.</p>
@@ -1798,8 +1754,6 @@ public CustInvoiceAccount parmInvoiceAccount(CustInvoiceAccount_invoiceAccount =
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Consume business events</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Different endpoint types can consume activated business events by subscribing to finance and operations apps events.</p>
 <p>A business event is consumable when it‘s activated, and subscriptions depend on the type of endpoints that are available. Endpoint types for finance and operations apps include:</p>
@@ -1849,7 +1803,7 @@ public CustInvoiceAccount parmInvoiceAccount(CustInvoiceAccount_invoiceAccount =
 <p>After you save the flow, you can locate it in the finance and operations app in the <strong>Active business events</strong> tab. Also, notice that an endpoint is created that points to Power Automate.</p>
 <p>Additionally, the flow sends an email based on the information that you provided, as shown in the following image.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/email.png#lightbox"><img alt="Screenshots showing the flow sending an email based on the information that is provided." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/business-events-finance-operations/media/email.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/email.png#lightbox"><img alt="Screenshots showing the flow sending an email based on the information that is provided." data-linktype="relative-path" src="./rawmb500/media_email.png"/></a></p>
 </div>
 <h2 id="other-endpoints">Other endpoints</h2>
 <p>Microsoft Learn documentation provides many tutorials for using business events for different endpoint types, including:</p>
@@ -1869,8 +1823,6 @@ public CustInvoiceAccount parmInvoiceAccount(CustInvoiceAccount_invoiceAccount =
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Extend an existing business event</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Business events are extensible, which means that you can add fields and business logic to existing business events so that a subscriber can use the added functionality.</p>
 <p>To extend an existing business event, you need to create code extensions. Business events consist of two classes: a <strong>business event</strong> class and a <strong>business event contract</strong> class.</p>
@@ -1919,14 +1871,14 @@ public CustInvoiceAccount parmInvoiceAccount(CustInvoiceAccount_invoiceAccount =
 </li>
 <li><p>Go to the <strong>Business event catalog</strong> and find the customized business event. Notice that the schema has changed and the new member is added, as the following screenshot shows.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/download-schema.png#lightbox"><img alt="Screenshots showing the new member added to the schema." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/business-events-finance-operations/media/download-schema.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/download-schema.png#lightbox"><img alt="Screenshots showing the new member added to the schema." data-linktype="relative-path" src="./rawmb500/media_download_schema.png"/></a></p>
 </div>
 <p>After you extend a business event in finance and operations apps, subscribers should be able to use the new functionality.</p>
 </li>
 </ol>
 <p>In the previous unit <strong>Consume business events</strong>, a Microsoft Power Automate flow was created by using the same business event. The following image shows how you can use the <strong>Get a record</strong> function to retrieve a name. Additionally, the image shows the addition of the data member for the name and that the <strong>Get a record</strong> function is no longer needed.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/flow.png#lightbox"><img alt="Screenshot showing the Power Automate flow." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/business-events-finance-operations/media/flow.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/flow.png#lightbox"><img alt="Screenshot showing the Power Automate flow." data-linktype="relative-path" src="./rawmb500/media_flow.png"/></a></p>
 </div>
 <p>To update Parse JSON with the new schema, remove the <strong>Get a record</strong> function and then update <strong>Send an email (V2)</strong> to use the new data member:</p>
 <ol>
@@ -1941,7 +1893,7 @@ public CustInvoiceAccount parmInvoiceAccount(CustInvoiceAccount_invoiceAccount =
 </ol>
 <p>The flow in Power Automate should now resemble the following image.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/update-parse-json.png#lightbox"><img alt="Screenshot showing the result of the steps in this procedure." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/business-events-finance-operations/media/update-parse-json.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/update-parse-json.png#lightbox"><img alt="Screenshot showing the result of the steps in this procedure." data-linktype="relative-path" src="./rawmb500/media_update_parse_json.png"/></a></p>
 </div>
 <p>You'll notice that <strong>Get a record</strong> is removed and the body for the email has changed to use <strong>Name</strong> from the JSON.</p>
 <h2 id="test-the-business-event-extension">Test the business event extension</h2>
@@ -1952,7 +1904,7 @@ public CustInvoiceAccount parmInvoiceAccount(CustInvoiceAccount_invoiceAccount =
 </ol>
 <p>The Power Automate flow runs and sends an email by using the extension, as the following image illustrates.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/extension-flow-email.png#lightbox"><img alt="Screenshot showing how the Power Automate flow runs and sends an email by using the extension." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/business-events-finance-operations/media/extension-flow-email.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/extension-flow-email.png#lightbox"><img alt="Screenshot showing how the Power Automate flow runs and sends an email by using the extension." data-linktype="relative-path" src="./rawmb500/media_extension_flow_email.png"/></a></p>
 </div>
 <p>When you review the flow’s history, notice that the name is set to <strong>Whale Wholesales</strong> and is used in the email.</p>
 <div class="modular-content-container" hidden="" id="next-section">
@@ -1960,8 +1912,6 @@ public CustInvoiceAccount parmInvoiceAccount(CustInvoiceAccount_invoiceAccount =
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Role-based security for business events</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Role-based security can be applied to business events to meet the following requirements using the appropriate security artifact.</p>
 <table>
@@ -2010,8 +1960,6 @@ public CustInvoiceAccount parmInvoiceAccount(CustInvoiceAccount_invoiceAccount =
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Business events in Microsoft Power Automate</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Business events can be consumed in Microsoft Power Automate via the application connector. The connector has a trigger that is named <strong>When a business event occurs</strong>. This trigger can be used to subscribe to any of the business events that are available in the target instance of the application.</p>
 <h2 id="subscribing-to-business-events-and-unsubscribing-from-them">Subscribing to business events and unsubscribing from them</h2>
@@ -2027,8 +1975,6 @@ public CustInvoiceAccount parmInvoiceAccount(CustInvoiceAccount_invoiceAccount =
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following question to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -2158,8 +2104,6 @@ public CustInvoiceAccount parmInvoiceAccount(CustInvoiceAccount_invoiceAccount =
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The intent behind capturing the business event must be clearly
 understood. In other words, you need to determine the reason for capturing the business event and how it's going to be used by the recipient.</p>

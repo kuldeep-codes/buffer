@@ -1,7 +1,5 @@
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>When it’s time to migrate data, the more you know, the easier it is to control operational complexity, and reduce costs. Your customer’s business continuity must be your priority. In this module, you will learn how to prepare data for a successful migration, by identifying important factors such as legacy systems, static, and common data.</p>
 <p>In this module, you will learn how to:</p>
@@ -23,8 +21,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Select a data integration (import/export) strategy</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This unit explores integration patterns, scenarios, and solutions for finance and operations. Although this unit does not include technical details about how to use or set up every integration pattern or how to work with sample code, it is always wise to be aware of available integration tools.</p>
 <p>The following integration patterns are available for finance and operations apps:</p>
@@ -79,8 +75,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Common migration scenarios and tools</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The following are two scenarios, and recommendations for which integration pattern to use.</p>
 <h2 id="scenario-1">Scenario 1</h2>
@@ -111,8 +105,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Bring your own database (BYOD)</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The BYOD feature lets administrators configure their own database, and then export one or more data entities, that are available in finance and operations apps, into it. Specifically, this feature lets you complete the following tasks:</p>
 <ul>
@@ -131,7 +123,7 @@
 <p>If you have integration solutions that require direct T-SQL access to the database, BYOD is the recommended upgrade path.</p>
 <p>Before you can configure the export option and use the BYOD feature, you must create an SQL database for production environments by using Azure portal.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/azure-side-bar.png#lightbox"><img alt="Screenshot of the Azure portal SQL databases menu item." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-data-migration-finance-operations/media/azure-side-bar.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/azure-side-bar.png#lightbox"><img alt="Screenshot of the Azure portal SQL databases menu item." data-linktype="relative-path" src="./rawmb500/media_azure_side_bar.png"/></a></p>
 </div>
 <p>You should also create a SQL user account for sign-in to the database. Make sure to record and save the server name, database name, and the SQL user ID and password. You will use these values when you configure the entity export option.</p>
 <p>If you're using the BYOD feature for integration with a business intelligence (BI) tool, consider creating an SQL premium database. Premium databases support clustered columnstore indexes (CCIs). CCIs are in-memory indexes that improve the performance of read queries that are typical in analytical and reporting workloads.</p>
@@ -140,7 +132,7 @@
 <ol>
 <li><p>Go to the <strong>Data management</strong> workspace and select the <strong>Configure entity export to database</strong> tile.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/configure-entity.png#lightbox"><img alt="Screenshot of the Configure entity export to database tile." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-data-migration-finance-operations/media/configure-entity.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/configure-entity.png#lightbox"><img alt="Screenshot of the Configure entity export to database tile." data-linktype="relative-path" src="./rawmb500/media_configure_entity.png"/></a></p>
 </div>
 </li>
 <li><p>If you've already configured any databases, a list is shown, and you will need to select a database. Then, skip step 3.</p>
@@ -171,11 +163,9 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Test a data migration and validate output</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>To prepare for data migration, the first step is to identify relevant (legacy) systems that the customer is currently using. Then, you need to identify and import static data that is common between industries.</p>
-<p><img alt="Diagram of the steps to Migrate data and validate output." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-data-migration-finance-operations/media/data-migrate.png"/></p>
+<p><img alt="Diagram of the steps to Migrate data and validate output." data-linktype="relative-path" src="./rawmb500/media_data_migrate.png"/></p>
 <h2 id="identify-relevant-legacy-systems">Identify relevant (legacy) systems</h2>
 <p>A legacy system is a business solution that has a few common characteristics with current solutions in the market, such as being based on outdated technology or design, being incompatible or difficult and costly to integrate with current systems, and a potential inability of being purchased from vendors because it is unavailable and discontinued.</p>
 <p>Each legacy system might have a different data export format option that must be considered as part of the planning for data migration, and you should be prepared for data extraction from legacy data sources.</p>
@@ -202,17 +192,17 @@
 <p>Typically, manual cleansing will be done before migration starts, while automated cleansing might be done before or as part of the migration’s initial phase.</p>
 <h2 id="generate-field-mapping-between-source-and-target-data-structures">Generate field mapping between source and target data structures</h2>
 <p>First, you need to identify the format of the data source. You can view the formats in Data management from the <strong>Configure data source</strong> tile.</p>
-<p><img alt="Screenshot of the Configure Data Source tile." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-data-migration-finance-operations/media/configure-data-source.png"/></p>
+<p><img alt="Screenshot of the Configure Data Source tile." data-linktype="relative-path" src="./rawmb500/media_configure_data_source.png"/></p>
 <p>In <strong>Configure data source</strong>, you can create and modify sources of data for migrations. If you have identified the data sources and their relevant entities, you can use different types of data sources depending on the format exported from external systems, some of which are legacy systems.</p>
-<p><a data-linktype="relative-path" href="media/data-source-types.png#lightbox"><img alt="Screenshot of the Data Source Types list." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-data-migration-finance-operations/media/data-source-types.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/data-source-types.png#lightbox"><img alt="Screenshot of the Data Source Types list." data-linktype="relative-path" src="./rawmb500/media_data_source_types.png"/></a></p>
 <p>Upon adding an entity into the Data management project for either import or export, finance and operations apps creates field mapping between the source data and the target table for each data entity, which matches the schema of the table associated with the data entity.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/maps-1.png#lightbox"><img alt="Screenshot of the Map Entity source to target page." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-data-migration-finance-operations/media/maps-1.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/maps-1.png#lightbox"><img alt="Screenshot of the Map Entity source to target page." data-linktype="relative-path" src="./rawmb500/media_maps_1.png"/></a></p>
 </div>
 <p>The type of the field, and whether it is a required field, are examples of the metadata of the table that is being shown in the <strong>Mapping details</strong> tab. Here, you can choose to ignore blank values and select a text identifier to properly use the text values from the source data field.</p>
 <p>Alternatively, you can use the label for the enumerator fields instead of its value.</p>
 <div class="mx-imgBorder">
-<p><a data-linktype="relative-path" href="media/maps-details.svg#lightbox"><img alt="Screenshot of the Map staging to target page details." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-data-migration-finance-operations/media/maps-details.svg"/></a></p>
+<p><a data-linktype="relative-path" href="media/maps-details.svg#lightbox"><img alt="Screenshot of the Map staging to target page details." data-linktype="relative-path" src="./rawmb500/media_maps_details.svg"/></a></p>
 </div>
 <h2 id="support-the-transition-between-the-existing-and-migrated-systems">Support the transition between the existing and migrated systems</h2>
 <p>Analyzing the data between what is in the legacy system and what has been imported to finance and operations apps is an important part of data migration. This provides an overview of the source data and its corresponding target table that is represented by data entities in finance and operations apps.</p>
@@ -222,8 +212,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -415,8 +403,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This module explained how to identify common migration scenarios and import static data that is common between industries. You learned about some of the tools in finance and operations apps, such as Data management and the BYOD feature.</p>
 <p>As part of selecting a data integration (import/export) strategy, you were able to observe how important it is to identify relevant (legacy) systems, create, and review test plans for data migration. You also learned about identifying and extracting source data, and its relevant data entities and elements.</p>
@@ -427,8 +413,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This module discusses fundamental principles of the Data Management Platform, an important aspect of finance and operations apps. The platform's capabilities include importing and exporting data, managing data entities and data entity packages, and using asynchronous recurring integration features.</p>
 <p>Imagine you are a data manager in a large multinational corporation. Your daily tasks involve handling vast amounts of data, migrating data from legacy systems, and ensuring seamless data integration across various departments. However, you often encounter challenges in managing data entities, understanding the impact of configuration keys on these entities, and sequencing data entities based on their relationships.</p>
@@ -438,8 +422,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Data management concepts</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The data management framework consists of the following concepts:</p>
 <ul>
@@ -458,7 +440,7 @@
 </li>
 <li><p><strong>Data package</strong> – Data packages are key concepts for many application lifecycle management (ALM) scenarios, such as copy configuration and data migration. A data package is a single compressed file that contains a data project manifest and data files. A data package is generated from a data job and is used for the importing or exporting of multiple files with the manifest. After you've defined a data project, including the data entities and the mapping and sequencing between these data entities, you can create a data package. Then, you can use the data package to move the definition of the data project from one environment to another.</p>
 <p>You can generate a data package from a data job. To create a data package, go to the <strong>Data management</strong> workspace, load the project that you want to create the data package for, and then select <strong>Download</strong>. This process will generate a zip file.</p>
-<p><a data-linktype="relative-path" href="media/dm-1.png#lightbox"><img alt="Screenshot showing the Download option to create a data package." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/dm-1.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/dm-1.png#lightbox"><img alt="Screenshot showing the Download option to create a data package." data-linktype="relative-path" src="./rawmb500/media_dm_1.png"/></a></p>
 <p>The zip file contains the package header and the manifest. The manifest defines the settings of the data project. You can use the data package to copy the settings of your data project from one environment to another.</p>
 </li>
 </ul>
@@ -487,13 +469,11 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Use data entities for data management and integration</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Data entities provide conceptual abstraction and encapsulation (de-normalized view) of underlying table schema that represent data concepts and functionalities.</p>
 <p>After data entities are created, you should be able to reuse them for Excel add-ins, import and export, or integration scenarios. A data entity is an abstraction from the physical implementation of database tables.</p>
 <p>This image presents data entity integration scenarios.</p>
-<p><img alt="Diagram of data entity integration scenarios." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/data-entity.png"/></p>
+<p><img alt="Diagram of data entity integration scenarios." data-linktype="relative-path" src="./rawmb500/media_data_entity.png"/></p>
 <p>For example, in normalized tables, a lot of the data for each customer might be stored in a customer table, and then the rest might be spread across a small set of related tables. In this case, the data entity for the customer concept appears as one de-normalized view, in which each row contains all the data from the customer table and its related tables.</p>
 <p>A data entity encapsulates a business concept into a format that makes development and integration easier. The abstracted nature of a data entity can simplify application development and customization. Later, the abstraction also insulates application code from the inevitable churn of the physical tables between versions.</p>
 <p>A data entity has the following capabilities:</p>
@@ -583,18 +563,16 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Work with the Data management workspace</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This unit explains how to work with the <strong>Data management</strong> workspace in finance and operations apps.</p>
 <p>The <strong>Data management</strong> workspace provides access to important tasks for data management. It also provides information about projects and project execution tasks.</p>
 <p>After you've created a configuration data project, it appears in the <strong>Data projects</strong> grid in the <strong>Data management</strong> workspace.</p>
 <p>For each project, the type of configuration (import or export) and the project category (Project, Configuration, Integration, or Other) are shown. Use the options to the left of the grid to filter by the appropriate project. The project definition is shared across legal entities</p>
-<p><a data-linktype="relative-path" href="media/data-management.png#lightbox"><img alt="Screenshot of the Data management workspace." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/data-management.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/data-management.png#lightbox"><img alt="Screenshot of the Data management workspace." data-linktype="relative-path" src="./rawmb500/media_data_management.png"/></a></p>
 <p>To open a project, select the project, and then select <strong>Load project</strong> to open the <strong>Import</strong> or <strong>Export</strong> page. Use the <strong>Delete</strong> button to delete the selected projects.</p>
-<p><a data-linktype="relative-path" href="media/load-project.png#lightbox"><img alt="Screenshot of the Data projects page with Load project highlighted." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/load-project.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/load-project.png#lightbox"><img alt="Screenshot of the Data projects page with Load project highlighted." data-linktype="relative-path" src="./rawmb500/media_load_project.png"/></a></p>
 <p>You can also download the project definitions by using the <strong>Download</strong> button. Use <strong>Job history</strong> to find more details about the projects that you've run. Use the data range filters to filter by the dates when data projects were run. You can view execution details by selecting a job and then using the <strong>Execution details</strong> menu.</p>
-<p><a data-linktype="relative-path" href="media/project-1.png#lightbox"><img alt="Screenshot with the Import, Job history and Download buttons highlighted." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/project-1.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/project-1.png#lightbox"><img alt="Screenshot with the Import, Job history and Download buttons highlighted." data-linktype="relative-path" src="./rawmb500/media_project_1.png"/></a></p>
 <p>For export tasks, you can also download the data from the workspace by using the <strong>Download page</strong> button. The available projects in the <strong>Data management</strong> workspace are as follows:</p>
 <ul>
 <li>Export</li>
@@ -602,7 +580,7 @@
 <li>Copy into legal entity</li>
 </ul>
 <p>The <strong>All projects</strong> option is a filter to decide which type of project in the workspace to work with.</p>
-<p><a data-linktype="relative-path" href="media/data-projects.png#lightbox"><img alt="Screenshot of the Data project operations type drop down list." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/data-projects.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/data-projects.png#lightbox"><img alt="Screenshot of the Data project operations type drop down list." data-linktype="relative-path" src="./rawmb500/media_data_projects.png"/></a></p>
 <h2 id="sequencing">Sequencing</h2>
 <p>Two types of sequencing should be considered when you are working with data entities.</p>
 <ul>
@@ -618,7 +596,7 @@
 <li><p>To view or edit a sequence, select the <strong>Entity sequence</strong> button (available only in Standard view) on the Action Pane of the data project.</p>
 </li>
 <li><p>In the Definition group entity sequence, you can view the execution units and the sequence. You can change sequence by selecting the data entity in the list, setting a different Execution unit or Sequence in level, and then selecting <strong>Update selected</strong>. After selecting <strong>Update selected</strong>, the entity will move up or down in the entity list.</p>
-<p><a data-linktype="relative-path" href="media/data-project-entity-seq.png#lightbox"><img alt="Screenshot highlighting the data project entity sequence." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/data-project-entity-seq.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/data-project-entity-seq.png#lightbox"><img alt="Screenshot highlighting the data project entity sequence." data-linktype="relative-path" src="./rawmb500/media_data_project_entity_seq.png"/></a></p>
 <p>To continue with the example in step 2, to successfully import sales tax codes and groups, the sales tax codes and details have to be loaded before sales tax groups can be imported. Sales tax codes and groups are all in Execution unit = 1, but the sequences are in the order that they will be imported. Other related sales tax entities that are not dependent upon other data entities being loaded are included in the package.</p>
 <p>For example, the sales tax exempt numbers entity is set in its own Execution unit = 2. This data entity will start loading immediately because there are no dependencies on other entities loading before it.</p>
 <p>Finance and operations apps can determine the sequences of selected data entities in a project by selecting the <strong>Auto sequence</strong> button.</p>
@@ -635,13 +613,13 @@
 <h2 id="mapping">Mapping</h2>
 <p>When you are working with data entities, mapping an entity to a source is automatic. The automatic mapping of fields can be overridden, if needed.</p>
 <p>To view how an entity is mapped, locate the tile for the entity in the project, and then select <strong>View map</strong>.</p>
-<p><a data-linktype="relative-path" href="media/view-map.png#lightbox"><img alt="Screenshot highlighting the View map field." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/view-map.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/view-map.png#lightbox"><img alt="Screenshot highlighting the View map field." data-linktype="relative-path" src="./rawmb500/media_view_map.png"/></a></p>
 <p>The Data management framework provides a mapping visualization view (default) and a mapping details view. A red asterisk (*) identifies any required fields in an entity. These fields must be mapped for you to be able to work with the entity. Other fields can be unmapped as required when you are working with the entity.</p>
 <ul>
 <li>To unmap a field, highlight the field in either column (<strong>Entity</strong> or <strong>Source</strong>), select <strong>Delete selection</strong>, and then select <strong>Save</strong>. After the changes are saved, close the form to return to the project.</li>
 </ul>
 <p>After import, you can also edit the field mapping from source to staging by using the same process.</p>
-<p><a data-linktype="relative-path" href="media/map-1.png#lightbox"><img alt="Screenshot of the Map source to staging page showing the Mapping visualization view." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/map-1.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/map-1.png#lightbox"><img alt="Screenshot of the Map source to staging page showing the Mapping visualization view." data-linktype="relative-path" src="./rawmb500/media_map_1.png"/></a></p>
 <h2 id="regenerate-a-map">Regenerate a map</h2>
 <p>If you have extended an entity (added fields) or if the automatic mapping appears to be incorrect, the mapping of the entity can be regenerated in the <strong>Mapping</strong> page.</p>
 <ol>
@@ -650,17 +628,15 @@
 </ol>
 <h2 id="generate-data">Generate data</h2>
 <p>You may have fields in entities that are not specified in your imported source file. In this case, you can use the auto-generated functionality in the mapping details. This makes the system generate data for a specified field. For example, let’s say you are trying to import customers and customer address information, but your <strong>Party number</strong> field is not included in the import file. You can simply toggle the <strong>Auto-generated</strong> checkbox by the field, and the system will generate a party number automatically.</p>
-<p><a data-linktype="relative-path" href="media/map-details.png#lightbox"><img alt="Screenshot of the Map source to staging page showing the Mapping details view." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/map-details.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/map-details.png#lightbox"><img alt="Screenshot of the Map source to staging page showing the Mapping details view." data-linktype="relative-path" src="./rawmb500/media_map_details.png"/></a></p>
 <p>However, notice that in the import project, the data source is coming from other systems, such as those legacy applications. finance and operations apps uses the business logics of each data entity, discovers the dependencies, and sequences the data entities based on their relationships and dependencies.</p>
 <p>For example, if you want to import customers and customer address information, but the address information was not previously imported with the Global Address Book (GAB) entities, you can have the entity auto-generate the party number upon import and the GAB information will be created. To access this functionality, view the map of the entity, and then select the <strong>Mapping details</strong> tab. Select the fields that you want to auto-generate. This will change the source field to <strong>Auto</strong>.</p>
-<p><a data-linktype="relative-path" href="media/generate-source-map.png#lightbox"><img alt="Screenshot of the Map source to staging page highlightling  the Generate source mapping button." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/generate-source-map.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/generate-source-map.png#lightbox"><img alt="Screenshot of the Map source to staging page highlightling  the Generate source mapping button." data-linktype="relative-path" src="./rawmb500/media_generate_source_map.png"/></a></p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Using Standard and Enhanced views for tiles</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>There are two views available to work with in data management projects, the Standard and Enhanced views.</p>
 <ul>
@@ -669,27 +645,25 @@
 </ul>
 <p>Both views show all available tiles in the Data management framework. However, the Enhanced view gives more detailed information and control over the project than the Standard view.</p>
 <p>The following image shows the Standard view.</p>
-<p><a data-linktype="relative-path" href="media/tiles-standard-view.png#lightbox"><img alt="Screenshot of the Data management tiles in the Standard view." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/tiles-standard-view.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/tiles-standard-view.png#lightbox"><img alt="Screenshot of the Data management tiles in the Standard view." data-linktype="relative-path" src="./rawmb500/media_tiles_standard_view.png"/></a></p>
 <p>The following image shows the Enhanced view.</p>
-<p><a data-linktype="relative-path" href="media/tiles-enhanced-view.png#lightbox"><img alt="Screenshot of the Data management tiles in the Enhanced view." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/tiles-enhanced-view.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/tiles-enhanced-view.png#lightbox"><img alt="Screenshot of the Data management tiles in the Enhanced view." data-linktype="relative-path" src="./rawmb500/media_tiles_enhanced_view.png"/></a></p>
 <p>Prior to managing data import and export, you need to configure these tiles to successfully create, manage, and run the jobs to perform the data management activities.</p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Use templates in data management</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Default templates are delivered together with each new release of finance and operations apps. Our long-term goal is to provide the templates in Lifecycle Services so that you can push them to an instance of finance and operations apps. However, for the current releases, select the <strong>Templates</strong> tile in the <strong>Data management</strong> workspace, and then select <strong>Load default templates</strong> to load the templates. To see the <strong>Load default templates</strong> menu, you must use Enhanced view.</p>
 <p>We recommend using the Enhanced views to have more features and flexibility while working with your projects.</p>
 <p>After the templates are loaded, you can change them to suit your business requirements. If you ever want to retrieve the original default templates, you can use the <strong>Load default templates</strong> button to add them back to your system. The templates will then be replaced with the latest versions. If you've made changes to the templates, you can make a copy of the old templates by exporting them.</p>
 <p>Note that system administrator access is required to load default templates and import templates. This requirement helps guarantee that all entities are correctly loaded into the template.</p>
 <p>For the newly deployed environment of finance and operations apps, the default templates are not loaded. We recommend that you select the <strong>Load default templates</strong> button to view the default templates.</p>
-<p><a data-linktype="relative-path" href="media/template.png#lightbox"><img alt="Screenshot of the Load default templates button." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/template.png"/></a>
+<p><a data-linktype="relative-path" href="media/template.png#lightbox"><img alt="Screenshot of the Load default templates button." data-linktype="relative-path" src="./rawmb500/media_template.png"/></a>
  </p>
 <p>When the <strong>Load default templates</strong> dialog box appears, you can select single, multiple, or all templates to be loaded into your environment.</p>
-<p><a data-linktype="relative-path" href="media/load-default-template.png#lightbox"><img alt="Screenshot of the Load default templates dialog box." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/load-default-template.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/load-default-template.png#lightbox"><img alt="Screenshot of the Load default templates dialog box." data-linktype="relative-path" src="./rawmb500/media_load_default_template.png"/></a></p>
 <p>Levels 10 to 22 are reserved for shared system entities so that those entities are processed first. Almost all systems also use the company-specific general ledger entities. Therefore, level 25 is reserved for those entities. These levels represent the minimum basic setup that is required for most shared data in a configuration.</p>
 <p>After the basic setup is completed, many entities can be loaded in parallel across all the modules. These entities don't have to be loaded in silos by module. Instead, you can set up bands of dependencies between the data for different entities. Bands help establish execution timing between entities added to the groups because each band is defined by its execution level.</p>
 <p>Entities that have no dependencies are added to band 30 in this example. Band 40 is added for entities that have a dependency on the entities in band 30. The same process is continued for bands 50 to 90, as shown in the table:</p>
@@ -762,7 +736,7 @@
 <p>Many default templates include entities for master data, such as customers, vendors, and released products. These entities are included to indicate the correct sequence of entities that you will require after you've loaded parameters and reference data. Master entities are most often sequenced in the module bands that are numbered 100 and above. In the grid, the entity category for these entities will be Master. If you don't want to include master data or any other entities in your configuration, remove those entities from your project.</p>
 <h2 id="enable-change-tracking-for-entities">Enable change tracking for entities</h2>
 <p>Change tracking enables incremental export of data from finance and operations apps by using Data management. In an incremental export, only records that have changed are exported. To enable incremental export, you must enable change tracking on entities.</p>
-<p><a data-linktype="relative-path" href="media/change-tracking.png#lightbox"><img alt="Screenshot of the Change tracking button." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/change-tracking.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/change-tracking.png#lightbox"><img alt="Screenshot of the Change tracking button." data-linktype="relative-path" src="./rawmb500/media_change_tracking.png"/></a></p>
 <p>If you don't enable change tracking on an entity, you can only enable a full export each time. For bring your own database (BYOD) use cases, change tracking can also track deletes, if the entity supports this.</p>
 <p>For more information regarding BYOD, see <a data-linktype="absolute-path" href="/en-us/training/modules/prepare-data-migration-finance-operations/?azure-portal=true">Prepare data for migration to finance and operations apps</a>.</p>
 <div class="modular-content-container" hidden="" id="next-section">
@@ -770,8 +744,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Export, import, and copy data into a legal entity</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This unit explains how to copy data into a legal entity, and how to import and export data in finance and operations apps.</p>
 <h2 id="data-import-and-export-jobs">Data import and export jobs</h2>
@@ -819,8 +791,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Explore the Data management workspace</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2 id="read-this-first---before-you-start-the-lab">Read this first - before you start the lab!</h2>
 <div class="IMPORTANT">
@@ -883,8 +853,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Export data using the Data management workspace</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2 id="read-this-first---before-you-start-the-lab">Read this first - before you start the lab!</h2>
 <div class="IMPORTANT">
@@ -936,12 +904,10 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Database movement operations</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Database movement operations are a suite of self-service actions that you can use as part of Data Application Lifecycle Management (also referred to as DataALM). These actions provide structured processes for common implementation scenarios such as golden configuration promotion, debugging/diagnostics, destructive testing, and general refresh for training purposes.</p>
 <div class="mx-imgBorder">
-<p><img alt="Diagram of the Create request for database movement operation page in Lifecycle Services." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/request-database-movement.png"/></p>
+<p><img alt="Diagram of the Create request for database movement operation page in Lifecycle Services." data-linktype="relative-path" src="./rawmb500/media_request_database_movement.png"/></p>
 </div>
 <p>With database movement operations, you can:</p>
 <ul>
@@ -969,7 +935,7 @@
 <li>SQL Server backup/restore between one-box environments (SQL Server)</li>
 </ul>
 <div class="mx-imgBorder">
-<p><img alt="Diagram of the Tier-1 and Tier-2 environments." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-data-management-finance-operations/media/tier-1-tier-2-database-operations.png"/></p>
+<p><img alt="Diagram of the Tier-1 and Tier-2 environments." data-linktype="relative-path" src="./rawmb500/media_tier_1_tier_2_database_operations.png"/></p>
 </div>
 <p>See <a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/database/dbmovement-operations/?azure-portal=true">Database movement operations home page</a> to learn more about database movement operations</p>
 <div class="modular-content-container" hidden="" id="next-section">
@@ -977,8 +943,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Data sharing framework</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Cross-company data sharing lets you replicate (share) reference and group data among companies. Data integrity is verified before replication occurs.</p>
 <p>Examples of cross-company data sharing and the basic logic:</p>
@@ -1030,8 +994,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -1231,8 +1193,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>In this module, you have learned about the basic concepts of the Data management platform in finance and operations apps, and examined integration scenarios that used data entities.</p>
 <p>Additionally, you were able to observe how easy it was to use data management functionality to perform complex tasks of data migration, such as import and export data. This module also showed you how to benefit from data import and export jobs, and then clean up the staging tables prior to each new project run as a best practice.</p>
@@ -1241,8 +1201,6 @@
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>To test and evaluate the customer solution prior to go-live, you
 need to have an environment of finance and operations apps,
@@ -1275,8 +1233,6 @@ suites, manage the running of tests, and investigate results.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create user acceptance test libraries</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The business process modeler (BPM) is a Lifecycle Services tool to describe a
 hierarchy of business processes and user tasks. Lifecycle Services also allows
@@ -1296,16 +1252,14 @@ Visual Studio Team Server before the changes will display.</p>
 <p>You can create a BPM library in several ways.</p>
 <p>To create a library, you need to sign in to Lifecycle Services, select the <strong>Business
 process modeler</strong> tile, or select it from the LCS menu. Then create a new library.</p>
-<p><img alt="Screenshot of the Business process modeler tile." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/perform-uat-finance-operations/media/bpm-1.png"/></p>
+<p><img alt="Screenshot of the Business process modeler tile." data-linktype="relative-path" src="./rawmb500/media_bpm_1.png"/></p>
 <p>The library can also be created by using the Microsoft Excel import functionality.</p>
-<p><a data-linktype="relative-path" href="media/bpm-import-excel.png#lightbox"><img alt="Screenshot of the Microsoft Excel import button." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/perform-uat-finance-operations/media/bpm-import-excel.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/bpm-import-excel.png#lightbox"><img alt="Screenshot of the Microsoft Excel import button." data-linktype="relative-path" src="./rawmb500/media_bpm_import_excel.png"/></a></p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Record test cases and save to the business process modeler (BPM)</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>After you have created a BPM library, you'll need to use the task
 recorder to create your test cases and then upload the cases to BPM.
@@ -1325,19 +1279,19 @@ test cases in the context of security roles, which is a best practice.</p>
 <h3 id="create-and-save-a-new-task-recording">Create and save a new task recording</h3>
 <ol>
 <li><p>Go to <strong>Settings &gt; Task recorder</strong>.</p>
-<p><img alt="Screenshot of the Task recorder option in the settings menu." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/perform-uat-finance-operations/media/task-recorder.png"/></p>
+<p><img alt="Screenshot of the Task recorder option in the settings menu." data-linktype="relative-path" src="./rawmb500/media_task_recorder.png"/></p>
 </li>
 <li><p>Select <strong>Create recording</strong>.</p>
-<p><img alt="Screenshot of the Create recording in the task recorder menu." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/perform-uat-finance-operations/media/create-new-recording.png"/></p>
+<p><img alt="Screenshot of the Create recording in the task recorder menu." data-linktype="relative-path" src="./rawmb500/media_create_new_recording.png"/></p>
 </li>
 <li><p>Enter a name for the recording and then select <strong>Start</strong>.</p>
-<p><img alt="Screenshot of the Start page with name and description fields." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/perform-uat-finance-operations/media/start-1.png"/></p>
+<p><img alt="Screenshot of the Start page with name and description fields." data-linktype="relative-path" src="./rawmb500/media_start_1.png"/></p>
 </li>
 <li><p>When the recording is complete, in the Task recorder pane, select
 <strong>Stop</strong>.</p>
 </li>
 <li><p>To save the task recording to an attached BPM, select <strong>Save to Lifecycle Services</strong>.</p>
-<p><img alt="Screenshot of the Save to Lifecycle Services feature." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/perform-uat-finance-operations/media/lcs-1.png"/></p>
+<p><img alt="Screenshot of the Save to Lifecycle Services feature." data-linktype="relative-path" src="./rawmb500/media_lcs_1.png"/></p>
 </li>
 <li><p>Select the library that you want to save the recording to and then select <strong>OK</strong>. This automatically saves the recording into Lifecycle Services. If you already have a business library, then identify that in <strong>System administration &gt; Setup &gt; System Parameters &gt; Help</strong> tab.</p>
 </li>
@@ -1369,7 +1323,7 @@ steps to upload them to BPM.</p>
 <li><p>Go to <strong>Settings &gt; Task recorder</strong>.</p>
 </li>
 <li><p>Select <strong>Edit Recording</strong> and attach the file by either saving directly to Lifecycle Services or downloading the AXTR and then uploading to BPM.</p>
-<p><img alt="Screenshot of the Edit recording feature." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/perform-uat-finance-operations/media/edit-recording.png"/></p>
+<p><img alt="Screenshot of the Edit recording feature." data-linktype="relative-path" src="./rawmb500/media_edit_recording.png"/></p>
 </li>
 </ol>
 <h3 id="guidelines-for-recording-test-cases">Guidelines for recording test cases</h3>
@@ -1405,8 +1359,6 @@ typically owned by developers.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Synchronize and configure your test plan in Azure DevOps</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>An acceptance test library is your starting point. It typically contains
 all test cases (task recordings) of an application that is organized by business
@@ -1431,7 +1383,7 @@ Azure DevOps project.</p>
 <li><p>After Azure DevOps synchronization is complete, select the ellipsis  button (...) and then select <strong>Sync test cases</strong>. When this step is complete, your task recordings will become test cases in Azure DevOps and a link will appear under the <strong>Requirements</strong> tab.</p>
 </li>
 </ol>
-<p><a data-linktype="relative-path" href="media/sync-test-cases.png#lightbox"><img alt="Screenshot showing the Sync test cases." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/perform-uat-finance-operations/media/sync-test-cases.png"/></a></p>
+<p><a data-linktype="relative-path" href="media/sync-test-cases.png#lightbox"><img alt="Screenshot showing the Sync test cases." data-linktype="relative-path" src="./rawmb500/media_sync_test_cases.png"/></a></p>
 <p>In addition to the test steps, the task recording XML file is attached
 to the Azure DevOps test case. This file will be needed if you want to
 automate test runs.</p>
@@ -1440,8 +1392,6 @@ automate test runs.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Run user acceptance tests</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>To run your user acceptance tests, you will need to create a test plan and test suite in
 Azure DevOps. This will allow you to run an ordered suite of test cases
@@ -1471,7 +1421,7 @@ testing after updates have been made to your finance and operations apps
 application in a sandbox or test environment. You can run the test cases
 in your test suite manually. Alternatively, you can play the task recordings that are part of
 the test suite and use Azure DevOps to denote the test cases as passed or failed.</p>
-<p><img alt="Screenshot of the manual tests outcome field." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/perform-uat-finance-operations/media/manual-tests.png"/></p>
+<p><img alt="Screenshot of the manual tests outcome field." data-linktype="relative-path" src="./rawmb500/media_manual_tests.png"/></p>
 <p>Azure DevOps also provides a tool, named Test Runner, to manage manual
 test case runs. For more information about using Test Runner,
 see <a data-linktype="absolute-path" href="/en-us/azure/devops/test/run-manual-tests?azure-portal=true">Run manual tests</a>.</p>
@@ -1508,8 +1458,6 @@ and errors.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Data task automation</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Data task automation in finance and operations apps lets you repeat many
 types of data tasks and validate the outcome of each task. Data task
@@ -1554,8 +1502,6 @@ task. It also provides insights into the reason why a task failed.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Exercise - Build test scripts to test business functionality</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>After you have created a Business Process Modeler (BPM) library, you'll need to use Task recorder
 to create your test cases and then upload the cases to BPM.</p>
@@ -1624,7 +1570,7 @@ the standard sample data available in finance and operations apps installed by u
 </li>
 <li><p>Go to <strong>Settings &gt; Task recorder</strong>.</p>
 <blockquote>
-<p><img alt="Screenshot of the Task recorder feature in the Settings menu." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/perform-uat-finance-operations/media/task-recorder.png"/></p>
+<p><img alt="Screenshot of the Task recorder feature in the Settings menu." data-linktype="relative-path" src="./rawmb500/media_task_recorder.png"/></p>
 </blockquote>
 </li>
 <li><p>Select <strong>Create a new recording</strong>.</p>
@@ -1680,8 +1626,6 @@ Lifecycle Services</strong>.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -1838,8 +1782,6 @@ Lifecycle Services</strong>.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>In this module, you learned how to build test cases to test business
 functionality without the need for development skills.</p>
@@ -1852,8 +1794,6 @@ to the production environment without needing a developer to code for you.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>All your hard work becomes a success by moving the implemented solution in finance and operations apps to the production environment, which is the final stage of completing an implementation.</p>
 <p>You want a happy customer, a quality solution, and peace of mind during this important phase, which is known as go-live.</p>
@@ -1871,11 +1811,9 @@ to the production environment without needing a developer to code for you.</p>
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Understand the go-live process</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>The go-live process is shown in the following image.</p>
-<p><img alt="Diagram of the go-live process with actions highlighted." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/prepare-go-live-finance-operations/media/go-live-process.png"/></p>
+<p><img alt="Diagram of the go-live process with actions highlighted." data-linktype="relative-path" src="./rawmb500/media_go_live_process.png"/></p>
 <p>The go-live process consists of the following actions, which should be considered as sequential steps in a checklist:</p>
 <ol>
 <li><p><strong>Update the go-live date in Lifecycle Services</strong>: Throughout project implementation, make sure that the milestone dates are continuously kept up-to-date. Start this step, at the latest, two to three months prior to go-live. You need to closely engage with customer key stake holders during this period in case anything unusual happens</p>
@@ -1910,8 +1848,6 @@ For package installation, depending on number of packages, it could take a minim
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Complete the Lifecycle Services methodology</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>After you have prepared to go live, it is time to take finance and operations apps to the production environment.</p>
 <p>Completing the Lifecycle Services methodology is a major milestone in each implementation project, and it is the cutover to the production environment.</p>
@@ -1931,8 +1867,6 @@ For package installation, depending on number of packages, it could take a minim
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Perform user acceptance testing (UAT) for your solution</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>During the User acceptance test (UAT) phase, you need to test all the business processes that you've implemented, and any customizations that you've made, in a sandbox, or standard acceptance test environment, in the implementation project. To help ensure a successful go-live, you should consider the following as you complete the UAT phase:</p>
 <ul>
@@ -1955,8 +1889,6 @@ For package installation, depending on number of packages, it could take a minim
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">FastTrack go-live assessment</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Microsoft FastTrack for finance and operations apps is a customer success service that is designed to help you move smoothly and confidently to finance and operations apps so that you can realize business value faster.</p>
 <p>When participating in the FastTrack program, you receive guidance about implementation best practices, planning for successful rollouts, and expanding capabilities. However, you can implement at your own pace. You also have access to Microsoft Solution Architects who are committed to making your experience with finance and operations apps a success.</p>
@@ -1983,8 +1915,6 @@ If you aren't familiar with Microsoft FastTrack, go to <a data-linktype="absolut
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Request a production environment</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>After you've completed the analysis, design and develop, and test phases in the Lifecycle Services methodology, and the go-live assessment has concluded that the project is ready, you can request your production environment.</p>
 <p>We recommend that you select a service account, for example a generic user account, as the Admin user of the environments that you deploy. If you use a named user account, you might not be able to access an environment if that user isn't available.</p>
@@ -2004,8 +1934,6 @@ You can view this service request in the Service requests list in Lifecycle Serv
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <h2>Answer the following questions to see what you've learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
@@ -2127,8 +2055,6 @@ You can view this service request in the Service requests list in Lifecycle Serv
 </div>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
-
-
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You have now learned how to prepare for a successful go-live by completing the Lifecycle Services methodology and making sure that the customer has performed and signed off on all user acceptance tests.</p>
 <p>You also learned about the FastTrack go-live assessment and how to assist the customer to request the production environment.</p>
