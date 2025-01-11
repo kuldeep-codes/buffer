@@ -1,0 +1,940 @@
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<p>A report in finance and operations apps can be defined simply as a structured presentation of data.
+Under ideal circumstances, reports materialize data in such a way that it allows the user to make informed decisions.
+Finance and operations apps supports a broad spectrum of information access scenarios that include, but are not limited to, the following:</p>
+<ul>
+<li>Cross company all-up financial reporting</li>
+<li>Analytical dashboards and tiles</li>
+<li>Electronically-transferable funds</li>
+<li>Customer sales invoices</li>
+<li>Checks and tax documents</li>
+</ul>
+<p>In this module, you will learn about:</p>
+<ul>
+<li>Different types of reports and inquiries in finance and operations apps</li>
+<li>Financial reporting</li>
+<li>Configuring finance and operations apps for Microsoft Power Platform</li>
+</ul>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Understand different types of reports and inquiries</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Understand different types of reports and inquiries</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<p>The first step in working with the reporting functionality in finance and operations apps is to understand the reporting features that already exist and that you can use, either as they are, or through small extensions to match your customer requirements.</p>
+<p>Finance and operations apps provide several reporting tools that cater to various data access scenarios.</p>
+<p>For example, the needs of users when they are interacting with business documents differ greatly from scenarios where they want to explore data at an aggregate level or derive insights by using Artificial Intelligence models that are hosted in the cloud.</p>
+<p>Finance and operations apps provide specialized tools for  reporting experiences:</p>
+<ul>
+<li><p><strong>Embedded analytics and native controls</strong> - Built-in visualizations that are used in operational reports to aggregate data to workspaces, by using native controls such as charts and grids.</p>
+</li>
+<li><p><strong>SQL Server Reporting Services (SSRS)</strong> - Primarily used for business documents and high-volume printing scenarios that are common with invoices, packing slips, picking lists, and more.</p>
+<p>Many pre-generated SSRS reports come out of the box with finance and operations apps. SSRS reports allow you to print reports to different locations, such as your screen, printer, a file, or an email. You can use SSRS reports to create parameterized views with drill-down navigation. You can also embed hyperlinks from a report to finance and operations apps pages.
+Additionally, you can schedule your reports to run periodically by using a batch job. SSRS reports can also help you create precise compliance documents for your local regulatory business. In addition to the out-of-the-box reports, you can create and modify additional reports by using X++ development to suit your organization's needs.</p>
+</li>
+<li><p><strong>Financial Report Designer</strong> - Flexible tool that is used to customize and create financial statements such as balance sheets, income statements, and cashflow statements.</p>
+</li>
+<li><p><strong>Microsoft Power Platform</strong> - Includes dashboards and workspaces that contain predefined and personalized views, Power BI, Power Apps, and Power Automate integrations.</p>
+</li>
+<li><p><strong>Electronic reporting</strong> - Used to configure formats for incoming and outgoing electronic documents in accordance with the legal requirements of various countries or regions. Electronic Reporting lets you manage these formats during their lifecycle.
+For example, you can adopt new regulatory requirements, and generate business documents in the required format to electronically exchange information with government bodies, banks, and other parties.</p>
+<p>The Electronic reporting engine is targeted at business users instead of developers. Because you configure formats instead of code, the processes for creating and adjusting formats for electronic documents are faster and easier.</p>
+<p>See <a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/analytics/general-electronic-reporting/?azure-portal=true">Electronic reporting (ER) overview</a> to learn more.</p>
+</li>
+</ul>
+<h2 id="microsoft-office-integrations">Microsoft Office integrations</h2>
+<p>By using the Microsoft Office integration built-in feature, you can export selected, or all, rows from a list page grid and export data entity values into a Microsoft Excel workbook for reporting purposes. Then, you can use the rich capabilities of Excel, such as pivot table, charts, and more, to present your data.</p>
+<div class="mx-imgBorder">
+<p><a data-linktype="relative-path" href="media/grid-export.svg#lightbox"><img alt="Screenshot of the Export to Excel menu from the List page grid." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-analytics-reporting-finance-operations/media/grid-export.svg"/></a></p>
+</div>
+<p>Finance and operations uses the Excel Data Connector to view, update, and edit data within an Excel workbook. You will need to download the Microsoft Dynamics Add-in to use this feature. On some pages, you can select the <strong>Open in Office</strong> icon on the Action Pane.</p>
+<p>From there, you can select <strong>Open in Excel</strong> or <strong>Export to Excel</strong>.</p>
+<ul>
+<li><p><strong>Open in Excel</strong> - Lets you use the data entity that is related to the form data. The columns that appear on your Excel workbook are defined in the <strong>AutoReport</strong> field group on the entity. You can also add or remove fields from the entity by using the <strong>Design</strong> button. Additionally, you can filter the data by using the <strong>Filter</strong> button. The <strong>Open in Excel</strong> feature also gives you the ability to change the data in the grid and publish the changes back to finance and operations apps.</p>
+</li>
+<li><p><strong>Export to Excel</strong> - Exports all the grid data to an Excel workbook. When the data is in a workbook, you can use the tools in Excel to manipulate the data and create visual charts for your reporting needs.</p>
+</li>
+</ul>
+<h2 id="financial-reporting">Financial reporting</h2>
+<p>Standard financial reports are provided by using the default main account categories in finance and operations apps. Use the Report designer to create or modify traditional financial statements, such as the Income statement and Balance sheet, and share the results with other members of your organization.</p>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Financial reporting</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Financial reporting</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<p>Financial reporting allows financial and business professionals to create, maintain, and view financial statements. It moves beyond traditional reporting constraints to help you efficiently design various types of reports.</p>
+<p>Financial reporting includes dimension support to determine what financial dimensions you want to include, and the sequence, and enables the building of a custom reporting structure.</p>
+<p>You can map the following to gain better insight of financial data:</p>
+<ul>
+<li>Main accounts</li>
+<li>Financial dimensions</li>
+<li>Combinations of the two</li>
+</ul>
+<p>For example, you can create financial row structures to focus on cost accounts. You can set up unlimited financial dimensions that allow for cost detail.
+The following financial dimensions are examples that might be associated with cost accounts:</p>
+<ul>
+<li>Cost centers</li>
+<li>Departments</li>
+<li>Combinations of the two</li>
+</ul>
+<p>The Financial reporting database is deployed to its own SQL Azure database on the same SQL Azure service as the finance and operations apps instance. This means that the database is preconfigured when you deploy finance and operations apps, and automatically links to available databases so that the Financial report designer can connect to it.</p>
+<h2 id="report-designer">Report designer</h2>
+<p>By using Report designer, you will be able to:</p>
+<ul>
+<li>Save and reuse dimension combinations for multiple reports.</li>
+<li>Control how to format and display the dimension descriptions.</li>
+<li>Identify the accounts or dimensions that have been omitted from report building blocks.</li>
+<li>Format the headers for rolling forecasts.</li>
+</ul>
+<p>You can manage the generation and distribution of reports by using the following features:</p>
+<ul>
+<li>Scheduling reports so that they are automatically generated on a daily, weekly, monthly, or annual basis.</li>
+<li>Exporting the report result to the read-only PDF format, which provides better document security through digital signatures.</li>
+<li>Exporting to a Microsoft Excel worksheet.</li>
+</ul>
+<p>Interactive features let you perform the following tasks within Financial reporting:</p>
+<ul>
+<li>Change the report date for the report that you're viewing.</li>
+<li>Change the currency of the report that you're viewing.</li>
+<li>View the report in either a summary view or a detailed view.</li>
+<li>Add dimension filters to limit the report content to a specific dimension or combination of dimensions.</li>
+<li>Add attribute filters to limit the report content to a specific attribute or a combination of attributes.</li>
+</ul>
+<p>We recommend that you link your main accounts to your main account categories. This makes it easier and faster when setting up your reporting in Financial reporting.</p>
+<p>For example, if you are creating a report, rather than listing many main accounts, you can simply list your main account category and get a total of all the main accounts in that category.</p>
+<h2 id="accessing-financial-reporting">Accessing financial reporting</h2>
+<p>Before creating and generating the financial reports, ensure that the following items have been set up for your company:</p>
+<ul>
+<li>Currency</li>
+<li>Fiscal calendar</li>
+<li>Chart of accounts</li>
+<li>Ledger</li>
+</ul>
+<p>For more information, see the following Microsoft Learn documentation and training content:</p>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/dynamics365/finance/budgeting/fiscal-calendars-fiscal-years-periods/?azure-portal=true">Fiscal calendars, fiscal years, and periods</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/dynamics365/finance/general-ledger/plan-chart-of-accounts/?azure-portal=true">Plan your chart of accounts</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/training/modules/configure-currencies-dyn365-finance/?azure-portal=true">Configure currencies in Dynamics 365 Finance</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/training/modules/create-fiscal-calendars-years-periods-dyn365-finance/?azure-portal=true">Create fiscal calendars, years, and periods in Dynamics 365 Finance</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/training/modules/configure-chart-accounts-dyn365-finance/?azure-portal=true">Configure chart of accounts in Dynamics 365 Finance</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/training/modules/configure-ledgers-journals-dyn365-finance/?azure-portal=true">Configure ledgers and journals in Dynamics 365 Finance</a></li>
+</ul>
+<p>You can find the <strong>Financial reporting</strong> menu in the following locations in Dynamics 365 Finance:</p>
+<ul>
+<li><strong>General Ledger &gt; Inquiries and reports</strong></li>
+<li><strong>Budgeting &gt; Inquires and reports &gt; Basic budgeting</strong></li>
+<li><strong>Budgeting &gt; Inquiries and reports &gt; Budget planning</strong></li>
+<li><strong>Budgeting &gt; Inquiries and reports &gt; Budget control</strong></li>
+<li><strong>Consolidations</strong></li>
+</ul>
+<h2 id="financial-reporting-setup">Financial reporting setup</h2>
+<p>The <strong>Financial reporting setup</strong> page in <strong>General ledger &gt; Ledger setup</strong> has a list of all financial dimensions in the system. It has two sections that determine the data that you will report on in Financial reporting:</p>
+<ul>
+<li><strong>Dimensions tab</strong> - Because different companies use different dimensions and account structures, there is no way to determine the order in which users want to view all financial dimensions on reports. This page allows you to set the order in which you want financial dimensions to appear when you build and view a report in Financial reporting.</li>
+<li><strong>Attributes tab</strong> - This is where you can select whether you want to use vendors and customers as attributes for filtering and report design. Reporting on vendor and customer will only be valuable if you do not enter multiple vendors or customers in a single voucher when posting transactions. Selecting <strong>Vendor</strong> and/or <strong>Customer</strong> will add more time to the integration.</li>
+</ul>
+<h2 id="financial-reporting-components">Financial reporting components</h2>
+<p>The following components of financial reporting make it easy to create, view, and schedule reports:</p>
+<ul>
+<li><strong>Report designer</strong> - Create report building blocks that can be combined to define and generate a report. Advanced users can create new report building blocks or modify existing building blocks to meet their requirements.</li>
+<li><strong>Report schedules</strong> - Schedule a single report, or a group of reports, so that it is generated on a regular basis.</li>
+</ul>
+<p>The financial statement functionality simplifies your ability to build reporting structures for internal analytical purposes. You can create many financial reports to comply with requirements and international accounting standards.</p>
+<p>There are two default balance sheet reports:</p>
+<ul>
+<li><strong>Balance Sheet – Default</strong> - The sections are stacked. Provides a view of the organization's financial position for the year.</li>
+<li><strong>Side by Side Balance Sheet – Default</strong> The sections are side by side. Provides a view of the organization's financial position for the year. Assets and liability and shareholder’s equity are side by side.</li>
+</ul>
+<p>The three trial balance reports are:</p>
+<ul>
+<li><strong>Detailed Trial Balance – Default</strong> - Provides balance information for all accounts, and includes debit and credit balances, and the net of these, together with the transaction date, voucher, and journal description.</li>
+<li><strong>Summary Trial Balance – Default</strong> - Provides balance information for all accounts and includes opening and closing balances, and debit and credit balances, together with their net difference.</li>
+<li><strong>Summary Trial Balance Year Over Year – Default</strong> - Provides balance information for all accounts and includes opening and closing balances, and debit and credit balances, together with their net difference for the current year and the past year.</li>
+</ul>
+<p>The <strong>Income Statement – Default</strong> report provides a view of the organization’s profitability for the current period and for the year to date.</p>
+<h2 id="financial-report-retention-policies">Financial report retention policies</h2>
+<p>As you run Financial reports, default expiration dates are applied to each one to automatically delete them after a period of time. Any reports can be retained for regulatory purposes, however, by using the Expiration feature in Financial reports. You have two choices:</p>
+<ul>
+<li>90 days</li>
+<li>Never</li>
+</ul>
+<div class="mx-imgBorder">
+<p><a data-linktype="relative-path" href="media/expiration-date-ssm.png#lightbox"><img alt="Screenshot of the Reports expiration page with expires after date." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-analytics-reporting-finance-operations/media/expiration-date-ssm.png"/></a></p>
+</div>
+<div class="mx-imgBorder">
+<p><a data-linktype="relative-path" href="media/expiration-date-choices-ssm.png#lightbox"><img alt="Screenshot of the Reports expiration page with expiration date choices." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-analytics-reporting-finance-operations/media/expiration-date-choices-ssm.png"/></a></p>
+</div>
+<h2 id="row-definition">Row definition</h2>
+<p>A row definition is a report component, or building block, that specifies the contents of each row on a financial report. It can be combined with column definitions, reporting tree definitions, and report definitions to create a building block group that can be used by multiple companies.</p>
+<p>A row definition defines the descriptive lines (for example, salaries or sales) on a report. It also lists the segment values or dimensions that contain the values for each line item and includes row formatting and calculations.</p>
+<p>You can use row definitions in the financial statements to present financial figures by the following:</p>
+<ul>
+<li>Financial dimension</li>
+<li>Main accounts</li>
+<li>A combination of the two</li>
+</ul>
+<p>A row definition can contain up to 20,000 financial dimension rows and can include the following information:</p>
+<ul>
+<li>Descriptive text that adds meaning to the report by creating section headings, lines, and spaces, such as Cash or Total revenue.</li>
+<li>Links to financial data, which can include dimension values in finance and operations apps.</li>
+<li>Row totals and formulas that are based on the linked financial data.</li>
+</ul>
+<p>Usually, each row in a row definition contains one of the following types of information:</p>
+<ul>
+<li>References to the financial dimensions system.</li>
+<li>Totals or calculations that are based on the data.</li>
+<li>Formatting.</li>
+</ul>
+<p>Two methods for entering information in a row definition are:</p>
+<ul>
+<li><strong>Manually</strong> - Enter row information in a new row definition. For more information, see <a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/analytics/modify-row-definition-cells-financial-reporting?azure-portal=true&amp;toc=%2Ffin-and-ops%2Ftoc.json">Modify row definition cells</a>.</li>
+<li><strong>Use the Report designer</strong> - Use this to pull row information directly from the financial dimensions.</li>
+</ul>
+<p>You can set up a row definition to pull data from the financial dimensions system every time that the report is generated.</p>
+<p>A dimension is an intersection of data and values. You can group data and values in the Report designer. Then, you can classify and analyze transactions in more detail. You can use the <strong>Insert rows</strong> function from <strong>Dimensions</strong> dialog box to add multiple rows to a row definition at the same time.</p>
+<p>The following list describes the information that you can specify for each dimension:</p>
+<ul>
+<li><strong>Dimension</strong> - The pattern that identifies the dimension to add to the row definition. This pattern contains one ampersand (&amp;) or number sign (#) for each position in the dimensions. If a dimension has an ampersand, then that dimension will populate the row definition. By default, it's set on the main account, which is the most common way to build a row definition.</li>
+<li><strong>Dimension Range Start</strong> - The first value for this dimension to add to the row definition.</li>
+<li><strong>Dimension Range End</strong> - The last value for this dimension to add to the row definition.</li>
+</ul>
+<h2 id="column-definition">Column definition</h2>
+<p>A column definition is a report component, or building block, that defines the contents of columns on a report. Like row definitions, basic column definitions can be used on multiple reports.</p>
+<p>A column definition defines the period to use when data is extracted from the financial dimensions. It also includes column formatting and calculations. You can also restrict a report column to a specific unit or for specific dates.</p>
+<p>Often, you might need to combine financial dimension sets to make detailed financial reports, which match the customer’s requirements. This helps companies to analyze transactions from the following transactions:</p>
+<ul>
+<li>General ledger</li>
+<li>Budget</li>
+</ul>
+<p>You can add, modify, and delete the headers that appear at the top of the columns on a report. You can also configure conditional spanning column headers, based on the <strong>Period</strong> field from column definitions and the <strong>Base period</strong> field from report definitions. The base period feature helps save time when you create rolling forecast reports.</p>
+<h2 id="reporting-tree-definition">Reporting tree definition</h2>
+<p>A reporting tree definition helps define the structure and hierarchy of your organization. It's a cross-dimensional and cross-company hierarchical structure that is based on the dimensional relationships in your financial data. It provides information at the reporting unit level and at a summary level for all units in the tree.</p>
+<p>Reporting tree definitions can be combined with column definitions and report definitions to create a building block group that can be used by multiple companies.</p>
+<p>A reporting unit can be an individual department from the financial data, or it can be a higher-level summary unit that combines information from other reporting units. For a report definition that includes a reporting tree, one report is generated for each reporting unit and for the summary level.</p>
+<p>Financial reports that aren't based on a reporting tree use only some of the capabilities of Financial reporting. You can use multiple reporting tree definitions together with the same row and column definitions to view your organization's data in various ways.
+All these reports use the row and column definitions that are specified in the report definition, unless the report definition specifies that the reporting tree from the row definition should be used. Row and column definitions are important components in the design and functionality of financial reports.</p>
+<h2 id="security-considerations">Security considerations</h2>
+<p>You can create a password to lock and help protect a building block. In this way, you can add a level of security to a report component without securing the whole system.</p>
+<p>A password can help protect building block information that is important to your month-end reporting process.
+A user in any role can lock a building block. However, other users always have read-only access to a locked component. Users can open, change, and save the locked component under a new name.
+A user who has the role of administrator can always access and change a locked building block.</p>
+<h2 id="learn-more">Learn more</h2>
+<p>For more information about financial reports, see <a data-linktype="absolute-path" href="/en-us/dynamics365/finance/general-ledger/financial-reporting-getting-started/?azure-portal=true">Get started with Financial reporting</a></p>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Find inquiries and reports</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Find inquiries and reports</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<p>Modules like Supply Chain Management, Human Resources, and Finance, provide a comprehensive set of out-of-the-box reports and inquiries designed to enhance business decision-making. Each module typically includes a dedicated <strong>Inquiries and Reports</strong> menu, offering predefined tools and templates for quickly accessing, viewing, and analyzing data. Users can explore detailed transactional records, summary data, and system-generated analytics without requiring advanced technical expertise.</p>
+<p>The following screenshot is an example of the <strong>General ledger &gt; Inquiries and Reports</strong> menu item.</p>
+<div class="mx-imgBorder">
+<p><a data-linktype="relative-path" href="media/inq-rep.png#lightbox"><img alt="Screenshot of the Inquiries and Reports menu item." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/work-analytics-reporting-finance-operations/media/inq-rep.png"/></a></p>
+</div>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Generate and consume inquiries and reports</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Generate and consume inquiries and reports</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<p>In finance and operations apps, you can perform the following tasks with reports and inquiries:</p>
+<ul>
+<li>Export application reports as Word documents.</li>
+<li>Export options while previewing documents.</li>
+<li>Send documents to network printers while previewing online.</li>
+</ul>
+<h2 id="export-application-reports-as-word-documents">Export application reports as Word documents</h2>
+<p>By using Report Definition Language (RDL) based design definitions, a user can create editable documents. Dynamics 365 offers specific application solutions that allow you to access predetermined business views of Finance and Supply Chain Management apps data. When completed, the data can be exported to PDF, CSV, and other Microsoft Office formats.</p>
+<p>In addition to the formats mentioned above, reports created using the cloud-hosted service can be downloaded as a standard Microsoft Word document.</p>
+<div class="NOTE">
+<p>Note</p>
+<p>A request for more than one report at a time results in a .ZIP file that must be downloaded and uncompressed before using the Word documents.</p>
+</div>
+<h2 id="export-options-while-previewing-documents">Export options while previewing documents</h2>
+<p>Because most users prefer to view their documents before exporting them, toolbar options are available on all supported devices, providing a simple and intuitive solution for exporting documents. For more information on PDF previewing, see <a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/analytics/preview-pdf-documents/?azure-portal=true">Preview PDF documents using a PDF viewer</a>.</p>
+<p>Unlike the Report Viewer, which used HTML to display documents before exporting them, the new toolbar actions convert documents into a format that ensures better consistency when downloaded.</p>
+<h2 id="send-documents-to-network-printers-while-previewing-online">Send documents to network printers while previewing online</h2>
+<p>In addition to printing on local devices, users can also select to send documents directly to Dynamics 365-supported network printers. Making direct networking printing options easily accessible to users helps companies enhance efficiency by printing reports connected to network-based printers even when working remotely from their mobile devices or any computer connected to the internet.</p>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Configure finance and operations apps for Microsoft Power Platform</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Configure finance and operations apps for Microsoft Power Platform</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<p>finance and operations apps delivers interactive reports that are seamlessly integrated into application workspaces. Workspaces can use rich infographics and visuals that are supported by Microsoft Power BI.</p>
+<p>You can also use Power Apps and Power Automate with finance and operations apps.</p>
+<h2 id="power-apps">Power Apps</h2>
+<p>You can embed Power Apps into finance and operations apps by using the <strong>Personalize</strong> toolbar that is available on most pages in the system. When you build a PowerApp, it’s important that you are logged in to Power Apps.com and your instance of finance and operations apps by using the same credentials.</p>
+<p>By using Power Apps, you can build apps fast with a point-and-click approach to app design. Choose from a large selection of templates or start from a blank canvas. Easily connect your app to data and use Excel-like expressions to easily add logic. Publish your app to the web, iOS, Android, and Windows 10.</p>
+<p>With Microsoft Dataverse built in, you get a powerful data service with rich customization, business logic, and security capabilities. Your data is stored in a standard format through Common Data Model so it’s ready to go and easy to use.</p>
+<p>To read more about Power Apps in finance and operations apps, go to the following sources:</p>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/fin-ops/get-started/embed-power-apps/?azure-portal=true">Embed Power Apps apps</a></li>
+<li><a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/user-interface/powerapps-host-control/?azure-portal=true">Power Apps Host control</a></li>
+</ul>
+<h2 id="power-automate">Power Automate</h2>
+<p>Power Automate includes powerful workflow automation that flows directly in your apps with a no-code approach that connects to hundreds of popular apps and services. You can create automated workflow between your favorite apps and services to get notifications, insights, synchronize files, collect data, and much more.</p>
+<p>To read more about Power Automate in finance and operations apps, go to:</p>
+<ul>
+<li><a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/business-events/business-events-flow/?azure-portal=true">Business events in Power Automate</a></li>
+</ul>
+<h2 id="power-bi">Power BI</h2>
+<p>Use the features of Power BI to unify data from many sources to create interactive, immersive dashboards, and reports that provide actionable insights and drive business results.</p>
+<p>The following Power BI solutions are available in the <strong>Shared assets library</strong> of Lifecycle Services. Refer to the version information in the <strong>Shared assets library</strong> to download the correct version for your environment.</p>
+<ul>
+<li><p><strong>Actual vs. budget</strong> - Individuals who are responsible for monitoring actual versus budget performance in their organization can use this Power BI content. It provides visibility into your budget variances.</p>
+</li>
+<li><p>You can analyze budget for the current year by account category, budget code, main account, main account descriptions, or fiscal period to gain better understanding of the cause of any variances.</p>
+</li>
+<li><p><strong>Cash overview</strong> - Business users who are responsible for cash in their organization can have visibility into the business cash flow by using this Power BI content. It provides forecasts that can help financial leaders make better decisions and therefore improve the health of the business cash flow.</p>
+</li>
+<li><p>You can analyze cash by legal entity, currency, and bank account to gain better understanding of surpluses and shortfalls. Reports from the <strong>Cash overview Power BI</strong> content are displayed in the <strong>Cash overview</strong> and <strong>Bank management</strong> workspaces.</p>
+</li>
+<li><p><strong>Compensation and benefits</strong> - Two reports are available in this Power BI content:</p>
+<ul>
+<li><strong>Comp and Benefits Analysis</strong> - Provides information for hourly and salaried employees by company, average hourly pay, average salaried pay, employees by employment type, and plan enrollment.</li>
+<li><strong>Employee Benefits</strong> - Provides information for employee enrollment by selected benefit so you can filter all employees by each benefit.</li>
+</ul>
+</li>
+<li><p><strong>Cost accounting analysis</strong> - This Power BI content is intended for cost controllers or anyone who is responsible for performing cost control of an organization.</p>
+<p>This report includes the key metrics, such as cost, magnitude, and cost rate by actual cost, budget cost, and flexible budget cost. It uses transaction data from the Cost accounting module and provides an aggregate view of costs for the whole organization in one reporting currency. Managers can filter the data by cost objects to perform cost control of their organizational units, even if the organization can have several legal entities.</p>
+</li>
+<li><p><strong>Compensation</strong> - This Power BI content is shown in the <strong>Compensation management</strong> workspace. The following reports are available:</p>
+<ul>
+<li><strong>Compensation overview</strong> – Provides a summary of other reports.</li>
+<li><strong>Compensation analysis</strong> - Hourly and salaried employees by company, total employees by compensation plan, male and female employees by compensation plan, and employee compensation by department.</li>
+<li><strong>Position pay analysis</strong> - Highest and lowest hourly and salary pay, positions with highest and lowest pay, and full-time and part-time positions.</li>
+<li><strong>Compensation Plan Analysis</strong> - Provides information regarding the employee enrollment by selected benefit.</li>
+</ul>
+</li>
+<li><p><strong>Credit and collections management</strong> - The credit and collections managers and collections clerks can benefit from this Power BI content. It provides key credit and collections metrics, such as days sales outstanding, balance overdue, credit exposure, and customers that are over their credit limit.</p>
+<p>It uses transactional data and provides aggregate views of credit and collections across all companies. It also provides a breakdown per company, customer group, and customer.</p>
+</li>
+<li><p><strong>Employee competencies and development</strong> - The following reports are available in this Power BI content:</p>
+<ul>
+<li><strong>Competency &amp; Development Analysis</strong> - Provides information of the team member skills by type.</li>
+<li><strong>Skill Profile</strong> - Provides information regarding the skill profile for the selected employee.</li>
+<li><strong>Skill Analysis</strong> - Provides information regarding skills by type and rating.</li>
+</ul>
+</li>
+<li><p><strong>Financial analysis (current company and all companies options)</strong> - Describes the dashboard and reports that are included, and provides information about the data model and entities that were used to build the solution.</p>
+<p>Because organizations want liabilities and revenue amounts to appear as positive amounts on reports, the setup of the main accounts is important.
+For these main accounts to appear as positive amounts, the main account type must be set to <strong>Liability</strong> or <strong>Revenue</strong>. When these account types are used, reporting through Power BI will reverse the signs and show the amounts as positive.</p>
+</li>
+<li><p><strong>Fixed asset management</strong> – This workspace shows information that is related to fixed assets that are entered in the system. It includes a summary view and an analytics view. The <strong>My work</strong> tab shows summary tiles, fixed asset details, and related information about fixed assets in the current company.</p>
+<p>You can also add analytics to the <strong>Power BI analytics</strong> section directly in the workspace. <strong>The Analytics – all companies</strong> tab uses capabilities of Microsoft Power BI to show visuals that are related to fixed assets in all companies.</p>
+</li>
+<li><p><strong>Organizational training</strong> - Two reports are available in this Power BI content:</p>
+<ul>
+<li><strong>Course Analysis</strong> - Provides information for registration by location, course attendees by status, and registration list.</li>
+<li><strong>Course Types</strong> - Provides information on course types by skill.</li>
+</ul>
+</li>
+<li><p><strong>Practice manager</strong> - Practice managers and project managers can benefit from this Power BI content. It provides key metrics that are related to the projects that the organization is working on. The dashboard gives an overview of the projects and related customers.</p>
+<p>A report-level filter can be used to report for specific legal entities. This Power BI content pulls data from the project accounting aggregate measurements.
+The Practice manager Power BI content contains five report pages: one overview page, and four pages that provide details about project costs, revenues, earned value management, and hour metrics that are broken down across various dimensions.
+All the amounts in the content are shown in the system currency. You can set the system currency on the <strong>System parameters</strong> page.</p>
+</li>
+<li><p><strong>Cost Management</strong> - Inventory accountants and individuals who are responsible for or interested in the status of inventory or work in process (WIP), and people who analyze the standard cost variance benefit from this Power BI content.</p>
+</li>
+<li><p><strong>Production performance</strong> - Production managers can benefit from this Power BI content. It can monitor the performance of manufacturing operations for a timely running process, quality control, and cost analysis. This report uses transactional data from production orders and batch orders and provides an aggregate view of production metrics.</p>
+</li>
+<li><p><strong>Purchase spend analysis</strong> - This Power BI content helps purchasing managers make sure that the purchase spending is within the allocated budget over time.</p>
+</li>
+<li><p><strong>Recruiting</strong> - This Power BI content is shown on the <strong>Recruitment management</strong> workspace and contains information such as:</p>
+<ul>
+<li><strong>Applicant Analysis</strong> - Shows the total number of applicants, and then groups them by jobs, gender, and location.</li>
+<li><strong>Applicant Status</strong> – Shows applicants by type, status, and applicant status.</li>
+<li><strong>Recruiting Analysis</strong> - Shows net hire ratio, average days to hire, percentage of bad hires, recruiting costs, number of recruitment projects, hire to applied, and applicants versus openings by recruitment project.</li>
+</ul>
+</li>
+<li><p><strong>Sales and profitability performance</strong> - The sales managers can monitor the key sales metrics of revenue, gross profit, and profit margins by using this Power BI content. It uses sales transactional data and provides both an aggregate view of the company-wide sales figures and a breakdown of sales performance for customers and products.</p>
+</li>
+<li><p><strong>Vendor payment</strong> - This Power BI content shows information that is related to the processing of vendor payments. This workspace includes a <strong>My work</strong> view and an <strong>Analytics</strong> page.</p>
+<p>The <strong>My work</strong> view shows summary tiles, vendor transaction grids, and related vendor information. The <strong>Analytics</strong> page uses the capabilities of Power BI to show visuals that are related to vendor payments.</p>
+</li>
+<li><p><strong>Warehouse performance</strong> - The warehouse and operations managers can monitor important inbound, outbound, and inventory metrics by using this Power BI content.</p>
+<p>It uses warehouse management, product, and other transactional data from finance and operations apps and provides both an aggregate view of warehouse performance and a breakdown for vendors, product groups and products, and site and warehouses.</p>
+</li>
+<li><p><strong>Workforce metrics</strong> - This Power BI content provides information for headcount analysis by company, department, location, job, and more.</p>
+</li>
+</ul>
+<p>Read more about Power BI content in finance and operations apps in the <a data-linktype="absolute-path" href="/en-us/dynamics365/unified-operations/dev-itpro/analytics/power-bi-home-page?azure-portal=true&amp;toc=/fin-and-ops/toc.json">PowerBI.com solutions home page</a></p>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Work with reports</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Work with reports</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<h2 id="read-this-first---before-you-start-the-lab">Read this first - before you start the lab!</h2>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>For this lab, you CAN'T sign in with your own credentials. Use the following steps to sign in to your lab environment with the correct credentials.</p>
+</div>
+<ol>
+<li>Ensure that you're signed in to Microsoft Learn.</li>
+<li>Select <strong>Launch VM mode</strong> or <strong>Sign in to launch VM mode</strong> in this unit.</li>
+<li>In the <strong>Resources</strong> tab on the lab side bar, select the <strong>T</strong> icon next to <strong>Password</strong> in the <strong>Finance and Operations</strong> box, to have the administrator password for the Virtual Machine (VM) entered for you.</li>
+<li>Select <strong>Enter</strong>.</li>
+<li>Microsoft Edge opens. Wait for it to navigate to the <strong>Sign in</strong> page for finance and operations. If you experience an issue with the <strong>Sign in</strong> page loading, try to restart the browser in the VM.</li>
+<li>On the Microsoft <strong>Sign in</strong> page in finance and operations, place your mouse cursor into the <strong>Username</strong> field.</li>
+<li>On the <strong>Resources</strong> tab of the lab side bar, below the <strong>Azure portal</strong> heading, select the <strong>T</strong> icon next to <strong>Username</strong>, then press <strong>Enter</strong>.</li>
+<li>Your mouse cursor is now in the <strong>Password</strong> page.</li>
+<li>On the <strong>Resources</strong> tab of the lab side bar, below the <strong>Azure portal</strong> heading, select the <strong>T</strong> icon next to select <strong>Password</strong>, then press <strong>Enter</strong>.</li>
+<li>In the <strong>Save password</strong> window, select <strong>Never</strong>.</li>
+<li>Select <strong>Accept</strong> in the <strong>Permissions requested</strong> page.</li>
+<li>To see the lab instructions, select the <strong>Instructions</strong> tab on the lab side bar.</li>
+</ol>
+<p>You can now begin your work on this lab.</p>
+<h2 id="scenario---generate-and-explore-a-financial-report">Scenario - Generate and explore a financial report</h2>
+<p>You need to generate and explore an existing default financial report.
+The report includes all accounts and contains account properties (attributes) for the accounts.
+You'll be drilling into transaction detail, applying a dimension filter, and changing the currency on the report.</p>
+<h3 id="display-the-order-of-dimensions-for-financial-reporting">Display the order of dimensions for financial reporting</h3>
+<p>Displaying the order of dimensions for financial reporting lets you select how the dimensions are displayed.</p>
+<ol>
+<li>In the company <strong>USMF</strong>, go to <strong>General ledger &gt; Chart of Accounts &gt; Dimensions &gt; Financial dimension configuration for integrating applications</strong>.</li>
+<li>Expand the <strong>Financial dimensions</strong> FastTab of the <strong>Default dimension format</strong>.</li>
+<li>Arrange the dimensions so that the <strong>MainAccount</strong> is first on the list - you will need to select <strong>MainAccount</strong> from the <strong>AVAILABLE</strong> list and use the right arrow to move it to the <strong>SELECTED</strong> list.</li>
+<li>Arrange the dimensions so that the <strong>BusinessUnit</strong> is second on the list.</li>
+<li>Arrange the dimensions so that the <strong>CostCenter</strong> is third on the list.</li>
+<li>Arrange the dimensions so that the <strong>Department</strong> is fourth on the list.</li>
+<li>Select <strong>Save</strong> and <strong>Yes</strong> to save the changes.</li>
+<li>Close the page.</li>
+</ol>
+<h3 id="generate-a-report-and-explore-the-data-in-the-report">Generate a report and explore the data in the report</h3>
+<ol>
+<li>Go to <strong>General ledger</strong> &gt; <strong>Inquiries and reports</strong> &gt; <strong>Financial reports</strong>.</li>
+<li>Select the row for the report named <strong>Ledger Transaction List – Default</strong>.</li>
+<li>Select <strong>Edit</strong>.</li>
+<li>In the <strong>Do you want to open ReportDesigner.application from usnconeboxax1aos.cloud.onebox.dynamics.com?</strong> prompt, select <strong>Open</strong>.</li>
+<li>Select <strong>Run</strong> in the <strong>Microsoft Dynamics 365 Finance: Financial Report Designer</strong> box to download the Report designer.</li>
+<li>Use the same credentials to log in, as you used to log in to finance and operations, located in the <strong>Azure Portal</strong> section in the right side of the lab page. The log-in window may appear behind the finance and operations window. The Report designer will now open in another window.</li>
+<li>In the Report designer, change the <strong>Base year</strong> to <strong>2016</strong> and select <strong>Generate</strong> in the top right of the Report designer page.</li>
+<li>Return to the <strong>Financial reports</strong> page in finance and operations. You will need to refresh the screen until the report you generated appears.</li>
+<li>Select the report, and then select <strong>View</strong>.</li>
+<li>In the opened report, select <strong>All accounts</strong>.</li>
+<li>Select <strong>Accounts Receivable - Domestic - Home</strong> to drill into the account detail for the report.</li>
+<li>At the report transaction level, you can view the properties (attributes) that are included in the design of this report. Depending on the transaction and account, some or all the attributes might be displayed.</li>
+<li>Close the report transaction level by using the back arrow at the top of the report.</li>
+</ol>
+<p>Within a financial report, you can view the data either for a different period and year, or with different attributes and dimensions applied. This is done by using <strong>Report options</strong>.</p>
+<ol>
+<li>While on <strong>All accounts</strong> select <strong>Report options</strong>.</li>
+<li>Select <strong>Add a dimension filter</strong>, select <strong>BusinessUnit</strong> and then type <strong>001</strong> in the <strong>BusinessUnit is</strong> field.</li>
+<li>Select <strong>OK</strong>. The report now displays only the data for the <strong>001 Business Unit</strong>. This is a personalized view of the report and isn't available for others to view.</li>
+<li>Close the filtered report.</li>
+</ol>
+<p>Financial reports can be displayed in any currency that has been added to finance and operations apps.</p>
+<ol>
+<li>Select <strong>Currency</strong> and then select <strong>Euro (EUR)</strong>. The report now displays in Euros. Any currency codes or currency symbols that are included in the report design now display in the applied currency. If no currency symbol is defined for a currency, the currency symbol is not displayed.</li>
+<li>Close the <strong>Ledger Transaction List  - Default (EUR)</strong> report.</li>
+</ol>
+<h2 id="close-the-lab-environment">Close the lab environment</h2>
+<ol>
+<li>Select <strong>Done</strong> in the <strong>Instructions</strong> pane in the lab side bar.</li>
+<li>In the <strong>Lab is complete</strong> window, select <strong>Continue</strong>, and then select <strong>Leave</strong> to return to the next unit in the module.</li>
+</ol>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<h2>Answer the following questions to see what you learned</h2>
+<form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
+<fieldset class="field">
+<div role="list">
+<div class="quiz-question" data-bi-name="question" role="listitem">
+<div aria-labelledby="quiz-question-1" class="quiz-question-title font-size-md margin-top-sm margin-bottom-xs" role="radiogroup">
+<div class="margin-top-sm margin-bottom-xs field-label" id="quiz-question-1">
+<span class="font-weight-semibold">1.</span>
+<p>Which of the following Power BI content is intended for cost controllers or anyone who is responsible for performing cost control of an organization?</p>
+<span class="required-indicator"></span>
+</div>
+<div class="field-body">
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-0-0">
+<input class="radio-dot choice-input" id="quiz-choice-0-0" name="0" type="radio" value="0"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Cost accounting analysis</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-0-1">
+<input class="radio-dot choice-input" id="quiz-choice-0-1" name="0" type="radio" value="1"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Financial performance</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-0-2">
+<input class="radio-dot choice-input" id="quiz-choice-0-2" name="0" type="radio" value="2"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Credit and collections management</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+</div>
+</div>
+</div>
+<div class="quiz-question" data-bi-name="question" role="listitem">
+<div aria-labelledby="quiz-question-2" class="quiz-question-title font-size-md margin-top-sm margin-bottom-xs" role="radiogroup">
+<div class="margin-top-sm margin-bottom-xs field-label" id="quiz-question-2">
+<span class="font-weight-semibold">2.</span>
+<p>What is the name of the tool that is used to customize and create financial statements such as balance sheet, income statements, and cashflow statements?</p>
+<span class="required-indicator"></span>
+</div>
+<div class="field-body">
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-1-0">
+<input class="radio-dot choice-input" id="quiz-choice-1-0" name="1" type="radio" value="0"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Financial report designer</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-1-1">
+<input class="radio-dot choice-input" id="quiz-choice-1-1" name="1" type="radio" value="1"/>
+<div class="margin-inline-sm radio-label-text">
+<p>SQL Server Reporting Services (SSRS)</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-1-2">
+<input class="radio-dot choice-input" id="quiz-choice-1-2" name="1" type="radio" value="2"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Electronic reporting</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="has-loading-skeleton" id="module-unit-quiz-submit-container"></div>
+<p class="font-size-sm color-danger font-weight-semibold margin-top-xxs is-hidden" id="unanswered-question-error" role="alert">You must answer all questions before checking your work.</p>
+<p class="visually-hidden" id="screen-reader-text"></p>
+</fieldset>
+</form>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<p>In this module, you learned about various types of reports and inquiries in finance and operations apps, including the reports that are out-of-the-box in a standard installation. You also learned how to use the Report designer to update the design of financial reports.</p>
+<p>Finally, you learned about the integration of Power BI, Power Apps, and Power Automate in finance and operations apps.</p>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Introduction</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<p>Often, different countries and regions have legal requirements regarding the format for incoming and outgoing electronic documents. The Electronic reporting (ER) functionality manages those formats during their life cycle. Additionally, potential regular requirement changes by government bodies or banks mean that business documents must be updated accordingly.</p>
+<p>The ER reporting functionality is intended for advanced business users because it is a matter of configuration and not code to maintain formats for electronic documents.</p>
+<p>The following section explains the ER engine from a high level.</p>
+<h2 id="capabilities">Capabilities</h2>
+<p>ER functionality provides the following capabilities:</p>
+<ul>
+<li>It is a single tool for electronic reporting and is a single source for what was previously 20 different engines that performed electronic reporting.</li>
+<li>The format is applicable for different versions.</li>
+<li>A custom format can be created that is based on another format. ER functionality will automatically upgrade the custom format when the original one is changed.</li>
+<li>It is the primary standard tool to support localization.</li>
+<li>Formats can be distributed through Microsoft Dynamics Lifecycle Services.</li>
+</ul>
+<p>For more technical information on the following electronic reporting topics, go to <a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/analytics/general-electronic-reporting?azure-portal=true&amp;toc=/dynamics365/commerce/toc.json">Electronic reporting (ER) overview</a>.</p>
+<ul>
+<li>Data models and model-mapping components</li>
+<li>Format components for outgoing electronic documents</li>
+<li>Format components for incoming electronic documents</li>
+<li>Component versioning</li>
+<li>Component date effectivity</li>
+<li>Component access</li>
+<li>Configuration</li>
+<li>Provider</li>
+<li>Repository</li>
+<li>Supported scenarios</li>
+<li>Handling ER components</li>
+<li>List of ER configurations that are delivered in the Finance application</li>
+</ul>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Configure electronic reporting</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Configure electronic reporting</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<p>Before you can start configuring the Electronic reporting functionality, set up the required document types in Document management:</p>
+<ul>
+<li>Office documents that are used as templates for reports</li>
+<li>Storage for the output of ER reports in the jobs archive</li>
+<li>Storage for the output of reports so that they can be viewed in other programs</li>
+<li>Documents for keeping baselines of configuration output</li>
+<li>Documents for handling files in the framework for all other purposes</li>
+</ul>
+<p>Follow these steps to set up the basic functionality of electronic reporting:</p>
+<ol>
+<li>Open the <strong>Electronic reporting</strong> workspace.</li>
+<li>In the <strong>App links</strong> section, select <strong>Electronic reporting parameters</strong>.</li>
+<li>On the <strong>General</strong> tab, turn on the <strong>Enable design mode</strong> option to enable the ER design experience to the current Finance instance.</li>
+<li>On the <strong>Attachments</strong> tab, define the types of documents that should be used for file storage in the ER framework. Notice that in the <strong>Configurations</strong> section, the document type is a file with each legal entity, while all other document types are files or images.</li>
+<li>On the <strong>Lifecycle Services</strong> tab, define the number of parallel threads that should be used to load an ER configuration from repositories in Lifecycle Services, so that the configurations are loaded in the most efficient manner. The value can vary from <strong>1</strong> to <strong>15</strong>, depending on the available resources of the current program. The real number of threads will be defined automatically based on this setting and on the number of other tasks and their priorities.</li>
+<li>Close the page.</li>
+<li>Under <strong>Configuration providers</strong>, you select a provider. Select the ellipses to see the <strong>Set active</strong> option. If the configuration is already active, the <strong>Set active</strong> option will be dimmed. The active provider's name and internet address are stored in an ER configuration as attributes of the configuration owner.</li>
+</ol>
+<h2 id="create-a-new-configuration-provider">Create a new configuration provider</h2>
+<p>In the <strong>USMF</strong> demo company in finance and operations apps, there is already a configuration provider. You can create a new configuration provider by going through the steps in the following sections. The newly created configuration providers are automatically shared with all legal entities.</p>
+<div class="mx-imgBorder">
+<p><a data-linktype="relative-path" href="media/electronic-reporting-workspace.svg#lightbox"><img alt="Screenshot of the Electronic reporting workspace." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/configure-electronic-reporting-finance-operations/media/electronic-reporting-workspace.svg"/></a></p>
+</div>
+<h3 id="create-a-provider">Create a provider</h3>
+<p>To create a new configuration provider, follow these steps:</p>
+<ol>
+<li>Go to <strong>Organization administration &gt; Workspaces &gt; Electronic reporting</strong>.</li>
+<li>Select <strong>Configuration providers</strong> in the <strong>App links</strong> section.</li>
+<li>Select <strong>New</strong>.</li>
+<li>In the <strong>Name</strong> field, enter <strong>Adventure Works Cycles International</strong>.</li>
+<li>In the <strong>Internet address</strong> field, enter <code>https://www.adventure-works.com</code>.</li>
+<li>Select <strong>Save</strong> and close the page.</li>
+</ol>
+<h3 id="set-the-new-provider-as-active">Set the new provider as active</h3>
+<p>To set the newly created configuration provider as active, follow these steps:</p>
+<ol>
+<li>Select the <strong>Adventure Works Cycles International</strong> provider tile.</li>
+<li>Select <strong>Set active</strong>.</li>
+</ol>
+<p>For more detail about creating configurations, go to <a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/analytics/tasks/er-design-domain-specific-data-model-2016-11?azure-portal=true&amp;toc=/dynamics365/commerce/toc.json">ER Design domain specific data model</a>.</p>
+<h2 id="legal-entity-specific-parameters">Legal entity-specific parameters</h2>
+<p>An advanced user can define corporate rules, which translate the terms to all the languages that are supported in finance and operations apps. This functionality allows business users to specify terms and conditions in their chosen language.</p>
+<p>If a power user configures an independent rule for a legal entity, a field for the data source is defined to return values describing the configured rule. The entire path to this field is provided, thus enabling a power user to navigate to it quickly. Also, when electronic reporting format-specific company (legal entity) master data is set up, this feature enables a power user to define what areas of the search data source will be provided to a business user.</p>
+<p>Furthermore, you can configure a legal entity-independent rule to return only the enumeration data type for each configured condition. An advanced user can also configure a rule to also return a text value.</p>
+<h2 id="resources">Resources</h2>
+<p>To learn more, see <a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/analytics/general-electronic-reporting-formulas-list-extension/?azure-portal=true">Extend the list of Electronic reporting (ER) functions</a>.</p>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Use barcode data sources to generate bar code images</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Use barcode data sources to generate bar code images</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<p>Barcode data sources are supported in electronic reporting (ER). You can create a picture that resembles a bar code for any text. You can use data sources of the <strong>Barcode</strong> type to produce bar code pictures when configuring an ER format. The photographs can then be added to company documents such as orders, invoices, packing slips, and receipts that have been prepared. You can also use them on product and shelf labels, as well as packing and shipping labels.</p>
+<div class="mx-imgBorder">
+<p><a data-linktype="relative-path" href="media/barcode.png#lightbox"><img alt="Screenshot of a barcode photograghm on a voided bank check." data-linktype="relative-path" src="https://learn.microsoft.com/en-us/training/modules/configure-electronic-reporting-finance-operations/media/barcode.png"/></a></p>
+</div>
+<p>By using a data source of the <strong>Barcode</strong> type, you can generate bar codes in the following formats:</p>
+<ul>
+<li>One-dimensional bar codes:
+<ul>
+<li>Codabar</li>
+<li>Code 39</li>
+<li>Code 93</li>
+<li>Code 128</li>
+<li>EAN-8</li>
+<li>EAN-13</li>
+<li>ITF-14</li>
+<li>Intelligent Mail (IMB)</li>
+<li>MSI</li>
+<li>Plessey</li>
+<li>PDF417</li>
+<li>UPC-A</li>
+<li>UPC-E</li>
+</ul>
+</li>
+<li>Two-dimensional bar codes:
+<ul>
+<li>Aztec</li>
+<li>Data Matrix</li>
+<li>QR Code</li>
+</ul>
+</li>
+</ul>
+<p>For more information, see <a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/analytics/er-barcode-data-sources?azure-portal=true&amp;toc=/dynamics365/finance/toc.json">Use Barcode data sources to generate bar code images</a>.</p>
+<h2 id="check-number-validation">Check number validation</h2>
+<p>When you have generated a barcode, you can use Finance to validate check numbers. By validating check numbers, you can eliminate the risk of errors in processing checks preventing delays and additional fees.</p>
+<p>There are two options to perform check number validation:</p>
+<ul>
+<li><p><strong>Interval validation</strong> - Interval validation can be set up in the cash and bank management parameters by setting up a default check number interval. If your check number falls outside of your defined interval, you will be prompted with a warning message that notifies you of the issue.</p>
+</li>
+<li><p><strong>Character validation</strong> - Character validation triggers a warning message when a character appears within the check number.</p>
+</li>
+</ul>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Generate electronic documents for payments</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Lab - Generate electronic documents for payments</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<h2 id="read-this-first---before-you-start-the-lab">Read this first - before you start the lab!</h2>
+<div class="IMPORTANT">
+<p>Important</p>
+<p>For this lab, you CAN'T sign in with your own credentials. Use the following steps to sign in to your lab environment with the correct credentials.</p>
+</div>
+<ol>
+<li>Ensure that you're signed in to Microsoft Learn.</li>
+<li>Select <strong>Launch VM mode</strong> or <strong>Sign in to launch VM mode</strong> in this unit.</li>
+<li>In the <strong>Resources</strong> tab on the lab side bar, select the <strong>T</strong> icon next to <strong>Password</strong> in the <strong>Finance and Operations</strong> box, to have the administrator password for the Virtual Machine (VM) entered for you.</li>
+<li>Select <strong>Enter</strong>. If you see a <strong>Your connection isn't private</strong> message, select <strong>Advanced</strong>, and then select <strong>Continue to usnconeboxax1aos.cloud.onebox.dynamics.com (unsafe)</strong>.</li>
+<li>Microsoft Edge opens. Wait for it to navigate to the <strong>Sign in</strong> page for finance and operations. If you experience an issue with the <strong>Sign in</strong> page loading, try to restart the browser in the VM.</li>
+<li>On the Microsoft <strong>Sign in</strong> page in finance and operations, place your mouse cursor into the <strong>Username</strong> field.</li>
+<li>On the <strong>Resources</strong> tab of the lab side bar, below the <strong>Azure portal</strong> heading, select the <strong>T</strong> icon next to <strong>Username</strong>, then press <strong>Enter</strong>.</li>
+<li>Your mouse cursor is now in the <strong>Password</strong> page.</li>
+<li>On the <strong>Resources</strong> tab of the lab side bar, below the <strong>Azure portal</strong> heading, select the <strong>T</strong> icon next to select <strong>Password</strong>, then press <strong>Enter</strong>.</li>
+<li>In the <strong>Save password</strong> window, select <strong>Never</strong>.</li>
+<li>Select <strong>Accept</strong> in the <strong>Permissions requested</strong> page.</li>
+<li>To see the lab instructions, select the <strong>Instructions</strong> tab on the lab side bar.</li>
+</ol>
+<p>You can now begin your work on this lab.</p>
+<h2 id="scenario">Scenario</h2>
+<p>As the Finance manager for the company <strong>USMF</strong>, you need to set up Electronic reporting due to a local requirement. Your technical team has set up the format, and now you need to test it, by creating a file to see that it matches what is needed.</p>
+<h2 id="verify-file-format-is-set-up">Verify file format is set up</h2>
+<ol>
+<li>In company <strong>USMF</strong> go to <strong>Accounts payable &gt; Payment setup &gt; Methods of payment</strong>.</li>
+<li>Place your cursor in the left navigation bar on <strong>Electronic</strong>.</li>
+<li>Select the <strong>File formats</strong> FastTab.</li>
+<li>If the <strong>Export format</strong> is not <strong>NACHA (US)</strong>, then select it.</li>
+<li><strong>Save</strong> and close the page.</li>
+</ol>
+<h2 id="test-the-format-of-generated-payment-files">Test the format of generated payment files</h2>
+<ol>
+<li>Go to <strong>Accounts payable &gt; Payments &gt; Vendor payment journal</strong>.</li>
+<li>Select <strong>New</strong>.</li>
+<li>In the <strong>Name</strong> field, select <strong>VendPay</strong>.</li>
+<li>Select <strong>Save</strong>.</li>
+<li>Select <strong>Lines</strong>.</li>
+<li>In the <strong>Company</strong> field, enter <strong>DEMF</strong>.</li>
+<li>In the <strong>Account</strong> field, specify the value <strong>DE-01001</strong>.</li>
+<li>In the <strong>Description</strong> field, enter <strong>Payment</strong>.</li>
+<li>In the <strong>Debit</strong> field, enter <strong>175</strong>.</li>
+<li>Select the <strong>Payment</strong> tab.</li>
+<li>In the <strong>Method of payment</strong> field, select the <strong>Electronic</strong>.</li>
+<li>Select <strong>Save</strong>.</li>
+<li>Select <strong>Generate payments</strong>.</li>
+<li>In the <strong>Method of payment</strong> field, select <strong>Electronic</strong>.</li>
+<li>In the <strong>Bank account</strong> field, select <strong>USMF OPER</strong>.</li>
+<li>Select the radio button on <strong>Export format</strong>.</li>
+<li>Select the <strong>Export format</strong> of <strong>NACHA (US)</strong>.</li>
+<li>Select <strong>OK</strong>.</li>
+<li>Note the <strong>File name</strong> created. (The batch number followed by the bank, etc.).</li>
+<li>Select <strong>OK</strong>. You will see a pop-up message asking you to open the file.</li>
+<li>Select <strong>Open file</strong>. You will see the electronic file in <strong>Notepad</strong>.</li>
+<li>Close the page.</li>
+</ol>
+<h2 id="close-the-lab-environment">Close the lab environment</h2>
+<ol>
+<li>Select <strong>Done</strong> in the <strong>Instructions</strong> pane in the lab side bar.</li>
+<li>In the <strong>Lab is complete</strong> window, select <strong>Continue</strong>, and then select <strong>Leave</strong> to return to the next unit in the module.</li>
+</ol>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Check your knowledge</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<h2>Answer the following questions to see what you learned</h2>
+<form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
+<fieldset class="field">
+<div role="list">
+<div class="quiz-question" data-bi-name="question" role="listitem">
+<div aria-labelledby="quiz-question-1" class="quiz-question-title font-size-md margin-top-sm margin-bottom-xs" role="radiogroup">
+<div class="margin-top-sm margin-bottom-xs field-label" id="quiz-question-1">
+<span class="font-weight-semibold">1.</span>
+<p>Before you can configure the Electronic reporting functionality, there are required document types that must be set up in Document management. How many required documents are there?</p>
+<span class="required-indicator"></span>
+</div>
+<div class="field-body">
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-0-0">
+<input class="radio-dot choice-input" id="quiz-choice-0-0" name="0" type="radio" value="0"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Five</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-0-1">
+<input class="radio-dot choice-input" id="quiz-choice-0-1" name="0" type="radio" value="1"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Four</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-0-2">
+<input class="radio-dot choice-input" id="quiz-choice-0-2" name="0" type="radio" value="2"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Three</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-0-3">
+<input class="radio-dot choice-input" id="quiz-choice-0-3" name="0" type="radio" value="3"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Two</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+</div>
+</div>
+</div>
+<div class="quiz-question" data-bi-name="question" role="listitem">
+<div aria-labelledby="quiz-question-2" class="quiz-question-title font-size-md margin-top-sm margin-bottom-xs" role="radiogroup">
+<div class="margin-top-sm margin-bottom-xs field-label" id="quiz-question-2">
+<span class="font-weight-semibold">2.</span>
+<p>In which module in Dynamics 365 Finance can you access the Electronic reporting workspace from?</p>
+<span class="required-indicator"></span>
+</div>
+<div class="field-body">
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-1-0">
+<input class="radio-dot choice-input" id="quiz-choice-1-0" name="1" type="radio" value="0"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Accounts payable</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-1-1">
+<input class="radio-dot choice-input" id="quiz-choice-1-1" name="1" type="radio" value="1"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Accounts receivable</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-1-2">
+<input class="radio-dot choice-input" id="quiz-choice-1-2" name="1" type="radio" value="2"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Organization administration</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-1-3">
+<input class="radio-dot choice-input" id="quiz-choice-1-3" name="1" type="radio" value="3"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Inventory management</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+</div>
+</div>
+</div>
+<div class="quiz-question" data-bi-name="question" role="listitem">
+<div aria-labelledby="quiz-question-3" class="quiz-question-title font-size-md margin-top-sm margin-bottom-xs" role="radiogroup">
+<div class="margin-top-sm margin-bottom-xs field-label" id="quiz-question-3">
+<span class="font-weight-semibold">3.</span>
+<p>In which FastTab can providers be configured in the Electronic reporting workspace?</p>
+<span class="required-indicator"></span>
+</div>
+<div class="field-body">
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-2-0">
+<input class="radio-dot choice-input" id="quiz-choice-2-0" name="2" type="radio" value="0"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Configurations</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-2-1">
+<input class="radio-dot choice-input" id="quiz-choice-2-1" name="2" type="radio" value="1"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Configuration providers</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-2-2">
+<input class="radio-dot choice-input" id="quiz-choice-2-2" name="2" type="radio" value="2"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Power BI</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+<label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-2-3">
+<input class="radio-dot choice-input" id="quiz-choice-2-3" name="2" type="radio" value="3"/>
+<div class="margin-inline-sm radio-label-text">
+<p>Related links</p>
+</div>
+</label>
+<div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="has-loading-skeleton" id="module-unit-quiz-submit-container"></div>
+<p class="font-size-sm color-danger font-weight-semibold margin-top-xxs is-hidden" id="unanswered-question-error" role="alert">You must answer all questions before checking your work.</p>
+<p class="visually-hidden" id="screen-reader-text"></p>
+</fieldset>
+</form>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
+<h2 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h2>
+<div class="section is-uniform position-relative" id="unit-inner-section">
+<h1 class="margin-right-xxl-desktop" id="module-unit-title">Summary</h1>
+
+
+<div hidden="" id="module-unit-notification-container"></div>
+<p>You have learned that by using Electronic Reporting (ER), you can easily control and modify your own reports as a business user without having a developer extend and customize Dynamics 365 Finance to meet your regulatory needs.</p>
+<p>ER has the following features:</p>
+<ul>
+<li>It supports TEXT, XML, PDF, and OPENXML worksheet formats.</li>
+<li>It is designed for business users who are familiar with Excel-based formulas.</li>
+<li>It easily adheres to changes in regulatory requirements.</li>
+<li>Versioning is available to manage definition lifecycle.</li>
+<li>Electronic invoicing is available.</li>
+</ul>
+<div class="modular-content-container" hidden="" id="next-section">
+</div>
+</div>
