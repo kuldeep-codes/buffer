@@ -65,7 +65,9 @@
 </div>
 <p>After you’ve unlocked the .zip file, you’ll need to extract its contents to a place on the VHD’s local drive. A good place to put these files is <strong>C:/Temp</strong> because it’s accessible from the command prompt and simple to navigate to. After the files are extracted in a secondary location, you’ll need to go to that folder. Open the Command Prompt tool as an administrator, from File Explorer or separately, and then go to the same folder.</p>
 <p>When in the folder, run the following command:</p>
-<p>AXUpdateInstaller.exe devinstall</p>
+<p>
+AXUpdateInstaller.exe devinstall
+</p>
 <div class="mx-imgBorder">
 <p><a data-linktype="relative-path" href="media/admin-command-prompt.png#lightbox"><img alt="Screenshot showing how to run the command when you are in a folder." data-linktype="relative-path" src="./rawmb500/media_admin_command_prompt.png"/></a></p>
 </div>
@@ -538,7 +540,7 @@ Management company. The developer needs to create their own project in Visual St
 <div class="section is-uniform position-relative" id="unit-inner-section">
 
 <div hidden="" id="module-unit-notification-container"></div>
-
+<h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
 <fieldset class="field">
 <div role="list">
@@ -726,18 +728,66 @@ developer environment and Visual Studio, you will also need a Visual Studio lice
 <div hidden="" id="module-unit-notification-container"></div>
 <p>This unit explains the different data types and operators that are used in X++.</p>
 <h2 id="data-types">Data types</h2>
-<p>Primitive data types are the most common data types that you encounter. The primitive data types are: anytype, boolean, date,
-enum,  guid, int, int64, real, str,timeOfday, and utcdatetime.</p>
+<p>Primitive data types are the most common data types that you encounter. The primitive data types are: 
+anytype
+, 
+boolean
+, 
+date
+,
+
+enum
+, 
+guid
+, 
+int
+, 
+int64
+, 
+real
+, 
+str
+,
+timeOfday
+, and 
+utcdatetime
+.</p>
 <ul>
-<li><strong>Date</strong> - This data type contains the day, month, and year. You can write out the date as literals by using the format day\month\year. The year must be entered as four digits. The dates must be within the January 1, 1900 and December 31, 2154 range. We recommend that you use utcDateTime instead of Date because it combines date, timeOfDay, and time zone information into a single data type.</li>
-<li><strong>Enumerations (enums)</strong> - Are a named list of literals. For example, there's an enum called NoYes, with a list of literals No and Yes. Each literal can also be represented by a number. The first literal has the number 0, the next literal has the number 1, and so on. You can also provide your own values in the enum metadata. To reference an enum value, you would use the enum name followed by two colons and the name of the literal. Considering the NoYes enum again, to reference the Yes literal, you would write <strong>NoYes::Yes</strong>.</li>
-<li><strong>GUID</strong> - This data type is a globally unique identifier (GUID) value. A GUID number is unique across all computers and networks.</li>
+<li><strong>Date</strong> - This data type contains the day, month, and year. You can write out the date as literals by using the format day\month\year. The year must be entered as four digits. The dates must be within the January 1, 1900 and December 31, 2154 range. We recommend that you use 
+utcDateTime
+ instead of 
+Date
+ because it combines 
+date
+, 
+timeOfDay
+, and time zone information into a single data type.</li>
+<li><strong>Enumerations (enums)</strong> - Are a named list of literals. For example, there's an enum called 
+NoYes
+, with a list of literals No and Yes. Each literal can also be represented by a number. The first literal has the number 0, the next literal has the number 1, and so on. You can also provide your own values in the enum metadata. To reference an enum value, you would use the enum name followed by two colons and the name of the literal. Considering the 
+NoYes
+ enum again, to reference the Yes literal, you would write <strong>
+NoYes::Yes
+</strong>.</li>
+<li><strong>GUID</strong> - This data type is a globally unique identifier (GUID) value. A 
+GUID
+ number is unique across all computers and networks.</li>
 <li><strong>Int</strong> - These values are 32-bit wide integer signed numbers that don't include a decimal place. There's no support for unsigned integer    types.</li>
-<li><strong>Int64</strong> - A larger, signed integer data type that works like the int data type, except that it's 64 bits wide compared to 32 bits. The int64 type has a greater range for larger numbers.</li>
+<li><strong>Int64</strong> - A larger, signed integer data type that works like the 
+int
+ data type, except that it's 64 bits wide compared to 32 bits. The 
+int64
+ type has a greater range for larger numbers.</li>
 <li><strong>Real</strong> - These data types hold number values with decimals.</li>
-<li><strong>Str</strong> - This data type contains values that are a string of characters. The str value must be wrapped in double quotation marks ("text") or single quotation marks ('text').</li>
+<li><strong>Str</strong> - This data type contains values that are a string of characters. The 
+str
+ value must be wrapped in double quotation marks ("text") or single quotation marks ('text').</li>
 <li><strong>TimeOfday</strong> - This data type is an integer value that represents the number of seconds that passed since midnight.</li>
-<li><strong>Utcdatetime</strong> - This data type is a combination of the date type and the timeOfday data type. The format is yyyy-mm-ddThh:mm:ss with the    default value being 1900-01-01T00:00:00.</li>
+<li><strong>Utcdatetime</strong> - This data type is a combination of the 
+date
+ type and the 
+timeOfday
+ data type. The format is yyyy-mm-ddThh:mm:ss with the    default value being 1900-01-01T00:00:00.</li>
 </ul>
 <h3 id="composite-data-types">Composite data types</h3>
 <p>Along with primitive data types, there are composite data types.
@@ -752,8 +802,24 @@ We recommend that the table variable has the same name as the table, but you sho
 </ul>
 <h3 id="user-defined-data-types">User-defined data types</h3>
 <p>Extended data types (EDT) are user-defined types that are based on the
-boolean, int, int64, real, str, date, and
-container data types. EDTs can be used on variables, method parameters, and field declarations. User-defined data types offer significant benefits, such as reusing type definitions, including assigned labels and string lengths. They make code easier to read because the EDT name can be defined by the user. Therefore, instead of using just str, you could use an EDT named <em>Color</em>, which would be a more meaningful name. You can also set certain properties on the EDT that all instances of that type use. Additionally, you can create hierarchies for EDTs so an EDT can inherit the properties of a parent.</p>
+
+boolean
+,
+int
+, 
+int64
+, 
+real
+, 
+str
+, 
+date
+, and
+
+container
+ data types. EDTs can be used on variables, method parameters, and field declarations. User-defined data types offer significant benefits, such as reusing type definitions, including assigned labels and string lengths. They make code easier to read because the EDT name can be defined by the user. Therefore, instead of using just 
+str
+, you could use an EDT named <em>Color</em>, which would be a more meaningful name. You can also set certain properties on the EDT that all instances of that type use. Additionally, you can create hierarchies for EDTs so an EDT can inherit the properties of a parent.</p>
 <h2 id="variables">Variables</h2>
 <p>Variables are identifiers that designate a storage location where a value of a data type is stored. The size, precision, default value, and conversion functions depend on the variable's data type. Variables can be declared anywhere in a code block in a method; they don't have to be declared at the beginning of a method.</p>
 <p>In a class, member (global) variables and local variables have different scopes. Global variables can be used throughout the instance (excluding static methods) of the class, while local variables are only available within the scope of the class method.</p>
@@ -942,9 +1008,13 @@ operators include assignment operators, arithmetic operators, and relational ope
 </tbody>
 </table>
 <p>A ternary operator allows you to evaluate if an expression is true or
-false to get a result. This is like an if statement, which is
+false to get a result. This is like an 
+if
+ statement, which is
 discussed in the Use conditional and iterative statements and Exception
-handling units. However, where an if statement provides conditional
+handling units. However, where an 
+if
+ statement provides conditional
 branching for the code that is being run, the ternary operator result can be assigned to a variable. The following example checks if the variable x is equal to 5. If it's equal to 5, then the ternary operator assigns the value <strong>Yes</strong> to the result variable.
 If x doesn't equal 5, the ternary operator assigns the value <strong>No</strong> to the result variable.</p>
 <pre>
@@ -999,17 +1069,23 @@ object that was created from a class. The object must be instantiated before you
 </li>
 <li><p><strong>Static methods (also known as class methods)</strong> - You do not need
 to instantiate an object to use these methods. You can declare a
-method as static with the keyword static. A specific type of
+method as static with the keyword 
+static
+. A specific type of
 static method is the Main method, which can be called directly from
 a menu option.</p>
 </li>
 </ul>
 <p>Methods are made up of a signature and a body. The method header holds
 the method's name, return type, method modifiers, and parameters. If
-there is no return type, then the keyword void is used. The body
+there is no return type, then the keyword 
+void
+ is used. The body
 holds the variable declarations, method declarations, and statements.</p>
 <p>The following is an example of a method. The method is a public method that returns a real data type. The method is called ReturnCalculation. It
-also has a real data type parameter _expression1. Parameters should
+also has a real data type parameter 
+_expression1
+. Parameters should
 begin with "_" to easily identify parameters within the code.</p>
 <pre>
 public real ReturnCalculation(real _expression1)
@@ -1041,7 +1117,11 @@ own class.</p>
 <li><strong>Struct</strong> - Contains values for multiple data types.</li>
 </ul>
 <h2 id="collection-class-list">Collection class: List</h2>
-<p>The <strong>List</strong> collection class contains values for a single data type, which you set up when you construct the list, in a sequential order. You can add values to the beginning (addStart) or at the end (addEnd), and you can use ListEnumerator or ListIterator to traverse values, as the following code sample shows.</p>
+<p>The <strong>List</strong> collection class contains values for a single data type, which you set up when you construct the list, in a sequential order. You can add values to the beginning (addStart) or at the end (addEnd), and you can use 
+ListEnumerator
+ or 
+ListIterator
+ to traverse values, as the following code sample shows.</p>
 <pre>
 internal final class CollectionClassListJob 
 {
@@ -1081,10 +1161,18 @@ internal final class CollectionClassListJob
 
 }
 </pre>
-<p>This code returns 30, 10, and 20, and it uses ListIterator and ListEnumerator to traverse values that you inserted at the start and end of the list. You can insert the same value multiple times, but you can’t check whether it already exists in the list.</p>
+<p>This code returns 30, 10, and 20, and it uses 
+ListIterator
+ and 
+ListEnumerator
+ to traverse values that you inserted at the start and end of the list. You can insert the same value multiple times, but you can’t check whether it already exists in the list.</p>
 <h2 id="collection-class-map">Collection class: Map</h2>
 <p>The <strong>Map</strong> collection class has values associated to a key, while a single data type specifies the key-value pair.</p>
-<p>Similar to the <strong>List</strong> collection class, you can use MapEnumerator or MapIterator to traverse the map’s key-value pair, and you can check whether a key value already exists and look up specific key values, as the following code sample shows.</p>
+<p>Similar to the <strong>List</strong> collection class, you can use 
+MapEnumerator
+ or 
+MapIterator
+ to traverse the map’s key-value pair, and you can check whether a key value already exists and look up specific key values, as the following code sample shows.</p>
 <pre>
 internal final class CollectionClassMapJob 
 {
@@ -1119,10 +1207,20 @@ internal final class CollectionClassMapJob
 
 }
 </pre>
-<p>This code shows two types for a map: key value and a specified value. You can add items by using the insert method, and you can traverse all item sets. To check if a key already exists, use the exists method and then the lookup method to find its value. If you insert an item that has an existing value, you overwrite it.</p>
+<p>This code shows two types for a map: key value and a specified value. You can add items by using the 
+insert
+ method, and you can traverse all item sets. To check if a key already exists, use the 
+exists
+ method and then the 
+lookup
+ method to find its value. If you insert an item that has an existing value, you overwrite it.</p>
 <p>A typical use case for maps is storing virtual fields in a form when you're working in the form.</p>
 <h2 id="collection-class-set">Collection class: Set</h2>
-<p>The <strong>Set</strong> collection class is a list of values for a single data type. The value is the key and the value, so you can test if an item already exists. For lists and maps, you can use a SetEnumerator or SetIterator to traverse values in the set, and you can check if a value already exists.</p>
+<p>The <strong>Set</strong> collection class is a list of values for a single data type. The value is the key and the value, so you can test if an item already exists. For lists and maps, you can use a 
+SetEnumerator
+ or 
+SetIterator
+ to traverse values in the set, and you can check if a value already exists.</p>
 <pre>
 internal final class CollectionClassSetJob 
 {
@@ -1161,26 +1259,58 @@ Sets are good for small lists that you use to check values. For example, it coul
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can use SQL statements in X++ to retrieve and manipulate data in the Finance and operations database.</p>
 <h2 id="select-statements">Select statements</h2>
-<p>You can use select statements to choose what data is retrieved from
-the database. In a select statement, you must define the table you retrieve data from and which field. You can use conditions to further filter the data, and select the sequence in which the data is listed.</p>
-<p>The select statement contains the keyword <strong>select</strong> and parameters. Parameters contain the pieces of the select statement that determine how and what data is retrieved.</p>
-<p>The following is an example of the select statement syntax:</p>
+<p>You can use 
+select
+ statements to choose what data is retrieved from
+the database. In a 
+select
+ statement, you must define the table you retrieve data from and which field. You can use conditions to further filter the data, and select the sequence in which the data is listed.</p>
+<p>The 
+select
+ statement contains the keyword <strong>select</strong> and parameters. Parameters contain the pieces of the 
+select
+ statement that determine how and what data is retrieved.</p>
+<p>The following is an example of the 
+select
+ statement syntax:</p>
 <pre>
 Select [FindOptions] [FieldList] from [Table] [Options] [OrderByClause] [WhereClause] [JoinClause] method()
 </pre>
 <p>The <strong>Find options</strong> parameters give additional options for retrieving
-data. For example, crossCompany retrieves data across legal entities,
-firstOnly retrieves only the first record, firstOnly10 only fetches
-the first ten records, and forUpdate selects the data with a lock.</p>
-<p>The <strong>Field list</strong> specifies which data to retrieve. You can also use aggregate functions, like sum, avg, minof, maxof or
-count.</p>
+data. For example, 
+crossCompany
+ retrieves data across legal entities,
+
+firstOnly
+ retrieves only the first record, 
+firstOnly10
+ only fetches
+the first ten records, and 
+forUpdate
+ selects the data with a lock.</p>
+<p>The <strong>Field list</strong> specifies which data to retrieve. You can also use aggregate functions, like 
+sum
+, 
+avg
+, 
+minof
+, 
+maxof
+ or
+
+count
+.</p>
 <p>After the <strong>Field list</strong>, the keyword "from" is used, followed by the
-table to retrieve from. You can then include options to sequence or group the data by using "order by" and "group by" keywords. The where clause uses expressions to define the criteria for the statement.</p>
+table to retrieve from. You can then include options to sequence or group the data by using "order by" and "group by" keywords. The 
+where
+ clause uses expressions to define the criteria for the statement.</p>
 <p>Here's an example of a select statement. This statement retrieves all account numbers from the CustTable.</p>
 <pre>
 Select AccountNum from custtable;
 </pre>
-<p>You can add parameters to make more complex select statements. In
+<p>You can add parameters to make more complex 
+select
+statements. In
 this example, doing so retrieves all the records from CustTable where the
 AccountNum values are greater than 1000 and less than 2000. The records are also sorted by the AccountNum values in descending order.</p>
 <pre>
@@ -1189,11 +1319,35 @@ Select forUpdate  CustTable order by AccountNum desc
 	&& custTable.accountNum < '2000';
 </pre>
 <h2 id="join-methods">Join methods</h2>
-<p>A join can be used to combine more tables to a select statement. You can use relational operators such as equal to, not equal to, greater than, less than in where clauses in select statements.</p>
-<p>The following is an example of a join statement. The statement joins a SalesLine record to the related SalesTable where the sales ID on the sales line matches the sales table sales ID.</p>
-<p>A select statement returns all records, and remaining records can be
-fetched by using a next statement.</p>
-<p>A while select statement loops through every record that matches the select criteria, which is common for data manipulation.</p>
+<p>A 
+join
+ can be used to combine more tables to a 
+select
+ statement. You can use relational operators such as 
+equal to
+, 
+not equal to
+, 
+greater than
+, 
+less than
+ in 
+where
+ clauses in 
+select
+ statements.</p>
+<p>The following is an example of a 
+join
+ statement. The statement joins a SalesLine record to the related SalesTable where the sales ID on the sales line matches the sales table sales ID.</p>
+<p>A 
+select
+ statement returns all records, and remaining records can be
+fetched by using a 
+next
+ statement.</p>
+<p>A 
+while select
+ statement loops through every record that matches the select criteria, which is common for data manipulation.</p>
 <pre>
 SalesTable SalesTable;
 SalesLine SalesLine;
@@ -1219,7 +1373,9 @@ Info(strFmt("Processing SalesId: %1, ItemId: %2, CustAccount: %3",
 salesLine.SalesId, salesLine.ItemId, salesTable.CustAccount));
 }
 </pre>
-<p>In the following example, instead of retrieving the first record that matches the criteria, the while select statement loops through each record where the criterion is true. In the code below, all account numbers that begin with <strong>US</strong> are retrieved, and the <strong>CreditMax</strong> for each record is updated to <strong>5000</strong>.</p>
+<p>In the following example, instead of retrieving the first record that matches the criteria, the 
+while select
+ statement loops through each record where the criterion is true. In the code below, all account numbers that begin with <strong>US</strong> are retrieved, and the <strong>CreditMax</strong> for each record is updated to <strong>5000</strong>.</p>
 <pre>
 {
     CustTable custTable;
@@ -1236,10 +1392,20 @@ Info(strFmt("Account number %1 has been updated", custTable.AccountNum));
 </pre>
 <h2 id="insert-methods">Insert methods</h2>
 <p>Insert methods can be used to add a new record to a table. Insert methods only insert the columns that are selected by the query. You can override the insert method's validations and processes by using the
-doInsert() method. The insert_recordset statement can insert
+
+doInsert()
+ method. The 
+insert_recordset
+ statement can insert
 multiple records by copying the records from one table and inserting them into another.</p>
-<p>Insert methods need ttsBegin and ttsCommit to ensure that the data insertion process is handled as a single transaction.</p>
-<p>The following is an example of using an insert method statement to create a new customer.</p>
+<p>Insert methods need 
+ttsBegin
+ and 
+ttsCommit
+ to ensure that the data insertion process is handled as a single transaction.</p>
+<p>The following is an example of using an 
+insert
+ method statement to create a new customer.</p>
 <pre>
 {
 FMCustomer fmCustomer;
@@ -1257,11 +1423,23 @@ Info("New customer has been created.");
 </pre>
 <h2 id="update-methods">Update methods</h2>
 <p>Update methods can change existing values on a table record. To update a
-record, you must use a select forUpdate command to indicate that the
+record, you must use a 
+select forUpdate
+ command to indicate that the
 records are for update. Update methods also need to be wrapped in a
-ttsbegin and ttscommit statement. You can also use the
-update_recordset to update multiple records at the same time.</p>
-<p>The following is an example of using an update method and the update_recordset statement.</p>
+
+ttsbegin
+ and 
+ttscommit
+ statement. You can also use the
+
+update_recordset
+ to update multiple records at the same time.</p>
+<p>The following is an example of using an 
+update
+ method and the 
+update_recordset
+ statement.</p>
 <pre>
 {
     FMCustomer fmcustomer;
@@ -1277,9 +1455,21 @@ update_recordset to update multiple records at the same time.</p>
 </pre>
 <h2 id="delete-methods">Delete methods</h2>
 <p>Delete methods can remove an existing record from a table. You
-can use the doDelete() method to override the standard delete method
-behavior. You can also delete multiple records simultaneously with the delete_from statement. Delete Methods also need to be wrapped in a ttsBegin and ttsCommit statement, where you delete the data.</p>
-<p>The following is an example of using a delete method statement to delete a customer.</p>
+can use the 
+doDelete()
+ method to override the standard 
+delete
+ method
+behavior. You can also delete multiple records simultaneously with the 
+delete_from
+ statement. Delete Methods also need to be wrapped in a 
+ttsBegin
+ and 
+ttsCommit
+ statement, where you delete the data.</p>
+<p>The following is an example of using a 
+delete
+ method statement to delete a customer.</p>
 <pre>
 {
      FMCustomer fmcustomer;
@@ -1303,12 +1493,18 @@ complex queries.</p>
 be run. Different conditional statements have different advantages
 and uses depending on the situation. The four conditional statements are: if, if...else, switch, and ternary operators.</p>
 <h2 id="if-statement">If statement</h2>
-<p>The if statement evaluates whether an expression is true. If the
-expression is true, it runs the set of statements that are listed in the braces. In the following if statement, the statement checks
+<p>The 
+if
+ statement evaluates whether an expression is true. If the
+expression is true, it runs the set of statements that are listed in the braces. In the following 
+if
+ statement, the statement checks
 the expression in parentheses. In this case, the statement checks if the
 variable x is equal to 5. If the expression is true, then the code in
 the braces runs. If the expression is false, the code in the braces
-is skipped. The if statement takes exactly one statement to run. The
+is skipped. The 
+if
+ statement takes exactly one statement to run. The
 braces can contain a list of statements that are enclosed into one
 statement, called a compound statement.</p>
 <pre>
@@ -1319,9 +1515,19 @@ if (x == 5)
 </pre>
 <h2 id="ifelse-statement">If...else statement</h2>
 <p>You can set statements to run when the expression is false by using
-the if...else statement. You can create a normal if statement, but
-at the end of the if statement, you use the keyword else
-followed by brackets, as shown in the following example. You can add more code in the brackets that runs when the expression in the if
+the 
+if...else
+ statement. You can create a normal 
+if
+ statement, but
+at the end of the 
+if
+ statement, you use the keyword 
+else
+
+followed by brackets, as shown in the following example. You can add more code in the brackets that runs when the expression in the 
+if
+
 statement is false. In the following example, the statement checks if x is equal to 5. If it is, it runs the info x statement. If it is not
 equal to 5, it runs the info "X does not equal 5" statement.</p>
 <pre>
@@ -1338,10 +1544,16 @@ else
 determine if the expression is true or false. You can use the operators
 &amp;&amp; and || in your expressions to determine if two or more expressions
 must be true, or only one expression out of many must be true.
-Additionally, you can nest if statements to check for multiple
-expressions, but if you are nesting multiple if statements, you might want to consider a switch statement.</p>
+Additionally, you can nest 
+if
+ statements to check for multiple
+expressions, but if you are nesting multiple 
+if
+ statements, you might want to consider a switch statement.</p>
 <h2 id="switch-statement">Switch statement</h2>
-<p>A switch statement is a multibranch conditional statement that is
+<p>A 
+switch
+ statement is a multibranch conditional statement that is
 checked against multiple cases. If one of the case values are equal to
 the switch expression, then the case statement is run. The case
 statements use a break statement to tell the code to stop running the
@@ -1378,10 +1590,14 @@ switch (x)
 <li>continue statements</li>
 </ul>
 <h2 id="while-loops">While loops</h2>
-<p>A while loop enables you to repeatedly run one statement or a
+<p>A 
+while
+ loop enables you to repeatedly run one statement or a
 compound statement if a condition is true. The statement is run
 from zero (not at all) to many times, depending on how many times the
-condition evaluates to true. This contrasts with a do...while loop,
+condition evaluates to true. This contrasts with a 
+do...while
+ loop,
 where the statements are always run at least once before the condition is evaluated.</p>
 <pre>
 int loopCount = 1;
@@ -1394,9 +1610,15 @@ while (loopCount <= conlen(cont))
 }
 </pre>
 <h2 id="dowhile-loops">Do...while loops</h2>
-<p>The do...while loop is like the while loop but differs in that
+<p>The 
+do...while
+ loop is like the 
+while
+ loop but differs in that
 the condition follows the statements. The statements are always
-performed at least once. The do...while loop is well suited for
+performed at least once. The 
+do...while
+ loop is well suited for
 tasks that always must be done at least once, for example, to get
 parameters for a report.</p>
 <pre>
@@ -1417,7 +1639,11 @@ int findPower(real _value)
 	}
 </pre>
 <h2 id="for-loops">For loops</h2>
-<p>The for loop is similar to the while loop, but has the
+<p>The 
+for
+ loop is similar to the 
+while
+ loop, but has the
 following additions:</p>
 <ul>
 <li>The initial value to a control variable can be assigned.</li>
@@ -1435,12 +1661,20 @@ for (int i=1; i<=100; i+=1)
 }
 </pre>
 <h2 id="break-statements">Break statements</h2>
-<p>X++ provides a break statement for the following:</p>
+<p>X++ provides a 
+break
+ statement for the following:</p>
 <ul>
 <li>Terminating loops</li>
 <li>Separation of case statements in a switch statement</li>
 </ul>
-<p>When used within a while, do...while, or for loop, the loop
+<p>When used within a 
+while
+, 
+do...while
+, or 
+for
+ loop, the loop
 is terminated and implementation continues from the statement that follows the loop, as shown in the following example.</p>
 <pre>
 mainMenu = SysDictMenu::newMainMenu();
@@ -1477,7 +1711,9 @@ switch (Debtor.AccountNo)
 }
 </pre>
 <p>If the Debtor account number is 1000, the program runs
-do_something and then continues running after the switch
+
+do_something
+ and then continues running after the switch
 statement. If you have a break within a loop, you need to break out of the loop. If you have a continue within a loop, it ends the current iteration and reevaluates the loop condition.</p>
 <p>Watch the following video to learn about conditional statements:</p>
 <div class="embeddedvideo"><iframe allowfullscreen="true" data-linktype="external" frameborder="0" src="https://learn-video.azurefd.net/vod/player?id=fd282c33-cbea-4aa7-879b-0372e0c08ed5"></iframe></div>
@@ -1489,7 +1725,15 @@ statement. If you have a break within a loop, you need to break out of the loop.
 <div hidden="" id="module-unit-notification-container"></div>
 <p>While conditional statements are great for handling the running of
 different code blocks, exception handling is used to deal with errors.
-Statements like throw, try...catch, finally, and retry
+Statements like 
+throw
+, 
+try...catch
+, 
+finally
+, and 
+retry
+
 can be used to handle exceptions. An exception is a way for the code to
 jump away from the runnable code when an error occurs.</p>
 <p>The throw statement can be used to give an error exception. A throw
@@ -1501,17 +1745,31 @@ throw error("This is an error.");
 </pre>
 <p>Here is what an error, warning, and info message looks like in the user interface:</p>
 <p><img alt="Screenshot showing error, warning, and info messages." data-linktype="relative-path" src="./rawmb500/media_error_1.png"/></p>
-<p>Static methods on the Global class can be called without the Global:: prefix, so the Global::error method can also be called as shown in the following example:</p>
+<p>Static methods on the Global class can be called without the 
+Global::
+ prefix, so the 
+Global::error
+ method can also be called as shown in the following example:</p>
 <pre>
 error("This is an error.");
 </pre>
-<p>You can also use a try...catch statement to process some code in the
+<p>You can also use a 
+try...catch
+ statement to process some code in the
 try block, and then use the catch block to handle an exception if it
-occurs. In the following example, the try block runs some code. If a
-numeric exception occurs, the first catch block gives an info
-message to display: "Found a Numeric." The second catch block
+occurs. In the following example, the 
+try
+ block runs some code. If a
+numeric exception occurs, the first 
+catch
+ block gives an info
+message to display: "Found a Numeric." The second 
+catch
+ block
 handles any other errors that might be found. You should only catch
-exceptions that you know your code inside the try block might throw. All other exceptions should rise to the next stack frame.</p>
+exceptions that you know your code inside the 
+try
+ block might throw. All other exceptions should rise to the next stack frame.</p>
 <pre>
 try
 {
@@ -1531,13 +1789,27 @@ finally
         // Executed no matter how the try block exits.
 }
 </pre>
-<p>A retry can be written in a catch block to jump back to the first
+<p>A 
+retry
+ can be written in a catch block to jump back to the first
 line of code within the try block. This can be used if the issue in the
-implementation can be fixed by code in the catch block. Then, the try block will run again to give it a second chance to succeed. Make sure that the retry does not cause an infinite loop. A finally clause can be
-added to a try...catch statement. Statements in the finally
-clause are run when the implementation of the code leaves the try
-block. The statements in the finally block will run no matter
-how the try block exits.</p>
+implementation can be fixed by code in the catch block. Then, the try block will run again to give it a second chance to succeed. Make sure that the retry does not cause an infinite loop. A 
+finally
+ clause can be
+added to a 
+try...catch
+ statement. Statements in the 
+finally
+
+clause are run when the implementation of the code leaves the 
+try
+
+block. The statements in the 
+finally
+ block will run no matter
+how the 
+try
+ block exits.</p>
 <p>If an exception is not handled, then the call to the current method is
 unraveled and the exception will be handled, or not handled, in the
 caller's scope.</p>
@@ -1548,7 +1820,9 @@ caller's scope.</p>
 messageId = Message::Add(MessageSeverity::Informational, "The customer is marked as inactive");
 </pre>
 <p>In this example, the message can then be cleared when a new record is shown on the page.</p>
-<p>In addition to using the <strong>Message()</strong> API, you can use the Message::AddAction() method so you can embed an action within a message that is sent to the message bar. This method supports adding a single action that is associated with a display or action menu item, that can then be visualized as a <strong>Link</strong> button.</p>
+<p>In addition to using the <strong>Message()</strong> API, you can use the 
+Message::AddAction()
+ method so you can embed an action within a message that is sent to the message bar. This method supports adding a single action that is associated with a display or action menu item, that can then be visualized as a <strong>Link</strong> button.</p>
 <p>In the following example, a message is triggered for a system administrator letting them know that a batch job is not running and then exposes an action to go directly to the <strong>Batch jobs</strong> page.</p>
 <pre>
 MenuItemMessageAction actionData = new MenuItemMessageAction();
@@ -1563,9 +1837,13 @@ int64 messageId = Message::AddAction(MessageSeverity::Informational, "The Test b
 <p><img alt="Screenshot showing the  output message The test batch job is not currently running." data-linktype="relative-path" src="./rawmb500/media_add_action_method_ss.png"/></p>
 <h2 id="exceptions-inside-transactions">Exceptions inside transactions</h2>
 <p>If an exception is thrown inside a transaction, the transaction is
-automatically aborted (a ttsAbort operation occurs). This applies
+automatically aborted (a 
+ttsAbort
+ operation occurs). This applies
 for exceptions that are thrown manually and for exceptions that are thrown by the system.</p>
-<p>When an exception is thrown inside a ttsBegin - ttsCommit
+<p>When an exception is thrown inside a 
+ttsBegin - ttsCommit
+
 transaction block, no catch statement inside that transaction block can
 process the exception. Instead, the innermost catch statements that are
 outside the transaction block are the first catch statements to be
@@ -1578,7 +1856,9 @@ tested.</p>
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Constant values can be used to define a variable and assign it a value
 that does not change. You can define a constant variable by adding the
-keyword const before defining a variable. The following example shows
+keyword 
+const
+ before defining a variable. The following example shows
 how to make a variable a constant variable.</p>
 <pre>
 const str constantVariable = "Value";
@@ -1651,9 +1931,17 @@ The following example shows an extended method that uses Chain of Command:</p>
        return 'MB-500 ' + txt;
    }
 </pre>
-<p>The system extends the formCaption method and then returns <strong>MB-500</strong> and the normal formCaption.</p>
+<p>The system extends the 
+formCaption
+ method and then returns <strong>MB-500</strong> and the normal 
+formCaption
+.</p>
 <h2 id="call-a-new-global-function">Call a new global function</h2>
-<p>You can call global functions without using the class name. Normally, the syntax for using static methods is className::MethodName, such as MyClass::MyMethod.
+<p>You can call global functions without using the class name. Normally, the syntax for using static methods is 
+className::MethodName
+, such as 
+MyClass::MyMethod
+.
 However, you can call all global functions by using only the method name.</p>
 <p>The following example shows a call to your newly created global function:</p>
 <pre>
@@ -1717,7 +2005,7 @@ interacts smoothly with code that is written in other .NET languages.</p>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 
 <div hidden="" id="module-unit-notification-container"></div>
-
+<h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
 <fieldset class="field">
 <div role="list">
@@ -1861,7 +2149,9 @@ interacts smoothly with code that is written in other .NET languages.</p>
 <label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-3-0">
 <input class="radio-dot choice-input" id="quiz-choice-3-0" name="3" type="radio" value="0"/>
 <div class="margin-inline-sm radio-label-text">
-<p>Call it the same way that you would call other static methods on a class by using the following syntax <ClassName>::<MethodName>.</p>
+<p>Call it the same way that you would call other static methods on a class by using the following syntax 
+<ClassName>::<MethodName>
+.</p>
 </div>
 </label>
 <div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
@@ -2018,8 +2308,12 @@ in the method. A subclass must extend the abstract class to use the
 abstract method.</p>
 <h3 id="example-1">Example</h3>
 <p>The following is an example of an abstract class. The Car class extends the abstract class Vehicle. This allows the Car class to override the
-printInfo() method and it allows you to add functionality
-to the operate() method that was not included in the
+
+printInfo()
+ method and it allows you to add functionality
+to the 
+operate()
+ method that was not included in the
 abstract class.</p>
 <pre>
 abstract class Vehicle
@@ -2061,11 +2355,17 @@ class Car extends Vehicle
 and methods. An attribute can be attached by simply typing the name of
 the attribute that is enclosed in square brackets before the declaration of class/function where it needs to be applied.</p>
 <h3 id="example">Example</h3>
-<p>For example, the SysObsoleteAttribute(message,setError) attribute can be used on methods or classes that should no longer be used. During the build process, the user will be notified with a detailed message that appears in the output windows. The first parameter is the
+<p>For example, the 
+SysObsoleteAttribute(message,setError)
+ attribute can be used on methods or classes that should no longer be used. During the build process, the user will be notified with a detailed message that appears in the output windows. The first parameter is the
 message, and the second parameter indicates if an error (true)
 or a warning (false) is to be set. You can have the compiler reject or display a warning.</p>
-<p>If the API is no longer functioning, set isError = true in the
-SysObsoleteAttribute attribute so the compiler will report any use of
+<p>If the API is no longer functioning, set 
+isError = true
+ in the
+
+SysObsoleteAttribute
+ attribute so the compiler will report any use of
 that API as a compiler error</p>
 <pre>
 [SysObsoleteAttribute("The Automobile class might have faster performance.", false)]
@@ -2076,12 +2376,22 @@ that API as a compiler error</p>
 </pre>
 <h2 id="attribute-classes">Attribute classes</h2>
 <p>Attributes can also be created by using attribute classes. To create an
-attribute class, extend the SysAttribute class by adding
-extend SysAttribute at the end of your class declaration.
+attribute class, extend the 
+SysAttribute
+ class by adding
+
+extend SysAttribute
+ at the end of your class declaration.
 You can then decorate a class with the attribute that was created from the attribute class. You can specify the attribute parameters from the
-constructor. In the following code, the PracticeAttribute
-attribute class is created, and then the RegularClass class uses
-PracticeAttribute as an attribute.</p>
+constructor. In the following code, the 
+PracticeAttribute
+
+attribute class is created, and then the 
+RegularClass
+ class uses
+
+PracticeAttribute
+ as an attribute.</p>
 <h3 id="example-1">Example</h3>
 <p>The following example shows the declaration and design of an ordinary
 attribute class that you could create.</p>
@@ -2117,8 +2427,12 @@ public class PracticeAttribute extends SysAttribute
 </pre>
 <p>Attributes have many uses, including the following:</p>
 <ul>
-<li>Using the WebMethod attribute in Web services to indicate if the method should be callable over the Simple Object Access Protocol (SOAP) to exchange information.</li>
-<li>Using DLLImportAttribute to call unmanaged code.</li>
+<li>Using the 
+WebMethod
+ attribute in Web services to indicate if the method should be callable over the Simple Object Access Protocol (SOAP) to exchange information.</li>
+<li>Using 
+DLLImportAttribute
+ to call unmanaged code.</li>
 <li>Describing the title, version, description, or trademark of an assembly.</li>
 <li>Describing how to map between classes, members, and eXtensible Markup Language (XML) nodes for serialization.</li>
 <li>Describing the security requirements for methods.</li>
@@ -2140,10 +2454,14 @@ before and/or after the standard code runs. You can only extend the
 logic of public and protected methods. When you wrap a method, you can also access the base class's protected methods, public methods, and
 variables. It is important to understand this concept, as base code cannot be changed in Dynamics 365 finance and operations apps development.</p>
 <p>To use CoC, you need to create a new class that uses the same name as
-the class that you are extending with _Extension added to
+the class that you are extending with 
+_Extension
+ added to
 the name as a suffix. The class declaration also needs to use the
 <strong>final</strong> keyword to indicate that it cannot be further inherited from.
-Finally, the ExtensionOf attribute must be used when you are
+Finally, the 
+ExtensionOf
+ attribute must be used when you are
 declaring the class. You can then reuse the same method declaration from
 the base class in the extended class. Inside the extended method, you
 can add your custom code. You are required to use the <strong>next</strong> keyword
@@ -2151,10 +2469,14 @@ to create a CoC. The next command will call the next method in the Chain
 of Command. When no more methods exist in the chain, the original (in other words, extended) method is called.</p>
 <h3 id="example">Example</h3>
 <p>The following code example shows how the class must be declared to
-use CoC. When the ExampleClass.doSomething() method is
+use CoC. When the 
+ExampleClass.doSomething()
+ method is
 called, the code will first run all the code before the next
 keyword. Then, the original code in the
-ExampleClass.doSomething() method will run. Finally, all
+
+ExampleClass.doSomething()
+ method will run. Finally, all
 code after the next keyword will run.</p>
 <pre>
 [ExtensionOf(classStr(ExampleClass))]
@@ -2171,8 +2493,12 @@ final class ExampleClass_Extension
 </pre>
 <p>Certain methods cannot be wrapped by using CoC. If the
 method uses a hookable attribute that is set to false,
-[Hookable(false)], or a wrappable attribute that is set to
-false, [Wrappable(false)], the method cannot be wrapped.
+
+[Hookable(false)]
+, or a wrappable attribute that is set to
+false, 
+[Wrappable(false)]
+, the method cannot be wrapped.
 Methods that use the final keyword cannot be wrapped in an extension class. Private methods are also excluded from extensibility.</p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
@@ -2181,7 +2507,13 @@ Methods that use the final keyword cannot be wrapped in an extension class. Priv
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement X++ scoping and access identifiers</h1>
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Scope is the area where an item is located or can be accessed. X++ variables and methods are within a defined scope. The scope can be set by the placement of declaration and the use of access identifiers.</p>
-<p>Access identifiers are [public], [protected], and [private].</p>
+<p>Access identifiers are 
+[public]
+, 
+[protected]
+, and 
+[private]
+.</p>
 <ul>
 <li><strong>Public</strong> - Methods that are declared as public can be called from
 anywhere that the class is accessible. In addition, a public method can be overridden by a subclass unless the method is declared as final.</li>
@@ -2215,7 +2547,9 @@ internal class MyInternalClass
 <h2 id="local-variables">Local variables</h2>
 <p>Local variables have a small scope. These variables are defined in a method and can only be accessed in that method.</p>
 <p>Parameters are a kind of local variable that is defined on a method.</p>
-<p>To use a variable from one scope to another scope, the variable must be passed by using parameters. Methods can use multiple parameters. The parameters are treated like local variables and initialized with the value from the parameter in the method-call. In the following example, the class method has two parameters that give <em>method1</em> access to four variables. The instance variables <em>a</em> and <em>b</em> can be accessed, and the parameters <em>x</em> and <em>y</em> act like local variables. Using parameters allows values to be assigned to those parameters when the method is called. If <em>method1</em> is called by using the code Test.method1(a,b);, the <em>x</em> variable will be assigned the value <strong>Car</strong>, and the <em>y</em> variable will be assigned the value <strong>20</strong>. You can then use the values of the parameter variables to assign values to the instance variables <em>c</em> and <em>d</em>.</p>
+<p>To use a variable from one scope to another scope, the variable must be passed by using parameters. Methods can use multiple parameters. The parameters are treated like local variables and initialized with the value from the parameter in the method-call. In the following example, the class method has two parameters that give <em>method1</em> access to four variables. The instance variables <em>a</em> and <em>b</em> can be accessed, and the parameters <em>x</em> and <em>y</em> act like local variables. Using parameters allows values to be assigned to those parameters when the method is called. If <em>method1</em> is called by using the code 
+Test.method1(a,b);
+, the <em>x</em> variable will be assigned the value <strong>Car</strong>, and the <em>y</em> variable will be assigned the value <strong>20</strong>. You can then use the values of the parameter variables to assign values to the instance variables <em>c</em> and <em>d</em>.</p>
 <pre>
 class Test
 {
@@ -2236,7 +2570,13 @@ default change the value of the original variable. The term for
 this is "call by value" as opposed to "call by reference." Only the
 local variable is changed.</p>
 <h3 id="example">Example</h3>
-<p>In the following example, <em>method2</em> has a local variable <em>a</em> with a value of 5. The first info() statement displays the value of <em>a</em>, which is 5. It calls <em>method1</em> and passes the value of its local variable <em>a</em>. <em>Method1</em> now has a different local variable <em>a</em>, with the value of 5. <em>Method1</em> then increments the value by one, making <em>a</em> the value of 2. The info() statement then displays the value of 2. The code will go back to <em>method2</em> and run the second info() statement and display a value of 5. This result is because even though the variable name is the same, and the scope is unique to their respective methods.</p>
+<p>In the following example, <em>method2</em> has a local variable <em>a</em> with a value of 5. The first 
+info()
+ statement displays the value of <em>a</em>, which is 5. It calls <em>method1</em> and passes the value of its local variable <em>a</em>. <em>Method1</em> now has a different local variable <em>a</em>, with the value of 5. <em>Method1</em> then increments the value by one, making <em>a</em> the value of 2. The 
+info()
+ statement then displays the value of 2. The code will go back to <em>method2</em> and run the second 
+info()
+ statement and display a value of 5. This result is because even though the variable name is the same, and the scope is unique to their respective methods.</p>
 <pre>
 class infoValue
 {
@@ -2268,8 +2608,14 @@ interface." data-linktype="relative-path" src="./rawmb500/media_info.png"/></p>
 <p>An <em>interface</em> is a specification for a set of public instance methods.
 An interface defines and enforces similarities between unrelated classes
 without having to derive one class from the other. All interfaces are
-public, even if you don't explicitly add the public keyword in
-front of the interface keyword in the classDeclaration code. The
+public, even if you don't explicitly add the 
+public
+ keyword in
+front of the 
+interface
+ keyword in the 
+classDeclaration
+ code. The
 methods on an interface are also public.</p>
 <p>To create an interface, follow these steps:</p>
 <ol>
@@ -2277,19 +2623,29 @@ methods on an interface are also public.</p>
 <li>In the <strong>New Item</strong> dialog box, select <strong>Interface</strong> and then enter a name for the interface.</li>
 <li>Select <strong>Add</strong>.</li>
 </ol>
-<p>When you add the implements keyword on a class declaration, the
+<p>When you add the 
+implements
+ keyword on a class declaration, the
 class must declare the methods that are specified by the interface. A
 class declaration can implement multiple interfaces. List the
-interfaces after the single occurrence of the implements keyword and
+interfaces after the single occurrence of the 
+implements
+ keyword and
 separate the interface names by using commas. All interface methods that
 a class implements must be explicitly declared as <strong>public</strong> by using
-the public keyword in the class. A class that implements an
+the 
+public
+ keyword in the class. A class that implements an
 interface must also be declared as <strong>public</strong>. An interface can extend
-another interface by using the extends keyword. However, an
+another interface by using the 
+extends
+ keyword. However, an
 interface can't extend more than one interface.</p>
 <h3 id="interface-example">Interface example</h3>
 <p>In the following example, an <strong>Automobile</strong> class implements
-an <strong>IDrivable</strong> interface. The is keyword is supported and lets you test whether a class implements an interface.</p>
+an <strong>IDrivable</strong> interface. The 
+is
+ keyword is supported and lets you test whether a class implements an interface.</p>
 <pre>
 public interface IDrivable
 {
@@ -2348,7 +2704,9 @@ class UseAnAutomobile
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Exercise - Create an extension by using Chain of Command</h1>
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You are a developer that must make a customization to the
-CustTable insert method. Upon customer creation, if the
+
+CustTable
+ insert method. Upon customer creation, if the
 customer credit rating is less than 200, then the customer should be
 blocked for all delivery and invoicing. A prompt should appear to alert
 the person who is entering the customer details.</p>
@@ -2774,7 +3132,7 @@ determine what areas in finance and operations apps are changing and what change
 <div class="section is-uniform position-relative" id="unit-inner-section">
 
 <div hidden="" id="module-unit-notification-container"></div>
-
+<h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
 <fieldset class="field">
 <div role="list">
@@ -3089,7 +3447,7 @@ interface with the options for car, truck, SUV, and van.</p>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 
 <div hidden="" id="module-unit-notification-container"></div>
-
+<h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
 <fieldset class="field">
 <div role="list">
@@ -3466,12 +3824,16 @@ another parent table.</li>
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Table methods</h1>
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Tables are main elements of finance and operations apps development. Many standard tables are already available in the application. You can also create a new custom table.</p>
-<p>Each table has methods, which can be classified as standard methods or custom methods. Standard tables must have a super() call to run the framework logic. This requirement also applies to custom tables because they're derived from the same base type.</p>
+<p>Each table has methods, which can be classified as standard methods or custom methods. Standard tables must have a 
+super()
+ call to run the framework logic. This requirement also applies to custom tables because they're derived from the same base type.</p>
 <p>You can extend the existing table methods and include code by using the chain of command option. Additionally, you can create table delegates to include code in an existing method. These delegates should be subscribed to add functionality to an existing table method.</p>
 <h2 id="standard-table-methods">Standard table methods</h2>
 <p>The following sections explain the various methods that are used in standard tables in the finance and operations apps development platform.</p>
 <h3 id="initvalue">initValue()</h3>
-<p>The initValue() method is a standard method that's called when a new record is created. You can use this method to address the requirement of initializing some field values while a new record is being created.</p>
+<p>The 
+initValue()
+ method is a standard method that's called when a new record is created. You can use this method to address the requirement of initializing some field values while a new record is being created.</p>
 <p><strong>Scenario</strong></p>
 <p>You are using the table named <strong>CustTable</strong>. The requirement is to initialize the <strong>Party</strong> field of that table with enum element <strong>0</strong> while a new record is inserted into this table.</p>
 <p>The coding pattern is as follows:</p>
@@ -3483,9 +3845,15 @@ public void initValue()
     }
 </pre>
 <h3 id="find">find()</h3>
-<p>The find() method is a custom method that's usually created with all tables. The find() method returns a specific record based on primary key or other unique keys. This method is a static method.</p>
+<p>The 
+find()
+ method is a custom method that's usually created with all tables. The 
+find()
+ method returns a specific record based on primary key or other unique keys. This method is a static method.</p>
 <p><strong>Scenario</strong></p>
-<p>You have a custom table named <strong>TrainingParameters</strong>. You need to create the find() method that will return one record.</p>
+<p>You have a custom table named <strong>TrainingParameters</strong>. You need to create the 
+find()
+ method that will return one record.</p>
 <p>The coding pattern is as follows:</p>
 <pre>
 static TrainingParameters find(boolean _forupdate = false)
@@ -3510,7 +3878,9 @@ static TrainingParameters find(boolean _forupdate = false)
     }
 </pre>
 <h3 id="insert">insert()</h3>
-<p>The insert() method is a standard method that's called when a new record is inserted into a table. You can use this method in these scenarios:</p>
+<p>The 
+insert()
+ method is a standard method that's called when a new record is inserted into a table. You can use this method in these scenarios:</p>
 <ul>
 <li>Populate data in a field based on the value of some other field in the table.</li>
 <li>Run a process while data is inserted in a table.</li>
@@ -3530,7 +3900,9 @@ public void insert()
     }
 </pre>
 <h3 id="modifiedfield">modifiedField()</h3>
-<p>The modifiedField() method is a standard method that's called when a field of a record is modified. You can use this method in these scenarios:</p>
+<p>The 
+modifiedField()
+ method is a standard method that's called when a field of a record is modified. You can use this method in these scenarios:</p>
 <ul>
 <li>Populate data into a field while some other field is modified in the same record.</li>
 <li>Run a process while some field is modified in a record.</li>
@@ -3552,7 +3924,9 @@ public void modifiedField(FieldId _fieldId)
     }
 </pre>
 <h3 id="validatefield">validateField()</h3>
-<p>The validateField() method is a standard method that's called to validate the data that's entered into a field. You can use this method to perform data validation while data is being entered into the field.</p>
+<p>The 
+validateField()
+ method is a standard method that's called to validate the data that's entered into a field. You can use this method to perform data validation while data is being entered into the field.</p>
 <p><strong>Scenario</strong></p>
 <p>The requirement is to restrict entering data into the venue field of the <strong>TrainingMaster</strong> table, if the <strong>TrainingType</strong> is <strong>Online</strong>.</p>
 <p>The coding pattern is as follows:</p>
@@ -3574,7 +3948,9 @@ public boolean validateField(FieldId _fieldIdToCheck)
     }
 </pre>
 <h3 id="validatewrite">validateWrite()</h3>
-<p>The validateWrite() method is a standard method on tables. This method is called when the <strong>Save</strong> button is selected or a user attempts to navigate out of a record after inserting a new record or updating an existing one. Override this method if a condition should be validated before you leave the record.</p>
+<p>The 
+validateWrite()
+ method is a standard method on tables. This method is called when the <strong>Save</strong> button is selected or a user attempts to navigate out of a record after inserting a new record or updating an existing one. Override this method if a condition should be validated before you leave the record.</p>
 <p><strong>Scenario</strong></p>
 <p>You have a custom form with a table named <strong>TrainingMaster</strong>. The table has a field named <strong>TrainerID</strong> that creates a foreign key with the <strong>TrainerTable</strong>. <strong>TrainerTable</strong> has a real field <strong>Rate</strong>, which captures the daily rate of the trainers. When you save the record in the <strong>TrainingMaster</strong> table, the system should check if <strong>Rate</strong> is defined for the corresponding trainer.</p>
 <p>The coding pattern can be as follows:</p>
@@ -3595,7 +3971,9 @@ public boolean validateWrite()
 </pre>
 <h2 id="extension-of-table-methods">Extension of table methods</h2>
 <p>Chain of command is an option that helps you enhance the functionality of a table method. This option is applicable for standard methods and custom methods.</p>
-<p>In the following example, the requirement is to initialize the <strong>Price Rounding</strong> rule of the <strong>Currency</strong> table with <strong>0.01</strong> whenever a new record is created. A table extension class will be created with this code snippet of the initValue() method.</p>
+<p>In the following example, the requirement is to initialize the <strong>Price Rounding</strong> rule of the <strong>Currency</strong> table with <strong>0.01</strong> whenever a new record is created. A table extension class will be created with this code snippet of the 
+initValue()
+ method.</p>
 <pre>
 [ExtensionOf(tableStr(Currency))]
 final class CurrencyTable_Extension
@@ -3608,7 +3986,11 @@ final class CurrencyTable_Extension
 
 }
 </pre>
-<p>The next keyword is calling the parent method from the extended method. If a new custom method is created in the extended table, you don't need to use the next keyword.</p>
+<p>The 
+next
+ keyword is calling the parent method from the extended method. If a new custom method is created in the extended table, you don't need to use the 
+next
+ keyword.</p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
@@ -3699,7 +4081,9 @@ The top-level properties include properties that are like tables, such as <stron
 </tbody>
 </table>
 <p>A computed column is a virtual calculated column in the view, and the system calculates it on the database with T-SQL from a method.</p>
-<p>Create computed columns on the <strong>Fields</strong> node by selecting the corresponding type for the computed column, which in earlier versions was called an unmapped field. Then, specify the View Method property, which is the calculation for the computed column that’s defined in the view’s <strong>Methods</strong> node.</p>
+<p>Create computed columns on the <strong>Fields</strong> node by selecting the corresponding type for the computed column, which in earlier versions was called an unmapped field. Then, specify the 
+View Method
+ property, which is the calculation for the computed column that’s defined in the view’s <strong>Methods</strong> node.</p>
 <p>Create methods by right-clicking the view in Solution Explorer or by activating the context menu and then selecting <strong>View Code</strong> (F7). If you already have the view open in the designer, you can right-click at the top level or activate the context menu and then select <strong>View Code</strong> (F7). When you’re creating a new method for a computed column, it must be static and it must return type str (T-SQL to be implemented on the database).</p>
 <p>The method uses the following components to calculate the result:</p>
 <ul>
@@ -3708,7 +4092,15 @@ The top-level properties include properties that are like tables, such as <stron
 <li>The field in the field list on the data source.</li>
 </ul>
 <p>In the global <strong>DictView</strong> class, you can call the computedColumnString method with the data source and field to generate T-SQL to the return.
-If you’re creating more complicated expressions, such as and, or, compare, or if, see the help methods in the <strong>SysComputedColumn</strong> class.</p>
+If you’re creating more complicated expressions, such as 
+and
+, 
+or
+, 
+compare
+, or 
+if
+, see the help methods in the <strong>SysComputedColumn</strong> class.</p>
 <p>The following example shows the use of a method for a computed column (view <strong>AssetTransReverse</strong>):</p>
 <pre>
 /// <summary>
@@ -3932,7 +4324,11 @@ Additionally, you can use Microsoft Visual Studio to create predefined queries.<
 </tr>
 </tbody>
 </table>
-<p>You can modify and create queries from code by using the query class. The following example depicts a query being created with the name MyCustTable. It has only one data source custTable, with two fields: <strong>AccountNum</strong> and <strong>CustGroup</strong>. Then, you need to add the <strong>CustGroup</strong> to the range in code, which the following sample code illustrates.</p>
+<p>You can modify and create queries from code by using the query class. The following example depicts a query being created with the name 
+MyCustTable
+. It has only one data source 
+custTable
+, with two fields: <strong>AccountNum</strong> and <strong>CustGroup</strong>. Then, you need to add the <strong>CustGroup</strong> to the range in code, which the following sample code illustrates.</p>
 <p><a data-linktype="relative-path" href="media/mycusttable.png#lightbox"><img alt=" Screenshot of the MyCustTable data source and CustGroup field." data-linktype="relative-path" src="./rawmb500/media_mycusttable.png"/></a></p>
 <p>The following example shows the result in code:</p>
 <pre>
@@ -4665,11 +5061,19 @@ and customer filters by applying a subpattern to the Group control.</p>
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Forms are main elements of finance and operations development. Many standard forms are already available in the application.</p>
 <p>You can also create new forms. Each form consists of form methods, which can be classified as standard methods or custom methods.
-Standard methods must have a super() call to implement the parent method. Standard and custom methods are available with all standard and custom forms. You can extend the existing form methods and include code by using chain of command.</p>
+Standard methods must have a 
+super()
+ call to implement the parent method. Standard and custom methods are available with all standard and custom forms. You can extend the existing form methods and include code by using chain of command.</p>
 <h2 id="standard-form-methods">Standard form methods</h2>
 <p>The following sections explain the standard form methods in the finance and operations apps development platform.</p>
 <h3 id="init">init()</h3>
-<p>The init() method is a standard method that's called when a form is opened. This method helps to initialize the form, and it's run after the constructor method new(). The init() method is responsible for creating the runtime interface of the form. Mostly, you'll use this method when you need to:</p>
+<p>The 
+init()
+ method is a standard method that's called when a form is opened. This method helps to initialize the form, and it's run after the constructor method 
+new()
+. The 
+init()
+ method is responsible for creating the runtime interface of the form. Mostly, you'll use this method when you need to:</p>
 <ul>
 <li>Initialize the form level variables.</li>
 <li>Get parameter data from args().</li>
@@ -4690,16 +5094,56 @@ public void init()
 </pre>
 <div class="NOTE">
 <p>Note</p>
-<p>Modifications to the data source should be done only after the super() call because the base initialization happens there.</p>
+<p>Modifications to the data source should be done only after the 
+super()
+ call because the base initialization happens there.</p>
 </div>
 <h3 id="close">close()</h3>
-<p>The close() method is a standard method that's called when a form is closed. The super() call in this method closes the form, manages the database updates, and sets the closed() method to true. You can use the closeCancel() or closeOK() methods to initiate the close() method. Additionally, you can use the close() method to forcefully clear the values of some variable or to deallocate a class. Make sure that you complete these actions before the super() call. Often, <strong>NumberSequence</strong> classes are called from the close() method to facilitate an abort operation.</p>
+<p>The 
+close()
+ method is a standard method that's called when a form is closed. The 
+super()
+ call in this method closes the form, manages the database updates, and sets the 
+closed()
+ method to true. You can use the 
+closeCancel()
+ or 
+closeOK()
+ methods to initiate the 
+close()
+ method. Additionally, you can use the 
+close()
+ method to forcefully clear the values of some variable or to deallocate a class. Make sure that you complete these actions before the 
+super()
+ call. Often, <strong>NumberSequence</strong> classes are called from the 
+close()
+ method to facilitate an abort operation.</p>
 <h3 id="closecancel">closeCancel()</h3>
-<p>The closeCancel() method is a standard method that's called when a form is canceled. The super() call in this method updates the Boolean value of closedCancel()and ensures that the modifications in the form aren't saved.</p>
+<p>The 
+closeCancel()
+ method is a standard method that's called when a form is canceled. The 
+super()
+ call in this method updates the Boolean value of 
+closedCancel()
+and ensures that the modifications in the form aren't saved.</p>
 <h3 id="closeok">closeOK()</h3>
-<p>The closeOK() method is a standard method that's called when a form is closed by selecting the <strong>OK</strong> button. The super() call in this method updates the Boolean value of closedOK() and calls the close() method.</p>
+<p>The 
+closeOK()
+ method is a standard method that's called when a form is closed by selecting the <strong>OK</strong> button. The 
+super()
+ call in this method updates the Boolean value of 
+closedOK()
+ and calls the 
+close()
+ method.</p>
 <h3 id="run">run()</h3>
-<p>The run() method is a standard method that's called immediately after the init() method. The super() call in this method makes the form window appear on the screen and performs a database search for the data to be displayed in the form.</p>
+<p>The 
+run()
+ method is a standard method that's called immediately after the 
+init()
+ method. The 
+super()
+ call in this method makes the form window appear on the screen and performs a database search for the data to be displayed in the form.</p>
 <p>Typical reasons for overriding this method include:</p>
 <ul>
 <li>Activating or deactivating some fields.</li>
@@ -4708,7 +5152,11 @@ public void init()
 <h2 id="standard-form-data-source-methods">Standard form data source methods</h2>
 <p>The following sections explain the standard form data source methods in the finance and operations apps development platform.</p>
 <h3 id="init-1">init()</h3>
-<p>The init() method is a standard method of a form data source, which is called when a form is opened after the implementation of the form init() method. This method helps create a data source query based on the data source properties.</p>
+<p>The 
+init()
+ method is a standard method of a form data source, which is called when a form is opened after the implementation of the form 
+init()
+ method. This method helps create a data source query based on the data source properties.</p>
 <p><strong>Example</strong></p>
 <p>You have a custom form with a table named <strong>TrainingMaster</strong>. The table has an enum type field named <strong>TrainingType</strong> that has two values: <strong>Online</strong> and <strong>Classroom</strong>. The form should be opened with those records, where <strong>TrainingType</strong> is <strong>Online</strong>.</p>
 <p>The code pattern should be as follows:</p>
@@ -4727,7 +5175,9 @@ class TrainingMaster
     }
 </pre>
 <h3 id="active">active()</h3>
-<p>The active() method is a standard method of a form data source that's called when a user navigates to a new record.</p>
+<p>The 
+active()
+ method is a standard method of a form data source that's called when a user navigates to a new record.</p>
 <p><strong>Example</strong></p>
 <p>You have a custom form with a table named <strong>TrainingMaster</strong>. The table has a field named <strong>Venue</strong> and an enum type field named <strong>TrainingType</strong>, which has two values of <strong>Online</strong> and <strong>Classroom</strong>. While you're navigating through the records, the <strong>Venue</strong> field will be uneditable if <strong>TrainingType</strong> is <strong>Online</strong>. Otherwise, the <strong>Venue</strong> field will be editable.</p>
 <p>The code pattern should be as follows:</p>
@@ -4748,7 +5198,9 @@ class TrainingMaster
     }
 </pre>
 <h3 id="validatewrite">validateWrite()</h3>
-<p>The validateWrite() method is a standard method of a form data source, which is called when a user attempts to save a record to determine whether data is valid and ready to be written.</p>
+<p>The 
+validateWrite()
+ method is a standard method of a form data source, which is called when a user attempts to save a record to determine whether data is valid and ready to be written.</p>
 <p><strong>Example</strong></p>
 <p>You have a custom form with a table named <strong>TrainingMaster</strong>. The table has a date field named <strong>TrainingDate</strong>. No backdated training data should be allowed.</p>
 <p>The following code pattern can be a way to achieve this result:</p>
@@ -4768,10 +5220,16 @@ class TrainingMaster
 </pre>
 <div class="NOTE">
 <p>Note</p>
-<p>You don’t want to let the validateWrite() method fail without a message regarding why. A best practice would be to throw an error with a specific message rather than using the Boolean return of the if statement.</p>
+<p>You don’t want to let the 
+validateWrite()
+ method fail without a message regarding why. A best practice would be to throw an error with a specific message rather than using the Boolean return of the 
+if
+ statement.</p>
 </div>
 <h3 id="validatedelete">validateDelete()</h3>
-<p>The validateDelete() method is a standard method of a form data source, which is called when a user attempts to delete a record, to confirm the deletion.</p>
+<p>The 
+validateDelete()
+ method is a standard method of a form data source, which is called when a user attempts to delete a record, to confirm the deletion.</p>
 <p><strong>Example</strong></p>
 <p>You have a custom form with a table named <strong>TrainingMaster</strong>. The table has a date field named <strong>TrainingDate</strong>. No backdated training data should be deleted.</p>
 <p>The following code pattern can be a way to achieve this result:</p>
@@ -4791,10 +5249,22 @@ class TrainingMaster
 </pre>
 <div class="NOTE">
 <p>Note</p>
-<p>You should throw an error with a message rather than let the validateDelete() method silently fail.</p>
+<p>You should throw an error with a message rather than let the 
+validateDelete()
+ method silently fail.</p>
 </div>
 <h3 id="executequery">executeQuery()</h3>
-<p>The executeQuery() method is a standard method of a form data source that runs the data source query and displays the retrieved records. You can apply a filter on the data source that uses a query by overriding executeQuery(). The main difference between this method and the init() method is that the init() method runs once during the opening of the form, whereas the executeQuery()  method runs whenever the form is refreshed.</p>
+<p>The 
+executeQuery()
+ method is a standard method of a form data source that runs the data source query and displays the retrieved records. You can apply a filter on the data source that uses a query by overriding 
+executeQuery()
+. The main difference between this method and the 
+init()
+ method is that the 
+init()
+ method runs once during the opening of the form, whereas the 
+executeQuery()
+ method runs whenever the form is refreshed.</p>
 <p><strong>Example</strong></p>
 <p>You have a custom form with a table named <strong>TrainingMaster</strong>. The table has an enum type field named <strong>TrainingType</strong> that has two values: <strong>Online</strong> and <strong>Classroom</strong>. The data in the form should be filtered with the <strong>Trainingtype</strong> of <strong>Online</strong> only.</p>
 <pre>
@@ -4816,7 +5286,11 @@ class TrainingMaster
     }
 </pre>
 <h3 id="initvalue">initValue()</h3>
-<p>The initValue() method is a standard method of a form data source. While you're inserting a new record, initValue() can help you initialize field values. This method is called when a new record is created.</p>
+<p>The 
+initValue()
+ method is a standard method of a form data source. While you're inserting a new record, 
+initValue()
+ can help you initialize field values. This method is called when a new record is created.</p>
 <p><strong>Example</strong></p>
 <p>You have a custom form with a table named <strong>TrainingMaster</strong>. The table has a date field named <strong>TrainingDate</strong>. During the creation of a new record, the <strong>TrainingDate</strong> field should be initialized with today’s date.</p>
 <p>The coding pattern can be as follows:</p>
@@ -4832,7 +5306,9 @@ class TrainingMaster
     }
 </pre>
 <h3 id="write">write()</h3>
-<p>The write() method is a standard method of a form data source. This method is called when a record is modified and when you've attempted to save it by selecting the <strong>Save</strong> button or navigating out of the record.</p>
+<p>The 
+write()
+ method is a standard method of a form data source. This method is called when a record is modified and when you've attempted to save it by selecting the <strong>Save</strong> button or navigating out of the record.</p>
 <p><strong>Example</strong></p>
 <p>You have a custom form with a table named <strong>TrainingMaster</strong>. The table has a real field called <strong>Price</strong> that indicates the total price of the trainer. It also contains an integer field called <strong>NoofDays</strong> that indicates the duration of the training. Additionally, the table has a field named <strong>TrainerID</strong>, which creates a foreign key with the <strong>TrainerTable</strong>. The <strong>TrainerTable</strong> has a real field called <strong>Rate</strong>, which captures the daily rate of the trainers.</p>
 <p>After you've saved the record in the <strong>TrainingMaster</strong> table, the <strong>Price</strong> field of the <strong>TrainerMaster</strong> table should be updated with the multiplication of <strong>NoofDays</strong> and <strong>Rate</strong> of the <strong>TrainerTable</strong>.</p>
@@ -4849,7 +5325,9 @@ class TrainingMaster
     }
 </pre>
 <h3 id="delete">delete()</h3>
-<p>The delete() method is a standard method of a form data source. This method is called when a record is deleted.</p>
+<p>The 
+delete()
+ method is a standard method of a form data source. This method is called when a record is deleted.</p>
 <p><strong>Example</strong></p>
 <p>You have a custom form with a table named <strong>TrainingMaster</strong>. The table has a field named <strong>TrainerID</strong>, which has a foreign key relation with the <strong>TrainerTable</strong>. <strong>TrainerTable</strong> has a field named <strong>TrainingCount</strong>. The requirement is to reduce the <strong>TrainingCount</strong> number by one if a record is deleted from the <strong>TrainingMaster</strong> table.</p>
 <p>The coding pattern can be as follows:</p>
@@ -4869,7 +5347,9 @@ public void delete()
 <h2 id="standard-form-data-source-field-methods">Standard form data source field methods</h2>
 <p>The following sections explain the standard form data source field methods in the finance and operations apps development platform.</p>
 <h4 id="modified">modified()</h4>
-<p>The modified() method is a standard method on the field of the form data source. This method is called when the value of a specific field is modified.</p>
+<p>The 
+modified()
+ method is a standard method on the field of the form data source. This method is called when the value of a specific field is modified.</p>
 <p><strong>Example</strong></p>
 <p>You have a custom form with a table named <strong>TrainingMaster</strong>. The table has a field named <strong>Venue</strong> and an enum type field named <strong>TrainingType</strong> that has two values: <strong>Online</strong> and <strong>Classroom</strong>. If <strong>Online</strong> is selected for the <strong>TrainingType</strong>, the <strong>Venue</strong> field should become blank.</p>
 <p>The coding pattern can be as follows:</p>
@@ -4890,7 +5370,9 @@ class TrainingMaster
     }
 </pre>
 <h3 id="validate">validate()</h3>
-<p>The validate() method is a standard method on the field of the form data source. This method is called when a value is entered in a specific field, and it's overridden if extra field validation is needed.</p>
+<p>The 
+validate()
+ method is a standard method on the field of the form data source. This method is called when a value is entered in a specific field, and it's overridden if extra field validation is needed.</p>
 <p><strong>Example</strong></p>
 <p>You have a custom form with a table named <strong>TrainingMaster</strong>. The table has a field named <strong>Participants</strong>, where entering a number higher than <strong>20</strong> isn't allowed.</p>
 <p>The coding pattern can be as follows:</p>
@@ -4933,7 +5415,11 @@ class TrainingMaster
     }
 </pre>
 <h3 id="lookup">lookup()</h3>
-<p>The lookup() method is a standard method on the field of the form data source. This method is called when a lookup operation is attempted on a data source field. If data that's shown in the lookup form must be customized with some filter, the lookup() method should be overridden.</p>
+<p>The 
+lookup()
+ method is a standard method on the field of the form data source. This method is called when a lookup operation is attempted on a data source field. If data that's shown in the lookup form must be customized with some filter, the 
+lookup()
+ method should be overridden.</p>
 <p><strong>Example</strong></p>
 <p>You have a custom form with a table named <strong>TrainingMaster</strong>. The table has a field named <strong>TrainerID</strong> that creates a foreign key with the <strong>TrainerTable</strong>. <strong>TrainerTable</strong> has an enum field called <strong>TrainerType</strong> that has two values: <strong>Technical</strong> and <strong>Functional</strong>. The lookup in the <strong>TrainerID</strong> field should display only technical trainers.</p>
 <p>The coding pattern can be as follows:</p>
@@ -4966,7 +5452,9 @@ class TrainingMaster
 </pre>
 <h2 id="extension-of-a-form-method">Extension of a form method</h2>
 <p>Chain of command is an option that helps you enhance the functionality of a form method. This option is applicable for standard methods and custom methods of the form.</p>
-<p>You can use the following code pattern if you need to extend the init() method of the form:</p>
+<p>You can use the following code pattern if you need to extend the 
+init()
+ method of the form:</p>
 <pre>
 [ExtensionOf(formStr(Currency))]
 final class CurrencyForm_Extension
@@ -4981,7 +5469,9 @@ final class CurrencyForm_Extension
 </pre>
 <h2 id="extension-of-a-form-data-source-method">Extension of a form data source method</h2>
 <p>Chain of command is an option that helps you enhance the functionality of a form data source method. This option is applicable for standard methods and custom methods of the form.</p>
-<p>You can use the following code pattern if you need to extend the initValue() method of the form data source:</p>
+<p>You can use the following code pattern if you need to extend the 
+initValue()
+ method of the form data source:</p>
 <pre>
 [ExtensionOf(FormDataSourceStr(Currency, Currency))]
 final class CurrencyFormCurrencyTableDataSource_Extension
@@ -4996,7 +5486,9 @@ final class CurrencyFormCurrencyTableDataSource_Extension
 </pre>
 <h2 id="extension-of-a-form-data-source-field-method">Extension of a form data source field method</h2>
 <p>Chain of command is an option that helps you enhance the functionality of a form data source field method. This option is applicable for standard methods and custom methods of the form.</p>
-<p>You can use the following code pattern if you need to extend the lookup() method of the form data source fields:</p>
+<p>You can use the following code pattern if you need to extend the 
+lookup()
+ method of the form data source fields:</p>
 <pre>
 [ExtensionOf(formDataFieldStr(CustTable, CustTable, CustGroup))]
 final class CustTableFormDataFieldCustGroup_Extension
@@ -5011,7 +5503,9 @@ final class CustTableFormDataFieldCustGroup_Extension
 </pre>
 <h2 id="extension-of-a-form-control-method">Extension of a form control method</h2>
 <p>Chain of command is an option that helps you enhance the functionality of a form control method. This option is applicable for standard methods and custom methods of the form.</p>
-<p>You can use the following code pattern if you need to extend the clicked() method of the form button control:</p>
+<p>You can use the following code pattern if you need to extend the 
+clicked()
+ method of the form button control:</p>
 <pre>
 [ExtensionOf(formControlStr(CustTable, DirPartyEntityAssociationUpdate))]
 final class CustTableFormControlDirPartyEntityAssociationUpdate_Extension
@@ -5178,7 +5672,9 @@ after seven days.</p>
 <h2 id="diagnose-and-optimize-client-performance-by-using-performance-timer">Diagnose and optimize client performance by using Performance timer</h2>
 <p>Performance timer is a tool that aids in diagnosing performance
 issues on the client and server. Performance timer is generated by
-opening a web page with the added parameter debug=develop: https://<yoursite>.cloud.test.dynamics.com/en/?cmp=USMF&debug=develop.
+opening a web page with the added parameter 
+debug=develop: https://<yoursite>.cloud.test.dynamics.com/en/?cmp=USMF&debug=develop
+.
 The Performance timer will appear in the top-right corner of finance and
 operations where you can see the separations between client time and
 server time, as well as the total time when selecting a page. The Performance timer provides links for you to view information regarding forms, garbage collection, web client sessions, and services session providers.</p>
@@ -5197,7 +5693,9 @@ window. You can do this by setting the form as a startup object in
 the Solution Explorer and starting it with or without the debugger.
 By running the debugger and using the <strong>Debug</strong> menu in Visual Studio, you can go through your code and view information about the state
 of the application.</p>
-<p>In code that is on a form, you can use info() statements to log
+<p>In code that is on a form, you can use 
+info()
+ statements to log
 status messages that you can view through the <strong>Infolog</strong> window. In the
 browser window, you will be able to note any delays that occur in
 loading the form, whether you are running with or without debugging.</p>
@@ -5234,7 +5732,9 @@ operations apps, and then Visual Studio will automatically exit debugging mode.<
 <p>The finance and operations apps developer is asked to create a new form
 for the Fleet Management company. The company wants a simple page to
 enter customer information. They want the form to pull fields from
-the CustTable element.</p>
+the 
+CustTable
+ element.</p>
 <h2 id="create-a-new-project">Create a new project</h2>
 <ol>
 <li>Close Microsoft Edge, and finance and operations in the Lab environment.</li>
@@ -5564,19 +6064,37 @@ class variable that is bound to a class.</p>
 <li>Enter a name for the class.</li>
 <li>Select <strong>Add</strong> to add the class to your project.</li>
 </ol>
-<p>When you are creating a class, it is declared as public, even if
-you remove the public modifier. In addition to the
-public modifier, you can add the final
-and/or extends modifiers. Using the final
+<p>When you are creating a class, it is declared as 
+public
+, even if
+you remove the 
+public
+ modifier. In addition to the
+
+public
+ modifier, you can add the 
+final
+
+and/or 
+extends
+ modifiers. Using the 
+final
+
 modifier helps prevent the class from being inherited. The
-extends modifier is used when your class is derived from
+
+extends
+ modifier is used when your class is derived from
 another class.</p>
 <p>A runnable class for finance and operations apps, known previously as a job,
-is similar to a standard class, except that it contains a main
+is similar to a standard class, except that it contains a 
+main
+
 method. You can manually add methods to your class, including a main
 method. Methods will be described in further detail in the next unit.
 The following screenshot shows the code editor window when you create a
-runnable class named RunnableClass1.</p>
+runnable class named 
+RunnableClass1
+.</p>
 <p><img alt="This screenshot shows the code displayed when a runnable class is added to a project." data-linktype="relative-path" src="./rawmb500/media_runnable_class.png"/></p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
@@ -5594,17 +6112,31 @@ runnable class named RunnableClass1.</p>
 <p>SysGlobalCache and singleton refer to a single client session cache that isn’t accessible in other system threads. The system cleans this cache when the client session is complete, but it’s best practice to clean up the cache after you use it.</p>
 <p>You can create <strong>SysGlobalCache</strong> of an instance of the <strong>SysGlobalCache</strong> class, but we recommend that you create it from the following system classes so that cleanup is easier:</p>
 <ul>
-<li>From the <strong>Application</strong> class by using the appl system variable</li>
-<li>From the <strong>ClassFactory</strong> class by using the classFactory system variable</li>
-<li>From the <strong>Info</strong> class by using the Infolog system variable</li>
+<li>From the <strong>Application</strong> class by using the 
+appl
+ system variable</li>
+<li>From the <strong>ClassFactory</strong> class by using the 
+classFactory
+ system variable</li>
+<li>From the <strong>Info</strong> class by using the 
+Infolog
+ system variable</li>
 </ul>
 <p>All listed system classes have globalCache already defined and you can use it.</p>
 <p>The <strong>SysGlobalCache</strong> class stores data on a specific key, and it has several commonly used methods:</p>
 <ul>
-<li>Construct - Allows you to create a new instance of <strong>SysGlobalCache</strong>. By using one of the system classes, such as <strong>Application</strong>, <strong>ClassFactory</strong>, or <strong>Info</strong>, this method automatically creates an instance if it doesn’t already exist.</li>
-<li>Get - Retrieves a value from a specific owner and key.</li>
-<li>Set - Sets a value on a specific owner and key.</li>
-<li>IsSet - Checks whether the cache is set for a specific owner and key.</li>
+<li>
+Construct
+ - Allows you to create a new instance of <strong>SysGlobalCache</strong>. By using one of the system classes, such as <strong>Application</strong>, <strong>ClassFactory</strong>, or <strong>Info</strong>, this method automatically creates an instance if it doesn’t already exist.</li>
+<li>
+Get
+ - Retrieves a value from a specific owner and key.</li>
+<li>
+Set
+ - Sets a value on a specific owner and key.</li>
+<li>
+IsSet
+ - Checks whether the cache is set for a specific owner and key.</li>
 </ul>
 <p>The system stores values in <strong>SysGlobalCache</strong> by using an owner and a key.</p>
 <p>The following example shows how to check if a value exists, get a value, and set a value by using <strong>SysGlobalCache</strong>.</p>
@@ -5729,7 +6261,9 @@ https://[your finance and operations apps url]/?mi=SysClassRunner&amp;cls=SysFlu
 <p>Note</p>
 <p>As previously mentioned, you can change the method signature with over-layering by adding a new parameter for a method. However, you can extend the method signature by using a <strong>Disposable</strong> context. When you implement <strong>IDisposable</strong> on the context class, it forces you to have a dispose method to use for cleanup.</p>
 </div>
-<p>The following example creates a context class for SalesPool with one parameter named myParameter.</p>
+<p>The following example creates a context class for SalesPool with one parameter named 
+myParameter
+.</p>
 <pre>
 internal final class MySalesPoolContext
 {
@@ -5756,7 +6290,9 @@ internal final class MySalesPoolContext
 
 }
 </pre>
-<p>Now you can add an extension to the find method for the <strong>SalesPool</strong> table. You must test the new parameter that you created in the context class without changing the signature of the find method, as follows:</p>
+<p>Now you can add an extension to the 
+find
+ method for the <strong>SalesPool</strong> table. You must test the new parameter that you created in the context class without changing the signature of the find method, as follows:</p>
 <pre>
 [ExtensionOf(tableStr(SalesPool))]
 final class SalesPool_MB500_Extension
@@ -5778,7 +6314,9 @@ final class SalesPool_MB500_Extension
 
 }
 </pre>
-<p>For test purposes, the following example creates a new runnable class, and you can configure the context parameter variable to call the disposal methods to clean up after using the class.</p>
+<p>For test purposes, the following example creates a new runnable class, and you can configure the 
+context parameter
+ variable to call the disposal methods to clean up after using the class.</p>
 <pre>
 internal final class MySalesPoolContextTest
 {
@@ -5818,14 +6356,20 @@ easy to learn.</p>
 <p>After you create a class from <strong>Solution Explorer</strong>, you can add code to the class. Data provides the state of an object, while a
 method provides behavior to an object. Methods that you will encounter and create in development for finance and operations apps include:</p>
 <ul>
-<li><p><strong>New method</strong> - Creates an instance of the class by using the new keyword. The default constructor is <strong>new()</strong>. The following is an example of declaring a variable and creating an instance of an object by calling the new method:</p>
+<li><p><strong>New method</strong> - Creates an instance of the class by using the 
+new
+ keyword. The default constructor is <strong>new()</strong>. The following is an example of declaring a variable and creating an instance of an object by calling the new method:</p>
 <pre>
 Sample mySample; //this declares a variable to refer to a sample object
 
 mySample = new Sample(); //this creates an instance of a sample object
 </pre>
 </li>
-<li><p><strong>Finalize method</strong> - A destructor method that finalizes an instance of a class by using the finalize keyword. The following is an example, using an if statement, which shows how to call a finalize method:</p>
+<li><p><strong>Finalize method</strong> - A destructor method that finalizes an instance of a class by using the 
+finalize
+ keyword. The following is an example, using an 
+if
+ statement, which shows how to call a finalize method:</p>
 <pre>
 if (condition) //state the condition that should be met
 {
@@ -5833,7 +6377,9 @@ if (condition) //state the condition that should be met
 }
 </pre>
 </li>
-<li><p><strong>Main method</strong> - Creates an instance of an object and calls the required member methods. It is a class method that is run directly from a menu option. To transfer data to the method, use the _args parameter. The following is an example of the syntax that is used to define a main method:</p>
+<li><p><strong>Main method</strong> - Creates an instance of an object and calls the required member methods. It is a class method that is run directly from a menu option. To transfer data to the method, use the 
+_args
+ parameter. The following is an example of the syntax that is used to define a main method:</p>
 <pre>
 Static void main (Args _args)
 {
@@ -5847,7 +6393,9 @@ ClassName objectReference = new ClassName();
 objectReference.methodname();
 </pre>
 </li>
-<li><p><strong>Static method</strong> - Also referred to as a class method, it uses the static keyword and belongs to a class. With a static method, unlike with an instance method, you don't need to instantiate an object before you use the method. Static methods are commonly used to work with data that is stored in tables. The following is an example of the syntax that is used to call a static method:</p>
+<li><p><strong>Static method</strong> - Also referred to as a class method, it uses the 
+static
+ keyword and belongs to a class. With a static method, unlike with an instance method, you don't need to instantiate an object before you use the method. Static methods are commonly used to work with data that is stored in tables. The following is an example of the syntax that is used to call a static method:</p>
 <pre>
 ClassName::methodName();
 </pre>
@@ -5857,11 +6405,35 @@ ClassName::methodName();
 classes can call the methods in your class. Class inheritance is also
 affected by the following accessor keywords.</p>
 <ul>
-<li><p><strong>public</strong> - Methods declared as public can be called from anywhere that the class is accessible. A public method can be overridden by a subclass, unless that method is declared as final.</p>
+<li><p><strong>
+public
+</strong> - Methods declared as 
+public
+ can be called from anywhere that the class is accessible. A 
+public
+ method can be overridden by a subclass, unless that method is declared as 
+final
+.</p>
 </li>
-<li><p><strong>protected</strong> - Methods declared as protected can only be called from methods in the same class or methods in a subclass of that class. A protected method can still be overridden in a subclass.</p>
+<li><p><strong>
+protected
+</strong> - Methods declared as 
+protected
+ can only be called from methods in the same class or methods in a subclass of that class. A 
+protected
+ method can still be overridden in a subclass.</p>
 </li>
-<li><p><strong>private</strong> - Methods declared as private can only be called from methods within the same class. Unlike public and protected methods, private methods can't be overridden in a subclass.</p>
+<li><p><strong>
+private
+</strong> - Methods declared as 
+private
+ can only be called from methods within the same class. Unlike 
+public
+ and 
+protected
+ methods, 
+private
+ methods can't be overridden in a subclass.</p>
 </li>
 </ul>
 <div class="modular-content-container" hidden="" id="next-section">
@@ -5872,24 +6444,64 @@ affected by the following accessor keywords.</p>
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can write code to manipulate data that is stored in the database.</p>
 <ul>
-<li>Use a select method to declare the data to modify.</li>
-<li>An insert method is used to add one or more records to a table.</li>
-<li>An update method is used to modify the current record in the appropriate system fields.</li>
-<li>Use a where clause to specify a condition that the update method tests as it processes each row of the table.</li>
-<li>A delete method is used to remove records from a table. Before using an update or delete method, you must use a select method to define the data to update or delete.</li>
-<li>To select multiple records or fields, you initially use a select method and then use a next method to fetch the next record in a table.</li>
-<li>To loop over many records that meet specific criteria, you can use a while select method.</li>
+<li>Use a 
+select
+ method to declare the data to modify.</li>
+<li>An 
+insert
+ method is used to add one or more records to a table.</li>
+<li>An 
+update
+ method is used to modify the current record in the appropriate system fields.</li>
+<li>Use a 
+where
+ clause to specify a condition that the 
+update
+ method tests as it processes each row of the table.</li>
+<li>A 
+delete
+ method is used to remove records from a table. Before using an 
+update
+ or 
+delete
+ method, you must use a 
+select
+ method to define the data to update or delete.</li>
+<li>To select multiple records or fields, you initially use a 
+select
+ method and then use a 
+next
+ method to fetch the next record in a table.</li>
+<li>To loop over many records that meet specific criteria, you can use a 
+while select
+ method.</li>
 </ul>
-<p>The select statement fetches or manipulates data from the database using X++. You can use the select statement to fetch one record or field. You can use other statements such as next to fetch more records, or use a while select to traverse multiple records.</p>
+<p>The 
+select
+ statement fetches or manipulates data from the database using X++. You can use the 
+select
+ statement to fetch one record or field. You can use other statements such as 
+next
+ to fetch more records, or use a 
+while select
+ to traverse multiple records.</p>
 <p>For example, the following code sample fetches all columns in the first row of the <strong>CustTable</strong>, then it prints the value in the <strong>AccountNum</strong> column of that row:</p>
 <pre>
 CustTable custTable;
 select firstonly custTable; //this is a short notation for 'select firstonly * from custTable;'  
 info("AccountNum: " + custTable.AccountNum);
 </pre>
-<p>The following are code samples for insert, update, and delete methods. The samples use a fictitious <strong>MyCustomerTable</strong> table containing fictitious fields for <strong>AccountNumber</strong> and <strong>CustomerName</strong>.</p>
+<p>The following are code samples for 
+insert
+, 
+update
+, and 
+delete
+ methods. The samples use a fictitious <strong>MyCustomerTable</strong> table containing fictitious fields for <strong>AccountNumber</strong> and <strong>CustomerName</strong>.</p>
 <ul>
-<li><p>insert method</p>
+<li><p>
+insert
+ method</p>
 <pre>
 //This will insert a new record into a sample MyCustomerTable table. The only mandatory field that is set on this table is AccountNumber.
 
@@ -5904,7 +6516,9 @@ private void AddCustomer()
 }
 </pre>
 </li>
-<li><p>update method</p>
+<li><p>
+update
+ method</p>
 <pre>
 //This will update the record where the AccountNumber field is set to 1234 by adding more information in the CustomerName field.
 
@@ -5921,7 +6535,9 @@ private void UpdateCustomer()
 }
 </pre>
 </li>
-<li><p>delete method</p>
+<li><p>
+delete
+ method</p>
 <pre>
 //This will delete the record from the MyCustomerTable table where the AccountNumber field is set to 1234.
 
@@ -5968,7 +6584,9 @@ private void DeleteCustomer()
 <p>As the finance and operations apps developer, you have been tasked with
 inserting customer records into a table for your Fleet Management
 company. You need to create a runnable class and add code that will
-insert two records into the FMCustomer table.</p>
+insert two records into the 
+FMCustomer
+ table.</p>
 <h2 id="create-a-runnable-class">Create a runnable class</h2>
 <ol>
 <li>Minimize the Microsoft Edge window.</li>
@@ -6007,7 +6625,11 @@ FMInsertCustomers FMInsertCustomers = new  FMInsertCustomers();
    FMInsertCustomers.run();
 </pre>
 </li>
-<li><p>Now, you create the methods needed to insert records into the FMCustomer table and use ttsbegin and tts commit to insert the data. This code should go before the <strong>main</strong> method.</p>
+<li><p>Now, you create the methods needed to insert records into the FMCustomer table and use 
+ttsbegin
+ and 
+tts
+ commit to insert the data. This code should go before the <strong>main</strong> method.</p>
 <pre>
 public void run()
      {
@@ -6036,7 +6658,9 @@ public void run()
 </li>
 <li><p>In this code sample, you are inserting John Smith’s record, then clearing the table buffer with clear() method. Then the code inserts another record for Sally.</p>
 </li>
-<li><p>In the <strong>Solution Explorer</strong>, right-click the FMInsertCustomers class.</p>
+<li><p>In the <strong>Solution Explorer</strong>, right-click the 
+FMInsertCustomers
+ class.</p>
 </li>
 <li><p>Select <strong>Set as Startup Object</strong>.</p>
 </li>
@@ -6056,7 +6680,7 @@ public void run()
 <div class="section is-uniform position-relative" id="unit-inner-section">
 
 <div hidden="" id="module-unit-notification-container"></div>
-
+<h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
 <fieldset class="field">
 <div role="list">
@@ -6071,7 +6695,9 @@ public void run()
 <label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-0-0">
 <input class="radio-dot choice-input" id="quiz-choice-0-0" name="0" type="radio" value="0"/>
 <div class="margin-inline-sm radio-label-text">
-<p>A new method</p>
+<p>A 
+new
+ method</p>
 </div>
 </label>
 <div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
@@ -6079,7 +6705,9 @@ public void run()
 <label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-0-1">
 <input class="radio-dot choice-input" id="quiz-choice-0-1" name="0" type="radio" value="1"/>
 <div class="margin-inline-sm radio-label-text">
-<p>A static method</p>
+<p>A 
+static
+ method</p>
 </div>
 </label>
 <div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
@@ -6087,7 +6715,9 @@ public void run()
 <label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-0-2">
 <input class="radio-dot choice-input" id="quiz-choice-0-2" name="0" type="radio" value="2"/>
 <div class="margin-inline-sm radio-label-text">
-<p>A main method</p>
+<p>A 
+main
+ method</p>
 </div>
 </label>
 <div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
@@ -6095,7 +6725,9 @@ public void run()
 <label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-0-3">
 <input class="radio-dot choice-input" id="quiz-choice-0-3" name="0" type="radio" value="3"/>
 <div class="margin-inline-sm radio-label-text">
-<p>A finalize  method</p>
+<p>A 
+finalize
+ method</p>
 </div>
 </label>
 <div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
@@ -6114,7 +6746,9 @@ public void run()
 <label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-1-0">
 <input class="radio-dot choice-input" id="quiz-choice-1-0" name="1" type="radio" value="0"/>
 <div class="margin-inline-sm radio-label-text">
-<p>A public method</p>
+<p>A 
+public
+ method</p>
 </div>
 </label>
 <div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
@@ -6122,7 +6756,9 @@ public void run()
 <label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-1-1">
 <input class="radio-dot choice-input" id="quiz-choice-1-1" name="1" type="radio" value="1"/>
 <div class="margin-inline-sm radio-label-text">
-<p>A private method</p>
+<p>A 
+private
+ method</p>
 </div>
 </label>
 <div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
@@ -6130,7 +6766,9 @@ public void run()
 <label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-1-2">
 <input class="radio-dot choice-input" id="quiz-choice-1-2" name="1" type="radio" value="2"/>
 <div class="margin-inline-sm radio-label-text">
-<p>An access method</p>
+<p>An 
+access
+ method</p>
 </div>
 </label>
 <div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
@@ -6138,7 +6776,9 @@ public void run()
 <label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-1-3">
 <input class="radio-dot choice-input" id="quiz-choice-1-3" name="1" type="radio" value="3"/>
 <div class="margin-inline-sm radio-label-text">
-<p>A protected method</p>
+<p>A 
+protected
+ method</p>
 </div>
 </label>
 <div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
@@ -6150,7 +6790,9 @@ public void run()
 <div aria-labelledby="quiz-question-3" class="quiz-question-title font-size-md margin-top-sm margin-bottom-xs" role="radiogroup">
 <div class="margin-top-sm margin-bottom-xs field-label" id="quiz-question-3">
 <span class="font-weight-semibold">3.</span>
-<p>You want to update a record in your SampleTable table that contains the account number 1234 by using the update method. Before you call the update method, which clause is used at the beginning of this statement to locate the record sampleTable.AccountNum == “1234”?</p>
+<p>You want to update a record in your 
+SampleTable
+ table that contains the account number 1234 by using the update method. Before you call the update method, which clause is used at the beginning of this statement to locate the record sampleTable.AccountNum == “1234”?</p>
 <span class="required-indicator"></span>
 </div>
 <div class="field-body">
@@ -6246,7 +6888,23 @@ public void run()
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Classes for finance and operations apps use the X++ development language, which is an object-oriented programming language. Classes contain data that define an object's state and methods that define an object's behavior. Elements such as tables and forms contain classes out of the box. These elements can be modified through extension to add more methods that control the element's behavior. Through the <strong>Solution Explorer</strong> window in Visual Studio, you can add a new class or runnable
 class to your project.</p>
-<p>A runnable class contains an empty main method and is declared as public static void. Many types of methods can be called in classes. Some methods dictate access to the method from other classes, like public, private, and protected methods. Others are used when you are manipulating data, such as select, insert, update, and delete methods. Methods, or any code within a class, can be commented on to explain the purpose of that code.</p>
+<p>A runnable class contains an empty main method and is declared as 
+public static void
+. Many types of methods can be called in classes. Some methods dictate access to the method from other classes, like 
+public
+, 
+private
+, and 
+protected
+ methods. Others are used when you are manipulating data, such as 
+select
+, 
+insert
+, 
+update
+, and 
+delete
+ methods. Methods, or any code within a class, can be commented on to explain the purpose of that code.</p>
 <h2 id="links-to-related-modules-and-sites-for-specific-topics">Links to related modules (and sites) for specific topics</h2>
 <table>
 <thead>
@@ -6647,7 +7305,7 @@ space should be between each data field and group.</p>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 
 <div hidden="" id="module-unit-notification-container"></div>
-
+<h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
 <fieldset class="field">
 <div role="list">
@@ -7434,13 +8092,23 @@ security profile to use the permissions policies to restrict access to a
 certain field. After you create the profile, you can assign users or teams to that profile and then set up specific read, create, or write permissions for the field.</p>
 <p>You can use permissions policies to ensure that users can view and access all necessary areas of finance and operations apps, from pages within the navigation pane to specific buttons on a page. A new security policy is added to a project through the <strong>Solution Explorer</strong> window by following the same steps as adding a new role, duty, or privilege to a project. In the <strong>Properties</strong> window, you can specify the details of the policy, such as the query that is the basis for the policy and the <strong>Primary Table</strong>, which is the first data source in the query that is assigned to the policy. Additionally, you can specify the <strong>Context Type</strong>, which is used to determine whether the policy is applicable.</p>
 <p>The following image shows the <strong>Properties</strong> window of the
-RetailCustomer security policy that uses the
-RoleName context type. The <strong>Role Name</strong> property has been filled in to specify that the RetailStoreManager role is
+
+RetailCustomer
+ security policy that uses the
+
+RoleName
+ context type. The <strong>Role Name</strong> property has been filled in to specify that the 
+RetailStoreManager
+ role is
 associated with this policy.</p>
 <p><a data-linktype="relative-path" href="media/retail-policy.png#lightbox"><img alt="RetailCustomer security policy Properties window." data-linktype="relative-path" src="./rawmb500/media_retail_policy.png"/></a></p>
 <p>The following image is the <strong>Properties</strong> window of the
-FMSelfServ security policy that uses the
-ContextString context type. Notice that different fields
+
+FMSelfServ
+ security policy that uses the
+
+ContextString
+ context type. Notice that different fields
 are used as you select a different context type.</p>
 <p><a data-linktype="relative-path" href="media/fm-policy.png#lightbox"><img alt="Properties window for the FMSelfServpolicy." data-linktype="relative-path" src="./rawmb500/media_fm_policy.png"/></a></p>
 <div class="modular-content-container" hidden="" id="next-section">
@@ -7622,7 +8290,7 @@ Management company to create a new role based on a new position that they are fi
 <div class="section is-uniform position-relative" id="unit-inner-section">
 
 <div hidden="" id="module-unit-notification-container"></div>
-
+<h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
 <fieldset class="field">
 <div role="list">
@@ -7851,7 +8519,9 @@ operations apps.</p>
 <h2 id="display-method-caching">Display method caching</h2>
 <p>In finance and operations apps, you can use display methods to show a calculated field. Whenever the form refreshes, the display method is calculated.</p>
 <p>To improve performance, you can cache a display method, which means that it’s calculated only once when it's received from the cache.</p>
-<p>To enable caching for a display method, add it to the init method on the form by using the following syntax:</p>
+<p>To enable caching for a display method, add it to the 
+init
+ method on the form by using the following syntax:</p>
 <pre>
 /// <summary> 
     /// Adding cache for display field 
@@ -7863,7 +8533,9 @@ operations apps.</p>
          myDisplayMethod)); 
     }
 </pre>
-<p>Using cacheAddMethod activates the caching mechanism for the display method, and it loads into the cache.
+<p>Using 
+cacheAddMethod
+ activates the caching mechanism for the display method, and it loads into the cache.
 Another way to activate caching is to use <strong>[SysClientCacheDataMethodAttribute]</strong> on the display method. The method is automatically added to the caching mechanism.</p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
@@ -7876,33 +8548,61 @@ tables, and when they should be used.</p>
 <p>Temporary tables allow you to efficiently create and clean up temporary
 data. The two types of temporary tables are:</p>
 <ul>
-<li>InMemory</li>
-<li>TempDB</li>
+<li>
+InMemory
+</li>
+<li>
+TempDB
+</li>
 </ul>
-<p>The table type can be determined on the table's TableType
+<p>The table type can be determined on the table's 
+TableType
+
 property.</p>
 <p><a data-linktype="relative-path" href="media/tables-1.png#lightbox"><img alt="Screenshot of the Properties table page highlighting the Table Type property." data-linktype="relative-path" src="./rawmb500/media_tables_1.png"/></a></p>
-<p>InMemory tables use an indexed sequential access method
+<p>
+InMemory
+ tables use an indexed sequential access method
 (ISAM) file that exists on the client tier or the AOS tier. Microsoft
 SQL Server has no connection to the ISAM file. The data is stored in
 memory until it reaches 128 KB, and then the dataset is written to a
-disk file on the server tier. InMemory tables are
+disk file on the server tier. 
+InMemory
+ tables are
 instantiated when the first record is inserted. The table exists and
 memory is only allocated to the table while a record buffer exists.</p>
-<p>An InMemory table might be used when you need to store and
+<p>An 
+InMemory
+ table might be used when you need to store and
 retrieve data without writing data to the database. This is like a
-container, but InMemory tables allow you to use indexes to
+container, but 
+InMemory
+ tables allow you to use indexes to
 speed up data retrieval. If you are only using a few records, you should
-use a container, not an InMemory table. You can use X++
-SQL syntax to join an InMemory table, however, joins and SQL
+use a container, not an 
+InMemory
+ table. You can use X++
+SQL syntax to join an 
+InMemory
+ table, however, joins and SQL
 operations are usually inefficient.</p>
-<p>TempDB tables use the TempDB database of the
+<p>
+TempDB
+ tables use the 
+TempDB
+ database of the
 SQL Server. This type of table causes the data to be removed when it is
-no longer used by the current method or when the system is restarted. Regular tables are automatically turned into TempDB tables by
+no longer used by the current method or when the system is restarted. Regular tables are automatically turned into 
+TempDB
+ tables by
 disabling the configuration key for the table, which allows references
 to the disabled table in the system to continue to compile and run.
-Additionally, TempDB tables are commonly used on reports to manipulate data.</p>
-<p>The capabilities of TempDB tables include the following:</p>
+Additionally, 
+TempDB
+ tables are commonly used on reports to manipulate data.</p>
+<p>The capabilities of 
+TempDB
+ tables include the following:</p>
 <ul>
 <li>Joining to regular tables.</li>
 <li>Using foreign keys.</li>
@@ -7913,7 +8613,9 @@ Additionally, TempDB tables are commonly used on reports to manipulate data.</p>
 <li>Being used as a query.</li>
 <li>Having no requirements for a configuration key.</li>
 </ul>
-<p>TempDB tables also have the following limitations:</p>
+<p>
+TempDB
+ tables also have the following limitations:</p>
 <ul>
 <li>Inability to manage date-effective data.</li>
 <li>They do not contain delete actions.</li>
@@ -7926,7 +8628,13 @@ Additionally, TempDB tables are commonly used on reports to manipulate data.</p>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Create or modify temporary tables to optimize data</h1>
 <div hidden="" id="module-unit-notification-container"></div>
-<p>The system stores InMemory tables in memory, so you might find them useful for a small number of records. You can’t use InMemory tables in a query because they don’t exist on SQL Server. Records in a temporary table of the InMemory type exist as long as the object in which you create the table exists.</p>
+<p>The system stores 
+InMemory
+ tables in memory, so you might find them useful for a small number of records. You can’t use 
+InMemory
+ tables in a query because they don’t exist on SQL Server. Records in a temporary table of the 
+InMemory
+ type exist as long as the object in which you create the table exists.</p>
 <p>The following code shows an example of how to insert data into a temporary table.</p>
 <pre>
 public static void main(Args _args)
@@ -7948,22 +8656,46 @@ public static void main(Args _args)
         }
     }
 </pre>
-<p>The code sample appears similar to how code for a normal table would appear. The scope for InMemory tables depends on how you declare it. If you declare it in a method, the scope is only in the method.</p>
+<p>The code sample appears similar to how code for a normal table would appear. The scope for 
+InMemory
+ tables depends on how you declare it. If you declare it in a method, the scope is only in the method.</p>
 <div class="NOTE">
 <p>Note</p>
-<p>You can declare an InMemory table at all levels, so it would be in scope for a class or a form, too.</p>
+<p>You can declare an 
+InMemory
+ table at all levels, so it would be in scope for a class or a form, too.</p>
 </div>
-<p>You can link InMemory tables from one object to another with the setTempData method, thereby creating a new instance link, as follows:</p>
+<p>You can link 
+InMemory
+ tables from one object to another with the 
+setTempData
+ method, thereby creating a new instance link, as follows:</p>
 <pre>
 SalesShippingLabelTmp salesShippingLabelTmp2;
  
         salesShippingLabelTmp2.setTmpData(salesShippingLabelTmp);
 </pre>
-<p>You can use all tables as an InMemory table by using the setTmp method of salesShippingLabelTmp2.setTmp();</p>
-<p>To use an InMemory table as a form datasource, you need to:</p>
+<p>You can use all tables as an 
+InMemory
+ table by using the 
+setTmp
+ method of 
+salesShippingLabelTmp2.setTmp();
+</p>
+<p>To use an 
+InMemory
+ table as a form datasource, you need to:</p>
 <ul>
-<li>Add the InMemory table as a form datasource.</li>
-<li>Use the setTempData to configure data to the record set for the form datasource in the Init method for the InMemory table form datasource, as follows:</li>
+<li>Add the 
+InMemory
+ table as a form datasource.</li>
+<li>Use the 
+setTempData
+ to configure data to the record set for the form datasource in the 
+Init
+ method for the 
+InMemory
+ table form datasource, as follows:</li>
 </ul>
 <pre>
 [DataSource]
@@ -7976,18 +8708,48 @@ SalesShippingLabelTmp salesShippingLabelTmp2;
         }
     }
 </pre>
-<p>The code example shows how to set InMemory table data to a form datasource. When you're using the setTmpData method in a method other than Init, follow it with executeQuery on the datasource.</p>
+<p>The code example shows how to set 
+InMemory
+ table data to a form datasource. When you're using the 
+setTmpData
+ method in a method other than 
+Init
+, follow it with 
+executeQuery
+ on the datasource.</p>
 <h2 id="create-a-temporary-table-with-the-tempdb-table-type">Create a temporary table with the TempDB table type</h2>
-<p>TempDB temporary tables are useful for larger amounts of data, and you can create them in the TempDB table in SQL Server. You can create indexes for performance optimization similar to how you’d do it for a regular table in finance and operations apps.</p>
-<p>The use of TempDB tables is similar to using InMemory tables, though a few key differences exist, where TempDB tables:</p>
+<p>
+TempDB
+ temporary tables are useful for larger amounts of data, and you can create them in the TempDB table in SQL Server. You can create indexes for performance optimization similar to how you’d do it for a regular table in finance and operations apps.</p>
+<p>The use of 
+TempDB
+ tables is similar to using 
+InMemory
+ tables, though a few key differences exist, where 
+TempDB
+ tables:</p>
 <ul>
-<li>Require the linkPhysicalTableInstance method when you link data from one TempDB table to another, rather than the InMemory method of setTmpData.</li>
+<li>Require the 
+linkPhysicalTableInstance
+ method when you link data from one 
+TempDB
+ table to another, rather than the 
+InMemory
+ method of 
+setTmpData
+.</li>
 <li>Can be global or according to company data.</li>
 <li>Support transaction scope or the transaction tracking system (TTS).</li>
 <li>Support indexes.</li>
 <li>Support joins to regular tables.</li>
 </ul>
-<p>The following code shows the use of a TempDB table, which is similar to the use of an InMemory table, with linkPhysicalTableInstance used for linking data to a new instance.</p>
+<p>The following code shows the use of a 
+TempDB
+ table, which is similar to the use of an 
+InMemory
+ table, with 
+linkPhysicalTableInstance
+ used for linking data to a new instance.</p>
 <pre>
 public static void main(Args _args)
     {
@@ -8014,8 +8776,12 @@ public static void main(Args _args)
         salesIdTempTable2.linkPhysicalTableInstance(salesIdTempTable);
     }
 </pre>
-<p>You can use TempDB in the Extensible Data Security (XDS) framework to build a temporary table with allowed data for users. Then, you can update it depending on the refresh frequency.</p>
-<p>When the user closes their session, the system removes all data in the TempDB table.</p>
+<p>You can use 
+TempDB
+ in the Extensible Data Security (XDS) framework to build a temporary table with allowed data for users. Then, you can update it depending on the refresh frequency.</p>
+<p>When the user closes their session, the system removes all data in the 
+TempDB
+ table.</p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
@@ -8033,22 +8799,40 @@ that needs to be manipulated, while a set-based statement only calls the
 database once.</p>
 <p>For example, if you need to update 100 records on a table, a row-based
 operation would call the update method and call the database 100 times
-to update all the records. A set-based statement would call the update_recordset method once and call the database once to update all the records.</p>
+to update all the records. A set-based statement would call the 
+update_recordset
+ method once and call the database once to update all the records.</p>
 <p>Three examples of set-based statements that can be used are:</p>
 <ul>
-<li><strong>Update_recordset</strong> - Used to update multiple records at once.</li>
-<li><strong>Delete_from</strong> - Used to delete multiple records at once.</li>
-<li><strong>Insert_recordset</strong> - Used to copy multiple
+<li><strong>
+Update_recordset
+</strong> - Used to update multiple records at once.</li>
+<li><strong>
+Delete_from
+</strong> - Used to delete multiple records at once.</li>
+<li><strong>
+Insert_recordset
+</strong> - Used to copy multiple
 records from one or more tables into another table.</li>
 </ul>
-<p>The update_recordset can update multiple fields on a
+<p>The 
+update_recordset
+ can update multiple fields on a
 table. You can also specify a where clause to determine what records are
-updated. The following is an example of an update_recordset where
-you declare the table and call the update_recordset to
+updated. The following is an example of an 
+update_recordset
+ where
+you declare the table and call the 
+update_recordset
+ to
 update the customer <strong>PaymMode</strong> and <strong>Currency</strong> fields only
-for the customers with a CustGroup field that equals "US."
+for the customers with a 
+CustGroup
+ field that equals "US."
 Keep in mind that if the update method is overridden, the
-update_recordset will call the update method one at a
+
+update_recordset
+ will call the update method one at a
 time instead of all at once.</p>
 <pre>
 CustTable custTable;
@@ -8058,14 +8842,30 @@ Setting
 	 Currency = 'USD'
 Where custTable.CustGroup == 'US';
 </pre>
-<p>The delete_from method is like the update_recordset. You can delete multiple records at the same time from a table, and you can use a where clause to determine which records to delete. In the following example, the table is declared and then the delete_from is called to delete all the records where the customer's CustGroup field equals "US."</p>
+<p>The 
+delete_from
+ method is like the 
+update_recordset
+. You can delete multiple records at the same time from a table, and you can use a where clause to determine which records to delete. In the following example, the table is declared and then the 
+delete_from
+ is called to delete all the records where the customer's 
+CustGroup
+ field equals "US."</p>
 <pre>
 CustTable custTable;
 Delete_from custTable
 	Where custTable.CustGroup == 'US';
 </pre>
-<p>Insert_recordset lets you insert multiple records
-from one table into another table. You can use a where clause to determine which records to insert, and you can use variables to insert. In the following example, the table that will be inserted into and the table that you are pulling data from are declared. The insert_recordset is then called to insert data into the fields that are listed in parentheses. The fields from the staging table are then called in the order that the fields were listed in the parentheses. Now, those fields will be inserted into the CustTable where the staged customer's CustGroup field equals "US."</p>
+<p>
+Insert_recordset
+ lets you insert multiple records
+from one table into another table. You can use a where clause to determine which records to insert, and you can use variables to insert. In the following example, the table that will be inserted into and the table that you are pulling data from are declared. The 
+insert_recordset
+ is then called to insert data into the fields that are listed in parentheses. The fields from the staging table are then called in the order that the fields were listed in the parentheses. Now, those fields will be inserted into the 
+CustTable
+ where the staged customer's 
+CustGroup
+ field equals "US."</p>
 <pre>
 CustTable custTable;
 CustCustomerBaseStaging custCustomerBaseStaging;
@@ -8128,7 +8928,13 @@ environments</strong> page and select the <strong>Full details</strong> link.</p
 <li><strong>Clean staging tables</strong> - We recommend that you clean up staging tables. For more information, see <a data-linktype="absolute-path" href="/en-us/training/modules/work-data-management-finance-operations/7-export-import-copy-data/?azure-portal=true">Clean up the staging tables</a>.</li>
 <li><strong>Update statistics</strong> - Updating statistics across associated tables can be helpful, and you can do so by using Lifecycle Services.</li>
 <li><strong>Entity execution parameters</strong> - In the data import/export framework parameters on the <strong>Entity settings</strong> page, you can select the <strong>Configure entity execution</strong> parameters. Additionally, use the <strong>Import threshold record count</strong> and <strong>Import task count</strong> fields for optimization.</li>
-<li><strong>Validations</strong> - You can turn off the ability to perform migration business validations and business logic by inserting and updating, which means that validateWrite() won’t run for validation and insert() and update() won’t run on the table. Also, you can turn off validation at the field level.</li>
+<li><strong>Validations</strong> - You can turn off the ability to perform migration business validations and business logic by inserting and updating, which means that 
+validateWrite()
+ won’t run for validation and 
+insert()
+ and 
+update()
+ won’t run on the table. Also, you can turn off validation at the field level.</li>
 </ul>
 <p>General recommendations for optimizing data migration include:</p>
 <ul>
@@ -8207,10 +9013,14 @@ which can lead to reduced database performance if there are multiple
 retries to updates.</p>
 <p>All standard tables in finance and operations apps have a concurrency model
 selected, and most of the tables use OCC. You can set the concurrency
-model on the OccEnabled table property. Additionally, you can
+model on the 
+OccEnabled
+ table property. Additionally, you can
 override the table concurrency model in a <strong>Select</strong> statement. After
 the keyword <em>Select</em>, you can use the keyword <em>optimisticLock</em> or
-<em>pessimisticLock</em> to replace the keyword forUpdate.</p>
+<em>pessimisticLock</em> to replace the keyword 
+forUpdate
+.</p>
 <p><img alt="Screenshot of the Properties page, highlighting the Concurrency model dropdown menu." data-linktype="relative-path" src="./rawmb500/media_concurrency_1.png"/></p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
@@ -8284,16 +9094,36 @@ items in the staging table can affect performance.</p>
 <p>Long-running processes can time out in finance and operations apps. To overcome this issue, asynchronous processing lets users continue working while the process runs in the background.</p>
 <p>For example, you might need to run processing in the application that deals with a large amount of data or transactions, and you don’t want to interrupt daily business processes. Therefore, you can use the asynchronous framework to run these processes in the background while users continue their work without interruption.</p>
 <p>To run a process asynchronously, you need to use the
-runAsync methods from the FormRun and
-Global classes to call the static method that you want to run.
+
+runAsync
+ methods from the 
+FormRun
+ and
+
+Global
+ classes to call the static method that you want to run.
 If the process is run on the client side, we recommend that you use the
-FormRun class's runAsync method. The Global
-class has a runAsync method that we recommend for running
+
+FormRun
+ class's 
+runAsync
+ method. The Global
+class has a 
+runAsync
+ method that we recommend for running
 code outside of the client.</p>
 <p>You can use a callback method to display a message when the process is
-completed. Only the FormRun class runAsync
+completed. Only the 
+FormRun
+ class 
+runAsync
+
 method displays the message immediately. If you use the
-Global class runAsync method, you need to refresh the page.</p>
+
+Global
+ class 
+runAsync
+ method, you need to refresh the page.</p>
 <p>The static method’s signature must:</p>
 <ul>
 <li>Be static.</li>
@@ -8301,7 +9131,9 @@ Global class runAsync method, you need to refresh the page.</p>
 <li>Have a container for in-parameters. The container can hold more values if needed.</li>
 <li>Have a cancellation token for in-parameters.</li>
 </ul>
-<p>The following example shows a static method that you can use as runAsync :</p>
+<p>The following example shows a static method that you can use as 
+runAsync
+:</p>
 <pre>
 /// <summary>
     /// Create entities asynchronously
@@ -8537,7 +9369,7 @@ class SampleClass
 <div class="section is-uniform position-relative" id="unit-inner-section">
 
 <div hidden="" id="module-unit-notification-container"></div>
-
+<h2>Answer the following questions to see what you learned</h2>
 <form aria-label="Knowledge check" class="quiz-form margin-top-xs" data-bi-name="quiz" role="form">
 <fieldset class="field">
 <div role="list">
@@ -8673,7 +9505,9 @@ class SampleClass
 <label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-3-0">
 <input class="radio-dot choice-input" id="quiz-choice-3-0" name="3" type="radio" value="0"/>
 <div class="margin-inline-sm radio-label-text">
-<p>Use the setTempData method.</p>
+<p>Use the 
+setTempData
+ method.</p>
 </div>
 </label>
 <div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
@@ -8681,7 +9515,9 @@ class SampleClass
 <label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-3-1">
 <input class="radio-dot choice-input" id="quiz-choice-3-1" name="3" type="radio" value="1"/>
 <div class="margin-inline-sm radio-label-text">
-<p>Use a while select method and copy data records individually to the other table instance.</p>
+<p>Use a 
+while select
+ method and copy data records individually to the other table instance.</p>
 </div>
 </label>
 <div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
@@ -8689,7 +9525,9 @@ class SampleClass
 <label class="quiz-choice display-flex padding-block-xxs padding-inline-xs margin-bottom-xxs radio" for="quiz-choice-3-2">
 <input class="radio-dot choice-input" id="quiz-choice-3-2" name="3" type="radio" value="2"/>
 <div class="margin-inline-sm radio-label-text">
-<p>Use the linkPhysicalTableInstance method.</p>
+<p>Use the 
+linkPhysicalTableInstance
+ method.</p>
 </div>
 </label>
 <div class="quiz-choice-explanation margin-block-xxs font-weight-semibold margin-left-lg">
