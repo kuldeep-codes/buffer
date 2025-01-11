@@ -362,7 +362,8 @@ wizard in Visual Studio.</p>
 <li><p>Right-click your project or activate the context menu, and then select <strong>Add</strong>, <strong>New Item</strong>, <strong>Code</strong>, <strong>Runnable class</strong> to add a runnable class. Use the name <strong>mySalesPoolRunnableClass</strong>, and select <strong>Add</strong>.</p>
 </li>
 <li><p>Enter the following code into your runnable class:</p>
-<pre><code class="lang-xpp">public static void main(Args _args)
+<pre>
+public static void main(Args _args)
 {
     mySalesPoolEnitity  salesPoolEntity;
     SalesPoolId         salesPoolId = "myPool-1";
@@ -388,7 +389,7 @@ wizard in Visual Studio.</p>
 
     Info(strFmt("Deleted sales pool does not exists: %1", salesPoolEntity.SalesPoolId));
 }
-</code></pre>
+</pre>
 </li>
 <li><p>Run the job with the debugger. The following screenshot depicts what you should observe in the Infolog.</p>
 <p><a data-linktype="relative-path" href="media/infolog.png#lightbox"><img alt="Screenshot showing the infolog after running the debugger." data-linktype="relative-path" src="./rawmb500/media_infolog.png"/></a></p>
@@ -401,7 +402,8 @@ wizard in Visual Studio.</p>
 <li><p>In Solution Explorer, right-click <strong>mySalesPoolEntity</strong> or activate the context menu and then select <strong>View code</strong>.</p>
 </li>
 <li><p>Add the following code:</p>
-<pre><code class="lang-xpp">public class MySalesPoolEnitity extends common
+<pre>
+public class MySalesPoolEnitity extends common
 {
     [SysODataActionAttribute("Check", false)]
     public static str check(SalesPoolId _salesPoolId)
@@ -411,7 +413,7 @@ wizard in Visual Studio.</p>
         return SalesPool::exist(_salesPoolId) ? "Sales pool exist" : "Sales pool does not exist";
     }
 }
-</code></pre>
+</pre>
 <p>The <strong>SysODataActionAttribute</strong> attribute defines the action attribute on the data entity.</p>
 </li>
 <li><p>After building the project, the OData endpoint needs to be updated by using <strong>Restart IIS Express</strong>.</p>
@@ -487,7 +489,7 @@ Refreshing the entity list ensures all entities are available in the environment
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Implement custom services</h1>
 <div hidden="" id="module-unit-notification-container"></div>
 <p>You can develop custom services for finance and operations apps to expose X++ functionality to external clients. Existing code can be exposed as a custom service by adding an attribute to the code. The attribute is set on the data contract class and its members to automatically serialize and deserialize data that is sent and received across a network connection.</p>
-<p>You can use custom service when the schema for the entity can be written as a simple data contract class with relevant data member attributes set. X++ data contract serialization and deserialization are specified by using the attributes <code>DataContractAttribute</code> and <code>DataMemberAttribute</code>.</p>
+<p>You can use custom service when the schema for the entity can be written as a simple data contract class with relevant data member attributes set. X++ data contract serialization and deserialization are specified by using the attributes DataContractAttribute and DataMemberAttribute.</p>
 <p>When you write a custom service under a service group, the service group is always deployed on two endpoints:</p>
 <ul>
 <li>SOAP endpoint</li>
@@ -532,15 +534,17 @@ Refreshing the entity list ensures all entities are available in the environment
 </li>
 <li><p>Enter a request name for your data contract class. In the following example, the class is named <strong>MB500_CustomServiceRequest</strong>.</p>
 </li>
-<li><p>In the code editor, add the <code>DataContractAttribute</code> attribute before the class name to indicate that it's a data contract class, as shown in the following example:</p>
-<pre><code class="lang-xpp"> [DataContractAttribute]
+<li><p>In the code editor, add the DataContractAttribute attribute before the class name to indicate that it's a data contract class, as shown in the following example:</p>
+<pre>
+[DataContractAttribute]
  internal final class MB500_CustomServiceRequest
  {
  }
-</code></pre>
+</pre>
 </li>
-<li><p>Add the <code>DataMemberAttribute</code> attribute for each number that the system should serialize in the request, as shown in the following example:</p>
-<pre><code class="lang-xpp"> [DataContractAttribute] 
+<li><p>Add the DataMemberAttribute attribute for each number that the system should serialize in the request, as shown in the following example:</p>
+<pre>
+[DataContractAttribute] 
  internal final class MB500_CustomServiceRequest
  {
      real        numberA;
@@ -566,7 +570,7 @@ Refreshing the entity list ensures all entities are available in the environment
          return numberB;
      }
  }
-</code></pre>
+</pre>
 </li>
 <li><p>Select <strong>Save all</strong>. Right-click the project to open the context menu and then select <strong>Build</strong>.</p>
 </li>
@@ -582,8 +586,9 @@ Refreshing the entity list ensures all entities are available in the environment
 </li>
 <li><p>Indicate the class as a data contract class with an attribute.</p>
 </li>
-<li><p>Add <code>DataMemberAttribute</code> data member for the result that you want to have in your response. The following code is an example of a data contract for a response:</p>
-<pre><code class="lang-xpp"> [DataContractAttribute] 
+<li><p>Add DataMemberAttribute data member for the result that you want to have in your response. The following code is an example of a data contract for a response:</p>
+<pre>
+[DataContractAttribute] 
  internal final class MB500_CustomServiceResponse
  {
  	real        result;
@@ -599,7 +604,7 @@ Refreshing the entity list ensures all entities are available in the environment
  	}
 
  }
-</code></pre>
+</pre>
 </li>
 <li><p>Select <strong>Save all</strong>. Right-click the project to open the context menu and then select <strong>Build</strong>.</p>
 </li>
@@ -614,7 +619,8 @@ Refreshing the entity list ensures all entities are available in the environment
 <li><p>Enter a name for your service class (business logic). In the following example, the class is named <strong>MB500_CustomServiceService</strong>.</p>
 </li>
 <li><p>Use a new method that has your data contract request class as a parameter and that returns your data contract response class, as follows:</p>
-<pre><code class="lang-xpp"> internal final class MB500_CustomServiceService 
+<pre>
+internal final class MB500_CustomServiceService 
  {
      public MB500_CustomServiceResponse summarize(MB500_CustomServiceRequest  _request)
      {
@@ -629,7 +635,7 @@ Refreshing the entity list ensures all entities are available in the environment
      }
 
  }
-</code></pre>
+</pre>
 </li>
 <li><p>Select <strong>Save all</strong>. Right-click the project to open the context menu and then select <strong>Build</strong>.</p>
 </li>
@@ -721,14 +727,14 @@ provides a protocol that is based on Representational State Transfer
 (REST) for create, read, update, and delete (CRUD) operations. OData
 applies web technologies such as HTTP and JavaScript Object Notation
 (JSON) to provide access to information from various programs. OData
-allows you to interact with data by using RESTful web services. The public OData service endpoint enables access to data in a consistent manner across a broad range of clients. An OData REST endpoint exposes all data entities that are selected as <code>IsPublic</code> in the AOT in Visual
+allows you to interact with data by using RESTful web services. The public OData service endpoint enables access to data in a consistent manner across a broad range of clients. An OData REST endpoint exposes all data entities that are selected as IsPublic in the AOT in Visual
 Studio. The OData REST endpoint also supports CRUD functionality that
 you can use to insert and retrieve data from the system.</p>
 <p>Insomnia is a tool that is often used to interact with RESTful services (such as OData) in scenarios that
 involve the development and testing of application programming
 interfaces (APIs).</p>
 <p>OData entities are based on an updatable view. When the
-<strong><code>IsPublic</code></strong> property for an updatable view is set to
+<strong>IsPublic</strong> property for an updatable view is set to
 <strong>True</strong>, then that view is exposed as a top-level OData entity. Links
 between OData entities are described by navigation properties, which
 detail the navigation from one end of an association to the other.</p>
@@ -745,23 +751,24 @@ Insomnia, go to <a data-linktype="absolute-path" href="/en-us/power-apps/develop
 <p>Microsoft Azure Key Vault is a cloud service for storing and accessing secrets in a more secure way. A secret is anything to which you want to tightly control access, such as API keys, passwords, certificates, connection strings, or cryptographic keys. In finance and operations apps, you shouldn’t store secrets on a parameter table but rather in Azure Key Vault.</p>
 <p>In the right navigation pane of finance and operations apps, you can store secrets from <strong>System administration &gt; Setup &gt; Key Vault parameters</strong> by selecting the connected <strong>Azure Key Vault URL</strong>, <strong>Key vault client ID</strong>, and <strong>Key vault secret</strong>. After setting up the key value parameters, you can add secrets by a given name and point to a specific secret in Azure Key Vault.</p>
 <p>In X++, you can receive the secrets in an Azure Key Vault by using those settings for the key vault parameters, as the following code sample depicts:</p>
-<pre><code class="lang-xpp">    /// &lt;summary&gt;
+<pre>
+/// <summary>
     /// The method returns the key vault value for the supplied name.
-    /// &lt;/summary&gt;
-    /// &lt;param name = "_keyvaultSecretName"&gt;Name of the secret to look up&lt;/param&gt;
-    /// &lt;returns&gt;string value for the secret&lt;/returns&gt;
+    /// </summary>
+    /// <param name = "_keyvaultSecretName">Name of the secret to look up</param>
+    /// <returns>string value for the secret</returns>
     public static str getKeyVaultSecretValue(str _keyVaultSecretName)
     {
         KeyVaultCertificateTable    certificateTable    = KeyVaultCertificateTable::findByName(_keyVaultSecretName);
         str keyVaultValue = KeyVaultCertificateHelper::getManualSecretValue(certificateTable.RecId);
         return keyVaultValue;
     }
-</code></pre>
-<p>In the previous <code>getKeyVaultSecretName</code> X++ method, you can find the secret for a specific parameter in the key vault parameters and connect to Azure Key Vault by using the <code>KeyVaultCertificationHelper</code> standard class in a more secure and trusted way.</p>
+</pre>
+<p>In the previous getKeyVaultSecretName X++ method, you can find the secret for a specific parameter in the key vault parameters and connect to Azure Key Vault by using the KeyVaultCertificationHelper standard class in a more secure and trusted way.</p>
 <h2 id="create-an-http-client-to-call-an-external-webservice">Create an HTTP client to call an external webservice</h2>
 <p>An HTTP client can send a request to, and get a response from, a web server in HTTP format. The client uses JSON for the request and response body. For authentication, the client uses an API key, and then you receive an API key from Azure Key Vault.</p>
 <p>The following code sample depicts how you can create a method by using URL and JSON for the request, and it shows that the system responds with JSON.</p>
-<pre><code class="lang-xpp">
+<pre>
 using System.IO;
 
     private const       str headerApiKey = "apiKey";
@@ -808,9 +815,10 @@ using System.IO;
         }
         return '';
     }
-</code></pre>
-<p>For the request body and response body, you need to create two data contracts. The following example depicts the use of <code>itemId</code> as the data member in the request body and <code>onhand</code> as the data member in the request body.</p>
-<pre><code class="lang-xpp">[DataContractAttribute]
+</pre>
+<p>For the request body and response body, you need to create two data contracts. The following example depicts the use of itemId as the data member in the request body and onhand as the data member in the request body.</p>
+<pre>
+[DataContractAttribute]
 class MyConsumeExternalWebServiceRequestContract
 {
     str             itemId;
@@ -834,9 +842,10 @@ class MyConsumeExternalWebServiceResponseContract
         return onhand;
     }
 }
-</code></pre>
+</pre>
 <p>Now, you can create the request contract with a value for consuming the external web service and receive a result in the response data contract, as the following code sample depicts.</p>
-<pre><code class="lang-xpp">    public static void main(Args _args)
+<pre>
+public static void main(Args _args)
     {
         URL         url = "myURL.com";
         str         serializedJSONstr;
@@ -853,7 +862,7 @@ class MyConsumeExternalWebServiceResponseContract
         responseConract = FormJsonSerializer::deserializeObject(classNum(MyConsumeExternalWebServiceResponseContract), serializedJSONstr);
     }
 }
-</code></pre>
+</pre>
 <p>Using data contracts for requests and responses can simplify a developer's processes. Without data contracts, you need to code the JSON serializing and deserializing manually. Data contracts have a framework for serializing and deserializing.</p>
 <p>Consuming external web services is common in finance and operations apps because functionality has moved from within the apps to external web services.</p>
 <h2 id="resources">Resources</h2>
@@ -937,8 +946,8 @@ By default, any user can embed a Power Apps app on a page. You can configure
 the Power Apps feature to only allow embedding on certain pages by
 implementing two methods:</p>
 <ul>
-<li><strong><code>isPowerAppPersonalizationEnabled</code></strong> - If this method returns false for a page, then the <strong>Power Apps</strong> menu button won't be shown and users won't be able to embed Power Apps apps anywhere on that page.</li>
-<li><strong><code>isPowerAppTabPersonalizationEnabled</code></strong> - If this method returns false for a page, then a user can't embed Power Apps as a tab, FastTab, or panorama section. However, a user can still embed a Power Apps through the <strong>Power Apps</strong> menu button.</li>
+<li><strong>isPowerAppPersonalizationEnabled</strong> - If this method returns false for a page, then the <strong>Power Apps</strong> menu button won't be shown and users won't be able to embed Power Apps apps anywhere on that page.</li>
+<li><strong>isPowerAppTabPersonalizationEnabled</strong> - If this method returns false for a page, then a user can't embed Power Apps as a tab, FastTab, or panorama section. However, a user can still embed a Power Apps through the <strong>Power Apps</strong> menu button.</li>
 </ul>
 <h2 id="data-integration">Data integration</h2>
 <p>You can connect to your data from finance and operations apps seamlessly within Microsoft Power Platform to build canvas and model-driven apps. As a System Administrator, you can access finance and operations apps data that is exposed through Data entities. These entities must be enabled for public API in the development environment to be exposed.</p>
@@ -1194,42 +1203,44 @@ on-premises deployments. Keep in mind that there are some key differences with t
 <p>To start the data package import process, the <strong>ImportFromPackage</strong> API is used to initiate an import from a data package. The data package is uploaded to the Blob storage that is associated with the finance and operations apps implementation.</p>
 <p>For on-premises deployments, the import is initiated from the local storage file that was uploaded previously.</p>
 <p>The following code is an example that is used to initiate the import process.</p>
-<pre><code class="lang-csharp">POST /data/DataManagementDefinitionGroups/Microsoft.Dynamics.DataEntities.**ImportFromPackage**
+<pre>
+POST /data/DataManagementDefinitionGroups/Microsoft.Dynamics.DataEntities.**ImportFromPackage**
 BODY
 {
-	"packageUrl":"&lt;string&gt;",
-	"definitionGroupId":"&lt;string&gt;",
-	"executionId":"&lt;string&gt;",
-	"execute":&lt;bool&gt;,
-	"overwrite":&lt;bool&gt;,
-	"legalEntityId":"&lt;string&gt;"
+	"packageUrl":"<string>",
+	"definitionGroupId":"<string>",
+	"executionId":"<string>",
+	"execute":<bool>,
+	"overwrite":<bool>,
+	"legalEntityId":"<string>"
 }
-</code></pre>
+</pre>
 <p>The following list describes the various code elements:</p>
 <ul>
-<li><code>ImportFromPackage</code> is initiating the import.</li>
-<li><code>packageurl</code> is a unique file name that is used to track Blob IDs. You can include a globally unique identifier (GUID) to help guarantee a unique file name.</li>
-<li><code>definitionGroupID</code> is a string that represents the name of the data project for the import.</li>
-<li><code>executionId</code> is the ID to use for the job. If an empty ID is assigned, a new execution ID is created automatically.</li>
-<li><code>execute</code> is a Boolean. If the parameter is set to <strong>True</strong>, the target step runs.</li>
-<li><code>overwrite</code> is also a Boolean that must be set to <strong>False</strong> when a composite entity is used in a package, if not, then this should be set to <strong>True</strong>.</li>
-<li><code>legalentityId</code> is the legal entity for the import.</li>
+<li>ImportFromPackage is initiating the import.</li>
+<li>packageurl is a unique file name that is used to track Blob IDs. You can include a globally unique identifier (GUID) to help guarantee a unique file name.</li>
+<li>definitionGroupID is a string that represents the name of the data project for the import.</li>
+<li>executionId is the ID to use for the job. If an empty ID is assigned, a new execution ID is created automatically.</li>
+<li>execute is a Boolean. If the parameter is set to <strong>True</strong>, the target step runs.</li>
+<li>overwrite is also a Boolean that must be set to <strong>False</strong> when a composite entity is used in a package, if not, then this should be set to <strong>True</strong>.</li>
+<li>legalentityId is the legal entity for the import.</li>
 </ul>
 <p>If the import is successfully finished, you receive a JSON success response.</p>
 <h2 id="exporting-apis">Exporting APIs</h2>
 <p>The export for APIs is similar to the import. The difference is that the <strong>ExportToPackage</strong> API is used to initiate the export. This is applicable for both cloud and on-premises deployments.</p>
 <p>The following is an example of code that is used to initiate the export process.</p>
-<pre><code class="lang-csharp">POST
+<pre>
+POST
 /data/DataManagementDefinitionGroups/Microsoft.Dynamics.DataEntities.**ExportToPackage**
 BODY
 {
-	"definitionGroupId":"&lt;string&gt;",
-	"packageName":"&lt;string&gt;",
-	"executionId":"&lt;string&gt;",
-	"reExecute":&lt;bool&gt;,
-	"legalEntityId":"&lt;string&gt;"
+	"definitionGroupId":"<string>",
+	"packageName":"<string>",
+	"executionId":"<string>",
+	"reExecute":<bool>,
+	"legalEntityId":"<string>"
 }
-</code></pre>
+</pre>
 <p>The following list describes the various code elements:</p>
 <ul>
 <li><strong>ExportToPackage</strong> - Initiates the export.</li>
@@ -1246,16 +1257,17 @@ BODY
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Monitor the status of APIs</h1>
 <div hidden="" id="module-unit-notification-container"></div>
-<p>You can use <code>GetExecutionSummaryStatus</code> for both import and
+<p>You can use GetExecutionSummaryStatus for both import and
 export jobs. This is used to check the status of a data project
 run job. This API is applicable to cloud deployments and
 on-premises deployments. Keep in mind that the file remains in the Blob storage for seven days, and then it is automatically deleted.</p>
-<p>To check the status of the API, use <code>GetExecutionSummaryStatus</code> and then specify the executionId.</p>
+<p>To check the status of the API, use GetExecutionSummaryStatus and then specify the executionId.</p>
 <p>For example:</p>
-<pre><code class="lang-csharp">POST /data/DataManagementDefinitionGroups/Microsoft.Dynamics.DataEntities.GetExecutionSummaryStatus
+<pre>
+POST /data/DataManagementDefinitionGroups/Microsoft.Dynamics.DataEntities.GetExecutionSummaryStatus
 BODY
-{"executionId":"&lt;executionId&gt;"}
-</code></pre>
+{"executionId":"<executionId>"}
+</pre>
 <p>A JSON successful response message is sent and the execution status is displayed. There are several outputs you might receive in this message:</p>
 <ul>
 <li><strong>Unknown</strong> – The execution status can't be determined, possibly due to missing or invalid information.</li>
@@ -1318,7 +1330,8 @@ in the base class that you're augmenting.</p>
 methods without having to use event handlers. When you wrap a method for
 a table, form, data entity, or other object, you must use an extension
 class. Before learning about how to use wrapper classes to connect to external web services, consider the following example of a wrapper class.</p>
-<pre><code class="lang-xpp">[ExtensionOf(tableStr(FMCustomer))]
+<pre>
+[ExtensionOf(tableStr(FMCustomer))]
 final class MyFleet_Extension
 {
 	public void salute(str message)
@@ -1326,8 +1339,8 @@ final class MyFleet_Extension
 		// ...
 	}
 }
-</code></pre>
-<p>In the previous code sample, the <code>ExtensionOf</code> attribute is applied to the class, and the <strong>FMCustomer</strong> table class is extended. Because the class is an extension class, it must be <code>public</code> and <code>final</code>. The <code>salute</code> method doesn't include the default value of the message parameter.</p>
+</pre>
+<p>In the previous code sample, the ExtensionOf attribute is applied to the class, and the <strong>FMCustomer</strong> table class is extended. Because the class is an extension class, it must be public and final. The salute method doesn't include the default value of the message parameter.</p>
 <p>You can create wrapper classes to connect to external web services. You
 can do this by wrapping a service endpoint in Visual Studio and then adding the reference in your project.</p>
 <div class="NOTE">
@@ -1342,26 +1355,27 @@ can do this by wrapping a service endpoint in Visual Studio and then adding the 
 <div hidden="" id="module-unit-notification-container"></div>
 <p>To create a wrapper class, you'll need to use some .NET programming language to consume an external web service. finance and operations can create a reference of the wrapper class and can access the external web service through the wrapper class.</p>
 <p>The following code shows an example of creating a C# class library. A service reference of the SOAP web service will be set up in the class library.</p>
-<pre><code class="lang-csharp">using System.ServiceModel;
+<pre>
+using System.ServiceModel;
 
-namespace &lt;WebServiceProviderName&gt;
+namespace <WebServiceProviderName>
 {
-      public class &lt;classname&gt;
+      public class <classname>
       {
-             public static string &lt;methodname&gt;()
+             public static string <methodname>()
              {
                      var binding = new System.ServiceModel.BasicHttpBinding();
                      var endpointAddress = new EndpointAddress(“SOAP web service url”);
                      WebServiceSoapClient client = new WebServiceSoapClient(binding, endpointAddress);
 
-                      return client.&lt;web service method name&gt;();
+                      return client.<web service method name>();
                }
        }
-} 
-</code></pre>
+}
+</pre>
 <p>The finance and operations apps development environment includes an element named <strong>References</strong> under <strong>Application explorer</strong>. The assembly of the wrapper class should be included in the reference. You can call the method that's created in the wrapper class directly by using the created reference.</p>
 <p>The code will resemble the following example:</p>
-<p><code>WebServiceDataProvider.&lt;classname&gt;::&lt;methodname&gt;();</code></p>
+<p>WebServiceDataProvider.<classname>::<methodname>();</p>
 <p>You can create separate methods in the wrapper class to access all methods of the web service, which you can eventually call from finance and operations apps code wherever required.</p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
@@ -1377,7 +1391,7 @@ namespace &lt;WebServiceProviderName&gt;
 <div aria-labelledby="quiz-question-1" class="quiz-question-title font-size-md margin-top-sm margin-bottom-xs" role="radiogroup">
 <div class="margin-top-sm margin-bottom-xs field-label" id="quiz-question-1">
 <span class="font-weight-semibold">1.</span>
-<p>Which of the following messages isn't a response message that you can receive when using <code>GetExecutionSummaryStatus</code> for monitoring the status of an API?</p>
+<p>Which of the following messages isn't a response message that you can receive when using GetExecutionSummaryStatus for monitoring the status of an API?</p>
 <span class="required-indicator"></span>
 </div>
 <div class="field-body">
@@ -1632,21 +1646,22 @@ application with your Microsoft Entra tenant. This is done through the
 <a data-linktype="external" href="https://ms.portal.azure.com/#home/?azure-portal=true">Microsoft Azure portal</a>.</p>
 <p>The following is an overview of the OAuth 2.0 authorization code request flow:</p>
 <ol>
-<li><p>The client directs the user to the <code>/authorize endpoint</code>.</p>
+<li><p>The client directs the user to the /authorize endpoint.</p>
 </li>
 <li><p>With this request, the client indicates the permissions that it needs to acquire from the user who is needing access. To get your OAuth 2.0  authorization endpoint for your tenant, you can go to <strong>App registrations &gt; Endpoints</strong> in the Azure portal.</p>
 </li>
-<li><p>In the native application, the user is directed to sign in and  consent to permissions that are requested by the app. When the user authenticates and grants consent, Microsoft Entra ID will send a response to your application at the <code>redirect_uri</code> address in your request.</p>
-<pre><code class="lang-odata">// Line breaks for legibility only
+<li><p>In the native application, the user is directed to sign in and  consent to permissions that are requested by the app. When the user authenticates and grants consent, Microsoft Entra ID will send a response to your application at the redirect_uri address in your request.</p>
+<pre>
+// Line breaks for legibility only
 
 https://login.microsoftonline.com/{tenant}/oauth2/authorize?
 client_id=
-&amp;response_type=code
-&amp;redirect_uri=http%3A%2F%2Flocalhost%3A12345
-&amp;response_mode=query
-&amp;resource=https%3A%2F%2Fservice.contoso.com%2F
-&amp;state=12345
-</code></pre>
+&response_type=code
+&redirect_uri=http%3A%2F%2Flocalhost%3A12345
+&response_mode=query
+&resource=https%3A%2F%2Fservice.contoso.com%2F
+&state=12345
+</pre>
 <p>The two types of responses are:</p>
 <ul>
 <li><strong>Successful response</strong> - A successful response will grant access and include the admin consent, the authorization code that the application requested, a unique session value, and a state parameter.</li>
@@ -1654,11 +1669,11 @@ client_id=
 </ul>
 <p>With a successful response, an authorization code is granted and access is given to the user.</p>
 </li>
-<li><p>The code can now be redeemed for an access token to the desired resource. This is accomplished by sending a POST request to the <code>/token</code> endpoint.</p>
+<li><p>The code can now be redeemed for an access token to the desired resource. This is accomplished by sending a POST request to the /token endpoint.</p>
 </li>
 <li><p>Upon a successful response, Microsoft Entra ID returns an access token. The access token is a Json Web Token (JWT).</p>
 </li>
-<li><p>When the access token is requested, Microsoft Entra ID returns metadata about the access token for the application's consumption. The client should cache access tokens for the specified token lifetime within the OAuth2 response. A web API might return an <code>invalid_token</code> response; this could be due to an expired token.</p>
+<li><p>When the access token is requested, Microsoft Entra ID returns metadata about the access token for the application's consumption. The client should cache access tokens for the specified token lifetime within the OAuth2 response. A web API might return an invalid_token response; this could be due to an expired token.</p>
 </li>
 <li><p>When the access token is obtained, the token can be used in requests to web APIs.</p>
 </li>
@@ -1931,7 +1946,8 @@ workspace.</li>
 </ol>
 <p>Now, you can test the aggregate data entity by using the <strong>https://your solution name.axcloud.dynamics.com/data/Aggregate Data Entity Collection name</strong> URL.</p>
 <p>The following code sample illustrates how the output might appear.</p>
-<pre><code class="lang-xpp">{
+<pre>
+{
   "@odata.context":"https://mb-500-dev23bd5795219c31f9devaos.axcloud.dynamics.com/data/$metadata#MyAggregateDataEntityCollection","value":[
     {
       "@odata.etag":"W/\"JzAsMTAxMCc=\"","ItemId":"","LineAmountMST":5636950
@@ -1944,7 +1960,7 @@ workspace.</li>
     }
   ]
 }
-</code></pre>
+</pre>
 <h2 id="resources">Resources</h2>
 <p>To learn more, see <a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/data-entities/develop-composite-data-entities#import-a-composite-entity">Import a composite entity</a>.</p>
 <div class="modular-content-container" hidden="" id="next-section">

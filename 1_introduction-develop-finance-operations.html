@@ -708,7 +708,7 @@ used to search for elements like forms, tables, and code by using the
 name. You know that "cust" is part of the name. You can use the metadata
 search to find all the tables that have "cust" in the name. You can search elements based on the name of the element, type of element, model that the element is in, properties of the element, and code snippets.</p>
 <p>The syntax for searching in the <strong>Metadata search</strong> is:</p>
-<p><code>*&lt;filter_1&gt;:&lt;filter_1_value&gt; [&lt;filter_2&gt;:&lt;filter_2_value&gt;... &lt;filter_N&gt;:&lt;filter_N_value&gt;]*</code></p>
+<p>*<filter_1>:<filter_1_value> [<filter_2>:<filter_2_value>... <filter_N>:<filter_N_value>]*</p>
 <p><img alt="Screenshot of metadata search in Visual
 Studio." data-linktype="relative-path" src="./rawmb500/media_metadata_search_1.png"/></p>
 <p>Keywords that you can use in the <strong>Metadata search</strong> include:</p>
@@ -895,7 +895,7 @@ to set up an on-premises project in Lifecycle Services. In your Lifecycle Servic
 <strong>Environment &gt; Sandbox &gt; Configure</strong>. In the primary domain
 controller virtual machine, you will need to run this script in the
 PowerShell:</p>
-<p><code>.\Get-DeploymentSettings.ps1 -ConfigurationFilePath .\ConfigTemplate.xml</code></p>
+<p>.\Get-DeploymentSettings.ps1 -ConfigurationFilePath .\ConfigTemplate.xml</p>
 <p>For new deployments, select your environment topology, and complete the wizard to start the deployment of your environment.</p>
 <p>To deploy code to on-premises environments, follow these steps:</p>
 <ol>
@@ -1269,7 +1269,8 @@ step-by-step implementation strategy.</p>
 </ul>
 <h3 id="data-contract-class">Data contract class</h3>
 <p>The Data contract class indicates the attributes that are needed for the job, and the attributes automatically provide a dialog-based UI. The following code sample illustrates the Data contract class:</p>
-<pre><code class="lang-xpp">[DataContractAttribute]
+<pre>
+[DataContractAttribute]
 internal final class MySysOperationContract
 {
     private ItemId      itemId;
@@ -1282,10 +1283,11 @@ internal final class MySysOperationContract
         return itemId;
     }
 }
-</code></pre>
+</pre>
 <h3 id="controller-class">Controller class</h3>
 <p>The Controller class is the execution class, which contains information about the dialog, execution mode, progress bar, and other elements. The following code sample illustrates the Controller class:</p>
-<pre><code class="lang-xpp">internal final class MySysOperationController extends SysOperationServiceController
+<pre>
+internal final class MySysOperationController extends SysOperationServiceController
 {
     protected void new()
     {
@@ -1315,10 +1317,11 @@ internal final class MySysOperationContract
         controller.startOperation();
     }
 }
-</code></pre>
+</pre>
 <h3 id="service-class">Service class</h3>
 <p>The Service class is the actual code that's processed or calculated. The following sample code illustrates the Service class:</p>
-<pre><code class="lang-xpp">internal final class MySysOperationService extends SysOperationServiceBase
+<pre>
+internal final class MySysOperationService extends SysOperationServiceBase
 {
     public void process(MySysOperationContract _contract)
     {
@@ -1329,7 +1332,7 @@ internal final class MySysOperationContract
         Info(strFmt("%1", itemId));
     }
 }
-</code></pre>
+</pre>
 <h3 id="ui-builder-class">UI Builder class</h3>
 <p>The UI Builder class is only needed if the UI requires modification from the dynamically generated UI or if it has custom behavior.</p>
 <h2 id="implement-the-sysextensionserializer">Implement the SysExtensionSerializer</h2>
@@ -2039,8 +2042,8 @@ prerequisites on your environment:</p>
 <li>You cannot proceed with multi-user testing without performing a single user test or having the C# testing classes generated for end-to-end scenarios.</li>
 </ul>
 <p>After you have verified that these prerequisites are performed, you can proceed to configure the finance and operations apps development environment. This requires downloading and configuring several certificates in the
-environment. Then, you can prepare the <code>PerfSDKSample</code> solution for
-the multi-user testing by installing, configuring the <code>.config file</code>, and running tests.</p>
+environment. Then, you can prepare the PerfSDKSample solution for
+the multi-user testing by installing, configuring the .config file, and running tests.</p>
 <p>When the development environment has been properly configured, the
 tier-2 or above sandbox must be prepared for multi-user testing. This
 process includes installing the same certificates that were created for
@@ -2370,7 +2373,7 @@ steps:</p>
 <li>In the window that opens in the <strong>Team Explorer</strong> window, select <strong>Manage Connections</strong>.</li>
 <li>Select <strong>Connect to Team Project</strong>. This will open a new dialog box.</li>
 <li>In the dialog box, select <strong>Servers</strong>.</li>
-<li>This opens a new dialog box, where you will enter the Azure DevOps URL. If the URL looks like <code>clientname.visualstudio.com</code>, and it usually does, the remaining fields will be automatically populated.</li>
+<li>This opens a new dialog box, where you will enter the Azure DevOps URL. If the URL looks like clientname.visualstudio.com, and it usually does, the remaining fields will be automatically populated.</li>
 <li>After you confirm these settings, a new dialog box will prompt you to sign in to Azure DevOps.</li>
 <li>When you have signed in, select the box for the desired Azure DevOps     project on the <strong>Team Projects</strong> pane.</li>
 <li>Select <strong>Connect</strong>.</li>
@@ -2731,7 +2734,8 @@ functionality is performing as expected.</p>
 <p>Next, you write code that will run a test when ran in Visual Studio, to do this follow these steps.</p>
 <ol>
 <li><p>In the Code editor, enter the following code:</p>
-<pre><code class="lang-xpp">//Test unit class must be public and extend the SysTestCase class
+<pre>
+//Test unit class must be public and extend the SysTestCase class
 class MyTestClass1 extends SysTestCase
 {
 public void setup()
@@ -2782,7 +2786,7 @@ public void testFMCarValidateField()
 }
 
 }
-</code></pre>
+</pre>
 </li>
 <li><p>Save the class. Two test cases are available in the Test Explorer.</p>
 </li>
@@ -2939,7 +2943,7 @@ If you open <strong>Settings &gt; Task Recorder &gt; Edit recording</strong>, yo
 <h2 id="import-a-task-recorder-recording-into-visual-studio">Import a Task Recorder recording into Visual Studio</h2>
 <p>You can import a Task Recorder recording into Visual Studio to generate
 test code. The task recording will be imported as an XML file, and the
-test code is generated from it by using <code>FormAdaptors</code>.</p>
+test code is generated from it by using FormAdaptors.</p>
 <p>To import a task recording into Visual Studio, follow these steps:</p>
 <ol>
 <li>Record a scenario by using <strong>Task Recorder</strong>.</li>
@@ -2986,32 +2990,33 @@ Practices</strong> page.</p>
 <p>The best practice check is run during the build. In the <strong>Results</strong> window,
 you can see all the best practice issues and the location of each issue. You can also run the best practice check from the command prompt. You can run best practices for all forms, specific elements, all items in a model, and items in all models and then write the output to a log file. The following list shows some code snippets for how to run best practices against different elements in the command prompt.</p>
 <ul>
-<li><p><strong>Run best practice on all forms in a module</strong> - <code>xppbp     -module:FleetManagement form:*</code></p>
+<li><p><strong>Run best practice on all forms in a module</strong> - xppbp     -module:FleetManagement form:*</p>
 </li>
-<li><p><strong>Run best practice on specific elements</strong> - <code>xppbp  -module:FleetManagement class:MyClass form:MyForm</code></p>
+<li><p><strong>Run best practice on specific elements</strong> - xppbp  -module:FleetManagement class:MyClass form:MyForm</p>
 </li>
-<li><p><strong>Run best practice on all items in the model (and only for this one model in the module)</strong> - <code>xppbp -module:FleetManagement -model:FleetManagement -all</code></p>
+<li><p><strong>Run best practice on all items in the model (and only for this one model in the module)</strong> - xppbp -module:FleetManagement -model:FleetManagement -all</p>
 </li>
-<li><p><strong>Run best practice on all items in all models in the module</strong> - <code>xppbp -module:FleetManagement -all</code></p>
+<li><p><strong>Run best practice on all items in all models in the module</strong> - xppbp -module:FleetManagement -all</p>
 </li>
-<li><p><strong>Write the best practice output to log files</strong> - <code>xppbp -module:FleetManagement -all -xmllog=Log.xml -log=Log.txt</code></p>
+<li><p><strong>Write the best practice output to log files</strong> - xppbp -module:FleetManagement -all -xmllog=Log.xml -log=Log.txt</p>
 </li>
 </ul>
 <p>You can suppress best practice checks for each model. To do this, you
 can right-click your project and select <strong>Edit best practice
 suppressions</strong>. This will open an XML file where you can suppress best
-practices. You will need to add the model that you want to suppress by using the tags <code>DiagnosticType</code>, <code>Severity</code>, <code>Path</code>, <code>Moniker</code>, and <code>Justification</code>. You should be able to copy the information
+practices. You will need to add the model that you want to suppress by using the tags DiagnosticType, Severity, Path, Moniker, and Justification. You should be able to copy the information
 from the model's BuildModelResult.xml that is created during the build
 into the <strong>Edit Best Practice Suppressions XML</strong> file. The justification
 message might need to be modified to be more meaningful.</p>
-<pre><code class="lang-xml">&lt;Diagnostic&gt;
-	 &lt;DiagnosticType&gt;BestPractices&lt;/DiagnosticType&gt;
-	 &lt;Severity&gt;Warning&lt;/Severity&gt;
-	 &lt;Path&gt;AxForm/AssetWarehouseTransfer/Design&lt;/Path&gt;
-	 &lt;Moniker&gt;BPErrorFormDesignPatternUnspecified&lt;/Moniker&gt;
-	 &lt;Justification&gt;Microsoft surely assigns a pattern  soon.&lt;/Justification&gt;
-&lt;/Diagnostic&gt;
-</code></pre>
+<pre>
+<Diagnostic>
+	 <DiagnosticType>BestPractices</DiagnosticType>
+	 <Severity>Warning</Severity>
+	 <Path>AxForm/AssetWarehouseTransfer/Design</Path>
+	 <Moniker>BPErrorFormDesignPatternUnspecified</Moniker>
+	 <Justification>Microsoft surely assigns a pattern  soon.</Justification>
+</Diagnostic>
+</pre>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
@@ -3020,22 +3025,23 @@ message might need to be modified to be more meaningful.</p>
 <div hidden="" id="module-unit-notification-container"></div>
 <p>Error statements are developed before testing to dictate what should be
 displayed when a test passes or fails. You can handle errors by using the
-<code>Throw</code>, <code>Try...catch</code>, <code>Finally</code>, and <code>Retry</code> statements to handle exceptions. An exception is a regulated jump away from the code run.</p>
-<p>The <code>throw</code> keyword is used to throw an exception enum
-value. For example, the statement <code>throw Exception::error;</code>
+Throw, Try...catch, Finally, and Retry statements to handle exceptions. An exception is a regulated jump away from the code run.</p>
+<p>The throw keyword is used to throw an exception enum
+value. For example, the statement throw Exception::error;
 would be used to throw an error exception. We recommend that you use the
-<code>Global::error</code> method instead of the <code>Exception::error</code>. The <code>Global::error</code> can write a message to the Infolog when an error exception is thrown and convert a label automatically into text. You can also write the <code>Global::error("Error message.")</code> as <code>error("Error message.")</code>.</p>
-<p>The <code>try...catch</code> keywords are used to process a thrown
-exception through the catch. The code is run in the <code>try</code> code block.
+Global::error method instead of the Exception::error. The Global::error can write a message to the Infolog when an error exception is thrown and convert a label automatically into text. You can also write the Global::error("Error message.") as error("Error message.").</p>
+<p>The try...catch keywords are used to process a thrown
+exception through the catch. The code is run in the try code block.
 If an error is thrown, the code will jump to run the catch code blocks
 sequentially to see if the thrown error is specified to handle the
 error. It is a common practice to have the first catch statement handle
-the <code>Exception::Error</code> enum value and leave one catch blank
-to catch any unspecified error. The <code>Finally</code> keyword can be
-used with the <code>Try...catch</code> statement. The code in the
-<code>finally</code> code block will run when the code leaves the <code>try</code> block
+the Exception::Error enum value and leave one catch blank
+to catch any unspecified error. The Finally keyword can be
+used with the Try...catch statement. The code in the
+finally code block will run when the code leaves the try block
 either normally or because of an error. See the following code example.</p>
-<pre><code class="lang-xpp">try
+<pre>
+try
 {
   // Code here.
 }
@@ -3051,15 +3057,15 @@ finally
 {
   // Executed no matter how the try block exits.
 }
-</code></pre>
-<p>The <code>retry</code> keyword can only be written in a
-<code>catch</code> block. This causes the code to jump back to the
-first line in the <code>try</code> code block. A <code>retry</code>
+</pre>
+<p>The retry keyword can only be written in a
+catch block. This causes the code to jump back to the
+first line in the try code block. A retry
 should be used when the issue can be fixed through code. The
-<code>retry</code> gives the code an additional chance to succeed and
-will display an Infolog when the <code>try</code> block started to run. You must
-make sure that the <code>retry</code> statement does not cause an infinite
-loop. We recommend that you include a variable in the <code>try</code>
+retry gives the code an additional chance to succeed and
+will display an Infolog when the try block started to run. You must
+make sure that the retry statement does not cause an infinite
+loop. We recommend that you include a variable in the try
 block to test if you are in an infinite loop.</p>
 <p>You can throw several error exceptions:</p>
 <ul>
@@ -3067,7 +3073,7 @@ block to test if you are in an infinite loop.</p>
 <li><strong>CLRError</strong> - The error occurred while the CLR functionality was
 being used.</li>
 <li><strong>CodeAccessSecurity</strong> - An error occurred while the
-<code>CodeAccessPermission.demand</code> method was being used.</li>
+CodeAccessPermission.demand method was being used.</li>
 <li><strong>DDEerror</strong> - An error occurred while the DDE system class was
 being used.</li>
 <li><strong>Deadlock</strong> - A database deadlock occurred because several
@@ -3083,8 +3089,8 @@ in a transaction.</li>
 stopped.</li>
 <li><strong>Internal</strong> - An internal error occurred in the development
 system.</li>
-<li><strong>Numeric</strong> - An error occurred when the <code>str2int</code>,
-<code>str2int64</code>, or <code>str2num</code> function was used.</li>
+<li><strong>Numeric</strong> - An error occurred when the str2int,
+str2int64, or str2num function was used.</li>
 <li><strong>UpdateConflict</strong> - An error occurred in a transaction during an
 update.</li>
 <li><strong>UpdateConflictNotRecovered</strong> - An error occurred in a transaction
@@ -3120,21 +3126,21 @@ import the configurations and data between environments.</p>
 <div class="section is-uniform position-relative" id="unit-inner-section">
 <h1 class="margin-right-xxl-desktop" id="module-unit-title">Run unit tests</h1>
 <div hidden="" id="module-unit-notification-container"></div>
-<p>Large projects can have multiple developers who are creating code in their own environments. Before pushing code changes to production, unit tests should be performed to verify the code. Unit tests must follow specific syntax. The class must extend the <code>SysTestCase</code> class. Test
+<p>Large projects can have multiple developers who are creating code in their own environments. Before pushing code changes to production, unit tests should be performed to verify the code. Unit tests must follow specific syntax. The class must extend the SysTestCase class. Test
 methods must be public, cannot have parameters, must return void, and
-need to be decorated with the <code>SysTestMethod</code>.</p>
+need to be decorated with the SysTestMethod.</p>
 <p>The test method can include other methods that do not follow
 these rules. Test methods typically have three distinct methods:
 arrange, act, and assert. The arrange method sets up all the variables.
 The act method does some processing. The assert method verifies if the
-result is expected. You can use the <code>setup()</code> method that is
+result is expected. You can use the setup() method that is
 built into the framework to arrange the variables that will be used throughout the test methods. For example, if you have a variable
-<code>currencyAmt</code> that is used in multiple test methods, instead
-of creating a variable for <code>currencyAmt</code> in each test
-method, you would only need to create it in the <code>setup()</code>
+currencyAmt that is used in multiple test methods, instead
+of creating a variable for currencyAmt in each test
+method, you would only need to create it in the setup()
 method.</p>
 <p>You can choose from several different assert methods to verify the
-test. <code>AssertEquals()</code> is the most common, but other methods are available, such as <code>assertTrue()</code> and <code>assertNotNull()</code>. You can also use the code <code>this.parmExceptionExpected(true)</code> to assert that an error
+test. AssertEquals() is the most common, but other methods are available, such as assertTrue() and assertNotNull(). You can also use the code this.parmExceptionExpected(true) to assert that an error
 thrown is the correct behavior.</p>
 <p>After the test class is created, you can right-click the class and
 select <strong>Run tests</strong>. This selection will open the unit test toolbar. Using unit tests can be a fast and reliable way to develop code. Over time, you will build new tests as new functionality is added. This allows you to quickly run these unit tests to make sure that everything works as expected. For information, see <a data-linktype="absolute-path" href="/en-us/dynamics365/fin-ops-core/dev-itpro/perf-test/systest-filtering/?azure-portal=true">SysTest Filtering using class and method attributes</a>.</p>
@@ -3449,13 +3455,15 @@ Production environment.</p>
 <p>You can deploy either all reports or a specific report from the
 PowerShell. To deploy all reports, open the PowerShell as an
 administrator and run the following command:</p>
-<pre><code class="lang-powershell">*C:\AosService\PackagesLocalDirectory\Plugins\AxReportVmRoleStartupTask\DeployAllReportsToSSRS.ps1 -PackageInstallLocation \"C:\AosService\PackagesLocalDirectory\" *
-</code></pre>
+<pre>
+*C:\AosService\PackagesLocalDirectory\Plugins\AxReportVmRoleStartupTask\DeployAllReportsToSSRS.ps1 -PackageInstallLocation \"C:\AosService\PackagesLocalDirectory\" *
+</pre>
 <p>Depending on the environment that you are using, the drive might vary. Generally, the drive is C:\, L:\, or K:\.</p>
 <p>To run a specific report, you need the report name. Though you will open
 the PowerShell as an administrator, you will run the following command line instead:</p>
-<pre><code class="lang-powershell">*C:\AosService\PackagesLocalDirectory\Plugins\AxReportVmRoleStartupTask\DeployAllReportsToSSRS.ps1 -Module ApplicationSuite -ReportName TaxVatRegister.Report*
-</code></pre>
+<pre>
+*C:\AosService\PackagesLocalDirectory\Plugins\AxReportVmRoleStartupTask\DeployAllReportsToSSRS.ps1 -Module ApplicationSuite -ReportName TaxVatRegister.Report*
+</pre>
 <p>To deploy a report from Visual Studio, you will need to add the report
 to your project. Right-click the report and select the <strong>Deploy</strong>
 option.</p>

@@ -69,8 +69,8 @@ Directory.</p>
 <p>When a change needs to be propagated through the entire application, you should create an extension of that element to modify properties or components.</p>
 <p>The following is an overview of common element types and the reasons for creating an extension of an element:</p>
 <ul>
-<li><strong>Labels</strong> - You would create a label extension file to modify the values of a label, add new labels, or add new languages. Label file    extensions are named with an <code>_extension</code> suffix, such as <strong>FLM_Extension</strong>.</li>
-<li><strong>Enumeration</strong> (enum) - If the <code>IsExtensible</code> property is set to <strong>True</strong>, an enum can be extended to add new values to it.</li>
+<li><strong>Labels</strong> - You would create a label extension file to modify the values of a label, add new labels, or add new languages. Label file    extensions are named with an _extension suffix, such as <strong>FLM_Extension</strong>.</li>
+<li><strong>Enumeration</strong> (enum) - If the IsExtensible property is set to <strong>True</strong>, an enum can be extended to add new values to it.</li>
 <li><strong>Extended data types (EDTs)</strong> - You can modify properties for an EDT, such as the label, string size, or help text by creating an extension, if <strong>String Size Is Extensible</strong> is set to <strong>Yes</strong>.</li>
 <li><strong>Tables</strong> - You can extend a table to add new fields, indexes, or    relations, and modify properties for the table elements or the table. You can also implement event handlers that are called from the base implementations of the table methods.</li>
 <li><strong>Data entities</strong> - Provide a denormalized version of underlying table schemas. Data entities can be extended for many of the same    reasons as tables and can also be extended to add data sources.</li>
@@ -107,12 +107,13 @@ extension of that element. Some elements require code to be written to
 change their behavior, such as adding an event handler. In other cases,
 you might create a class extension to change an element's makeup.</p>
 <h2 id="class-extensions">Class extensions</h2>
-<p>To extend the business logic that is related to a table, you create an augmentation class. If you wanted to add another ID field to the table and have it filled, you would create a data event handler for the Inserting event and then implement the logic to fill the new field in that event handler. You can create a class that augments the table and enables access to the table's fields and methods in an easy-to-read manner. When creating a class extension, you must decorate it with the <code>ExtensionOf</code> attribute, use the <code>_Extension</code>
-suffix, and indicate the class as <code>final</code>.</p>
+<p>To extend the business logic that is related to a table, you create an augmentation class. If you wanted to add another ID field to the table and have it filled, you would create a data event handler for the Inserting event and then implement the logic to fill the new field in that event handler. You can create a class that augments the table and enables access to the table's fields and methods in an easy-to-read manner. When creating a class extension, you must decorate it with the ExtensionOf attribute, use the _Extension
+suffix, and indicate the class as final.</p>
 <p>The following is an example of creating a class that extends
-<code>InventTable</code>. Methods can then be added to this
+InventTable. Methods can then be added to this
 augmented class where the comment is used.</p>
-<pre><code class="lang-xpp">[ExtensionOf(tableStr(InventTable))]
+<pre>
+[ExtensionOf(tableStr(InventTable))]
 final class InventTableNew_Extension
 {
  	public void newDefaultInventLocationId()
@@ -120,61 +121,64 @@ final class InventTableNew_Extension
 	 //enter your code here
 	 }
 }
-</code></pre>
+</pre>
 <h2 id="event-handlers">Event handlers</h2>
 <p>An event handler is a way for you to write or copy code to an element that runs when a certain event occurs, such as when a field is modified or a record is deleted. Some elements, like tables and forms, contain an <strong>Events</strong> node in the designer window that, when expanded, lists all the events that are associated with that element. If you need to add supplementary behavior that doesn't currently exist in an element, you should create an extension of that element, and then add an event handler to the extended element.</p>
-<p>The following are methods for event handlers that are pulled from the <code>CustTable</code> table. These methods can be copied and added to your extended element or class by right-clicking the event in the element designer window and selecting <strong>Copy event handler method</strong>.</p>
+<p>The following are methods for event handlers that are pulled from the CustTable table. These methods can be copied and added to your extended element or class by right-clicking the event in the element designer window and selecting <strong>Copy event handler method</strong>.</p>
 <p><a data-linktype="relative-path" href="media/copy-event-handler.png#lightbox"><img alt="Visual Studio screenshot showing how to copy event handler method from
 the table designer
 window." data-linktype="relative-path" src="./rawmb500/media_copy_event_handler.png"/></a></p>
 <ul>
-<li><strong><code>OnDeleted</code> event</strong> - This is a post-event handler that triggers when a record is deleted in the table. You could use this, for example, to display an Infolog message after a record is deleted.</li>
+<li><strong>OnDeleted event</strong> - This is a post-event handler that triggers when a record is deleted in the table. You could use this, for example, to display an Infolog message after a record is deleted.</li>
 </ul>
-<pre><code class="lang-xpp">/// &lt;summary&gt;
+<pre>
+/// <summary>
 ///
-/// &lt;/summary&gt;
-/// &lt;param name="sender"&gt;&lt;/param&gt;
-/// &lt;param name="e"&gt;&lt;/param&gt;
+/// </summary>
+/// <param name="sender"></param>
+/// <param name="e"></param>
 [DataEventHandler(tableStr(CustTable), DataEventType::Deleted)]
 public static void CustTable_onDeleted(Common sender, DataEventArgs e)
 {
 }
-</code></pre>
+</pre>
 <ul>
-<li><strong><code>OnInserting</code> event</strong> - This is triggered when data
+<li><strong>OnInserting event</strong> - This is triggered when data
 is being inserted. For example, this could trigger when you add a  new customer to finance and operations apps.</li>
 </ul>
-<pre><code class="lang-xpp">/// &lt;summary&gt;
+<pre>
+/// <summary>
 ///
-/// &lt;/summary&gt;
-/// &lt;param name="sender"&gt;&lt;/param&gt;
-/// &lt;param name="e"&gt;&lt;/param&gt;
+/// </summary>
+/// <param name="sender"></param>
+/// <param name="e"></param>
 [DataEventHandler(tableStr(CustTable), DataEventType::Inserting)]
 public static void CustTable_onInserting(Common sender, DataEventArgs e)
 {
 }
-</code></pre>
+</pre>
 <ul>
-<li><strong><code>OnValidatedWrite</code> event</strong> - This is a post-event
+<li><strong>OnValidatedWrite event</strong> - This is a post-event
 handler that triggers after data is entered. This is used to
 validate data that is being written to a page, such as ensuring that a customer is at least 18 years old by verifying a birth date.</li>
 </ul>
-<pre><code class="lang-xpp">/// &lt;summary&gt;
+<pre>
+/// <summary>
 ///
-/// &lt;/summary&gt;
-/// &lt;param name="sender"&gt;&lt;/param&gt;
-/// &lt;param name="e"&gt;&lt;/param&gt;
+/// </summary>
+/// <param name="sender"></param>
+/// <param name="e"></param>
 [DataEventHandler(tableStr(CustTable), DataEventType::ValidatedWrite)]
 public static void CustTable_onValidatedWrite(Common sender, DataEventArgs e)
 {
 }
-</code></pre>
+</pre>
 <h2 id="chain-of-command">Chain of Command</h2>
 <p>You can wrap logic around methods that are defined in the base class that you're augmenting. You can also extend the logic of public and protected
 methods without having to use event handlers.</p>
 <p>When wrapping a method, you can access public and protected methods as
 well as variables of the base class. Using a wrapper around a method and
-the <code>next</code> keyword creates a Chain of Command (CoC).</p>
+the next keyword creates a Chain of Command (CoC).</p>
 <p>CoC is a design pattern where a request is handled by a series of
 receivers. An extension class is used to wrap protected or public
 methods of classes, tables, data entities, and forms. You should be aware of some restrictions when wrapping methods:</p>
@@ -183,8 +187,8 @@ methods of classes, tables, data entities, and forms. You should be aware of som
 <li>When you augment form classes, only root-level methods can be    wrapped, not methods that are defined in nested classes.</li>
 </ul>
 <p>Wrapper methods in an extension class are required to always call
-<code>next</code> so that the <code>next</code> method in the chain
-and, finally, the original implementation is always called. This process ensures that every method in the chain factors into the result. The method must call <strong><code>next()</code></strong> unconditionally.</p>
+next so that the next method in the chain
+and, finally, the original implementation is always called. This process ensures that every method in the chain factors into the result. The method must call <strong>next()</strong> unconditionally.</p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
@@ -201,12 +205,13 @@ and, finally, the original implementation is always called. This process ensures
 and then select Pre-event handler." data-linktype="relative-path" src="./rawmb500/media_copy_eventhandler_method.png"/></a></p>
 <p>After you select the pre-event handler, go to the event handler class, and then paste the method. Return to the method, select the post-event handler, and then paste it in the event handler class.</p>
 <p>Two methods for pre-events and post-events should display, and the original method is called between these two methods (super call), as the following code sample illustrates:</p>
-<pre><code class="lang-xpp">internal final class CustTableTableEventHandler
+<pre>
+internal final class CustTableTableEventHandler
 {
-    /// &lt;summary&gt;
+    /// <summary>
     ///
-    /// &lt;/summary&gt;
-    /// &lt;param name="args"&gt;&lt;/param&gt;
+    /// </summary>
+    /// <param name="args"></param>
     [PreHandlerFor(tableStr(CustTable), tableMethodStr(CustTable, insert))]
     public static void CustTable_Pre_delete(XppPrePostArgs args)
     {
@@ -215,10 +220,10 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
         // do something
     }
 
-    /// &lt;summary&gt;
+    /// <summary>
     ///
-    /// &lt;/summary&gt;
-    /// &lt;param name="args"&gt;&lt;/param&gt;
+    /// </summary>
+    /// <param name="args"></param>
     [PostHandlerFor(tableStr(CustTable), tableMethodStr(CustTable, insert))]
     public static void CustTable_Post_delete(XppPrePostArgs args)
     {
@@ -227,7 +232,7 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
         // do something
     }
 }
-</code></pre>
+</pre>
 <h2 id="attributes">Attributes</h2>
 <p>You can add attributes to a method to prevent people from using pre-handlers and post-handlers and other extensions. The three types of attributes that you can add are hookable, wrappable, and replaceable.</p>
 <p>Hookable attributes complete the following actions:</p>
@@ -247,22 +252,23 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
 </ul>
 <p>The replaceable method must also be wrappable.</p>
 <p>The following code example shows that the method is protected to have pre-events and post-events and CoC by using [Hookable(false), Wrappable(false)], which means that no extensibility is available.</p>
-<pre><code class="lang-xpp">    /// &lt;summary&gt;
-    /// Calculates and sets the &lt;c&gt;AmountCur&lt;/c&gt; field using the &lt;c&gt;Quantity&lt;/c&gt; and &lt;c&gt;UnitPrice&lt;/c&gt;
+<pre>
+/// <summary>
+    /// Calculates and sets the <c>AmountCur</c> field using the <c>Quantity</c> and <c>UnitPrice</c>
     /// values.
-    /// &lt;/summary&gt;
-    /// &lt;param name="_qty"&gt;
+    /// </summary>
+    /// <param name="_qty">
     /// Item quantity on the line.
-    /// &lt;/param&gt;
-    /// &lt;returns&gt;
-    /// The &lt;c&gt;AmountCur&lt;/c&gt; value.
-    /// &lt;/returns&gt;
+    /// </param>
+    /// <returns>
+    /// The <c>AmountCur</c> value.
+    /// </returns>
     [Hookable(false), Wrappable(false)]
     public AmountCur calcLineAmount(Qty _qty = this.Quantity)
     {
         return this.salesPurchLineInterface().calcLineAmount(_qty);
     }
-</code></pre>
+</pre>
 <p>When you’re using attributes for methods, make sure that you’re aware of extensibility and potentially breaking it.</p>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
@@ -284,7 +290,8 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
 <ol>
 <li>Create a new class with business logic to create 100 new check numbers. Pack and unpack methods are also created in the class.</li>
 </ol>
-<pre><code class="lang-xpp">class SandBoxLabHelper
+<pre>
+class SandBoxLabHelper
 {
     public static container AsyncInfo(container _parameters)
     {
@@ -295,7 +302,7 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
         
         BankChequeTable   bankChequeTable;
 
-        for(int i = checkStart; i &lt; (checkStart + checkCount); i++)
+        for(int i = checkStart; i < (checkStart + checkCount); i++)
         {
             bankChequeTable.clear();
             bankChequeTable.AccountID = bankAccount;
@@ -316,11 +323,12 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
     }
 
 	}
-</code></pre>
+</pre>
 <ol start="2">
 <li>Create a new form and add a button. Write code in the clicked() method of the button to run the preceding AsyncInfo static method by using the sandbox framework.</li>
 </ol>
-<pre><code class="lang-xpp">public void clicked()
+<pre>
+public void clicked()
 {
    boolean result;
    container mCon;
@@ -331,7 +339,7 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
    [result] = SysOperationSandbox::callStaticMethod(classNum(SandBoxLabHelper), staticMethodStr(SandBoxLabHelper, AsyncInfo), mCon, "Processing", "Completed", "Cancelled");
    super();
 }
-</code></pre>
+</pre>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
@@ -470,9 +478,10 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
 <li><p>Select <strong>Save All</strong>.</p>
 </li>
 <li><p>Open the <strong>SubmitManager</strong> class (<strong>MyWorkflowSubmitManager</strong>), and then replace the existing code with the following code. A dialog opens when you run the code. When you close the dialog, the new table’s status should change to <strong>Submit</strong>.</p>
-<pre><code class="lang-xpp"> /// &lt;summary&gt;
+<pre>
+/// <summary>
  /// The MyWorkflowTypeSubmitManager menu item action event handler.
- /// &lt;/summary&gt;
+ /// </summary>
  public class MyWorkflowTypeSubmitManager 
  {
      public static void main(Args args)
@@ -520,13 +529,14 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
          args.caller().updateWorkFlowControls();
  	}
  }
-</code></pre>
+</pre>
 <p>You can set each status in the workflow event handler class by using a method for updating the <strong>Status</strong> field on the table that you previously created.</p>
 </li>
 <li><p>Open the workflow table (<strong>MyWorkflowTable</strong>) in Visual Studio Designer, and then right-click it to open the context menu. To open the code editor, select <strong>View Code</strong>.</p>
 </li>
-<li><p>Create a new <code>public</code> method for updating the status for a specific <strong>RecId</strong>, as follows:</p>
-<pre><code class="lang-xpp"> public class MyWorkflowTable extends common
+<li><p>Create a new public method for updating the status for a specific <strong>RecId</strong>, as follows:</p>
+<pre>
+public class MyWorkflowTable extends common
  {
      public static void  updateWorkflowStatus(RefRecId _recId , MyWorkflowStatus _status)
      {
@@ -546,16 +556,17 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
          ttscommit;
      }
  }
-</code></pre>
+</pre>
 </li>
 <li><p>Go to the workflow table (<strong>MyWorkflowTable</strong>), and then right-click the <strong>Methods</strong> node to open the context menu.</p>
 </li>
-<li><p>Select <strong>Override</strong>, and then select the <code>canSubmitToWorkflow</code> method. The method should return a status of <strong>True</strong> so that you can submit the workflow. The system should now allow you to submit all incomplete workflows.</p>
-<pre><code class="lang-xpp">     /// &lt;summary&gt;
+<li><p>Select <strong>Override</strong>, and then select the canSubmitToWorkflow method. The method should return a status of <strong>True</strong> so that you can submit the workflow. The system should now allow you to submit all incomplete workflows.</p>
+<pre>
+/// <summary>
      /// Can workflow be submitted.
-     /// &lt;/summary&gt;
-     /// &lt;param name = "_workflowType"&gt;&lt;/param&gt;
-     /// &lt;returns&gt;&lt;/returns&gt;
+     /// </summary>
+     /// <param name = "_workflowType"></param>
+     /// <returns></returns>
      public boolean canSubmitToWorkflow(str _workflowType = '')
      {
          boolean ret;
@@ -573,14 +584,15 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
 
          return ret;
      }
-</code></pre>
+</pre>
 </li>
 <li><p>Select <strong>Save all</strong> and then build the project.</p>
 </li>
-<li><p>Open the <code>event handler</code> class for the workflow type (<strong>MyWorkflowTypeEventHandler</strong>). The class has event methods for started, canceled, and completed. Call the method for updating the status on the table, as follows:</p>
-<pre><code class="lang-xpp"> /// &lt;summary&gt;
+<li><p>Open the event handler class for the workflow type (<strong>MyWorkflowTypeEventHandler</strong>). The class has event methods for started, canceled, and completed. Call the method for updating the status on the table, as follows:</p>
+<pre>
+/// <summary>
  /// The MyWorkflowTypeEventHandler workflow event handler.
- /// &lt;/summary&gt;
+ /// </summary>
  public class  MyWorkflowTypeEventHandler implements WorkflowCanceledEventHandler,  
  	WorkflowCompletedEventHandler,
  	WorkflowStartedEventHandler
@@ -606,7 +618,7 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
          MyWorkflowTable::updateWorkflowStatus(_workflowEventArgs.parmWorkflowContext().parmRecId(),MyWorkflowStatus::Complete);
  	}
  }
-</code></pre>
+</pre>
 </li>
 <li><p>Select <strong>Save all</strong> and then build the project again.</p>
 </li>
@@ -664,8 +676,9 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
 </li>
 <li><p>Open your workflow approval event handler class from the project <strong>MyWorkflowEventHandler</strong>.</p>
 </li>
-<li><p>For each status, update your table. The following code example calls the <code>updateWorkflowStatus</code> method for each event to update its status in the table.</p>
-<pre><code class="lang-xpp">    public void started(WorkflowElementEventArgs _workflowElementEventArgs)
+<li><p>For each status, update your table. The following code example calls the updateWorkflowStatus method for each event to update its status in the table.</p>
+<pre>
+public void started(WorkflowElementEventArgs _workflowElementEventArgs)
  	{
  		// TODO:  Write code to execute once the workflow is started.
 
@@ -711,7 +724,7 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
  	{
  		// TODO:  Write code to execute once work items are created.
  	}
-</code></pre>
+</pre>
 </li>
 <li><p>Select <strong>Save all</strong>.</p>
 </li>
@@ -795,7 +808,7 @@ and then select Pre-event handler." data-linktype="relative-path" src="./rawmb50
 <p>You can now begin your work on this lab.</p>
 <h2 id="scenario">Scenario</h2>
 <p>The finance and operations apps developer has been asked by the Fleet
-Management company to change a number-entry field on the <strong>Customer</strong> page. The <strong>Agency location code</strong> field only accepts 12 digits, and the company needs to be able to enter 14 digits. Because the company doesn't need a new field, the developer will create an extension of the <code>AgencyLocationCode</code> EDT in Visual Studio.</p>
+Management company to change a number-entry field on the <strong>Customer</strong> page. The <strong>Agency location code</strong> field only accepts 12 digits, and the company needs to be able to enter 14 digits. Because the company doesn't need a new field, the developer will create an extension of the AgencyLocationCode EDT in Visual Studio.</p>
 <h2 id="create-a-new-project">Create a new project</h2>
 <ol>
 <li>Close the Microsoft Edge window and finance and operations.</li>
@@ -1095,9 +1108,9 @@ table and selecting <strong>New</strong>, or by selecting and dragging a field f
 table. After the field is added to the table, you can select and drag it
 to an existing field group, or you can create a new field group and drag
 the field to it. The added field and/or field group will be shown in bold type, while the existing fields and field groups will be displayed in italic type.</p>
-<p>The following is an example of adding the <strong><code>AccountNum</code></strong> field
+<p>The following is an example of adding the <strong>AccountNum</strong> field
 from <strong>AOT &gt; Data Types &gt; Extended Data Types</strong> to the <strong>Fields</strong> node
-of the <strong><code>FMCustomer.myExtension</code></strong> table.</p>
+of the <strong>FMCustomer.myExtension</strong> table.</p>
 <p><img alt="This is a screenshot from Visual Studio showing the AccountNum field
 has been added to an extension of the FMCustomer
 table." data-linktype="relative-path" src="./rawmb500/media_table_extension.png"/></p>
@@ -1116,8 +1129,9 @@ every property that is listed in the <strong>Properties</strong> window can be
 adjusted. For example, the tracking properties that were mentioned cannot be changed to <strong>No</strong> if they are set to <strong>Yes</strong> on the base table. If a property appears dimmed, it isn't editable.</p>
 <h2 id="table-business-logic">Table business logic</h2>
 <p>Event handlers can also be implemented and are called from the base
-implementations of the table methods. First, you need to create a new class that extends the desired table and enables access to its fields and methods. The class should be decorated with the <code>final</code> and <code>[ExtensionOf()]</code> attributes and have the <code>_Extension</code> suffix. The following code sample shows how to create a new class that extends the table InventTable.</p>
-<pre><code class="lang-xpp">[ExtensionOf(tableStr(InventTable))]
+implementations of the table methods. First, you need to create a new class that extends the desired table and enables access to its fields and methods. The class should be decorated with the final and [ExtensionOf()] attributes and have the _Extension suffix. The following code sample shows how to create a new class that extends the table InventTable.</p>
+<pre>
+[ExtensionOf(tableStr(InventTable))]
 final class InventTableMy_Extension
 {
 	public void myDefaultInventLocationId()
@@ -1126,10 +1140,11 @@ final class InventTableMy_Extension
 		this.MyInventLocationID = this.inventLocationId();
 	}
 }
-</code></pre>
+</pre>
 <p>Next, you will add methods to the augmented class and use your new method
-from an event handler. The following is an example of an <code>InventTable</code> class event handler.</p>
-<pre><code class="lang-xpp">class InventTableMy_EventHandler
+from an event handler. The following is an example of an InventTable class event handler.</p>
+<pre>
+class InventTableMy_EventHandler
 {
 	[DataEventHandler(tableStr(InventTable), DataEventType::Inserting)]
 	public static void InventTable_onInserting(Common sender, DataEventArgs e)
@@ -1139,7 +1154,7 @@ from an event handler. The following is an example of an <code>InventTable</code
 		inventTable.myDefaultInventLocationId();
 	}
 }
-</code></pre>
+</pre>
 <div class="modular-content-container" hidden="" id="next-section">
 </div>
 </div>
@@ -1157,7 +1172,7 @@ can be edited when you create a form extension. For example, the
 <strong>Name</strong> property might appear dimmed in the <strong>Properties</strong> window,
 indicating that you cannot change it.</p>
 <p>Some tasks can't be carried out by using an extension, for example, if you require a different form pattern and not all form patterns are available with an extension. In that case, you would create a new form, apply the necessary pattern, and then build the form according to the <strong>Pattern</strong> tab in the form designer window.</p>
-<p>The following screenshot shows the addition of a tab to the Action Pane for the <code>FMCustomer</code> form extension, named <strong>FMCustomer.myExtension</strong>. A <strong>Button Group</strong> and <strong>Menu Item Button</strong> have also been added to the <strong>Action Pane Tab</strong> control. The existing elements in a form extension are shown in italic type, while the changed or added items are displayed in bold type.</p>
+<p>The following screenshot shows the addition of a tab to the Action Pane for the FMCustomer form extension, named <strong>FMCustomer.myExtension</strong>. A <strong>Button Group</strong> and <strong>Menu Item Button</strong> have also been added to the <strong>Action Pane Tab</strong> control. The existing elements in a form extension are shown in italic type, while the changed or added items are displayed in bold type.</p>
 <p><a data-linktype="relative-path" href="media/form-extend.png#lightbox"><img alt="This is a screenshot from Visual Studio of an FMCustomer form
 extension with an added Action Pane Tab, Button Group, and Menu Item
 Button." data-linktype="relative-path" src="./rawmb500/media_form_extend.png"/></a></p>
@@ -1170,7 +1185,7 @@ appears dimmed, you will need to set your project to reference the
 model that contains that form.</li>
 <li>In the <strong>Solution Explorer</strong> window, right-click your form
 extension and select <strong>Rename</strong>. Add a company-specific
-suffix, such as <code>.myExtension</code> or <code>.abcExtension</code>.</li>
+suffix, such as .myExtension or .abcExtension.</li>
 <li>In the <strong>Solution Explorer</strong> window, right-click your form
 extension and select <strong>Open</strong>.</li>
 <li>In the <strong>Application Explorer</strong> window, expand <strong>AOT &gt; Data
@@ -1324,23 +1339,25 @@ Management company to adjust the appearance and functionality of the <strong>Cus
 <p>Typically, you would create delegates in your code in tables, forms, or classes.</p>
 <p>Make sure that you define the delegate in the code and then ensure that you define a call to the empty delegate so that subscribers can use it.</p>
 <p>The following code sample shows how a delegate might appear in a class:</p>
-<pre><code class="lang-xpp">/// &lt;summary&gt;
-    /// Delegate for construct &lt;c&gt;MyCustTableClass&lt;/c&gt; instances.
-    /// &lt;/summary&gt;
-    /// &lt;param name = "_buffer"&gt;The buffer to create the instance from.&lt;/param&gt;
-    /// &lt;param name = "_eventHandlerResult"&gt;An &lt;c&gt;EventHandlerResult&lt;/c&gt;&lt;/param&gt;
+<pre>
+/// <summary>
+    /// Delegate for construct <c>MyCustTableClass</c> instances.
+    /// </summary>
+    /// <param name = "_buffer">The buffer to create the instance from.</param>
+    /// <param name = "_eventHandlerResult">An <c>EventHandlerResult</c></param>
     static delegate void constructDelegate(Common _buffer,EventHandlerResult _eventHandlerResult)
     {
     }
-</code></pre>
+</pre>
 <p>You would call the delegates in the code as follows:</p>
-<pre><code class="lang-xpp">/// &lt;summary&gt;
-    /// Construct method &lt;c&gt;MyCustTableClass&lt;/c&gt; instances.
-    /// &lt;/summary&gt;
-    /// &lt;param name = "_buffer"&gt;The buffer to create the instance from.&lt;/param&gt;
-    /// &lt;returns&gt;
+<pre>
+/// <summary>
+    /// Construct method <c>MyCustTableClass</c> instances.
+    /// </summary>
+    /// <param name = "_buffer">The buffer to create the instance from.</param>
+    /// <returns>
     /// MyCustTableClass.
-    /// &lt;/returns&gt;
+    /// </returns>
     public static MyCustTableClass construct(Common _buffer)
     {
         switch (_buffer.TableId)
@@ -1360,15 +1377,15 @@ Management company to adjust the appearance and functionality of the <strong>Cus
 
         throw error(Error::missingRecord(classstr(MyCustTableClass)));
     }
-
-</code></pre>
+</pre>
 <p>As shown in the preceding example, the call to the static <strong>MyCustTableClass::constructDelegate</strong> is done in the middle of the method, so you can’t use pre-events and post-events or CoC. Because you’ve created delegates, an extension is now enabled.</p>
 <p>The system uses the <strong>EventHandlerResult</strong> to return the result, which you can validate.</p>
 <h2 id="subscribe-to-a-delegate">Subscribe to a delegate</h2>
 <p>You can perform extensions by subscribing to the delegate, which enables you to make modifications, as the following code sample shows:</p>
-<pre><code class="lang-xpp">/// &lt;summary&gt;
-    /// &lt;c&gt;MyCustTableClass&lt;/c&gt; class delegate subscriber.
-    /// &lt;/summary&gt;
+<pre>
+/// <summary>
+    /// <c>MyCustTableClass</c> class delegate subscriber.
+    /// </summary>
     [SubscribesTo(classstr(MyCustTableClass), staticDelegateStr(MyCustTableClass, constructDelegate))]
     public static void myConstruct(Common _buffer, EventHandlerResult _eventHandlerResult)
     {
@@ -1378,7 +1395,7 @@ Management company to adjust the appearance and functionality of the <strong>Cus
 
         _eventHandlerResult.result(custTable);
     }
-</code></pre>
+</pre>
 <p>Subscribers use the <strong>SubscribesTo</strong> attribute with the class name and delegate method name, and the system uses the <strong>EventHandlerResult</strong> method to set the desired result.</p>
 <p>Using delegates can be useful, but the best practice is to use CoC because it provides a richer, more robust, and more concise extension mechanism. Additionally, you can apply CoC by splitting and structuring code into smaller pieces.</p>
 <div class="modular-content-container" hidden="" id="next-section">
@@ -1612,21 +1629,23 @@ To activate a business event, select one or multiple business events, and then s
 <p>To implement a new business event, you need to build a contract, build the event, and then add code to send the event.</p>
 <p>Two classes are implemented for a new event: a business event class and
 a business events contract class. The business event class extends the
-<code>BusinessEventsBase</code> class and supports constructing the
+BusinessEventsBase class and supports constructing the
 business event, building the payload, and sending the business event.
 The name should include the noun or phrase that corresponds with the
-event, followed by the <code>BusinessEvent</code> suffix, such as
-<code>CustomerInvoicePostedBusinessEvent</code>.</p>
+event, followed by the BusinessEvent suffix, such as
+CustomerInvoicePostedBusinessEvent.</p>
 <p>First you will need to create the SalesInvoicePostedBusinessEvent class.</p>
-<p>Extend the <code>BusinessEventsBase</code> class. Labels must be defined for the name and description arguments, but the at "@" symbol should be left out to avoid storing localized data. The <code>BusinessEvents</code> attribute provides the business events framework with information about the business event's contract, name, and description.</p>
-<pre><code class="lang-xpp"> [BusinessEvents(classStr(SalesInvoicePostedBusinessEventContract),
+<p>Extend the BusinessEventsBase class. Labels must be defined for the name and description arguments, but the at "@" symbol should be left out to avoid storing localized data. The BusinessEvents attribute provides the business events framework with information about the business event's contract, name, and description.</p>
+<pre>
+[BusinessEvents(classStr(SalesInvoicePostedBusinessEventContract),
  "AccountsReceivable:SalesOrderInvoicePostedBusinessEventName","AccountsReceivable:SalesOrderInvoicePostedBusinessEventDescription",ModuleAxapta::SalesOrder)]
  	public class SalesInvoicePostedBusinessEvent extends BusinessEventsBase
-</code></pre>
-<p>After the class is created, use the following procedure to add methods to your class. The code examples define the <code>SalesInvoicePostedBusinessEvent</code> event.</p>
+</pre>
+<p>After the class is created, use the following procedure to add methods to your class. The code examples define the SalesInvoicePostedBusinessEvent event.</p>
 <ol>
-<li><p>Add a static <code>newFrom&lt;my_buffer&gt;</code> method, filling in the <code>my_buffer</code> piece with the table buffer that is used to initialize the business event contract.</p>
-<pre><code class="lang-xpp">static public SalesInvoicePostedBusinessEvent
+<li><p>Add a static newFrom<my_buffer> method, filling in the my_buffer piece with the table buffer that is used to initialize the business event contract.</p>
+<pre>
+static public SalesInvoicePostedBusinessEvent
 newFromCustInvoiceJour(CustInvoiceJour _custInvoiceJour)
 {
     SalesInvoicePostedBusinessEvent businessEvent = new
@@ -1634,43 +1653,47 @@ newFromCustInvoiceJour(CustInvoiceJour _custInvoiceJour)
     businessEvent.parmCustInvoiceJour(_custInvoiceJour);
     return businessEvent;
 }
-</code></pre>
+</pre>
 </li>
-<li><p>Add <code>private parm</code> methods to maintain the internal state of the class.</p>
-<pre><code class="lang-xpp">private CustInvoiceJour parmCustInvoiceJour(CustInvoiceJour_custInvoiceJour = custInvoiceJour)
+<li><p>Add private parm methods to maintain the internal state of the class.</p>
+<pre>
+private CustInvoiceJour parmCustInvoiceJour(CustInvoiceJour_custInvoiceJour = custInvoiceJour)
 {
     custInvoiceJour = _custInvoiceJour;
     return custInvoiceJour;
 }
-</code></pre>
+</pre>
 </li>
-<li><p>Add the <code>buildContract</code> method. The method must be decorated with the <code>Wrappable(true)</code> and <code>Replaceable(true)</code> attributes, and it will only be called when a business event is enabled for a company.</p>
-<pre><code class="lang-xpp">[Wrappable(true), Replaceable(true)]
+<li><p>Add the buildContract method. The method must be decorated with the Wrappable(true) and Replaceable(true) attributes, and it will only be called when a business event is enabled for a company.</p>
+<pre>
+[Wrappable(true), Replaceable(true)]
 public BusinessEventsContract buildContract()
 {
   return
   SalesInvoicePostedBusinessEventContract::newFromCustInvoiceJour(custInvoiceJour);
 }
-</code></pre>
+</pre>
 </li>
 </ol>
 <h2 id="business-events-contract-class">Business events contract class</h2>
 <p>The Business events contract class extends the
-<code>BusinessEventsContract</code> class. It defines the payload of
+BusinessEventsContract class. It defines the payload of
 the business event and allows the contract to be populated at runtime.</p>
-<p>Use the following steps to extend the <code>BusinessEventContract</code>
+<p>Use the following steps to extend the BusinessEventContract
 class and add methods to the class. The code examples define the
-<code>SalesInvoicePostedBusinessEventContract</code> event.</p>
+SalesInvoicePostedBusinessEventContract event.</p>
 <ol>
-<li><p>Extend the <code>BusinessEventContract</code> class, ensuring that it's
-decorated with the <code>DataContract</code> attribute.</p>
-<pre><code class="lang-xpp">[DataContract]
+<li><p>Extend the BusinessEventContract class, ensuring that it's
+decorated with the DataContract attribute.</p>
+<pre>
+[DataContract]
 public final class SalesInvoicePostedBusinessEventContract extends
 BusinessEventsContract
-</code></pre>
+</pre>
 </li>
-<li><p>Add <code>private</code> variables to hold the contract state.</p>
-<pre><code class="lang-xpp">private CustInvoiceAccount      invoiceAccount;
+<li><p>Add private variables to hold the contract state.</p>
+<pre>
+private CustInvoiceAccount      invoiceAccount;
 private CustInvoiceId           invoiceId;
 private SalesIdBase             salesId;
 private TransDate               invoiceDate;
@@ -1678,10 +1701,11 @@ private DueDate                 invoiceDueDate;
 private AmountMST               invoiceAmount;
 private TaxAmount               invoiceTaxAmount;
 private LegalEntityDataAreaId   legalEntity;
-</code></pre>
+</pre>
 </li>
-<li><p>Add a <code>private</code> initialization method by using the <code>initialize</code> name. This method sets the business event contract class's private state, based on data that is provided through the <code>static</code> constructor method.</p>
-<pre><code class="lang-xpp">private void initialize(CustInvoiceJour _custInvoiceJour)
+<li><p>Add a private initialization method by using the initialize name. This method sets the business event contract class's private state, based on data that is provided through the static constructor method.</p>
+<pre>
+private void initialize(CustInvoiceJour _custInvoiceJour)
 {
     invoiceAccount = _custInvoiceJour.InvoiceAccount;
     invoiceId = _custInvoiceJour.InvoiceId;
@@ -1692,27 +1716,29 @@ private LegalEntityDataAreaId   legalEntity;
     invoiceTaxAmount = _custInvoiceJour.SumTaxMST;
     legalEntity = _custInvoiceJour.DataAreaId;
 }
-</code></pre>
+</pre>
 </li>
-<li><p>Add a <code>static</code> constructor method.</p>
-<pre><code class="lang-xpp">public static SalesInvoicePostedBusinessEventContract
+<li><p>Add a static constructor method.</p>
+<pre>
+public static SalesInvoicePostedBusinessEventContract
 newFromCustInvoiceJour(CustInvoiceJour _custInvoiceJour)
 {
     var contract = new SalesInvoicePostedBusinessEventContract();
     contract.initialize(_custInvoiceJour);
     return contract;
 }
-</code></pre>
+</pre>
 </li>
-<li><p>Add <code>parm</code> methods to access the contract state. These methods should be decorated with the <code>DataMember('')</code> and <code>BusinessEventsDataMember('')</code> attributes. To populate the data contract's internal state, you might need additional retrieval methods, which should be shown as <code>private</code> and called from the <code>initialize</code> method.</p>
-<pre><code class="lang-xpp">[DataMember('InvoiceAccount'),
+<li><p>Add parm methods to access the contract state. These methods should be decorated with the DataMember('') and BusinessEventsDataMember('') attributes. To populate the data contract's internal state, you might need additional retrieval methods, which should be shown as private and called from the initialize method.</p>
+<pre>
+[DataMember('InvoiceAccount'),
 BusinessEventsDataMember("@AccountsReceivable:InvoiceAccount")]
 public CustInvoiceAccount parmInvoiceAccount(CustInvoiceAccount_invoiceAccount = invoiceAccount)
 {
     invoiceAccount = _invoiceAccount;
     return invoiceAccount;
 }
-</code></pre>
+</pre>
 </li>
 </ol>
 <div class="modular-content-container" hidden="" id="next-section">
@@ -1836,7 +1862,8 @@ public CustInvoiceAccount parmInvoiceAccount(CustInvoiceAccount_invoiceAccount =
 </li>
 <li><p>Right-click or activate the context menu for the class name and then select <strong>Create code extension</strong>. This action creates a new code extension named <strong>class name_model_Extension</strong> in your project in <strong>Solution Explorer</strong>.</p>
 <p>After you open the class, you can add new functionality, as the following code sample illustrates:</p>
-<pre><code class="lang-xpp"> [ExtensionOf(classStr(SalesInvoicePostedBusinessEventContract))]
+<pre>
+[ExtensionOf(classStr(SalesInvoicePostedBusinessEventContract))]
  final class SalesInvoicePostedBusinessEventContract_MB500_Extension
  {
      private CustName name;
@@ -1862,7 +1889,7 @@ public CustInvoiceAccount parmInvoiceAccount(CustInvoiceAccount_invoiceAccount =
          name = _custInvoiceJour.InvoicingName;
      }
  }
-</code></pre>
+</pre>
 <p>In the code sample, the <strong>SalesInvoicePostedBusinessEventContract</strong> class is extended and a new data member is created and initialized. Business data members use a data member name and a label.</p>
 <p>Typically, an initialize() method on the contract class is called with a buffer from a table.</p>
 <p>For the newFromCustInvoiceJour method, a Chain of Command (CoC) is created and a new method called <strong>myInitialize</strong> is added. The <strong>myInitialize</strong> method sets the new data member. Because the initialize() method is in the <strong>SalesInvoicePostBusinessEventContract</strong> class and therefore private, you can’t create CoC for this method.</p>
