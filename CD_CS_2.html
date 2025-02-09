@@ -122,24 +122,50 @@ td {
 <p dir="auto"><img alt="slides/Pasted image 20250209093805_7.png" src="slides/Pasted image 20250209093805_7.png" class="internal-embed"></p>
 <p dir="auto">Now, we get a practical example to illustrate what tokens look like within a code segment.</p>
 <ul>
-<li dir="auto"><strong>Example Program Segment:</strong> The slide shows a small C code snippet: <code>void main() { printf("Hello World\n"); }</code></li>
+<li dir="auto"><strong>Example Program Segment:</strong> The slide shows a small C code snippet: 
+void main() { printf("Hello World\n"); }
+</li>
 <li dir="auto"><strong>Token Breakdown:</strong> The slide then lists each token in the code:
 <ol>
-<li dir="auto"><code>void</code></li>
-<li dir="auto"><code>main</code></li>
-<li dir="auto"><code>(</code></li>
-<li dir="auto"><code>)</code></li>
-<li dir="auto"><code>{</code></li>
-<li dir="auto"><code>printf</code></li>
-<li dir="auto"><code>(</code></li>
-<li dir="auto"><code>"Hello World\n"</code></li>
-<li dir="auto"><code>)</code></li>
-<li dir="auto"><code>;</code></li>
-<li dir="auto"><code>}</code></li>
+<li dir="auto">
+void
+</li>
+<li dir="auto">
+main
+</li>
+<li dir="auto">
+(
+</li>
+<li dir="auto">
+)
+</li>
+<li dir="auto">
+{
+</li>
+<li dir="auto">
+printf
+</li>
+<li dir="auto">
+(
+</li>
+<li dir="auto">
+"Hello World\n"
+</li>
+<li dir="auto">
+)
+</li>
+<li dir="auto">
+;
+</li>
+<li dir="auto">
+}
+</li>
 </ol>
 </li>
 </ul>
-<p dir="auto">This is a clear and direct way to show how the Lexical Analyzer would break down this code into a stream of tokens. Each keyword, identifier, operator, and literal (like the string <code>"Hello World\n"</code>) becomes an individual token.</p>
+<p dir="auto">This is a clear and direct way to show how the Lexical Analyzer would break down this code into a stream of tokens. Each keyword, identifier, operator, and literal (like the string 
+"Hello World\n"
+) becomes an individual token.</p>
 <p dir="auto"><img alt="slides/Pasted image 20250209093805_8.png" src="slides/Pasted image 20250209093805_8.png" class="internal-embed"></p>
 <p dir="auto">This slide is about the specifications of tokens, relating to the concept of strings. Let's go through the terms:</p>
 <ul>
@@ -153,11 +179,33 @@ td {
 <p dir="auto">This slide introduces "The Principle of Longest Match," which is a key concept in how lexical analyzers work.</p>
 <ul>
 <li dir="auto"><strong>Principle of Longest Match:</strong> In most programming languages, the scanner (lexical analyzer) is designed to pick the longest possible string of characters to make up the next token when there are multiple possible matches.</li>
-<li dir="auto"><strong>Example:</strong> The slide provides an example to illustrate this. Let's consider the code: <code>return foobar != hohum;</code>
+<li dir="auto"><strong>Example:</strong> The slide provides an example to illustrate this. Let's consider the code: 
+return foobar != hohum;
+
 <ul>
 <li dir="auto">The lexical analyzer should recognize this as five tokens.</li>
-<li dir="auto">The tokens would be: <code>RETURN</code>, <code>ID(foobar)0</code>, <code>NEQ</code>, <code>ID(hohum)</code>, <code>SCOLON</code>.</li>
-<li dir="auto"><code>!=</code> is correctly recognized as the "not equal" operator, while <code>!</code> and <code>=</code> would not be separate tokens, as the longest possible string is taken. Similarly, <code>foobar</code> and <code>hohum</code> are correctly recognized as a single identifier token.</li>
+<li dir="auto">The tokens would be: 
+RETURN
+, 
+ID(foobar)0
+, 
+NEQ
+, 
+ID(hohum)
+, 
+SCOLON
+.</li>
+<li dir="auto">
+!=
+ is correctly recognized as the "not equal" operator, while 
+!
+ and 
+=
+ would not be separate tokens, as the longest possible string is taken. Similarly, 
+foobar
+ and 
+hohum
+ are correctly recognized as a single identifier token.</li>
 </ul>
 </li>
 </ul>
@@ -165,21 +213,115 @@ td {
 <p dir="auto"><img alt="slides/Pasted image 20250209093805_10.png" src="slides/Pasted image 20250209093805_10.png" class="internal-embed"></p>
 <p dir="auto">This slide shows a breakdown of typical token types found in programming languages. Let's examine each category:</p>
 <ul>
-<li dir="auto"><strong>Operators &amp; Punctuation:</strong> This includes symbols such as <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>(</code>, <code>)</code>, <code>{</code>, <code>}</code>, <code>[</code>, <code>]</code>, <code>;</code>, <code>:</code>, <code>&lt;</code>, <code>&lt;=</code>, <code>==</code>, <code>=</code>, <code>!=</code>, <code>!</code>, etc. Each of these symbols represents a distinct lexical class or token type.</li>
-<li dir="auto"><strong>Keywords:</strong> Keywords are reserved words in a programming language that have special meanings. Examples here include <code>if</code>, <code>while</code>, <code>for</code>, <code>goto</code>, <code>return</code>, <code>switch</code>, and <code>void</code>. Like operators and punctuation, each keyword is a distinct lexical class.</li>
+<li dir="auto"><strong>Operators &amp; Punctuation:</strong> This includes symbols such as 
++
+, 
+-
+, 
+*
+, 
+/
+, 
+(
+, 
+)
+, 
+{
+, 
+}
+, 
+[
+, 
+]
+, 
+;
+, 
+:
+, 
+<
+, 
+<=
+, 
+==
+, 
+=
+, 
+!=
+, 
+!
+, etc. Each of these symbols represents a distinct lexical class or token type.</li>
+<li dir="auto"><strong>Keywords:</strong> Keywords are reserved words in a programming language that have special meanings. Examples here include 
+if
+, 
+while
+, 
+for
+, 
+goto
+, 
+return
+, 
+switch
+, and 
+void
+. Like operators and punctuation, each keyword is a distinct lexical class.</li>
 <li dir="auto"><strong>Identifiers:</strong> Identifiers are names given to variables, functions, and other program elements. Identifiers are a single lexical class, but their specific values are parameterized by the actual identifier's name (the string of characters used to represent the identifier).</li>
-<li dir="auto"><strong>Integer Constants:</strong> These are numerical values that represent whole numbers. They belong to a single lexical class (e.g., <code>INT</code>), and they are parameterized by their actual integer value (e.g., 10, -5, 1000).</li>
+<li dir="auto"><strong>Integer Constants:</strong> These are numerical values that represent whole numbers. They belong to a single lexical class (e.g., 
+INT
+), and they are parameterized by their actual integer value (e.g., 10, -5, 1000).</li>
 <li dir="auto"><strong>Other Constants:</strong> This category would encompass other types of constants such as floating-point numbers, character constants, string literals, and boolean constants. Each of these has its own distinct lexical class.</li>
 </ul>
 <p dir="auto">This breakdown is important for understanding the different categories of tokens that a lexical analyzer must identify and classify to produce a stream of tokens for the subsequent phases of the compiler.</p>
 <p dir="auto"><img alt="slides/Pasted image 20250209093805_11.png" src="slides/Pasted image 20250209093805_11.png" class="internal-embed"></p>
 <p dir="auto">This slide provides a table summarizing different token types typically found in programming languages, along with examples:</p>
 <ul>
-<li dir="auto"><strong>ID (Identifiers):</strong>  These are names used for variables, functions, etc. Examples include <code>foo</code>, <code>n14</code>, <code>a</code>, <code>temp</code>.</li>
-<li dir="auto"><strong>NUM (Numbers):</strong> This represents integer constants. Examples: <code>73</code>, <code>0</code>, <code>00</code>, <code>515</code>, <code>+2</code>.</li>
-<li dir="auto"><strong>REAL (Real Numbers):</strong>  This represents floating-point or decimal numbers. Examples: <code>66.1</code>, <code>.5</code>, <code>10.</code>, <code>1e67</code>, <code>5.5e-10</code>. The examples show the various forms of floating point numbers.</li>
-<li dir="auto"><strong>KEYWORDS:</strong> These are reserved words with special meanings. Examples: <code>IF</code>, <code>DO</code>, <code>WHILE</code>, <code>INT</code>.</li>
-<li dir="auto"><strong>SYMBOLS:</strong> These include operators, punctuation, and other special characters. Examples include <code>,</code> (comma), <code>!=</code> (not equal), and <code>(</code> (left parenthesis).</li>
+<li dir="auto"><strong>ID (Identifiers):</strong>  These are names used for variables, functions, etc. Examples include 
+foo
+, 
+n14
+, 
+a
+, 
+temp
+.</li>
+<li dir="auto"><strong>NUM (Numbers):</strong> This represents integer constants. Examples: 
+73
+, 
+0
+, 
+00
+, 
+515
+, 
++2
+.</li>
+<li dir="auto"><strong>REAL (Real Numbers):</strong>  This represents floating-point or decimal numbers. Examples: 
+66.1
+, 
+.5
+, 
+10.
+, 
+1e67
+, 
+5.5e-10
+. The examples show the various forms of floating point numbers.</li>
+<li dir="auto"><strong>KEYWORDS:</strong> These are reserved words with special meanings. Examples: 
+IF
+, 
+DO
+, 
+WHILE
+, 
+INT
+.</li>
+<li dir="auto"><strong>SYMBOLS:</strong> These include operators, punctuation, and other special characters. Examples include 
+,
+ (comma), 
+!=
+ (not equal), and 
+(
+ (left parenthesis).</li>
 </ul>
 <p dir="auto">This table gives a clear overview of the variety of tokens the Lexical Analyzer has to identify.</p>
 <p dir="auto"><img alt="slides/Pasted image 20250209093805_12.png" src="slides/Pasted image 20250209093805_12.png" class="internal-embed"></p>
@@ -222,7 +364,9 @@ td {
 <ul>
 <li dir="auto"><strong>Defined over an Alphabet:</strong> A regular expression is always defined over some alphabet (Σ). This alphabet is the set of all possible symbols that can be used in the strings that the regular expression describes. In the context of programming languages, the alphabet is typically ASCII or Unicode.</li>
 <li dir="auto"><strong>L(E) is the "Language":</strong> If E is a regular expression, then L(E) represents the "language," which is the set of strings generated or matched by E.</li>
-<li dir="auto"><strong>Example: {a}</strong> For each symbol 'a' in the alphabet, the regular expression <code>{a}</code> denotes a language containing just the single string "a." This is known as a symbol.</li>
+<li dir="auto"><strong>Example: {a}</strong> For each symbol 'a' in the alphabet, the regular expression 
+{a}
+ denotes a language containing just the single string "a." This is known as a symbol.</li>
 <li dir="auto"><strong>Empty sequence (λ):</strong> A regular expression generated with an empty sequence λ (lambda) is denoted by ε (epsilon).</li>
 </ul>
 <p dir="auto">Regular expressions provide a precise notation to define the structure of the different tokens. They are used to specify the patterns of characters that constitute valid tokens. The lexical analyzer uses these regular expressions to match patterns in the source code.</p>
@@ -247,21 +391,39 @@ td {
 <li dir="auto"><strong>Alphabet:</strong> The examples use the alphabet Σ = {a, b}. This means the regular expressions can only use the symbols 'a' and 'b'.</li>
 <li dir="auto"><strong>Examples:</strong>
 <ul>
-<li dir="auto"><code>a | b</code>: This means "a or b." The language contains either the string "a" or the string "b."</li>
-<li dir="auto"><code>(a | b)(a | b)</code>: This matches a string that is either "aa", "ab", "ba", or "bb". It is a concatenation of two symbols, each of which can be 'a' or 'b'.</li>
-<li dir="auto"><code>a*</code>: This matches zero or more occurrences of the character 'a'. The language includes "", "a", "aa", "aaa", and so on.</li>
-<li dir="auto"><code>(a | b)*</code>: This matches any string composed of zero or more 'a's and 'b's, in any order. This effectively matches any string composed of 'a' and 'b'.</li>
-<li dir="auto"><code>a | a*b</code>: This matches the string "a" or any string that begins with zero or more 'a's followed by a single 'b'. It includes strings like "a", "b", "ab", "aab", "aaab", etc.</li>
+<li dir="auto">
+a | b
+: This means "a or b." The language contains either the string "a" or the string "b."</li>
+<li dir="auto">
+(a | b)(a | b)
+: This matches a string that is either "aa", "ab", "ba", or "bb". It is a concatenation of two symbols, each of which can be 'a' or 'b'.</li>
+<li dir="auto">
+a*
+: This matches zero or more occurrences of the character 'a'. The language includes "", "a", "aa", "aaa", and so on.</li>
+<li dir="auto">
+(a | b)*
+: This matches any string composed of zero or more 'a's and 'b's, in any order. This effectively matches any string composed of 'a' and 'b'.</li>
+<li dir="auto">
+a | a*b
+: This matches the string "a" or any string that begins with zero or more 'a's followed by a single 'b'. It includes strings like "a", "b", "ab", "aab", "aaab", etc.</li>
 </ul>
 </li>
 <li dir="auto"><strong>Precedence and Associativity:</strong> The slide also outlines operator precedence and associativity, similar to arithmetic operators:
 <ul>
-<li dir="auto"><code>*</code> (Kleene Star): Highest precedence and left-associative.</li>
+<li dir="auto">
+*
+ (Kleene Star): Highest precedence and left-associative.</li>
 <li dir="auto">Concatenation: Second-highest precedence and left-associative.</li>
-<li dir="auto"><code>|</code> (or/union): Lowest precedence and left-associative.</li>
+<li dir="auto">
+|
+ (or/union): Lowest precedence and left-associative.</li>
 </ul>
 </li>
-<li dir="auto"><strong>Example of Operator Precedence:</strong> The example <code>(a) | ((b)*(c)) = a | b*c</code> illustrates how operator precedence affects the interpretation of a regular expression. Because the Kleene star has higher precedence than concatenation, <code>b*c</code> is interpreted as a Kleene star applied to 'b', followed by concatenation with 'c'.</li>
+<li dir="auto"><strong>Example of Operator Precedence:</strong> The example 
+(a) | ((b)*(c)) = a | b*c
+ illustrates how operator precedence affects the interpretation of a regular expression. Because the Kleene star has higher precedence than concatenation, 
+b*c
+ is interpreted as a Kleene star applied to 'b', followed by concatenation with 'c'.</li>
 </ul>
 <p dir="auto">The slide demonstrates how regular expressions are used to describe and specify patterns of strings based on a given alphabet. These regular expressions form the basis for defining tokens in the lexical analyzer.</p>
 <p dir="auto"><img alt="slides/Pasted image 20250209093806_18.png" src="slides/Pasted image 20250209093806_18.png" class="internal-embed"></p>
@@ -275,37 +437,49 @@ td {
 <p dir="auto"><img alt="slides/Pasted image 20250209093806_19.png" src="slides/Pasted image 20250209093806_19.png" class="internal-embed"></p>
 <p dir="auto">This slide provides several examples of regular expressions, along with the languages they define and some example words that belong to those languages.</p>
 <ul>
-<li dir="auto"><code>a | b</code>:
+<li dir="auto">
+a | b
+:
 <ul>
 <li dir="auto">Language: {a, b} (The set containing "a" or "b")</li>
 <li dir="auto">Example Words: a, b</li>
 </ul>
 </li>
-<li dir="auto"><code>ab*a</code>:
+<li dir="auto">
+ab*a
+:
 <ul>
 <li dir="auto">Language: {a}{b}*{a} (Matches "a" followed by zero or more "b"s, then followed by "a")</li>
 <li dir="auto">Example Words: aa, aba, abba, abbba</li>
 </ul>
 </li>
-<li dir="auto"><code>(ab)*</code>:
+<li dir="auto">
+(ab)*
+:
 <ul>
 <li dir="auto">Language: {ab}* (Matches zero or more repetitions of "ab")</li>
 <li dir="auto">Example Words: ε (the empty string), ab, abab, ababab, ...</li>
 </ul>
 </li>
-<li dir="auto"><code>abba</code>:
+<li dir="auto">
+abba
+:
 <ul>
 <li dir="auto">Language: {abba} (Matches only the string "abba")</li>
 <li dir="auto">Example Words: abba</li>
 </ul>
 </li>
-<li dir="auto"><code>(0 | 1)*0</code>:
+<li dir="auto">
+(0 | 1)*0
+:
 <ul>
 <li dir="auto">Language: {0}{1}* {0} (Matches strings of 0s and 1s that end in 0. This represents all binary even numbers).</li>
 <li dir="auto">Example Words: 0, 00, 10, 010, 110, ... (All binary even numbers)</li>
 </ul>
 </li>
-<li dir="auto"><code>b*(abb*)*(a | ε)</code>:
+<li dir="auto">
+b*(abb*)*(a | ε)
+:
 <ul>
 <li dir="auto">Language: Strings of a and b with NO consecutive a (Matches strings of 'a' and 'b' where no two 'a's are next to each other.)</li>
 <li dir="auto">Example Words: Strings of a and b with NO consecutive a</li>
@@ -326,7 +500,9 @@ td {
 <li dir="auto"><strong>[a-z A-Z]:</strong> Character set alternation (matches any lowercase or uppercase letter).</li>
 <li dir="auto"><strong>[abxyz]:</strong> One of the given characters (a | b | x | y | z).</li>
 <li dir="auto"><strong>. (dot):</strong> Stands for a single character (except newline).</li>
-<li dir="auto"><code>'a..+'</code>: Quotation: A string in quotes stands for itself literally.</li>
+<li dir="auto">
+'a..+'
+: Quotation: A string in quotes stands for itself literally.</li>
 </ul>
 <p dir="auto">This table provides a concise summary of the regular expression notations that the lexical analyzer will use.</p>
 <p dir="auto"><img alt="slides/Pasted image 20250209093806_21.png" src="slides/Pasted image 20250209093806_21.png" class="internal-embed"></p>
@@ -411,11 +587,19 @@ td {
 <li dir="auto">A number can also start with a point followed by one or more digits.</li>
 </ol>
 </li>
-<li dir="auto"><strong>Solution:</strong> The regular expression to match the numbers is given as: <code>[(0-9)+ [“.”(0-9)*]? ] | [“.”(0-9) +]</code>
+<li dir="auto"><strong>Solution:</strong> The regular expression to match the numbers is given as: 
+[(0-9)+ [“.”(0-9)*]? ] | [“.”(0-9) +]
+
 <ul>
-<li dir="auto"><code>[(0-9)+ [“.”(0-9)*]? ]</code>: This part matches the case where the number starts with one or more digits (0-9), followed optionally by a decimal point and zero or more digits.</li>
-<li dir="auto"><code>|</code>: The pipe symbol is "or."</li>
-<li dir="auto"><code>[“.”(0-9) +]</code>: This part handles the case where the number starts with a decimal point and is followed by one or more digits.</li>
+<li dir="auto">
+[(0-9)+ [“.”(0-9)*]? ]
+: This part matches the case where the number starts with one or more digits (0-9), followed optionally by a decimal point and zero or more digits.</li>
+<li dir="auto">
+|
+: The pipe symbol is "or."</li>
+<li dir="auto">
+[“.”(0-9) +]
+: This part handles the case where the number starts with a decimal point and is followed by one or more digits.</li>
 </ul>
 </li>
 </ul>
@@ -424,11 +608,21 @@ td {
 <p dir="auto">This slide presents a table showing regular expressions used to identify tokens in a programming language. The slide shows the relationship between the regular expression and the token type.</p>
 <ul>
 <li dir="auto"><strong>if:</strong> The regular expression "if" directly represents the keyword "if". The Token Type would be [Return IF;].</li>
-<li dir="auto"><code>[a-z][a-z0-9]*</code>: This expression represents an identifier. It starts with a lowercase letter (a-z) and can be followed by zero or more lowercase letters or digits (0-9). The token type would be [return ID ].</li>
-<li dir="auto"><code>[0-9]+</code>: This expression matches a number. It consists of one or more digits. The Token Type would be [return NUM].</li>
-<li dir="auto"><code>([0-9]+ '.' [0-9]*) | (['.' [0-9]+)</code>: This is for a real number (floating-point number). It will match integers, decimals, and scientific notation.</li>
-<li dir="auto"><code>('('*[a-z]*'\n')|(') | '\n' | '*/') +</code>: Regular expression to match comments. This handles the comments with different delimiters.</li>
-<li dir="auto"><code>.</code>: This represents a catch-all for any invalid or unrecognized characters. The token type is [return ERROR].</li>
+<li dir="auto">
+[a-z][a-z0-9]*
+: This expression represents an identifier. It starts with a lowercase letter (a-z) and can be followed by zero or more lowercase letters or digits (0-9). The token type would be [return ID ].</li>
+<li dir="auto">
+[0-9]+
+: This expression matches a number. It consists of one or more digits. The Token Type would be [return NUM].</li>
+<li dir="auto">
+([0-9]+ '.' [0-9]*) | (['.' [0-9]+)
+: This is for a real number (floating-point number). It will match integers, decimals, and scientific notation.</li>
+<li dir="auto">
+('('*[a-z]*'\n')|(') | '\n' | '*/') +
+: Regular expression to match comments. This handles the comments with different delimiters.</li>
+<li dir="auto">
+.
+: This represents a catch-all for any invalid or unrecognized characters. The token type is [return ERROR].</li>
 </ul>
 <p dir="auto">This is a practical example of using regular expressions to specify lexical tokens, which will be used by a lexical analyzer.</p>
 <p dir="auto"><img alt="slides/Pasted image 20250209093807_26.png" src="slides/Pasted image 20250209093807_26.png" class="internal-embed"></p>
