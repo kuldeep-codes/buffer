@@ -74,13 +74,13 @@ img {
 </style>
     </head>
     <body>
-<h1 data-heading="response_1.md" dir="auto">response_1.md</h1>
+<h1 data-heading="Question 1" dir="auto">Question 1</h1>
 <p dir="auto">Okay, let's break down this question about filtering Vendor Past Due Invoices in what sounds like a Dynamics 365 environment. The question is essentially asking: "Imagine you're looking at a list of overdue vendor invoices, and you want to narrow down that list. What are <em>two</em> ways you can filter that information within the system?"</p>
 <p dir="auto">The question is focused on the <em>types</em> of filtering available, not necessarily <em>what</em> you'd be filtering <em>by</em> (like a specific vendor or date range). It's hinting that there are multiple filtering mechanisms built into the system, and it wants us to identify two of them. The core concept here is "filtering," which, in database terms, just means selecting a subset of data based on certain criteria. The "Vendor Past Due Invoices form" is simply the specific screen/area within the application where this data is displayed.</p>
 <p dir="auto">So, we are looking for named filtering features. The options given are QuickFilter, Advanced Filter, Grid Column Filtering, and Filter Pane. Now, with that clear understanding of what the question is <em>really</em> asking, let's consider the options:</p>
 <p dir="auto">Knowing Dynamics 365, QuickFilter is definitely a common way to filter. It usually sits above a list and lets you quickly type in something to search for within a specific field. Grid Column Filtering is also a standard feature, and often involves clicking on the header of a column (like "Due Date" or "Vendor Name") to sort or filter by that column's values. The other two are red herrings. Advanced filters usually allow for more complex filtering options, and while it is a feature in D365, it is usually accessed through a separate button or menu option. Filter pane is another option that would allow filtering, but it is not one of the options described in the context of the question.</p>
 <p dir="auto">Therefore, QuickFilter and Grid Column Filtering are indeed the two filtering methods one can use directly on the Vendor Past Due Invoices form.</p>
-<h1 data-heading="response_2.md" dir="auto">response_2.md</h1>
+<h1 data-heading="Question 2" dir="auto">Question 2</h1>
 <p dir="auto">Okay, let's walk through this Dynamics 365 Finance and Operations development question step-by-step. It's asking about how to modify an existing form ("CashDisc") to meet some unspecified requirements, and it's broken down into three distinct parts, each with a multiple-choice selection. The overall theme is about making changes in a way that aligns with best practices for customization and maintainability in D365 F&amp;O. It's testing knowledge of extension concepts, table modifications, and form updates.</p>
 <p dir="auto">Let's analyze each part separately:</p>
 <ol>
@@ -122,7 +122,7 @@ img {
 <li dir="auto">Data source</li>
 </ol>
 <p dir="auto">This reflects the standard and recommended approach to customizing forms and tables in Dynamics 365 Finance and Operations, using extensions to avoid overlayering and ensuring that the form's data source is updated to reflect the changes made to the underlying table structure.</p>
-<h1 data-heading="response_3.md" dir="auto">response_3.md</h1>
+<h1 data-heading="Question 3" dir="auto">Question 3</h1>
 <p dir="auto">Okay, this question is <em>very</em> similar in concept to the previous one, but it's presented in a more direct, problem-solving format.  It's still about modifying the :CashDisc: functionality in Dynamics 365 Finance and Operations, but this time it's framed as meeting the requirements of a specific user ("User1"). The underlying principle remains the same: how do you customize existing objects in D365 F&amp;O in a best-practice, maintainable way?</p>
 <p dir="auto">Let's look at the options, keeping in mind the core principles of D365 F&amp;O customization:</p>
 <ul>
@@ -146,7 +146,7 @@ img {
 </ul>
 <p dir="auto">The question is designed to reinforce the importance of extensions. Option A is the only one that explicitly and correctly describes the extension-based approach. The other options are either incorrect (creating a new table), ambiguous (using "Open Designer"), or represent outdated and problematic practices (overlayering).</p>
 <p dir="auto">Therefore, the answer is definitively <strong>A. Create an extension of CashDisc in a new project and add the field to the extended table.</strong> This is the only option that aligns with modern D365 F&amp;O customization best practices.</p>
-<h1 data-heading="response_4.md" dir="auto">response_4.md</h1>
+<h1 data-heading="Question 4" dir="auto">Question 4</h1>
 <p dir="auto">Okay, this question dives into security configuration within Dynamics 365 Finance and Operations, specifically related to the :CashDisc: form. It presents two very similar scenarios, both labeled "Accounts payable," but with slightly different recommended actions. The key here is understanding how roles, duties, and privileges interact in D365 F&amp;O security, and how to modify them appropriately.</p>
 <p dir="auto">Let's break down the concepts first:</p>
 <ul>
@@ -192,7 +192,7 @@ img {
 <li dir="auto"><strong>Create a new duty and add the existing privilege and add duty to the role</strong></li>
 </ol>
 <p dir="auto">This reflects the two most common and efficient ways to adjust security in D365 F&amp;O: modifying existing privileges when possible and creating new ones when necessary, always working within the role-duty-privilege framework.</p>
-<h1 data-heading="response_5.md" dir="auto">response_5.md</h1>
+<h1 data-heading="Question 5" dir="auto">Question 5</h1>
 <p dir="auto">Okay, this question tests your understanding of how to extend existing code logic in Dynamics 365 Finance and Operations, specifically when dealing with enumerations (enums) and switch statements. The scenario presents a :switch: statement that handles different :TruckStatus: enum values. The goal is to add two new statuses (:Quarantine:, :InTransit:) to the enum <em>and</em> handle them in the existing code, all while adhering to D365 F&amp;O best practices (i.e., avoiding overlayering).</p>
 <p dir="auto">First, let's clarify the concepts:</p>
 <ul>
@@ -222,7 +222,7 @@ img {
 </ul>
 <p dir="auto">The question is testing your understanding of how to extend code <em>correctly</em> in D365 F&amp;O. Option B is the only one that uses a post-handler (avoiding overlayering) and uses the enum values directly (making the code readable and maintainable). Options C and D are technically flawed and go against best practices. Option A is directly overlayering.</p>
 <p dir="auto">Therefore, the answer is definitively <strong>B. Add a post handler to the method that checks the enumeration and logic for your new enumeration values using the enumeration value.</strong> This is the clean, maintainable, and upgrade-safe way to extend the existing :switch: statement to handle the new enum values.</p>
-<h1 data-heading="response_6.md" dir="auto">response_6.md</h1>
+<h1 data-heading="Question 6" dir="auto">Question 6</h1>
 <p dir="auto">Okay, this question is about choosing the correct deployment option (cloud, on-premises, or both) for various Dynamics 365 Unified Operations features. It's testing your knowledge of which features are available in which deployment models. It's a drag-and-drop style question, but we can analyze it just as effectively in text.</p>
 <p dir="auto">Let's break down each requirement and the associated deployment options:</p>
 <ul>
@@ -268,7 +268,7 @@ img {
 <li dir="auto"><strong>Implement Task Recorder:</strong> <strong>cloud or on-premises</strong></li>
 </ol>
 <p dir="auto">I made a mistake in the solution. Task Recorder can be used with both the cloud and on-premises deployments. I have corrected it.</p>
-<h1 data-heading="response_7.md" dir="auto">response_7.md</h1>
+<h1 data-heading="Question 7" dir="auto">Question 7</h1>
 <p dir="auto">Okay, this question is about choosing the correct execution mode for different batch processes within Dynamics 365 Finance, using the SysOperation framework. It's testing your understanding of the differences between synchronous, asynchronous, and reliable asynchronous execution, and when to apply each one.</p>
 <p dir="auto">Let's define the execution modes first:</p>
 <ul>
@@ -299,7 +299,7 @@ img {
 <li dir="auto"><strong>Short operation:</strong> <strong>synchronous</strong></li>
 <li dir="auto"><strong>Runs on a recurring schedule:</strong> <strong>asynchronous</strong></li>
 </ol>
-<h1 data-heading="response_8.md" dir="auto">response_8.md</h1>
+<h1 data-heading="Question 8" dir="auto">Question 8</h1>
 <p dir="auto">Okay, this question is focused on the rules for modifying Extended Data Types (EDTs) in Dynamics 365 Finance using extensions. It's testing your understanding of what changes are allowed and disallowed when extending EDTs, specifically concerning field size.</p>
 <p dir="auto">Let's break down the concepts:</p>
 <ul>
@@ -325,7 +325,7 @@ img {
 </ul>
 <p dir="auto">The question is testing a very specific rule about EDT extensions: you can increase the size of a string-based EDT at the root level, but you cannot decrease it anywhere in the hierarchy.</p>
 <p dir="auto">Therefore, the answer is definitively <strong>D. Create an extension for AccountBase and increase the field size.</strong> This is the only option that adheres to the rules of EDT modification in D365 F&amp;O.</p>
-<h1 data-heading="response_9.md" dir="auto">response_9.md</h1>
+<h1 data-heading="Question 9" dir="auto">Question 9</h1>
 <p dir="auto">Okay, this question focuses on the best practices for creating a new model in Dynamics 365 Finance and Operations when you need to extend objects from a standard package (in this case, "Application Foundation"). It's testing your understanding of model creation, package dependencies, and extension principles.</p>
 <p dir="auto">Let's clarify the key concepts:</p>
 <ul>
@@ -354,7 +354,7 @@ img {
 </ul>
 <p dir="auto">The question is testing the core principles of model creation and package dependencies. Options B and E are incorrect because they violate the fundamental rules of D365 F&amp;O customization (no overlayering, no modifying standard packages). The creation of a new model that references a package is essential for proper compilation and execution.</p>
 <p dir="auto">The correct answer is <strong>C. Reference the Application Foundation package when creating the extension model</strong>. The other option that is required is to create a new model. Since that is not presented as an option, the best we can do is to choose option A, which describes what will be done once the model is created and the reference is established.</p>
-<h1 data-heading="response_10.md" dir="auto">response_10.md</h1>
+<h1 data-heading="Question 10" dir="auto">Question 10</h1>
 <p dir="auto">Okay, this question is about identifying the specific area within Lifecycle Services (LCS) that provides a structured project methodology and tracking capabilities. It's testing your familiarity with the different components and functionalities of LCS.</p>
 <p dir="auto">Let's break down the options:</p>
 <ul>
@@ -376,7 +376,7 @@ img {
 </ul>
 <p dir="auto">The question is specifically asking about the area within LCS that provides a structured methodology and milestone tracking. The LCS project workspace is designed precisely for this purpose. The central repository is for storing assets, and "Unified control" is not a relevant concept.</p>
 <p dir="auto">Therefore, the answer is definitively <strong>B. LCS project workspace.</strong> This is the core area within LCS for managing a Dynamics 365 implementation project, including its methodology, milestones, and deliverables.</p>
-<h1 data-heading="response_11.md" dir="auto">response_11.md</h1>
+<h1 data-heading="Question 11" dir="auto">Question 11</h1>
 <p dir="auto">Okay, this question is about matching specific Lifecycle Services (LCS) performance monitoring tools to the appropriate environment types in Dynamics 365 Finance. It's testing your knowledge of which tools are available and useful in different stages of the development and testing lifecycle.</p>
 <p dir="auto">Let's break down the tools and environment types:</p>
 <ul>
@@ -425,7 +425,7 @@ img {
 <li dir="auto"><strong>System Diagnostics:</strong> User Acceptance Testing (UAT) only</li>
 </ol>
 <p dir="auto">The answer provided for System Diagnostics is the best possible answer given the context.</p>
-<h1 data-heading="response_12.md" dir="auto">response_12.md</h1>
+<h1 data-heading="Question 12" dir="auto">Question 12</h1>
 <p dir="auto">Okay, this question is about the possible response messages you might receive when using the :GetExecutionSummaryStatus: API call in Dynamics 365 Finance and Operations, likely in the context of data integration or recurring integrations. It's testing your familiarity with the specific status values that this API returns.</p>
 <p dir="auto">Let's break down the context and then the options:</p>
 <ul>
@@ -449,7 +449,7 @@ img {
 </ul>
 <p dir="auto">The question is asking for the option that is <em>not</em> a valid response. The other three options (:NotRun:, :Failed:, :Canceled:) are all documented and expected status values.</p>
 <p dir="auto">Therefore, the answer is definitively <strong>D. Starting.</strong> This is not a status message returned by the :GetExecutionSummaryStatus: API.</p>
-<h1 data-heading="response_13.md" dir="auto">response_13.md</h1>
+<h1 data-heading="Question 13" dir="auto">Question 13</h1>
 <p dir="auto">Okay, this question is about configuring Electronic Reporting (ER) in Dynamics 365 Finance and Operations for importing data from electronic documents. It's focusing on the relationship between format configurations, model mappings, and how they're used to handle different types of incoming documents.</p>
 <p dir="auto">Let's break down the key concepts:</p>
 <ul>
@@ -478,7 +478,7 @@ img {
 </ul>
 <p dir="auto">The question is testing your understanding of the core principle of ER: use a consistent data model (and therefore the same model mapping) and different format configurations to handle variations in the <em>external</em> document structure.</p>
 <p dir="auto">Therefore, the answer is definitively <strong>A. The same model mapping and destinations with different formats for different types of incoming documents.</strong> This is the efficient and maintainable way to configure ER for importing data from various sources.</p>
-<h1 data-heading="response_14.md" dir="auto">response_14.md</h1>
+<h1 data-heading="Question 14" dir="auto">Question 14</h1>
 <p dir="auto">Okay, this question is about error handling in X++ (the programming language of Dynamics 365 Finance and Operations) and specifically how to re-execute a :try: block after catching an exception. It's testing your knowledge of the :retry: statement within a :try...catch: structure.</p>
 <p dir="auto">Let's break down the concepts:</p>
 <ul>
@@ -503,7 +503,7 @@ img {
 </ul>
 <p dir="auto">The question is testing your knowledge of the :retry: statement, which is the <em>only</em> mechanism in X++ for directly re-executing a :try: block from within its corresponding :catch: block.</p>
 <p dir="auto">Therefore, the answer is definitively <strong>C. The retry statement could be used in the catch statement to rerun the try block.</strong> This is the correct and intended use of the :retry: statement in X++ error handling.</p>
-<h1 data-heading="response_15.md" dir="auto">response_15.md</h1>
+<h1 data-heading="Question 15" dir="auto">Question 15</h1>
 <p dir="auto">Okay, this question is about choosing the most appropriate workspace element in Dynamics 365 Finance and Operations to quickly identify sales orders with a specific status ("Pending confirmation"). It's testing your understanding of the different types of workspace elements and their typical uses.</p>
 <p dir="auto">Let's break down the options:</p>
 <ul>
@@ -522,7 +522,7 @@ img {
 </ul>
 <p dir="auto">The question is asking for the element that provides the <em>quickest</em> and most direct way to identify pending orders. A tile is specifically designed for this purpose – displaying key counts and information at a glance on the workspace. The other options are either less suitable for this specific need (charts) or less direct (a link).</p>
 <p dir="auto">Therefore, the answer is definitively <strong>D. Tile.</strong> This is the most appropriate workspace element for quickly identifying the number of sales orders requiring attention.</p>
-<h1 data-heading="response_16.md" dir="auto">response_16.md</h1>
+<h1 data-heading="Question 16" dir="auto">Question 16</h1>
 <p dir="auto">Okay, this question is about the correct sequence of steps to create a table extension class in Dynamics 365 Finance and Operations using Visual Studio. It's testing your understanding of the proper syntax and structure for extension classes. It's a drag-and-drop style question in the original format, but we can analyze it as an ordered list.</p>
 <p dir="auto">Let's break down the steps and their order:</p>
 <ol>
@@ -560,7 +560,7 @@ img {
 <li dir="auto"><strong>Add a new method to the class and implement it.</strong></li>
 </ol>
 <p dir="auto">This sequence ensures that the extension class is correctly defined, linked to the target table, and ready for your custom code.</p>
-<h1 data-heading="response_17.md" dir="auto">response_17.md</h1>
+<h1 data-heading="Question 17" dir="auto">Question 17</h1>
 <p dir="auto">Okay, this question is about choosing the most appropriate type of conditional statement in X++ (the programming language of Dynamics 365 Finance and Operations) for a specific scenario. The scenario involves checking a variable against multiple possible values ("In progress", "Completed", "Canceled") and executing different code blocks based on the value, with a default case for other values.</p>
 <p dir="auto">Let's analyze the options:</p>
 <ul>
@@ -584,7 +584,7 @@ img {
 </ul>
 <p dir="auto">The question is testing your understanding of when to use a :switch: statement versus other conditional constructs.  A :switch: statement is the most efficient and readable way to handle multiple, discrete values of a variable, making it the best choice for this scenario.</p>
 <p dir="auto">Therefore, the answer is definitively <strong>D. Switch statement.</strong> This is the most appropriate and efficient conditional statement for checking a variable against multiple values with a default case in X++.</p>
-<h1 data-heading="response_18.md" dir="auto">response_18.md</h1>
+<h1 data-heading="Question 18" dir="auto">Question 18</h1>
 <p dir="auto">Okay, this question deals with creating reports in Dynamics 365 Finance and Operations, specifically focusing on attributes used within the SysOperation framework (often used for reports) to define parameters and control the report dialog. It's testing your knowledge of :SRSReportParameterAttribute:, :SysOperationDisplayOrderAttribute:, and :DataMemberAttribute: and where they are applied.</p>
 <p dir="auto">Let's break down the requirements and the attributes:</p>
 <ul>
@@ -626,7 +626,7 @@ img {
 <li dir="auto"><strong>:DataMemberAttribute:</strong></li>
 </ol>
 <p dir="auto">The question provided the correct answer as including 4 options. There are only 3 requirements. The first is the :SRSReportParameterAttribute:, and the other two are the :DataMemberAttribute:. The fourth attribute listed in the answer should not be there.</p>
-<h1 data-heading="response_19.md" dir="auto">response_19.md</h1>
+<h1 data-heading="Question 19" dir="auto">Question 19</h1>
 <p dir="auto">Okay, this question is about writing an embedded SQL statement in X++ (the programming language of Dynamics 365 Finance and Operations) to select records from a table in a specific order. It's testing your understanding of the :select: statement syntax, specifically the :order by: clause.</p>
 <p dir="auto">Let's break down the requirements and the options:</p>
 <ul>
@@ -668,7 +668,7 @@ img {
 </ul>
 <p dir="auto">The question is testing your fundamental understanding of the :select: statement's :order by: clause. The correct syntax is :order by fieldName [asc | desc]:.</p>
 <p dir="auto">Therefore, the answer is <strong>C. Select VehicleId from vehicle order by VehicleId asc;</strong> with the caveat that to select all fields, you don't have to specify the field.</p>
-<h1 data-heading="response_20.md" dir="auto">response_20.md</h1>
+<h1 data-heading="Question 20" dir="auto">Question 20</h1>
 <p dir="auto">Okay, this question is about identifying the technology in Dynamics 365 Finance and Operations that provides the broadest and most general-purpose integration capabilities with other systems. It's testing your understanding of the different integration options available.</p>
 <p dir="auto">Let's analyze the options:</p>
 <ul>
@@ -684,7 +684,7 @@ img {
 </ul>
 <p dir="auto">The question is asking for the technology that enables the <em>broadest</em> integration. OData is designed specifically for this purpose, providing a standardized way for external systems to interact with Dynamics 365 F&amp;O data. Excel integration is more limited, and custom services are for specific, tailored scenarios.</p>
 <p dir="auto">Therefore, the answer is definitively <strong>C. OData.</strong> This is the core technology for broad, standards-based integration between Dynamics 365 Finance and Operations and other systems.</p>
-<h1 data-heading="response_21.md" dir="auto">response_21.md</h1>
+<h1 data-heading="Question 21" dir="auto">Question 21</h1>
 <p dir="auto">Okay, this question is about designing a data structure in Dynamics 365 Finance and Operations to manage a "vendor exclusion list." It's testing your understanding of table relationships, extensions, and how to model this specific scenario. It's presented as a two-part question with drop-down options.</p>
 <p dir="auto">Let's analyze the scenario and the options:</p>
 <p dir="auto">The core requirement is to create a way to exclude certain vendors, presumably from some process or functionality. This implies a many-to-many relationship:</p>
@@ -724,7 +724,7 @@ img {
 <li dir="auto"><strong>Relationship Type</strong></li>
 </ol>
 <p dir="auto">This reflects the standard approach to modeling a many-to-many relationship in a database: creating a separate table to represent the relationship and defining the relationship type between the tables.</p>
-<h1 data-heading="response_22.md" dir="auto">response_22.md</h1>
+<h1 data-heading="Question 22" dir="auto">Question 22</h1>
 <p dir="auto">Okay, this question is about choosing the appropriate form pattern in Dynamics 365 Finance and Operations for a "Vendor exclusion list." It's testing your understanding of the different standard form patterns and when to apply them.</p>
 <p dir="auto">Let's analyze the scenario and the options:</p>
 <p dir="auto">The "Vendor exclusion list" implies a list of records, likely representing vendors that are excluded from some process or functionality. We need a form that allows users to view, manage (add, edit, delete), and potentially filter this list.</p>
@@ -751,7 +751,7 @@ img {
 </ul>
 <p dir="auto">The question is asking for the most appropriate pattern for managing a list of records. The List Page pattern is specifically designed for this purpose, providing the necessary features and flexibility.</p>
 <p dir="auto">Therefore, the answer is definitively <strong>C. List Page.</strong> This is the standard and recommended form pattern for managing a list of records like a "Vendor exclusion list" in Dynamics 365 Finance and Operations.</p>
-<h1 data-heading="response_23.md" dir="auto">response_23.md</h1>
+<h1 data-heading="Question 23" dir="auto">Question 23</h1>
 <p dir="auto">Okay, this question is about modifying the behavior of a standard form (the purchase order creation form) in Dynamics 365 Finance and Operations. It's testing your understanding of the different extension techniques available for customizing form behavior, specifically focusing on validation.</p>
 <p dir="auto">Let's break down the concepts and the options:</p>
 <ul>
@@ -784,7 +784,7 @@ img {
 <strong>C. In Application Explorer, create a form extension and implement validation</strong><br>
 <strong>D. Implement Chain of Command (CoC) and method wrapping by creating a form extension class</strong></p>
 <p dir="auto">While both are correct, using CoC is the recommended approach for more complex scenarios.</p>
-<h1 data-heading="response_24.md" dir="auto">response_24.md</h1>
+<h1 data-heading="Question 24" dir="auto">Question 24</h1>
 <p dir="auto">Okay, this question is about understanding common inventory and purchasing parameters in Dynamics 365 Finance and Operations (or similar ERP systems). It's asking which parameter represents the <em>typical</em> or <em>usual</em> order quantity for an item.</p>
 <p dir="auto">Let's analyze the options:</p>
 <ul>
@@ -803,7 +803,7 @@ img {
 </ul>
 <p dir="auto">The question is asking for the parameter that represents the <em>typical</em> order quantity. The "standard order quantity" is specifically designed for this purpose. The other options represent minimums, maximums, or quantity constraints.</p>
 <p dir="auto">Therefore, the answer is definitively <strong>B. Standard order quantity.</strong> This parameter is used to define the usual or default order quantity for an item in Dynamics 365 F&amp;O and similar systems.</p>
-<h1 data-heading="response_25.md" dir="auto">response_25.md</h1>
+<h1 data-heading="Question 25" dir="auto">Question 25</h1>
 <p dir="auto">Okay, this question is about the correct usage of the :var: keyword and ternary operators in X++ (the programming language of Dynamics 365 Finance and Operations). It's testing your understanding of type inference and the rules for valid X++ expressions. The scenario involves a code review where the use of :var: is being scrutinized.</p>
 <p dir="auto">Let's break down the concepts:</p>
 <ul>
@@ -844,7 +844,7 @@ img {
 </ul>
 <p dir="auto">The question is testing your understanding of type inference with :var: and the type compatibility rules for ternary operators. All of the options given have type mismatches.</p>
 <p dir="auto">Therefore, all options given are incorrect. The best option provided as the solution is <strong>A. var var1 = systemDateGet (); var1 = var1 ? today(); ''No today'';</strong> which is still incorrect, as explained above.</p>
-<h1 data-heading="response_26.md" dir="auto">response_26.md</h1>
+<h1 data-heading="Question 26" dir="auto">Question 26</h1>
 <p dir="auto">Okay, this question is about identifying the correct term for the process of analyzing and monitoring the health of a Dynamics 365 Finance and Operations (or similar system) environment using various metrics. It's a terminology question, testing your understanding of common monitoring concepts.</p>
 <p dir="auto">Let's analyze the options:</p>
 <ul>
@@ -863,7 +863,7 @@ img {
 </ul>
 <p dir="auto">The question is specifically asking about monitoring the <em>health</em> of the <em>environment</em> using various metrics. "Environment monitoring" is the most precise and commonly used term for this activity in the context of Dynamics 365 and similar systems.</p>
 <p dir="auto">Therefore, the answer is definitively <strong>B. Environment monitoring.</strong> This term best describes the comprehensive process of analyzing and monitoring the health of a Dynamics 365 F&amp;O environment.</p>
-<h1 data-heading="response_27.md" dir="auto">response_27.md</h1>
+<h1 data-heading="Question 27" dir="auto">Question 27</h1>
 <p dir="auto">Okay, this question is about choosing the correct form pattern in Dynamics 365 Finance and Operations to achieve a specific visual layout – vertically aligned tabs. It's a "yes/no" question testing your understanding of the characteristics of different form patterns.</p>
 <p dir="auto">Let's analyze the proposed solution:</p>
 <ul>
@@ -874,7 +874,7 @@ img {
 <p dir="auto">Therefore, the "Details Master" pattern does <em>not</em> achieve the goal of vertically aligned tabs.</p>
 <p dir="auto">The question is testing your knowledge of the visual layout produced by the "Details Master" pattern. It's a straightforward "yes/no" based on whether the pattern matches the desired outcome.</p>
 <p dir="auto">The correct answer is <strong>B. No</strong>. The Details Master pattern uses horizontal tabs, not vertical tabs. A pattern like "Simple Details" or potentially a custom form design would be needed to achieve vertical tabs.</p>
-<h1 data-heading="response_28.md" dir="auto">response_28.md</h1>
+<h1 data-heading="Question 28" dir="auto">Question 28</h1>
 <p dir="auto">Okay, this question is about explaining the fundamental concepts of models, packages, and projects in Dynamics 365 Finance and Operations development. It's testing your understanding of how these elements relate to each other and their roles in the development and deployment process.</p>
 <p dir="auto">Let's analyze the options and identify the three correct concepts:</p>
 <ul>
@@ -907,7 +907,7 @@ img {
 <li dir="auto"><strong>E. A package is a deployment unit that may contain one or more models</strong></li>
 </ul>
 <p dir="auto">These three statements accurately describe the relationships and roles of models, packages, and projects in D365 F&amp;O development.</p>
-<h1 data-heading="response_29.md" dir="auto">response_29.md</h1>
+<h1 data-heading="Question 29" dir="auto">Question 29</h1>
 <p dir="auto">Okay, this question is a series of "yes/no" statements about table extensions in Dynamics 365 Finance and Operations. It's testing your understanding of the capabilities and limitations of table extensions.</p>
 <p dir="auto">Let's analyze each statement:</p>
 <ol>
@@ -948,7 +948,7 @@ img {
 <li dir="auto"><strong>No</strong></li>
 </ol>
 <p dir="auto">The answer provided for the last option is incorrect.</p>
-<h1 data-heading="response_30.md" dir="auto">response_30.md</h1>
+<h1 data-heading="Question 30" dir="auto">Question 30</h1>
 <p dir="auto">Okay, this question is about identifying the key technology that enables data flow between Dynamics 365 Finance and Operations and <em>other</em> Dynamics 365 applications (like Sales, Customer Service, etc.). It's testing your understanding of the broader Dynamics 365 ecosystem and how data is shared across applications.</p>
 <p dir="auto">Let's analyze the options:</p>
 <ul>
@@ -967,7 +967,7 @@ img {
 </ul>
 <p dir="auto">The question is asking for the technology that <em>enables</em> the flow of data <em>between</em> Dynamics 365 applications. The Common Data Service (Dataverse) is specifically designed for this purpose, providing a shared data platform. The other options are either tools (Power Automate, Data management workspace) or components of the integration process (data entities), but not the core enabling technology.</p>
 <p dir="auto">Therefore, the answer is definitively <strong>B. Common Data Service.</strong> This is the foundation for data sharing and integration across the Dynamics 365 ecosystem.</p>
-<h1 data-heading="response_31.md" dir="auto">response_31.md</h1>
+<h1 data-heading="Question 31" dir="auto">Question 31</h1>
 <p dir="auto">Okay, let's break down this question about Dynamics 365 Finance and how to trigger an integration based on a production order's status. It's essentially asking: "How can I get a notification, and therefore start an integration, when something happens with a production order, like it starting?"</p>
 <p dir="auto">The question revolves around real-time (or near real-time) monitoring of events within Dynamics 365. We're not looking for something that runs on a fixed schedule, nor are we necessarily exporting a bunch of data. We're focused on a specific <em>trigger</em> – the start of a process within a production order. This tells us we need a mechanism that's event-driven.</p>
 <p dir="auto">Let's think about what "production order status" means. Production orders go through different stages (Created, Estimated, Scheduled, Started, Reported as Finished, Ended, etc.). The question specifies "when a specific process starts," meaning we're likely interested in when the status changes to "Started."</p>
@@ -980,7 +980,7 @@ img {
 </ul>
 <p dir="auto">Given this, the question is highlighting a scenario that perfectly aligns with the purpose of Business Events. And the question asks which tool should you use and the correct answer is a Business Event.</p>
 <p dir="auto">So, the answer is indeed <strong>Business Event</strong>. Business events in Dynamics 365 are designed to be triggered when specific actions or changes occur within the system, such as a change in the production order status. You would configure a business event to be triggered when the production order status changes to "Started." This business event would then send a notification (often to an endpoint like Microsoft Power Automate or Azure Logic Apps) which would, in turn, kick off the integration. The other options are not suitable for triggering an action based on an event. They are either scheduled or focused on data export, rather than real-time event notification.</p>
-<h1 data-heading="response_32.md" dir="auto">response_32.md</h1>
+<h1 data-heading="Question 32" dir="auto">Question 32</h1>
 <p dir="auto">Okay, let's dissect this Dynamics 365 Finance code extension scenario. The core problem is about extending an existing enumeration (adding new status values) and then making sure a :switch: statement that uses that enumeration still works correctly <em>without modifying the original code directly</em>. This is a classic extension scenario, emphasizing maintainability and avoiding over-layering.</p>
 <p dir="auto">First, let's clarify the concepts:</p>
 <ul>
@@ -1010,7 +1010,7 @@ The solution checks the value of :truckTable.TruckStatus: to check if the value 
 </ol>
 <p dir="auto">The solution <em>does</em> meet the goal. It correctly extends the enum and provides a way to handle the new enum values in the context of the existing :switch: statement <em>without</em> modifying the original :switch: statement. The use of a post-handler and integer value checks is a valid and common approach for this type of extension scenario.</p>
 <p dir="auto">Therefore, the answer is <strong>A. Yes</strong>.</p>
-<h1 data-heading="response_33.md" dir="auto">response_33.md</h1>
+<h1 data-heading="Question 33" dir="auto">Question 33</h1>
 <p dir="auto">Okay, let's break down this Dynamics 365 Finance and Operations reporting question.  It's all about understanding the different components involved in building a report when you can't just use a simple query.  The scenario emphasizes the need for parameters and a structured approach to data retrieval and processing.</p>
 <p dir="auto">Here's a breakdown of what the question is getting at, and then we'll address each of the five parts:</p>
 <ul>
@@ -1124,7 +1124,7 @@ The solution checks the value of :truckTable.TruckStatus: to check if the value 
 </li>
 </ol>
 <p dir="auto">In summary, the question walks us through the key components of a report that requires parameters and custom data processing. It highlights the roles of the data contract class (for parameters), the data provider class (for data retrieval and processing), and the attributes that connect them and define their behavior. The answers provided are the correct answers.</p>
-<h1 data-heading="response_34.md" dir="auto">response_34.md</h1>
+<h1 data-heading="Question 34" dir="auto">Question 34</h1>
 <p dir="auto">Okay, let's break down this X++ code question about updating records in Dynamics 365 Finance and Operations. The core concept is how to select a <em>specific</em> record for updating using the :update: method.</p>
 <p dir="auto">Here's a breakdown of the question and the options:</p>
 <ul>
@@ -1171,7 +1171,7 @@ sampleTable.SomeField = "New Value";</p>
 </ul>
 <p dir="auto">The question focuses solely on the filtering part, and the :where: clause is the correct way to do that.</p>
 <p dir="auto">Therefore, the answer is <strong>A. :where sampleTable.AccountNum == "1234":</strong>.</p>
-<h1 data-heading="response_35.md" dir="auto">response_35.md</h1>
+<h1 data-heading="Question 35" dir="auto">Question 35</h1>
 <p dir="auto">Okay, let's clarify this question about the Bank Management workspace in Dynamics 365 Finance. The question is essentially asking: "If you see a summarized amount in the Bank Management workspace, and you want to see the individual transactions that contribute to that total, which option allows you to do that?"</p>
 <p dir="auto">The Bank Management workspace, as the name suggests, is a central place for managing bank accounts, transactions, and reconciliations. It provides summary views and detailed views of your bank data. The key here is understanding the concept of "drilling down" – going from a summary level to a more detailed, granular level.</p>
 <p dir="auto">Let's examine the options:</p>
@@ -1182,7 +1182,7 @@ sampleTable.SomeField = "New Value";</p>
 </ul>
 <p dir="auto">The question is specifically about seeing the transactions that make up a <em>summary amount</em>. In the context of bank reconciliation, the "Bridged Transactions Amount" represents a summary of transactions that are in a specific state (recorded in one system but not yet the other). Therefore, that's the amount you'd want to drill down into to see the individual items.</p>
 <p dir="auto">So, the answer is <strong>A. Bridged transactions amount</strong>.</p>
-<h1 data-heading="response_36.md" dir="auto">response_36.md</h1>
+<h1 data-heading="Question 36" dir="auto">Question 36</h1>
 <p dir="auto">Okay, let's break down this Dynamics 365 Supply Chain Management question about finding classes with cross-company queries. The core task is to use the code search functionality (likely in Visual Studio) to identify specific classes based on their contents.</p>
 <p dir="auto">Here's what the question is asking, and what the key concepts are:</p>
 <ul>
@@ -1231,7 +1231,7 @@ sampleTable.SomeField = "New Value";</p>
 </li>
 </ul>
 <p dir="auto">Option C is the most appropriate. Therefore, the answer is <strong>C. :type:class, method name-run code:'crossconpany' model:'Application Suite':</strong>.</p>
-<h1 data-heading="response_37.md" dir="auto">response_37.md</h1>
+<h1 data-heading="Question 37" dir="auto">Question 37</h1>
 <p dir="auto">Okay, let's break down this Dynamics 365 Supply Chain Management performance monitoring question. It's about knowing which tools within the Lifecycle Services (LCS) environment are best suited for different monitoring tasks. LCS provides a suite of tools for managing and monitoring your Dynamics 365 implementations.</p>
 <p dir="auto">The question presents three specific monitoring needs and three tools. We need to match the tool to the need.</p>
 <p dir="auto">Here are the tools and what they're generally used for:</p>
@@ -1301,7 +1301,7 @@ sampleTable.SomeField = "New Value";</p>
 </li>
 </ol>
 <p dir="auto">In summary, the question tests your understanding of the different monitoring tools available in LCS and their specific purposes. Activity Monitoring is for user actions, SQL Insights is for database performance, and Health Metrics is for overall system health. The provided answers are incorrect.</p>
-<h1 data-heading="response_38.md" dir="auto">response_38.md</h1>
+<h1 data-heading="Question 38" dir="auto">Question 38</h1>
 <p dir="auto">Okay, let's analyze this Dynamics 365 development scenario involving source control and potential auto-merge issues. The core problem is: you suspect that a "Get Latest Version" operation (pulling changes from source control) overwrote some of your local changes during an automatic merge. You need to figure out what happened and potentially recover your lost changes.</p>
 <p dir="auto">Let's break down the concepts and then examine the options:</p>
 <ul>
@@ -1328,7 +1328,7 @@ sampleTable.SomeField = "New Value";</p>
 </ul>
 <p dir="auto">The key is to first understand <em>what happened</em> during the "Get Latest" and auto-merge. The Output window provides that information. Once you know which files were affected, you can then use other tools (like comparing versions in source control history) to try and recover your changes if needed.</p>
 <p dir="auto">Therefore, the answer is <strong>D. Check the Output window in Visual Studio for logs of which files were auto merged</strong>.</p>
-<h1 data-heading="response_39.md" dir="auto">response_39.md</h1>
+<h1 data-heading="Question 39" dir="auto">Question 39</h1>
 <p dir="auto">Okay, let's break down this question about setting up Visual Studio for Dynamics 365 Finance and Operations development, specifically connecting to Azure DevOps for source control. This is a crucial setup step for any F&amp;O development project.</p>
 <p dir="auto">Here's what the question is getting at, and the key concepts involved:</p>
 <ul>
@@ -1362,7 +1362,7 @@ sampleTable.SomeField = "New Value";</p>
 </ul>
 <p dir="auto">The core principle is that the F&amp;O application code (metadata) needs to be in the :PackagesLocalDirectory: on the AOS drive for the system to work correctly. The workspace mapping in Visual Studio is how you ensure that "Get Latest" from Azure DevOps puts the code in the right place.</p>
 <p dir="auto">Therefore, the answer is <strong>C. Map the Metadata folder for the branch in source control to the Packages Local Directory folder of the AOS drive</strong>.</p>
-<h1 data-heading="response_40.md" dir="auto">response_40.md</h1>
+<h1 data-heading="Question 40" dir="auto">Question 40</h1>
 <p dir="auto">Okay, let's tackle this question about how base enumerations (enums) are represented in the Dynamics 365 Finance and Operations user interface. The key is understanding what an enum is and how it can be visually presented to a user.</p>
 <p dir="auto">Here's a breakdown:</p>
 <ul>
@@ -1387,7 +1387,7 @@ sampleTable.SomeField = "New Value";</p>
 </ul>
 <p dir="auto">The key distinction is that a date field is for a <em>specific type of data</em> (a date), while enums represent a <em>set of predefined choices</em>. There's no logical connection between a general-purpose enum and a date.</p>
 <p dir="auto">Therefore, the answer is <strong>C. Date field</strong>.</p>
-<h1 data-heading="response_41.md" dir="auto">response_41.md</h1>
+<h1 data-heading="Question 41" dir="auto">Question 41</h1>
 <p dir="auto">Okay, let's analyze this Dynamics 365 Finance form development question. The core task is to add a button to a form that, when clicked, runs a specific report. The question is whether the proposed solution – using an output menu item – is the correct approach.</p>
 <p dir="auto">Here's a breakdown of the concepts and the solution:</p>
 <ul>
@@ -1416,7 +1416,7 @@ sampleTable.SomeField = "New Value";</p>
 <li dir="auto"><strong>Standard Dynamics 365 Pattern:</strong> This is the established pattern for launching reports from forms. It aligns with the overall architecture of Dynamics 365.</li>
 </ul>
 <p dir="auto">Therefore, the answer is <strong>A. Yes</strong>.</p>
-<h1 data-heading="response_42.md" dir="auto">response_42.md</h1>
+<h1 data-heading="Question 42" dir="auto">Question 42</h1>
 <p dir="auto">Okay, let's break down this Dynamics 365 Finance question about creating Extended Data Types (EDTs). The core task is to choose the appropriate base types for two new EDTs, one for a date and one for a quantity.</p>
 <p dir="auto">Here's a clarification of the concepts:</p>
 <ul>
@@ -1467,7 +1467,7 @@ sampleTable.SomeField = "New Value";</p>
 <li dir="auto"><strong>Track the day: Date</strong></li>
 <li dir="auto"><strong>Track the quantity: Integer</strong></li>
 </ol>
-<h1 data-heading="response_43.md" dir="auto">response_43.md</h1>
+<h1 data-heading="Question 43" dir="auto">Question 43</h1>
 <p dir="auto">Okay, let's clarify this Dynamics 365 Finance question about using Lifecycle Services (LCS) tools for troubleshooting performance in different environments. The core issue is understanding which LCS tools are available and appropriate for different types of environments (specifically, build and user acceptance testing (UAT) environments).</p>
 <p dir="auto">Here's a breakdown of the concepts:</p>
 <ul>
@@ -1534,7 +1534,7 @@ sampleTable.SomeField = "New Value";</p>
 <li dir="auto">System Diagnostics provides a general overview of system health, making it valuable in both build and UAT environments.</li>
 </ul>
 <p dir="auto">The provided answers are correct.</p>
-<h1 data-heading="response_44.md" dir="auto">response_44.md</h1>
+<h1 data-heading="Question 44" dir="auto">Question 44</h1>
 <p dir="auto">Okay, let's analyze this Dynamics 365 Finance X++ code question about updating customer records. The core task is to update the :DlvMode: (Delivery Mode) field to 'Air' for all customers in the 'International' customer group. The question asks which code segments <em>correctly</em> achieve this, considering there are two million customers. This implies we need to think about performance.</p>
 <p dir="auto">Let's break down the key concepts and then evaluate each option:</p>
 <ul>
@@ -1583,7 +1583,7 @@ sampleTable.SomeField = "New Value";</p>
 </ul>
 <p dir="auto">The best options are the ones that use :update_recordset: for performance reasons. The :while select: loop with :update(): or :doUpdate(): is far too slow for a large dataset.</p>
 <p dir="auto">The correct answer provided is incorrect. Option A will work, although it is not efficient. Option C is closer to the ideal solution, but the setting and where clauses are in the wrong order. Option E is the best option.</p>
-<h1 data-heading="response_45.md" dir="auto">response_45.md</h1>
+<h1 data-heading="Question 45" dir="auto">Question 45</h1>
 <p dir="auto">Okay, let's examine this question about indexes in the context of Dynamics 365 Finance and Operations (and database concepts in general). Indexes are crucial for database performance, and understanding their properties is essential for developers.</p>
 <p dir="auto">Here's a breakdown of the concepts and the options:</p>
 <ul>
@@ -1610,7 +1610,7 @@ sampleTable.SomeField = "New Value";</p>
 </ul>
 <p dir="auto">The question asks for the <em>true</em> statement. Only option D accurately describes the purpose of an index.</p>
 <p dir="auto">Therefore, the answer should be <strong>D. An index is used to improve the speed of data retrieval.</strong> The provided answer is incorrect.</p>
-<h1 data-heading="response_46.md" dir="auto">response_46.md</h1>
+<h1 data-heading="Question 46" dir="auto">Question 46</h1>
 <p dir="auto">Okay, let's break down this Dynamics 365 Finance integration question. The core concept is understanding the difference between <em>synchronous</em> and <em>asynchronous</em> integrations and when to use each. This is a crucial decision in designing integration architectures.</p>
 <p dir="auto">Here's a breakdown of the concepts:</p>
 <ul>
@@ -1648,7 +1648,7 @@ sampleTable.SomeField = "New Value";</p>
 </ul>
 <p dir="auto">The key distinction is the <em>need for immediate response</em>. Synchronous integrations are for situations where the calling system needs to wait for a response before proceeding. Asynchronous integrations are for situations where the calling system can continue processing without waiting, and the response (or data transfer) can happen later. Option B is a perfect fit for asynchronous approach.</p>
 <p dir="auto">Therefore, the answer is <strong>B. A company uses an on-premises inventory management system that needs to receive sales order data every hour throughout the day.</strong></p>
-<h1 data-heading="response_47.md" dir="auto">response_47.md</h1>
+<h1 data-heading="Question 47" dir="auto">Question 47</h1>
 <p dir="auto">Okay, let's break down this Dynamics 365 Finance question about table caching. Table caching is a crucial performance optimization technique, and understanding the different :CacheLookup: properties is essential for developers.</p>
 <p dir="auto">Here's a clarification of the concepts:</p>
 <ul>
@@ -1703,7 +1703,7 @@ sampleTable.SomeField = "New Value";</p>
 <li dir="auto">:FoundAndEmpty:: Similar to :Found:, but also caches "empty" results.</li>
 </ul>
 <p dir="auto">The provided answers are correct.</p>
-<h1 data-heading="response_48.md" dir="auto">response_48.md</h1>
+<h1 data-heading="Question 48" dir="auto">Question 48</h1>
 <p dir="auto">Okay, let's break down this Dynamics 365 Finance question about running a report asynchronously. The core problem is that a report is currently running synchronously (blocking the user interface), and we need to change it to run asynchronously so the user can continue working while the report processes. We also need to notify the user when the report is finished.</p>
 <p dir="auto">Here's a breakdown of the concepts and the two parts of the question:</p>
 <ul>
@@ -1805,7 +1805,7 @@ info(strFmt("Report for Sale ID %1 completed.", saleId));
 <li dir="auto">Provide a notification to the user when the asynchronous operation completes.</li>
 </ul>
 <p dir="auto">The provided answers are correct.</p>
-<h1 data-heading="response_49.md" dir="auto">response_49.md</h1>
+<h1 data-heading="Question 49" dir="auto">Question 49</h1>
 <p dir="auto">Okay, let's analyze this question about customizing a Common Data Service (now called Dataverse) entity. The core problem is to capture the date a record is created, and the question focuses on how to handle a pre-existing "Date" field.</p>
 <p dir="auto">Here's a breakdown of the concepts and options:</p>
 <ul>
@@ -1829,7 +1829,7 @@ info(strFmt("Report for Sale ID %1 completed.", saleId));
 </ul>
 <p dir="auto">The key is understanding that you can customize the <em>display name</em> of a field without changing its underlying data type or behavior. Since a suitable "Date" field already exists, the simplest and correct solution is to rename it.</p>
 <p dir="auto">Therefore, the answer is <strong>B. Use the built-in Date field within the Entity to store the date values but rename the field to "Date Confirmed"</strong>.</p>
-<h1 data-heading="response_50.md" dir="auto">response_50.md</h1>
+<h1 data-heading="Question 50" dir="auto">Question 50</h1>
 <p dir="auto">Okay, let's break down this Dynamics 365 Finance question about parallel processing. The core problem is to efficiently process a large number of work items (1,000) in parallel, given that their individual run times vary and a bundle size of 100 is mentioned.</p>
 <p dir="auto">Here's a clarification of the concepts and options:</p>
 <ul>
@@ -1853,7 +1853,7 @@ info(strFmt("Report for Sale ID %1 completed.", saleId));
 </ul>
 <p dir="auto">The key to choosing the right approach is understanding the impact of varying run times. Batch bundling can be inefficient if some bundles are much slower than others. Top picking dynamically distributes work, ensuring that tasks are always busy and minimizing the impact of slow items.</p>
 <p dir="auto">Therefore, the answer is <strong>C. Top picking</strong>.</p>
-<h1 data-heading="response_51.md" dir="auto">response_51.md</h1>
+<h1 data-heading="Question 51" dir="auto">Question 51</h1>
 <p dir="auto">Okay, let's break down this Dynamics 365 Finance question about creating a Key Performance Indicator (KPI) to track "total RAFs per hour." This involves understanding how KPIs are built in Dynamics 365 and the components involved.</p>
 <p dir="auto">Here's a clarification of the concepts:</p>
 <ul>
@@ -1883,7 +1883,7 @@ info(strFmt("Report for Sale ID %1 completed.", saleId));
 <li dir="auto"><strong>A calculation to aggregate the data:</strong> This is provided by the <strong>aggregate measurement</strong>.</li>
 </ol>
 <p dir="auto">Therefore, the correct answers are <strong>B. Data entity</strong> and <strong>C. Aggregate measurements</strong>.</p>
-<h1 data-heading="response_52.md" dir="auto">response_52.md</h1>
+<h1 data-heading="Question 52" dir="auto">Question 52</h1>
 <p dir="auto">Okay, let's analyze this Dynamics 365 Finance and Operations question about deploying a report in a development environment. The key is understanding the different ways you can deploy artifacts (like reports) within Visual Studio.</p>
 <p dir="auto">Here's a breakdown of the concepts and the options:</p>
 <ul>
@@ -1911,7 +1911,7 @@ info(strFmt("Report for Sale ID %1 completed.", saleId));
 </ul>
 <p dir="auto">The two most relevant options are A and D. Package deployment is more for moving changes <em>between</em> environments, while deploying from Solution Explorer is for deploying <em>within</em> the development environment.</p>
 <p dir="auto">Therefore, the correct answers are <strong>A. Package deployment</strong> and <strong>D. Solution Explorer</strong>.</p>
-<h1 data-heading="response_53.md" dir="auto">response_53.md</h1>
+<h1 data-heading="Question 53" dir="auto">Question 53</h1>
 <p dir="auto">Okay, let's break down these statements about Task Recorder in Dynamics 365 Finance and Operations. Task Recorder is a powerful tool for documenting processes, creating training materials, and even generating test automation.</p>
 <p dir="auto">Here's an analysis of each statement:</p>
 <ol>
@@ -1948,7 +1948,7 @@ info(strFmt("Report for Sale ID %1 completed.", saleId));
 <li dir="auto">It supports "on-rails" playback to guide users through a process.</li>
 </ul>
 <p dir="auto">The provided answers are correct.</p>
-<h1 data-heading="response_54.md" dir="auto">response_54.md</h1>
+<h1 data-heading="Question 54" dir="auto">Question 54</h1>
 <p dir="auto">Okay, let's analyze this question about registering a service to connect to Dynamics 365 Finance and Operations (F&amp;O) apps. The core concept is understanding the authentication and authorization mechanisms involved when connecting external services to F&amp;O.</p>
 <p dir="auto">Here's a breakdown of the options and why one is <em>not</em> required:</p>
 <ul>
@@ -1964,7 +1964,7 @@ info(strFmt("Report for Sale ID %1 completed.", saleId));
 </ul>
 <p dir="auto">The key distinction is between <em>authentication/authorization</em> (handled by Azure AD) and <em>environment management</em> (handled by LCS). Registering a service is primarily about authentication and authorization.</p>
 <p dir="auto">Therefore, the answer is <strong>C. Lifecycle Services</strong>.</p>
-<h1 data-heading="response_55.md" dir="auto">response_55.md</h1>
+<h1 data-heading="Question 55" dir="auto">Question 55</h1>
 <p dir="auto">Okay, let's break down this Dynamics 365 Finance question about displaying a Key Performance Indicator (KPI). The core task is to make the KPI visible to users within the Dynamics 365 interface.</p>
 <p dir="auto">Here's a clarification of the concepts and the options:</p>
 <ul>
@@ -1986,7 +1986,7 @@ info(strFmt("Report for Sale ID %1 completed.", saleId));
 </ul>
 <p dir="auto">The most appropriate and standard way to display KPIs in Dynamics 365 is to add them to a workspace. Workspaces are designed to provide users with a consolidated view of relevant information, including KPIs.</p>
 <p dir="auto">Therefore, the answer is <strong>A. Create a new workspace and add the KPI to the workspace</strong>.</p>
-<h1 data-heading="response_56.md" dir="auto">response_56.md</h1>
+<h1 data-heading="Question 56" dir="auto">Question 56</h1>
 <p dir="auto">Okay, let's trace this X++ code example to determine the output of the :info(): calls. This question tests your understanding of variable scope, object references, and parameter passing in X++.</p>
 <p dir="auto">Here's a step-by-step breakdown of the code execution:</p>
 <ol>
@@ -2038,7 +2038,7 @@ info(strFmt("Report for Sale ID %1 completed.", saleId));
 <li dir="auto"><strong>:salesQty::</strong> The value of :salesQty: in the call from the :run(): method will be :5:.</li>
 </ol>
 <p dir="auto">The provided answer is correct for :tmpFrmVirtual.Id: and it is :SID1234:. The provided answer for :salesQty: is not correct. It should be 5. Since the options are not available, we will assume that it is 5.</p>
-<h1 data-heading="response_57.md" dir="auto">response_57.md</h1>
+<h1 data-heading="Question 57" dir="auto">Question 57</h1>
 <p dir="auto">Okay, let's analyze this simple but fundamental X++ code question about displaying the value of an integer variable using the :info(): method in Dynamics 365 Finance.</p>
 <p dir="auto">Here's a breakdown of the concepts and the options:</p>
 <ul>
@@ -2069,7 +2069,7 @@ info(strFmt("Report for Sale ID %1 completed.", saleId));
 </ul>
 <p dir="auto">The key is to use the :int2str(): function to convert the integer to a string before passing it to :info():.</p>
 <p dir="auto">Therefore, the answer is <strong>C. :info(int2str{inventQi.ntity));:</strong>. Note that all the options had typos. :inventQuantity: was spelled differently.</p>
-<h1 data-heading="response_58.md" dir="auto">response_58.md</h1>
+<h1 data-heading="Question 58" dir="auto">Question 58</h1>
 <p dir="auto">Okay, let's break down this Dynamics 365 Finance debugging question. It's about understanding how to navigate code execution within the debugger, specifically when you encounter a method call (in this case, :custTable.insert():).</p>
 <p dir="auto">Here's a clarification of the concepts:</p>
 <ul>
@@ -2092,7 +2092,7 @@ info(strFmt("Report for Sale ID %1 completed.", saleId));
 </ul>
 <p dir="auto">The key is to understand the difference between "Step Into" (go inside the method), "Step Over" (execute the method without going inside), and "Step Out" (finish the current method and return to the caller).</p>
 <p dir="auto">Therefore, the answer is <strong>A. Select the Step Into button</strong>.</p>
-<h1 data-heading="response_59.md" dir="auto">response_59.md</h1>
+<h1 data-heading="Question 59" dir="auto">Question 59</h1>
 <p dir="auto">Okay, let's break down this X++ query question about finding customers <em>not</em> associated with sales orders. The key is understanding the different types of joins available in X++ and how they relate to this specific requirement.</p>
 <p dir="auto">Here's a clarification of the concepts:</p>
 <ul>
@@ -2118,7 +2118,7 @@ info(strFmt("Report for Sale ID %1 completed.", saleId));
 </ul>
 <p dir="auto">The :notExists: join is specifically designed for finding records that <em>don't</em> have a relationship in another table. It's the most direct and efficient way to solve this problem in X++.</p>
 <p dir="auto">Therefore, the answer is <strong>D. :NotExists Join:</strong>.</p>
-<h1 data-heading="response_60.md" dir="auto">response_60.md</h1>
+<h1 data-heading="Question 60" dir="auto">Question 60</h1>
 <p dir="auto">Okay, let's break down this fundamental object-oriented programming (OOP) question about method access modifiers. This concept applies to X++ in Dynamics 365 Finance and Operations, as well as many other programming languages.</p>
 <p dir="auto">The question is about which method type can be called from "anywhere that its class is accessible." This is all about <em>visibility</em> and <em>encapsulation</em>.</p>
 <p dir="auto">Here's a breakdown of the options:</p>
