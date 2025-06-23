@@ -1,0 +1,39 @@
+{
+    "server": {
+        "host": "localhost",
+        "port": 8000
+    },
+    "grid": {
+        "columns": 3,
+        "cellMinWidth": 400,
+        "cellMinHeight": 300
+    },
+    "modules": {
+        "timesheet": {
+            "enabled": true,
+            "grid": {
+                "row": 0,
+                "column": 0,
+                "width": 600,
+                "height": 540
+            },
+            "config": {
+                "domain": "http://192.168.29.50:8001",
+                "token": "f796c6f66365705bfd024a457"
+            }
+        },
+        "clusters": {
+            "enabled": true,
+            "grid": {
+                "row": 0,
+                "column": 1,
+                "width": 600,
+                "height": 540
+            },
+            "config": {
+                "cluster_file": "\\\\Admin\\qbank-mb500\\clusters.md",
+                "update_interval": 2
+            }
+        }
+    }
+}
