@@ -1,0 +1,846 @@
+<!doctype html>
+<html>
+    <head>
+        <title>group1</title>
+        <meta charset='utf-8'/>
+        <style>
+body {
+  background-color: black;
+  color: white;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div{
+  color: white;
+}
+
+img{
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 80%;
+
+}
+
+p{
+  font-size: large;
+  /* display: inline; */
+}
+
+li{
+font-size: large;
+}
+
+.scrollmenu {
+  overflow: auto;
+  max-height: 65vh;
+  white-space: nowrap;
+  text-align: left;
+}
+</style>
+    </head>
+    <body>
+<p dir="auto">You are a Dynamics 365 Finance developer.<br>
+You need to create an extension class.<br>
+Which action should you perform?</p>
+<ul>
+<li dir="auto">Mark the class as final.</li>
+<li dir="auto">Add the class buffer as the first parameter.</li>
+<li dir="auto">Mark the class as protected.</li>
+<li dir="auto">Mark the class as public.</li>
+</ul>
+<ul>
+<li dir="auto">Mark the class as final.</li>
+</ul>
+<p dir="auto">Extension classes are final classes that are adorned with the ExtensionOf attribute and have names that end with the _Extension suffix.</p>
+<p dir="auto">Since the classes are instantiated by the runtime system, deriving from an extension class is not meaningful. Consequently, the extension class must be marked as final</p>
+<hr>
+<pre class="language-text" tabindex="0"><code class="language-text is-loaded">Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path><style>
+:root {
+  --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+}</style>"<marker id="mermaid_arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker>"</svg></button></pre>
+<p dir="auto">You have an enumeration named truckStatus that has the following statuses:</p>
+<ul>
+<li dir="auto">Empty</li>
+<li dir="auto">Loaded</li>
+<li dir="auto">Completed</li>
+</ul>
+<p dir="auto">You have the following code:</p>
+<pre class="language-text" tabindex="0"><code class="language-text is-loaded">switch (trunkTable.TruckStatus)
+{
+    case TruckStatus::Empty:
+        Info("1");
+        break;
+    case TruckStatus::Loaded:
+        Info("2");
+        break;
+    case TruckStatus::Completed:
+        Info("3");
+        break;
+}
+
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path><style>
+:root {
+  --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+}</style>"<marker id="mermaid_arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker>"</svg></button></pre>
+<p dir="auto">You need to extend this enumeration and add the following statuses to the enumeration: Quarantine, InTransit. You must then modify code that validates the switch statement.</p>
+<p dir="auto">Solution: Add a post handler to the method that checks the enumeration and logic for your new enumeration values using the enumeration value.</p>
+<p dir="auto">Does the solution meet the goal?</p>
+<ul>
+<li dir="auto">Yes</li>
+<li dir="auto">No<br>
+<strong>Yes</strong></li>
+</ul>
+<p dir="auto">When working with <strong>extension scenarios</strong>, such as adding new values to an existing <strong>enumeration</strong> (<code>truckStatus</code> in this case), you cannot directly modify the original <code>switch</code> statement in the base method because overlayering is not allowed. Instead, you need to use <strong>event handlers</strong>, such as <strong>post-handlers</strong>, to extend the logic.</p>
+<hr>
+<p dir="auto">A company uses Dynamics 365 Finance.</p>
+<p dir="auto">You must add fields to a standard table in Visual Studio.</p>
+<p dir="auto">You need to create an extension of the table.</p>
+<p dir="auto">What should you do?</p>
+<ul>
+<li dir="auto">Create an extension class for the base table.</li>
+<li dir="auto">Drag the table from the AOT to the project.</li>
+<li dir="auto">Create a new table object in the pitied.</li>
+<li dir="auto">Create a table extension from the base table.</li>
+</ul>
+<ul>
+<li dir="auto">Create a table extension from the base table.</li>
+</ul>
+<p dir="auto">To add fields to a standard (base) table in Dynamics 365 Finance using Visual Studio, you need to create a table extension, not a new table or class. Table extensions allow you to safely add new fields and metadata to Microsoft-provided tables without modifying the original objects.</p>
+<ul>
+<li dir="auto">❌ <strong>Create an extension class for the base table</strong>:
+<ul>
+<li dir="auto">Extension <strong>classes</strong> are used to extend the behavior of <strong>X++ classes</strong>, not tables.<br>
+</li>
+</ul>
+</li>
+<li dir="auto">❌ <strong>Drag the table from the AOT to the project</strong>:
+<ul>
+<li dir="auto">Dragging the table does <strong>not create an extension</strong> — it just adds a reference, which you can’t modify directly for standard objects.<br>
+</li>
+</ul>
+</li>
+<li dir="auto">❌ <strong>Create a new table object in the project</strong>:
+<ul>
+<li dir="auto">This would create a <strong>new table</strong>, not an <strong>extension</strong> of an existing one.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p dir="auto">A company has a cloud-based installation of Dynamics 365 Finance.</p>
+<p dir="auto">A user reports slow response times in the application when accessing the production environment.</p>
+<p dir="auto">You need to diagnose the performance issue by using the Environment monitoring tool.</p>
+<p dir="auto">Which two features of the Environment monitoring tool should you use?</p>
+<p dir="auto">Options:<br>
+A.  Customization analysis<br>
+B.  System diagnostics<br>
+C.  SQL insights<br>
+D.  Health metrics<br>
+E.  Availability monitoring<br>
+C. Health metrics<br>
+E. SQL insights</p>
+<p dir="auto"><strong>Explanation</strong></p>
+<p dir="auto">C. Health Metrics: This feature provides a summary of the environment's health and performance, including metrics such as CPU usage, memory consumption, and server resource utilization. It helps identify system-level issues that could contribute to slow response times, such as high resource usage or server performance bottlenecks.</p>
+<p dir="auto">E. SQL Insights: This feature allows you to monitor and analyze database performance, including the identification of slow-running queries or index fragmentation that could degrade system performance. Since slow response times are often linked to inefficient database operations, SQL Insights is critical for pinpointing problematic queries or database-related issues.</p>
+<p dir="auto"><strong>Explanation of Other Options:</strong></p>
+<ul>
+<li dir="auto"><strong>A. Customization Analysis</strong>: This is not a feature of the Environment monitoring tool in LCS. It is typically associated with tools like the Customization Analysis Report, which evaluates custom code but is not directly used for real-time performance diagnostics.</li>
+<li dir="auto"><strong>B. System Diagnostics</strong>: While system diagnostics may sound relevant, it is not a specific feature within the LCS Environment monitoring tool. The tool focuses on Health Metrics, SQL Insights, and Activity Monitoring for performance diagnostics.</li>
+<li dir="auto"><strong>E. Availability Monitoring</strong>: This is not a distinct feature in the LCS Environment monitoring tool. Availability is indirectly monitored through health metrics and system status, but it is not a primary feature for diagnosing slow response times.</li>
+</ul>
+<hr>
+<pre class="language-text" tabindex="0"><code class="language-text is-loaded">Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path><style>
+:root {
+  --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+}</style>"<marker id="mermaid_arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker>"</svg></button></pre>
+<p dir="auto">You are developing a form for Dynamics 365 Finance.<br>
+You need to add a button that allows users to run a report.</p>
+<p dir="auto">Solution: Create an output menu item. Add the output menu item to the form button and then link the report to the output menu item.<br>
+Does the solution meet the goal?</p>
+<ul>
+<li dir="auto">Yes</li>
+<li dir="auto">No<br>
+<strong>Yes</strong></li>
+</ul>
+<p dir="auto"><strong>Explanation:</strong><br>
+In Dynamics 365 Finance (and Supply Chain Management), when you want to run a report from a form button, a <strong>common and correct approach</strong> is to:</p>
+<ol>
+<li dir="auto"><strong>Create an Output Menu Item</strong> for the report — this menu item points to the report you want to run.</li>
+<li dir="auto"><strong>Add the Output Menu Item to a Button</strong> on the form — either via a menu item button or through coding (if needed).    </li>
+<li dir="auto">The <strong>Output Menu Item links directly</strong> to the report (e.g., an SSRS report), enabling users to run it when they click the button.</li>
+</ol>
+<hr>
+<p dir="auto">You need to create the new table for the vendor exclusion list. What should you do? Select the answers from the drop-down?</p>
+<ol>
+<li dir="auto">
+<p>What should you create?</p>
+<ul>
+<li dir="auto">A table extension for vendors and a relation for vendor exclusions</li>
+<li dir="auto">A relation between vendor exclusion table and the vendors tables</li>
+<li dir="auto">A table extension for vendors and add a delete action for vendor exclusions</li>
+</ul>
+</li>
+<li dir="auto">
+<p>For which property on the relationship node should you set a value?</p>
+<ul>
+<li dir="auto">Delete action</li>
+<li dir="auto">Validate</li>
+<li dir="auto">OnDelete</li>
+<li dir="auto">Relationship Type<br>
+<strong>A relation between vendor exclusion table and the vendors tables</strong></li>
+</ul>
+</li>
+</ol>
+<p dir="auto"><strong>Reasoning:</strong><br>
+The goal is to create a <em>new table</em> for the exclusion list. This new table (let's call it <code>VendorExclusionTable</code>) will hold the list of excluded vendors. To link this new table to the standard <code>VendTable</code>, you must create a relationship. The most accurate description of the required steps is to create this new table and then establish a relationship between it and the <code>VendTable</code>. Creating a table extension on <code>VendTable</code> is not the primary task here; you are creating a new, separate table.</p>
+<p dir="auto"><strong>OnDelete</strong></p>
+<p dir="auto"><strong>Reasoning:</strong><br>
+When a vendor is deleted from the main <code>VendTable</code>, you want to ensure that any corresponding records in your <code>VendorExclusionTable</code> are also removed to maintain data integrity. The <code>OnDelete</code> property on the relationship (defined on the <code>VendorExclusionTable</code>) controls this behavior. You would typically set its value to <code>Cascade</code>, which means that deleting the parent record (the vendor) will automatically cascade and delete the related child record (the exclusion entry).</p>
+<p dir="auto">Note:- While setting&nbsp;<code>RelationshipType</code>&nbsp;to&nbsp;<code>Composition</code>&nbsp;is a great practice and&nbsp;should&nbsp;be done, it's the&nbsp;OnDelete&nbsp;property that directly governs the delete action. In fact, if you set&nbsp;<code>RelationshipType</code>&nbsp;to&nbsp;<code>Composition</code>, the framework often defaults&nbsp;<code>OnDelete</code>&nbsp;to&nbsp;<code>Cascade</code>&nbsp;for you, but it's the&nbsp;<code>OnDelete</code>&nbsp;property that is ultimately responsible for the behavior.</p>
+<hr>
+<p dir="auto">You are a Dynamics 365 Finance developer. You create a key performance indicator (KPI) in a development environment. You need to display the KPI. What should you do?</p>
+<p dir="auto">Options:<br>
+A.  Create a new workspace and add the KPI to the workspace<br>
+B.  Create a tile and add the KPI to the tile<br>
+C.  Add the KPI to an existing form<br>
+Correct Answer</p>
+<p dir="auto">A.  Create a new workspace and add the KPI to the workspace</p>
+<hr>
+<p dir="auto">Plan the architecture and solution design</p>
+<p dir="auto">You are working on a project that has undefined requirements and new requirements are expected to occur during the project. What methodology would best suit this type of project?</p>
+<p dir="auto">Options:<br>
+A.  Waterfall<br>
+B.  Agile<br>
+C.  Spiral<br>
+B. Agile</p>
+<h3 data-heading="Explanation" dir="auto">Explanation</h3>
+<ul>
+<li dir="auto"><strong>Agile:</strong> This methodology is specifically designed for projects where requirements are expected to change or are not fully known at the start. It works in short, iterative cycles (sprints) that allow for continuous feedback and the incorporation of new requirements throughout the project's lifecycle. This flexibility is its core strength and makes it ideal for the scenario described.</li>
+<li dir="auto"><strong>Waterfall:</strong> This is a poor choice. The Waterfall model is a linear, sequential approach that requires all requirements to be fully defined and locked down at the beginning of the project. It does not handle change well, and introducing new requirements mid-project is very difficult and costly.</li>
+<li dir="auto"><strong>Spiral:</strong> While the Spiral model is also iterative and handles change better than Waterfall, its primary focus is on risk management for large, complex projects. Agile is more directly focused on adapting to changing customer requirements and delivering value incrementally, which is a better fit for the described problem.</li>
+</ul>
+<hr>
+<p dir="auto">Which option in the Task recorder can automatically run the steps of an existing recording by using the pages and values that were originally recorded?</p>
+<p dir="auto">Options:<br>
+A.  Create recording<br>
+B.  Play recording as guide<br>
+C.  Edit recording<br>
+D.  Playback recording<br>
+<strong>D. Playback recording</strong></p>
+<hr>
+<h3 data-heading="✅ Explanation:" dir="auto">✅ Explanation:</h3>
+<p dir="auto"><strong>Task Recorder</strong> in Dynamics 365 Finance and Operations lets you:</p>
+<ul>
+<li dir="auto">Record business processes (as step-by-step actions)</li>
+<li dir="auto">Save them for documentation, testing, or training</li>
+</ul>
+<hr>
+<h3 data-heading="📌 What does each option do?" dir="auto">📌 What does each option do?</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Option</strong></th>
+<th><strong>Function</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. Create recording</strong></td>
+<td>Starts a new recording from scratch. You manually perform the steps.</td>
+</tr>
+<tr>
+<td><strong>B. Play recording as guide</strong></td>
+<td>Shows each recorded step interactively and guides the user step-by-step, but <strong>doesn't execute steps automatically</strong></td>
+</tr>
+<tr>
+<td><strong>C. Edit recording</strong></td>
+<td>Allows you to change the contents of a previously recorded task</td>
+</tr>
+<tr>
+<td>✅ <strong>D. Playback recording</strong></td>
+<td><strong>Automatically runs the steps</strong> of the task using the recorded pages and values</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p dir="auto">So, to <strong>automatically run</strong> an existing recording as it was recorded (with same fields/values), you use:</p>
+<blockquote dir="auto">
+<p>✅ <strong>Playback recording</strong></p>
+</blockquote>
+<hr>
+<p dir="auto">DRAG DROP -<br>
+You are a Dynamics 365 Finance developer.<br>
+Users must be able to view a filtered customer list from within a workspace.<br>
+You need to add the customer form to a workspace.<br>
+Which four actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them on the correct order.<br>
+Select and Place:</p>
+<p dir="auto"><strong>Actions</strong><br>
+Navigate to the Workspace form and select <strong>Find form to add</strong>.<br>
+Select <strong>Workspace and Presentation options</strong>.<br>
+Select the <strong>Options</strong> action pane tab and then select <strong>Add to workspace</strong>.<br>
+Open the customer form and apply filters to the grid.<br>
+Select <strong>Configure</strong>.<br>
+Select the General menu item then select <strong>Add to workspace</strong>.</p>
+<h3 data-heading="Correct Order (Select and Place):" dir="auto">Correct Order (Select and Place):</h3>
+<ol>
+<li dir="auto"><strong>Open the customer form and apply filters to the grid.</strong></li>
+<li dir="auto"><strong>Select the Options action pane tab and then select Add to workspace.</strong></li>
+<li dir="auto"><strong>Select Workspace and Presentation options.</strong></li>
+<li dir="auto"><strong>Select Configure.</strong></li>
+</ol>
+<h3 data-heading="Explanation:" dir="auto">Explanation:</h3>
+<ul>
+<li dir="auto"><strong>Open the customer form and apply filters to the grid</strong>
+<ul>
+<li dir="auto">First, go to the <strong>Customers</strong> form and apply the specific filters (e.g., customers with overdue balances).</li>
+</ul>
+</li>
+<li dir="auto"><strong>Select the Options action pane tab and then select Add to workspace</strong>
+<ul>
+<li dir="auto">After filtering, go to the <strong>Options</strong> tab and click <strong>Add to workspace</strong> to begin adding the form.</li>
+</ul>
+</li>
+<li dir="auto"><strong>Select Workspace and Presentation options</strong>
+<ul>
+<li dir="auto">Choose the <strong>target workspace</strong> and how you want it displayed (link, list, or tile).</li>
+</ul>
+</li>
+<li dir="auto"><strong>Select Configure</strong>
+<ul>
+<li dir="auto">This allows you to finalize display options and confirm the addition.</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><a rel="noopener nofollow" class="external-link" href="https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/fin-ops/get-started/personalize-user-experience" target="_blank">https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/fin-ops/get-started/personalize-user-experience</a></p>
+<hr>
+<p dir="auto">You are a Dynamics 365 Finance developer.<br>
+You need to ensure that an integration is triggered when a specific process starts.<br>
+Which tool should you use to retrieve the status from the Production order?</p>
+<ul>
+<li dir="auto">
+<p>Batch job</p>
+</li>
+<li dir="auto">
+<p>Periodic flow</p>
+</li>
+<li dir="auto">
+<p>Business event</p>
+</li>
+<li dir="auto">
+<p>Recurring Data Entity export<br>
+Business event</p>
+</li>
+<li dir="auto">
+<p><strong>Business events</strong> in Dynamics 365 Finance and Operations are designed specifically to <strong>notify external systems</strong> when something happens in the system (like a change in order status).</p>
+</li>
+<li dir="auto">
+<p>They are <strong>event-driven</strong> and ideal for real-time or near-real-time <strong>integrations</strong>.</p>
+</li>
+<li dir="auto">
+<p>You can subscribe to these events using <strong>Power Automate</strong>, <strong>Azure Service Bus</strong>, <strong>Logic Apps</strong>, etc.</p>
+</li>
+</ul>
+<h4 data-heading="Why not the others?" dir="auto">Why not the others?</h4>
+<ul>
+<li dir="auto"><strong>Batch job</strong>: Used for scheduling processes in the system, not for event-driven integration.</li>
+<li dir="auto"><strong>Periodic flow</strong>: Implies a time-based check, not event-based. This adds latency and isn't efficient for triggering at the <strong>start</strong> of a process.</li>
+<li dir="auto"><strong>Recurring Data Entity export</strong>: This is for bulk data movement, typically used for <strong>data synchronization</strong>, not real-time event notification.</li>
+</ul>
+<hr>
+<p dir="auto">Plan the architecture and solution design<br>
+You need to create the outstanding invoice report for the CFO. Which attributes should you use? Select the answers.</p>
+<p dir="auto">Your organization has the following requirements:</p>
+<ul>
+<li dir="auto">Identify the class that provides parameter for the report<br>
+Possible Answers:</li>
+</ul>
+<ol>
+<li dir="auto">SRSReportParameterAttribute</li>
+<li dir="auto">SysOperationDisplayOrderAttribute</li>
+<li dir="auto">DataMemberAttribute</li>
+<li dir="auto">DataMemberAttribute</li>
+</ol>
+<hr>
+<ul>
+<li dir="auto">Enable contract parameters in the report dialog<br>
+Possible Answers:</li>
+</ul>
+<ol>
+<li dir="auto">SRSReportParameterAttribute</li>
+<li dir="auto">SysOperationDisplayOrderAttribute</li>
+<li dir="auto">DataMemberAttribute</li>
+<li dir="auto">DataMemberAttribute</li>
+</ol>
+<hr>
+<ul>
+<li dir="auto">Indicate the contract name in the data provider class<br>
+Possible Answers:</li>
+</ul>
+<ol start="5">
+<li dir="auto">SRSReportParameterAttribute</li>
+<li dir="auto">SysOperationDisplayOrderAttribute</li>
+<li dir="auto">DataMemberAttribute</li>
+<li dir="auto">DataMemberAttribute</li>
+</ol>
+<h3 data-heading="✅ Requirements Breakdown:" dir="auto">✅ Requirements Breakdown:</h3>
+<ol>
+<li dir="auto">
+<p><strong>Identify the class that provides parameters for the report</strong><br>
+➤ Use <code>DataContractAttribute </code> on the <strong>data contract class</strong>.</p>
+</li>
+<li dir="auto">
+<p><strong>Enable contract parameters in the report dialog</strong><br>
+➤ Use <code>DataMemberAttribute</code> on each parameter property to expose it in the dialog.</p>
+</li>
+<li dir="auto">
+<p><strong>Indicate the contract name in the data provider class</strong><br>
+➤ Use the contract class name in the <code>[SRSReportParameterAttribute(classStr(...))]</code> on the DP class.</p>
+</li>
+</ol>
+<hr>
+<h3 data-heading="✅ Correct Attributes Selection:" dir="auto">✅ Correct Attributes Selection:</h3>
+<p dir="auto">The correct set of attributes to fulfill the requirements is:</p>
+<ul>
+<li dir="auto"><code>DataContractAttribute</code></li>
+<li dir="auto"><code>SysOperationDisplayOrderAttribute</code></li>
+<li dir="auto"><code>DataMemberAttribute</code></li>
+</ul>
+<hr>
+<p dir="auto">These attributes apply as follows:</p>
+<h4 data-heading="Example:" dir="auto">Example:</h4>
+<pre class="language-csharp" tabindex="0"><code class="language-csharp is-loaded"><span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">SRSReportParameterAttribute</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token function">classStr</span><span class="token punctuation">(</span>OutstandingInvoiceContract<span class="token punctuation">)</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OutstandingInvoiceDP</span> <span class="token return-type class-name">extends</span> SRSReportDataProviderBase
+<span class="token punctuation">{</span>
+    <span class="token range operator">..</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+
+<span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">DataContractAttribute</span></span><span class="token punctuation">]</span>
+<span class="token keyword">class</span> <span class="token class-name">OutstandingInvoiceContract</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name"><span class="token keyword">int</span></span> fromDate<span class="token punctuation">;</span>
+    <span class="token class-name"><span class="token keyword">int</span></span> toDate<span class="token punctuation">;</span>
+
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">DataMemberAttribute</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token string">"FromDate"</span><span class="token punctuation">)</span></span><span class="token punctuation">,</span> <span class="token class-name">SysOperationDisplayOrderAttribute</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token char">'1'</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">parmFromDate</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> _fromDate <span class="token operator">=</span> fromDate<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        fromDate <span class="token operator">=</span> _fromDate<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> fromDate<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token punctuation">[</span><span class="token attribute"><span class="token class-name">DataMemberAttribute</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token string">"ToDate"</span><span class="token punctuation">)</span></span><span class="token punctuation">,</span> <span class="token class-name">SysOperationDisplayOrderAttribute</span><span class="token attribute-arguments"><span class="token punctuation">(</span><span class="token char">'2'</span><span class="token punctuation">)</span></span></span><span class="token punctuation">]</span>
+    <span class="token keyword">public</span> <span class="token return-type class-name"><span class="token keyword">int</span></span> <span class="token function">parmToDate</span><span class="token punctuation">(</span><span class="token class-name"><span class="token keyword">int</span></span> _toDate <span class="token operator">=</span> toDate<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        toDate <span class="token operator">=</span> _toDate<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> toDate<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path><style>
+:root {
+  --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+}</style>"<marker id="mermaid_arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker>"</svg></button></pre>
+<hr>
+<p dir="auto">You are a Dynamics 365 Finance developer. You have a solution that records product weights.<br>
+You must store up to four decimals of precision by using a standard Extended Data Type (EDT).<br>
+You need to add the field in a new table.<br>
+Which EDT should you extend?</p>
+<ul>
+<li dir="auto">AmountMST</li>
+<li dir="auto">MarkupValue</li>
+<li dir="auto">Weight</li>
+<li dir="auto">WeightBase</li>
+</ul>
+<ul>
+<li dir="auto">WeightBase</li>
+</ul>
+<p dir="auto"><strong>Correct Answer</strong><br>
+D<br>
+<strong>Answer Description</strong><br>
+Weight data can be maintained with a maximum of two decimals by default. If you require the ability to enter, maintain, and view weight data with a maximum precision of six decimals, you must extend the decimal point precision for the WeightBase extended data type.<br>
+Reference:<br>
+<a rel="noopener nofollow" class="external-link" href="https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/extensibility/decimal-point-precision" target="_blank">https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/extensibility/decimal-point-precision</a></p>
+<hr>
+<p dir="auto">A base enumeration can be viewed in multiple ways in the Finance and Operations user interface. Which of the following is not an example of how a base enum can be viewed in the UI?</p>
+<p dir="auto">Options:<br>
+A.  Option buttons<br>
+B.  Slider bar<br>
+C.  Date field<br>
+D.  Drop-down menu<br>
+Date field</p>
+<h3 data-heading="🔍 Let’s break down the options:" dir="auto">🔍 Let’s break down the options:</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Option</strong></th>
+<th><strong>Can it represent a base enum?</strong></th>
+<th><strong>Explanation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. Option buttons</strong></td>
+<td>✅ Yes</td>
+<td>Radio buttons are commonly used to show enum values in a compact, selectable form</td>
+</tr>
+<tr>
+<td><strong>B. Slider bar</strong></td>
+<td>✅ Yes</td>
+<td>A slider can be used for enums with numeric or linear values</td>
+</tr>
+<tr>
+<td><strong>C. Date field</strong></td>
+<td>❌ <strong>No</strong></td>
+<td>A date field expects a date/time value — <strong>not an enum</strong></td>
+</tr>
+<tr>
+<td><strong>D. Drop-down menu</strong></td>
+<td>✅ Yes</td>
+<td>The most common way to show enums in the UI</td>
+</tr>
+</tbody>
+</table>
+<h3 data-heading="🧠 Remember:" dir="auto">🧠 Remember:</h3>
+<ul>
+<li dir="auto">Enums are shown using controls that allow selecting from a list of <strong>predefined values</strong></li>
+<li dir="auto">A <strong>Date field</strong> is for datetime data types, <strong>not enums</strong></li>
+</ul>
+<hr>
+<p dir="auto">Design and develop AOT elements</p>
+<p dir="auto">Your organization has two million customers that are part of the International customer group. Validation must occur when customer records are updated. For all customers where the value of the customer group field is international, you must set the delivery mode to Air. You need to update the customer records. Which two segments can you use?</p>
+<p dir="auto"><strong>Options:</strong></p>
+<p dir="auto"><strong>A.</strong></p>
+<pre class="language-none" tabindex="0"><code class="language-x++ language-none is-loaded">ttsbegin;
+while select forupdate CustTable 
+    where CustTable.CustGroup == 'International' 
+{
+    CustTable.DlvMode = 'Air';
+    CustTable.update();
+}
+ttscommit;
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path><style>
+:root {
+  --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+}</style>"<marker id="mermaid_arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker>"</svg></button></pre>
+<p dir="auto"><strong>B.</strong></p>
+<pre class="language-none" tabindex="0"><code class="language-x++ language-none is-loaded">ttsbegin;
+update CustTable 
+    set DivMode = 'Air' 
+    where CustTable.CustGroup == 'International';
+ttscommit;
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path><style>
+:root {
+  --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+}</style>"<marker id="mermaid_arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker>"</svg></button></pre>
+<p dir="auto"><strong>C.</strong></p>
+<pre class="language-none" tabindex="0"><code class="language-x++ language-none is-loaded">ttsbegin;
+update_recordset CustTable 
+    where CustTable.CustGroup == 'International' 
+    setting DivMode = 'Air';
+ttscommit;
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path><style>
+:root {
+  --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+}</style>"<marker id="mermaid_arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker>"</svg></button></pre>
+<p dir="auto"><strong>D.</strong></p>
+<pre class="language-none" tabindex="0"><code class="language-x++ language-none is-loaded">ttsbegin;
+while select forupdate CustTable 
+    where CustTable.CustGroup == 'International' 
+{
+    CustTable.DlvMode = 'Air';
+    CustTable.doUpdate();
+}
+ttscommit;
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path><style>
+:root {
+  --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+}</style>"<marker id="mermaid_arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker>"</svg></button></pre>
+<p dir="auto"><strong>E.</strong></p>
+<pre class="language-none" tabindex="0"><code class="language-x++ language-none is-loaded">ttsbegin;
+update_recordset CustTable 
+    setting DlvMode = 'Air' 
+    where CustTable.CustGroup == 'International';
+ttscommit;
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path><style>
+:root {
+  --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+}</style>"<marker id="mermaid_arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker>"</svg></button></pre>
+<p dir="auto">A: correct<br>
+B: wrong ( should be "update_recordset" and "setting" )<br>
+C: wrong ( "where"&amp;"setting" are vice versa )<br>
+D: wrong ( don't use .doUpdate() unless you want to purposely skip validation)<br>
+E: correct</p>
+<hr>
+<p dir="auto">Skill: Design and develop AOT elements</p>
+<p dir="auto">You are a Dynamics 365 Finance developer. You have the following Extended Data Types (EDTs):</p>
+<p dir="auto">Name: AccountBase<br>
+Comments: Root EDT</p>
+<p dir="auto">Name: AccountId<br>
+Comments: Derives from AccountBase</p>
+<p dir="auto">You are planning to modify the EDT properties by using an extension. You need to determine which operations can be performed. Which operation is possible?</p>
+<p dir="auto">Options:<br>
+A.  Create an extension for AccountBase and decrease the field size<br>
+B.  Create an extension for AccountId and increase the field size<br>
+C.  Create a derived EDT for AccountId and decrease the field size<br>
+D.  Create an extension for AccountBase and increase the field size</p>
+<blockquote dir="auto">
+<p><strong>D. Create an extension for AccountBase and increase the field size</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Valid?</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. Create an extension for AccountBase and decrease the field size</strong></td>
+<td>❌ No</td>
+<td>You <strong>can’t decrease</strong> field size — risk of data loss</td>
+</tr>
+<tr>
+<td><strong>B. Create an extension for AccountId and increase the field size</strong></td>
+<td>❌ No</td>
+<td><code>AccountId</code> is <strong>derived</strong> — <code>StringSize</code> <strong>cannot be changed</strong></td>
+</tr>
+<tr>
+<td><strong>C. Create a derived EDT for AccountId and decrease the field size</strong></td>
+<td>❌ No</td>
+<td>Cannot derive from a derived EDT and cannot reduce field size</td>
+</tr>
+<tr>
+<td><strong>D. Create an extension for AccountBase and increase the field size</strong></td>
+<td>✅ <strong>Yes</strong></td>
+<td><code>AccountBase</code> is a <strong>root EDT</strong>, and you can <strong>increase</strong> the field size via extension</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p dir="auto">HOTSPOT -<br>
+You have the following class definition:</p>
+<p dir="auto">You need to create an extension class and create a new static method in it that converts miles to kilometers and then call the method from another class.<br>
+How should you complete the code and call the method? To answer, select the appropriate options in the answer area.<br>
+NOTE: Each correct selection is worth one point.<br>
+Hot Area:</p>
+<pre class="language-text" tabindex="0"><code class="language-text is-loaded">class UnitConv
+{
+    public static real PoundsToKilograms(real _pounds)
+    {
+        return _pounds * 0.45359237;
+    }
+    public static real FahrenheitCelsius(real _fahrenheit)
+    {
+        return (_fahrenheit - 32) = 5/9;
+    }
+}
+
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path><style>
+:root {
+  --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+}</style>"<marker id="mermaid_arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker>"</svg></button></pre>
+<h3 data-heading="**Answer Area**" dir="auto"><strong>Answer Area</strong></h3>
+<h4 data-heading="**Extension class definition:**" dir="auto"><strong>Extension class definition:</strong></h4>
+<pre class="language-none" tabindex="0"><code class="language-x++ language-none is-loaded">[ExtensionOf(classStr(UnitConv))]
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path><style>
+:root {
+  --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+}</style>"<marker id="mermaid_arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker>"</svg></button></pre>
+<p dir="auto"><strong>Options:</strong></p>
+<ul>
+<li dir="auto">final class CustUnitConv_Extension</li>
+<li dir="auto">final class UnitConv_MyExtension</li>
+<li dir="auto">static class UnitConvMy_Extension</li>
+<li dir="auto">class UnitConv_Extension</li>
+</ul>
+<hr>
+<pre class="language-none" tabindex="0"><code class="language-x++ language-none is-loaded">{
+    public static CaseMileage MiToKm(CaseMileage _miles)
+    {
+        return _miles * 1.609344;
+    }
+}
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path><style>
+:root {
+  --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+}</style>"<marker id="mermaid_arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker>"</svg></button></pre>
+<h4 data-heading="**Call the method:**" dir="auto"><strong>Call the method:</strong></h4>
+<p dir="auto"><strong>Options:</strong></p>
+<ul>
+<li dir="auto">var km = UnitConv::MiToKm(62.1371);</li>
+<li dir="auto">CaseMileage km = UnitConv_MyExtension::MiToKm(62.1371);</li>
+<li dir="auto">UnitConvMy_Extension cUC = new UnitConv(); int km = cUC.MiToKm(62.1371);</li>
+<li dir="auto">UnitConv_Extension uCE = new UnitConv(); real km = uCE.MiToKm(62.1371);<br>
+<strong>Answer Description</strong><br>
+Box 1: final class UnitConv_MyExtension<br>
+Box 2: var km = UnitConv::miToKm(62.1371);<br>
+Reference:<br>
+<a rel="noopener nofollow" class="external-link" href="https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/extensibility/method-wrapping-coc" target="_blank">https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/extensibility/method-wrapping-coc</a></li>
+</ul>
+<hr>
+<pre class="language-text" tabindex="0"><code class="language-text is-loaded">Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path><style>
+:root {
+  --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+}</style>"<marker id="mermaid_arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker>"</svg></button></pre>
+<p dir="auto">You create a new form in a project.<br>
+You need to display tabs in a vertical alignment.<br>
+Solution: Apply the Details Master pattern.<br>
+Does the solution meet the goal?</p>
+<ul>
+<li dir="auto">Yes</li>
+<li dir="auto">No<br>
+<strong>No</strong></li>
+</ul>
+<p dir="auto">The Details Master pattern in Dynamics F&amp;O is used to create a form where a list (master) is displayed alongside detailed information. It's great for scenarios like customer lists with details shown on selection.</p>
+<hr>
+<pre class="language-text" tabindex="0"><code class="language-text is-loaded">Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.
+</code><button class="copy-code-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-copy"><rect x="8" y="8" width="14" height="14" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path><style>
+:root {
+  --default-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Microsoft YaHei Light", sans-serif;
+  --font-monospace: 'Source Code Pro', monospace;
+  --background-primary: #ffffff;
+  --background-modifier-border: #ddd;
+  --text-accent: #705dcf;
+  --text-accent-hover: #7a6ae6;
+  --text-normal: #2e3338;
+  --background-secondary: #f2f3f5;
+  --background-secondary-alt: #e3e5e8;
+  --text-muted: #888888;
+}</style>"<marker id="mermaid_arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker>"</svg></button></pre>
+<p dir="auto">You create a new form in a project.<br>
+You need to display tabs in a vertical alignment.<br>
+Solution: Apply the Table of Contents pattern.<br>
+Does the solution meet the goal?</p>
+<ul>
+<li dir="auto">Yes</li>
+<li dir="auto">No<br>
+<strong>Yes</strong></li>
+</ul>
+<p dir="auto">The Table of Contents pattern is commonly used in UI design to present a navigational structure, often in a vertical list format, where items (like sections or tabs) are organized to guide users through content. This pattern naturally aligns with the requirement of displaying tabs vertically, as it typically involves a vertically stacked list of clickable items that allow users to navigate between different sections or views, similar to how vertical tabs function.</p>
+<hr>
+    </body>
+</html>
