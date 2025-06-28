@@ -1,0 +1,1648 @@
+<!doctype html>
+<html>
+    <head>
+        <title>group2</title>
+        <meta charset='utf-8'/>
+        <style>
+body {
+  background-color: black;
+  color: white;
+  margin-left: 25%;
+  margin-right: 25%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+div{
+  color: white;
+}
+
+img{
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 80%;
+
+}
+
+p{
+  font-size: large;
+  /* display: inline; */
+}
+
+li{
+font-size: large;
+}
+
+.scrollmenu {
+  overflow: auto;
+  max-height: 65vh;
+  white-space: nowrap;
+  text-align: left;
+}
+</style>
+    </head>
+    <body>
+<p dir="auto">A company uses Dynamics 365 Finance.</p>
+<p dir="auto">You must add fields to a standard Dynamics 365 Finance form by using Visual Studio.</p>
+<p dir="auto">You need to create an extension for the form.</p>
+<p dir="auto">What should you do?</p>
+<ul>
+<li dir="auto">Drag the form from Application Explorer to the project.</li>
+<li dir="auto">Create a new class that extends the form.</li>
+<li dir="auto">Create an extension of the standard form in the AOT and add it to the project.</li>
+<li dir="auto">Add the form directly to the project and add the new fields.</li>
+</ul>
+<ul>
+<li dir="auto">Create an extension of the standard form in the AOT and add it to the project</li>
+</ul>
+<h3 data-heading="Options" dir="auto">Options</h3>
+<ul>
+<li dir="auto"><strong>Create a new class that extends the form:</strong>&nbsp;This is used to create a&nbsp;form extension class, which allows you to add or modify the&nbsp;code and logic&nbsp;of a form (e.g., event handlers, new methods). It is not used to add visual controls like fields to the form's design.</li>
+<li dir="auto"><strong>Create an extension of the standard form in the AOT and add it to the project:</strong>&nbsp;While you can right-click the form in the AOT and select "Create extension," the drag-and-drop method is a more direct and common workflow that accomplishes the same thing in a single step.</li>
+<li dir="auto"><strong>Add the form directly to the project and add the new fields:</strong>&nbsp;This describes overlayering, which is not permitted for standard Microsoft elements. Attempting to do this would result in an error or the system would create an extension anyway.</li>
+<li dir="auto"><strong>Drag the form from Application Explorer to the project:</strong> </li>
+</ul>
+<ol>
+<li dir="auto">Locate the form in the&nbsp;<strong>Application Explorer</strong>&nbsp;in Visual Studio.</li>
+<li dir="auto"><strong>Drag</strong>&nbsp;the form from the Application Explorer and&nbsp;<strong>drop</strong>&nbsp;it onto your project in the Solution Explorer.</li>
+</ol>
+<ul>
+<li dir="auto">Visual Studio will automatically create a new form extension element in your project (for example, SalesTable.MyProject.Extension), which you can then modify by adding new data sources, controls (fields), or changing properties.</li>
+</ul>
+<hr>
+<p dir="auto">Plan the architecture and solution design</p>
+<p dir="auto">When deploying a cloud-based solution of Finance and Operations, which source control process is available?</p>
+<p dir="auto">Options:<br>
+A.  Azure DevOps Services<br>
+B.  Azure DevOps Server<br>
+C.  Visual Studio Team Foundation Server<br>
+Azure DevOps Services</p>
+<h3 data-heading="🔍 Option Breakdown:" dir="auto">🔍 Option Breakdown:</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Option</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Supported for Cloud Deployment?</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ <strong>A. Azure DevOps Services</strong></td>
+<td>Microsoft’s <strong>cloud-based</strong> DevOps solution, tightly integrated with LCS and F&amp;O</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td><strong>B. Azure DevOps Server</strong></td>
+<td>On-premises version of Azure DevOps (previously called TFS Server)</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td><strong>C. Visual Studio Team Foundation Server (TFS)</strong></td>
+<td>Old name for Azure DevOps Server (on-premises)</td>
+<td>❌ No</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p dir="auto">A company uses Dynamics 365 Finance.</p>
+<p dir="auto">You implement the Insert method for a table you create. The class must meet the following requirements:</p>
+<p dir="auto">• If FieldA is equal to “Hello,” then FieldB must save the integer value 10.<br>
+• If FieldA is equal to “World,” then FieldB must save the integer value 20.<br>
+• Otherwise FieldB must save the integer 0.</p>
+<p dir="auto">You need to implement the code.</p>
+<p dir="auto">Which two code segments can you use? Each correct answer presents a complete solution.</p>
+<p dir="auto">NOTE: Each correct selection is worth one point.</p>
+<ul>
+<li dir="auto"></li>
+<li dir="auto"></li>
+<li dir="auto"></li>
+<li dir="auto"></li>
+</ul>
+<ul>
+<li dir="auto"></li>
+<li dir="auto"></li>
+</ul>
+<p dir="auto"><strong>Correct Answer</strong><br>
+AC</p>
+<hr>
+<p dir="auto">DRAG DROP -<br>
+You are a Dynamics 365 Finance developer for a company that sells pre-owned vehicles. When the company acquires a new vehicle, vehicle identification (VIN) numbers are added to the VIN field in the CustTable.<br>
+You need to create an event handler to validate that new VIN values are at least 10 characters long. Validation must occur when records are saved.<br>
+Which three actions should you perform in sequence? To answer, move the appropriate actions from the list of actions to the answer area and arrange them in the correct order.<br>
+Select and Place:</p>
+<p dir="auto"><strong>Actions</strong></p>
+<ul>
+<li dir="auto">Copy the onWriting event handler on the CustTable table object.</li>
+<li dir="auto">Copy the validatedWrite event handler on the CustTable object.</li>
+<li dir="auto">Add code to perform the validation.</li>
+<li dir="auto">Copy the onModified event handler on the CustTable object.</li>
+<li dir="auto">Add the event handler method to a class.<br>
+| <strong>Step</strong> | <strong>Action</strong>                                                     |<br>
+| -------- | -------------------------------------------------------------- |<br>
+| <strong>1</strong>    | Copy the validatedWrite event handler on the CustTable object. |<br>
+| <strong>2</strong>    | Add the event handler method to a class.                       |<br>
+| <strong>3</strong>    | Add code to perform the validation.                            |</li>
+</ul>
+<h3 data-heading="**Explanation:**" dir="auto"><strong>Explanation:</strong></h3>
+<ol>
+<li dir="auto">
+<p><strong>Copy the validatedWrite event handler on the CustTable object:</strong> The validateWrite method on a table is called whenever a record is about to be saved (inserted or updated). This is the correct place to put record-level validation logic to meet the requirement "Validation must occur when records are saved." In Visual Studio, you find the CustTable in the Application Explorer, expand its methods, right-click validateWrite, and select "Copy event handler method" to get the correct method signature for your event handler.</p>
+</li>
+<li dir="auto">
+<p><strong>Add the event handler method to a class:</strong> Event handlers must reside within a class. You would create a new class (or use an existing one for handlers) and paste the method signature you copied in the previous step. This creates the method stub, decorated with the appropriate attribute (e.g., [PostHandlerFor(tableStr(CustTable), tableMethodStr(CustTable, validateWrite))]), ready for you to add your code.</p>
+</li>
+<li dir="auto">
+<p><strong>Add code to perform the validation:</strong> Inside the newly created event handler method, you write the X++ code to get the value from the VIN field, check its length, and use the checkFailed method or throw an error if the length is less than 10 characters.</p>
+</li>
+</ol>
+<h3 data-heading="**Incorrect Options**" dir="auto"><strong>Incorrect Options</strong></h3>
+<ul>
+<li dir="auto"><strong>Copy the onWriting event handler on the CustTable table object.</strong>
+<ul>
+<li dir="auto"><strong>Why this is incorrect:</strong>&nbsp;The&nbsp;onWriting&nbsp;event is a more general-purpose event that also fires before a record is saved. However,&nbsp;validateWrite&nbsp;is&nbsp;<strong>semantically correct</strong>&nbsp;and the framework's intended location for validation logic that can prevent a save. The validation framework is built around the&nbsp;validate...&nbsp;methods. When&nbsp;validateWrite&nbsp;returns false (or&nbsp;checkFailed&nbsp;is used), the system gracefully stops the transaction and displays the validation errors to the user. While you&nbsp;could&nbsp;throw an exception in an&nbsp;onWriting&nbsp;handler to stop the save, using&nbsp;validateWrite&nbsp;is the best practice and the standard, expected pattern for this specific task.</li>
+</ul>
+</li>
+<li dir="auto"><strong>Copy the onModified event handler on the CustTable object.</strong>
+<ul>
+<li dir="auto"><strong>Why this is incorrect:</strong>&nbsp;This is incorrect for two main reasons.
+<ol>
+<li dir="auto"><strong>Wrong Object:</strong>&nbsp;The&nbsp;onModified&nbsp;event applies to a&nbsp;<strong>field control</strong>&nbsp;on a form, not the table object itself. You would find this event on the form's data source field.</li>
+<li dir="auto"><strong>Wrong Timing:</strong>&nbsp;The&nbsp;modified&nbsp;method fires immediately when a user changes the value in a field and then leaves that field (e.g., tabs to the next one). The requirement is to validate&nbsp;<strong>when the record is saved</strong>, not every time the field is modified. Validating on&nbsp;modified&nbsp;can be intrusive and annoying to the user, who may not be finished editing the entire record. The correct trigger is the final save action, which is handled by&nbsp;validateWrite.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p dir="auto">You are a Dynamics 365 Finance developer. You have a virtual machine that includes Visual Studio.<br>
+You need to display the elements by model.<br>
+What should you do?</p>
+<ul>
+<li dir="auto">Select Model management from the menu and then select View all package dependences.</li>
+<li dir="auto">Right-click the Application Object Tree (AOT) node in Application Explorer and select Model View.</li>
+<li dir="auto">Select Metadata Search from the Dynamics 365 menu.</li>
+<li dir="auto">Select Model Management from the menu and then select Refresh Models.<br>
+Right-click the Application Object Tree (AOT) node in Application Explorer and select Model View</li>
+</ul>
+<h3 data-heading="🔍 Option Breakdown:" dir="auto">🔍 Option Breakdown:</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Option</strong></th>
+<th><strong>What it does</strong></th>
+<th><strong>Correct?</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Select Model management &gt; View all package dependencies</strong></td>
+<td>Shows dependencies between packages, not individual model elements</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>✅ <strong>Right-click AOT node &gt; Model View</strong></td>
+<td>Changes Application Explorer to show elements organized by <strong>model</strong>, which is what we need</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td><strong>Select Metadata Search from the Dynamics 365 menu</strong></td>
+<td>Lets you search metadata across elements — not related to viewing by model</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td><strong>Select Model Management &gt; Refresh Models</strong></td>
+<td>Refreshes the list of models (used after changes) — doesn’t display elements by model</td>
+<td>❌ No</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p dir="auto">You need to configure Electronic reporting to stop data import of a bank statement that has a vendor's payments when the vendor identification code vendor's attributes is missing. Which of the following scheme elements should you use?</p>
+<p dir="auto">Options:<br>
+A.  A format<br>
+B.  A format mapping<br>
+C.  A format validation<br>
+Correct Answer</p>
+<p dir="auto">C.  A format validation</p>
+<hr>
+<p dir="auto">Integrate and manage data solutions</p>
+<p dir="auto">Your company has field workers who schedule installation jobs for heaters. This company uses Finance and Operations for the back office and third-party software as a service (SaaS) to schedule appointments. When field workers schedule appointments, they must look up inventory availability to make sure that installation parts are available for the job. The real-time data is required. Peak data volume is 1,000 records per hour and the Frequency is Ad hoc. Which one of the following integration patterns should you use?</p>
+<p dir="auto">Options:<br>
+A.  External web services<br>
+B.  Excel integration<br>
+C.  Custom service<br>
+C.  Custom service</p>
+<p dir="auto">Here's a detailed explanation of why:</p>
+<ul>
+<li dir="auto"><strong>Real-time Data Required:</strong> The field workers need immediate confirmation of inventory availability. A custom service provides a synchronous, real-time connection. The third-party application makes a direct call to Dynamics 365 Finance and Operations and gets an immediate response.</li>
+<li dir="auto"><strong>Ad hoc Frequency:</strong> The calls are made on-demand whenever a worker needs to schedule a job. Custom services are designed to be called at any time (ad hoc) by an external system.</li>
+<li dir="auto"><strong>Specific Business Logic:</strong> The request is not just to get a raw list of inventory but to "look up inventory availability." This implies specific business logic might be needed (e.g., checking on-hand inventory, considering existing reservations, and calculating what is truly available for a new job). A custom service allows you to encapsulate this complex logic on the Finance and Operations side, presenting a simple and clear interface to the third-party application.</li>
+</ul>
+<h3 data-heading="Why the other options are incorrect:" dir="auto">Why the other options are incorrect:</h3>
+<ul>
+<li dir="auto"><strong>A. External web services:</strong> This term is generic. While a custom service is a type of web service, in the context of Dynamics 365, this option is less precise. It could also imply that Finance and Operations is <em>calling</em> an external service, which is the reverse of what is needed here. "Custom service" is the specific and correct pattern for exposing custom F&amp;O logic <em>to</em> an external application.</li>
+<li dir="auto"><strong>B. Excel integration:</strong> This is designed for user-driven bulk data import/export and analysis. It is not an automated, real-time, system-to-system integration pattern and is entirely unsuitable for this requirement.</li>
+</ul>
+<hr>
+<p dir="auto">You are adding a new field to the SalesTable form. You must use an extension to add a status field onto the form. You need to create the extension in the Application Object Tree (AOT) and add the extension to the demoExtensions model.<br>
+Solution: Add a new form object to the project and name the form SalesTable.Extension.<br>
+Does the solution meet the goal?</p>
+<p dir="auto">Options:<br>
+A.  Yes<br>
+B.  No<br>
+B.  No</p>
+<p dir="auto">The proposed solution describes creating a&nbsp;<strong>brand new, empty form</strong>&nbsp;and naming it&nbsp;SalesTable.Extension. This does not create an extension of the standard&nbsp;SalesTable&nbsp;form. It creates a completely new, independent form object. Any fields added to this new object will exist only on this new form and will&nbsp;<strong>not</strong>&nbsp;appear on the standard Sales Order Details form that users interact with.</p>
+<p dir="auto">To correctly create an extension of the&nbsp;SalesTable&nbsp;form, you would need to:</p>
+<ol>
+<li dir="auto">Find the&nbsp;SalesTable&nbsp;form in the Application Explorer (AOT).</li>
+<li dir="auto">Right-click the form and select&nbsp;<strong>Create extension</strong>.
+<ul>
+<li dir="auto">Alternatively, you could&nbsp;<strong>drag</strong>&nbsp;the&nbsp;SalesTable&nbsp;form from the Application Explorer into your project.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<p dir="auto">You are a Dynamics 365 Finance developer.</p>
+<p dir="auto">You have the following entities.</p>
+<p dir="auto">You must create the required fields and relationships in the staging tables.</p>
+<p dir="auto">You need to develop a composite entity that uses the OrderHeader and OrderLine entities.</p>
+<p dir="auto">Which object should you use for each action? To answer, select the appropriate options in the answer area.</p>
+<ol>
+<li dir="auto">
+<p>Add a foreign key relation on the table based on the Orderld field:</p>
+<ul>
+<li dir="auto">OrderHeaderStaging</li>
+<li dir="auto">OrderLineStaging</li>
+</ul>
+</li>
+<li dir="auto">
+<p>Add mandatory field names:</p>
+<ul>
+<li dir="auto">RowId, ParentRowId</li>
+<li dir="auto">RefTableld, RefRecId</li>
+<li dir="auto">ParentTableld, ParentRecId</li>
+</ul>
+</li>
+<li dir="auto">
+<p>Add mandatory fields on the tables:</p>
+<ul>
+<li dir="auto">OrderHeaderStaging only</li>
+<li dir="auto">OrderLineStaging only</li>
+<li dir="auto">OrderHeaderStaging and OrderLineStaging<br>
+| <strong>Action</strong>                                                         | <strong>Correct Option</strong>                        |<br>
+| ------------------------------------------------------------------ | ----------------------------------------- |<br>
+| Add a foreign key relation on the table based on the OrderId field | ✅ OrderLineStaging                        |<br>
+| Add mandatory field names                                          | ✅ RowId, ParentRowId                      |<br>
+| Add mandatory fields on the tables                                 | ✅ OrderHeaderStaging and OrderLineStaging |</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 data-heading="✅ **Add a foreign key relation on the table based on the OrderId field:**" dir="auto">✅ <strong>Add a foreign key relation on the table based on the OrderId field:</strong></h3>
+<ul>
+<li dir="auto"><strong>Answer:</strong> ✅ <strong>OrderLineStaging</strong></li>
+</ul>
+<blockquote dir="auto">
+<p>The <strong>OrderLineStaging</strong> table must have a foreign key to <strong>OrderHeaderStaging</strong> to reflect the parent-child relationship. OrderId typically links a line to its header.</p>
+</blockquote>
+<hr>
+<h3 data-heading="✅ **Add mandatory field names:**" dir="auto">✅ <strong>Add mandatory field names:</strong></h3>
+<ul>
+<li dir="auto"><strong>Answer:</strong> ✅ <strong>RowId, ParentRowId</strong></li>
+</ul>
+<blockquote dir="auto">
+<p>These are <strong>required</strong> for composite entity staging tables to define parent-child relationships and preserve hierarchy during import/export via data management.</p>
+</blockquote>
+<hr>
+<h3 data-heading="✅ **Add mandatory fields on the tables:**" dir="auto">✅ <strong>Add mandatory fields on the tables:</strong></h3>
+<ul>
+<li dir="auto"><strong>Answer:</strong> ✅ <strong>OrderHeaderStaging and OrderLineStaging</strong></li>
+</ul>
+<blockquote dir="auto">
+<p>Both staging tables must contain tracking fields like RowId, ParentRowId, TransferStatus, and system fields to enable the composite data entity to function properly.</p>
+</blockquote>
+<hr>
+<p dir="auto">Develop and test code</p>
+<p dir="auto">You are writing a query to retrieve the customers that are not associated with a sales order. What join between the Customer table and the Sales table should you use?</p>
+<p dir="auto">Options:<br>
+A.  Join<br>
+B.  Outer join<br>
+C.  Exists join<br>
+D.  NotExists join<br>
+NotExists join</p>
+<h3 data-heading="Explanation:" dir="auto">Explanation:</h3>
+<ul>
+<li dir="auto"><strong>A. Join</strong> – Regular join returns only matching records between Customer and Sales tables. This would return customers <em>with</em> sales orders (not what we want).</li>
+<li dir="auto"><strong>B. Outer join</strong> – Returns all customers and any matching sales orders, but still includes those with sales. You’d need to filter nulls manually — less efficient for this use case.</li>
+<li dir="auto"><strong>C. Exists join</strong> – Returns customers <em>with</em> at least one related sales order — the opposite of what is required.</li>
+<li dir="auto"><strong>D. NotExists join</strong> – ✅ Returns customers where <strong>no matching record exists</strong> in the Sales table. This is exactly what we need.</li>
+</ul>
+<hr>
+<h3 data-heading="In X++ (example syntax):" dir="auto">In X++ (example syntax):</h3>
+<p dir="auto">x++<br>
+select * from CustTable<br>
+notexists join SalesTable<br>
+where SalesTable.CustAccount == CustTable.AccountNum;</p>
+<p dir="auto">This returns all customers <strong>who do not have</strong> any associated sales orders.</p>
+<hr>
+<p dir="auto">A company uses Dynamics 365 Finance. You are customizing elements for the extended data types (EDTs) shown in the following table.</p>
+<table>
+<thead>
+<tr>
+<th>EDT name</th>
+<th>Comment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CalendarID</td>
+<td>root EDT</td>
+</tr>
+<tr>
+<td>CalendarName</td>
+<td>root EDT</td>
+</tr>
+<tr>
+<td>BasicCalendarID</td>
+<td>derives from CalendarID</td>
+</tr>
+</tbody>
+</table>
+<p dir="auto">You have a Table named WorkCalendar. The table has a column named BasicCalendarlD that uses the BasicCalendariD EDT. You need to increase the length of the column by using an extension.</p>
+<p dir="auto">Solution: Create an extension for CalendarlD.</p>
+<p dir="auto">Does the solution meet the goal?</p>
+<p dir="auto">Options:<br>
+A.  Yes<br>
+B.  No<br>
+A.  Yes</p>
+<p dir="auto">&nbsp;Properties such as label, help text, and string size are inherited from a parent EDT to a child EDT.</p>
+<ol>
+<li dir="auto"><strong>The Hierarchy:</strong>&nbsp;The problem states that&nbsp;BasicCalendarID&nbsp;derives from&nbsp;CalendarID. This means&nbsp;CalendarID&nbsp;is the parent (or "root" in this chain) and&nbsp;BasicCalendarID&nbsp;is the child.</li>
+<li dir="auto"><strong>Property Inheritance:</strong>&nbsp;BasicCalendarID&nbsp;inherits its properties, including its length (StringSize), from&nbsp;CalendarID.</li>
+<li dir="auto"><strong>Effect of the Solution:</strong>&nbsp;By creating an extension for the root EDT&nbsp;CalendarID&nbsp;and increasing its StringSize, this change will automatically be inherited by the&nbsp;BasicCalendarID&nbsp;EDT.</li>
+<li dir="auto"><strong>Table Field Update:</strong>&nbsp;Since the&nbsp;WorkCalendar.BasicCalendarID&nbsp;field is based on the&nbsp;BasicCalendarID&nbsp;EDT, it will adopt the new, longer length from the EDT after a database synchronization.</li>
+</ol>
+<hr>
+<p dir="auto">You are a Dynamics 365 Finance developer. You need to create a key performance indicator (KPI) that shows total sales by region. Which two objects should you create?</p>
+<p dir="auto">Options:<br>
+A.  Dimension for region<br>
+B.  Dimension for total sales<br>
+C.  Aggregated view for total sales<br>
+D.  Measure for region<br>
+E.  Measure for total sales<br>
+A.  Dimension for region<br>
+E.  Measure for total sales</p>
+<table>
+<thead>
+<tr>
+<th>Object</th>
+<th>What It Means</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ <strong>Measure (E)</strong></td>
+<td>A numeric field to summarize (e.g., SUM of sales)</td>
+<td>Total Sales (e.g., sum of invoice)</td>
+</tr>
+<tr>
+<td>✅ <strong>Dimension (A)</strong></td>
+<td>A category used to group the measure</td>
+<td>Region (e.g., North, South)</td>
+</tr>
+<tr>
+<td>❌ <strong>Dimension for total sales (B)</strong></td>
+<td>Not valid — you don't create a "dimension" for numbers</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>❌ <strong>Aggregated view (C)</strong></td>
+<td>Not something you directly create; it's generated via modeling</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>❌ <strong>Measure for region (D)</strong></td>
+<td>Region isn’t numeric; it’s a category, not a measure</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p dir="auto">A developer submits code for a quality assurance review. Several lines of code use the var data type.</p>
+<p dir="auto">You need to validate the segments for the correct X++ structure.</p>
+<p dir="auto">Which code statement will pass validation?</p>
+<p dir="auto">Options:<br>
+A.  var var1 = systemDateGet (); var1 = var1 ? today(); ''No today'';<br>
+B.  var var1 = true ? 10:''10''<br>
+C.  var var1 = true; var1 = true ? 10:falase;<br>
+D.  var var1 = (var1 &gt;= false) ? true :10;<br>
+Correct Answer</p>
+<p dir="auto">A.  var var1 = systemDateGet (); var1 = var1 ? today(); ''No today'';</p>
+<hr>
+<h3 data-heading="Develop and test code" dir="auto">Develop and test code</h3>
+<p dir="auto">The following statements are about Task Recorder. Select Yes if the statement is true or else select No.</p>
+<ol>
+<li dir="auto">
+<p>Create task guides of a process that users can follow</p>
+<ul>
+<li dir="auto">Yes</li>
+<li dir="auto">No</li>
+</ul>
+</li>
+<li dir="auto">
+<p>Generate unit tests in Visual Studio</p>
+<ul>
+<li dir="auto">Yes</li>
+<li dir="auto">No</li>
+</ul>
+</li>
+<li dir="auto">
+<p>Periodically run to automatically complete a task</p>
+<ul>
+<li dir="auto">Yes</li>
+<li dir="auto">No</li>
+</ul>
+</li>
+<li dir="auto">
+<p>Create on-rails playback that limits users to only be able to select elements within the task recording</p>
+<ul>
+<li dir="auto">Yes</li>
+<li dir="auto">No<br>
+| Statement                                                                                               | Answer |<br>
+| ------------------------------------------------------------------------------------------------------- | ------ |<br>
+| Create task guides of a process that users can follow                                                   | Yes    |<br>
+| Generate unit tests in Visual Studio                                                                    | Yes    |<br>
+| Periodically run to automatically complete a task                                                       | No     |<br>
+| Create on-rails playback that limits users to only be able to select elements within the task recording | Yes    |</li>
+</ul>
+</li>
+</ol>
+<p dir="auto"><strong>1. Create task guides of a process that users can follow</strong></p>
+<p dir="auto"><strong>Yes</strong></p>
+<p dir="auto">This is a primary function of the Task Recorder. It captures user actions, such as clicks and value entries, to create a step-by-step interactive guide. Other users can then play this guide, which will point them to the exact fields and buttons they need to interact with to complete a business process. It can also be exported as a Word document to create printable training materials.</p>
+<p dir="auto"><strong>2. Generate unit tests in Visual Studio</strong></p>
+<p dir="auto"><strong>Yes</strong></p>
+<p dir="auto">A task recording can be saved as a "developer recording" file (.xml). This file can then be imported into Visual Studio to automatically generate X++ test code. This allows developers to quickly create repeatable unit and regression tests based on real user processes, which is a key component of the Regression Suite Automation Tool (RSAT).</p>
+<p dir="auto"><strong>3. Periodically run to automatically complete a task</strong></p>
+<p dir="auto"><strong>No</strong></p>
+<p dir="auto">The Task Recorder itself does not include a scheduling feature to automatically run business processes in an unattended way (e.g., run every night to post a journal). While recordings can be played back automatically, this is primarily in the context of user guidance or, more significantly, for automated <em>testing</em> with the Regression Suite Automation Tool (RSAT). For unattended and scheduled business process automation, other tools such as Power Automate or the system's built-in batch job framework are used.</p>
+<p dir="auto"><strong>4. Create on-rails playback that limits users to only be able to select elements within the task recording</strong></p>
+<p dir="auto"><strong>Yes</strong></p>
+<p dir="auto">When a task guide is being played back, it operates in a locked or "on-rails" mode. This feature restricts the user from clicking on elements outside of the one highlighted by the current step of the guide. This ensures that the user follows the process exactly as it was recorded, preventing them from going off-track or making mistakes. The user can choose to "unlock" the guide if they need to deviate from the prescribed steps.</p>
+<hr>
+<p dir="auto">Design and develop AOT elements</p>
+<p dir="auto">A company implements Dynamics 365 Finance and Dynamics 365 Supply Chain Management.<br>
+Customers place orders from the company website store or through sales representatives.<br>
+You create a Power Platform app to manage sales quotes for sales representatives who do not have direct access to the Finance and Supply Chain Management environment. The app must meet the following requirements:</p>
+<ul>
+<li dir="auto">Sales representatives must be able to create new customers.</li>
+<li dir="auto">Ensure that only approved products can be sold.</li>
+<li dir="auto">Be available when the sales representatives do not have internet access.</li>
+<li dir="auto">Web sales are imported nightly.</li>
+</ul>
+<p dir="auto">You need to determine a strategy to integrate apps.<br>
+What should you use? To answer, drag the appropriate options to the correct app features. Each option may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.</p>
+<p dir="auto">New customers:</p>
+<ul>
+<li dir="auto">Select Option</li>
+<li dir="auto">Dual-write</li>
+<li dir="auto">Virtual entity</li>
+<li dir="auto">Composite entity</li>
+</ul>
+<p dir="auto">Approved products:</p>
+<ul>
+<li dir="auto">Select Option</li>
+<li dir="auto">Dual-write</li>
+<li dir="auto">Virtual entity</li>
+<li dir="auto">Composite entity</li>
+</ul>
+<p dir="auto">Web orders:</p>
+<ul>
+<li dir="auto">Select Option</li>
+<li dir="auto">Dual-write</li>
+<li dir="auto">Virtual entity</li>
+<li dir="auto">Composite entity<br>
+| <strong>App Feature</strong>   | <strong>Option</strong>         |<br>
+| ----------------- | ------------------ |<br>
+| New customers     | ✅ Dual-write       |<br>
+| Approved products | ✅ Dual-write       |<br>
+| Web orders        | ✅ Composite entity |</li>
+</ul>
+<p dir="auto"><strong>New customers:</strong><br>
+✅ <strong>Dual-write</strong><br>
+<strong>Reason:</strong> Dual-write provides real-time bi-directional synchronization between Dynamics 365 Finance and Operations apps and Dataverse. It allows new customers created in the Power Platform app to be written directly into the Finance and Supply Chain Management environment.</p>
+<hr>
+<p dir="auto"><strong>Approved products:</strong><br>
+✅ <strong>Dual-write</strong><br>
+<strong>Reasoning:</strong> The app must be available offline, and sales representatives need access to a list of approved products. For an app to work offline, the data must be physically stored on the device, which means the product data must exist in Dataverse. Dual-write synchronizes the product data from Dynamics 365 Supply Chain Management to Dataverse. This populates the Power Platform app with the necessary product list and, because the data is now natively in Dataverse, it can be made available for sales representatives when they do not have internet access. Virtual entities are unsuitable as they require a constant online connection.</p>
+<hr>
+<p dir="auto"><strong>Web orders:</strong><br>
+✅ <strong>Composite entity</strong><br>
+<strong>Reason:</strong> Composite entities are commonly used in data import/export scenarios. Since web orders are imported <strong>nightly</strong>, a batch-based approach using composite entities to combine and process multiple related data elements (like order header and lines) makes sense.</p>
+<hr>
+<p dir="auto">You have a Dynamics 365 Finance environment.<br>
+You have the following code: (Line numbers are included for reference only.)</p>
+<p dir="auto">For each of the following statements, select Yes if the statement is true. Otherwise, select No.<br>
+NOTE: Each correct selection is worth one point.</p>
+<p dir="auto">Hot Area:</p>
+<p dir="auto">text<br>
+01  class SalesPriceDiscount<br>
+02  {<br>
+03      ...<br>
+04      public void calculatePrice<br>
+05      {<br>
+06          ...<br>
+07      }<br>
+08      public static AmountCur getDiscount(Percent markup)<br>
+09      {<br>
+10          ...<br>
+11      }<br>
+12  }<br>
+13  [ExtensionOf(classStr(SalesPriceDiscount))]<br>
+14  final class SalesPriceDiscountMy_Extension<br>
+15  {<br>
+16      public void calculatePrice()<br>
+17      {<br>
+18          ...<br>
+19          next calculatePrice()<br>
+20          ...<br>
+21      }<br>
+22  }</p>
+<table>
+<thead>
+<tr>
+<th><strong>Statement</strong></th>
+<th><strong>Yes</strong></th>
+<th><strong>No</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The calculatePrice() method in the extension class can access and manage public and protected methods and variables of the base class.</td>
+<td>⭘</td>
+<td>⭘</td>
+</tr>
+<tr>
+<td>You can modify the calculatePrice() method in the extension class by adding conditional logic at line 20.</td>
+<td>⭘</td>
+<td>⭘</td>
+</tr>
+<tr>
+<td>The static method getDiscount() in Line 10 of the base class can be wrapped and extended by adding business logic to the extension class.</td>
+<td>⭘</td>
+<td>⭘</td>
+</tr>
+<tr>
+<td>The extension class can be instantiated by running the following code: SalesPriceDiscountMy_Extension myInstance = new SalesPriceDiscountMy_Extension();</td>
+<td>⭘</td>
+<td>⭘</td>
+</tr>
+<tr>
+<td><strong>Statement</strong></td>
+<td><strong>Yes</strong></td>
+<td><strong>No</strong></td>
+</tr>
+<tr>
+<td>--------------------------------------------------------------------------------------------------------------------------------------------------------------</td>
+<td>:-----:</td>
+<td>:----:</td>
+</tr>
+<tr>
+<td><strong>The calculatePrice() method in the extension class can access and manage public and protected methods and variables of the base class.</strong></td>
+<td>✅</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>You can modify the calculatePrice() method in the extension class by adding conditional logic at line 20.</strong></td>
+<td>✅</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>The static method getDiscount() in Line 10 of the base class can be wrapped and extended by adding business logic to the extension class.</strong></td>
+<td>✅</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>The extension class can be instantiated by running the following code: SalesPriceDiscountMy_Extension myInstance = new SalesPriceDiscountMy_Extension();</strong></td>
+<td></td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h3 data-heading="✅ Explanation:" dir="auto">✅ Explanation:</h3>
+<ol>
+<li dir="auto"><strong>Access to base class members</strong>: Extension methods can access <strong>public and protected</strong> members of the base class. So this is <strong>Yes</strong>.</li>
+<li dir="auto"><strong>Adding logic at line 20</strong>:  You can modify or extend the logic after the next calculatePrice() call by adding custom logic—<strong>Yes</strong>.</li>
+<li dir="auto"><strong>Static methods cannot be extended</strong>:  Instance and static methods can be wrapped by extension classes. If a static method is the target that will be wrapped, the method in the extension must be qualified by using the static keyword.</li>
+<li dir="auto"><strong>Instantiation of extension class</strong>: Extension classes are <strong>not meant to be instantiated</strong>; they enhance the base class. So new SalesPriceDiscountMy_Extension() is <strong>invalid</strong>—<strong>No</strong>.</li>
+</ol>
+<hr>
+<p dir="auto">You have a table in which multiple properties must be changed. Multiple table properties are locked down at the base table and must not be overwritten.<br>
+You need to modify the table properties by extending the table.<br>
+Which table property can you populate in a table extension by using the property sheet?</p>
+<ul>
+<li dir="auto">
+<p>Cache lookup</p>
+</li>
+<li dir="auto">
+<p>Modified date time</p>
+</li>
+<li dir="auto">
+<p>Configuration key</p>
+</li>
+<li dir="auto">
+<p>Table group<br>
+<strong>Modified date time</strong></p>
+</li>
+<li dir="auto">
+<p>ModifiedDateTime is a <strong>system field</strong> that tracks when a record was last modified.</p>
+</li>
+<li dir="auto">
+<p>You <strong>can enable this property</strong> in a table extension via the <strong>property sheet</strong>, provided the base table hasn’t already enabled it.</p>
+</li>
+<li dir="auto">
+<p>It’s considered a <strong>system-managed field</strong>, and enabling it does not violate the rules about altering critical structural or behavioral properties of the base table.</p>
+</li>
+</ul>
+<hr>
+<p dir="auto">You need to prepare to deploy a software deployable package to a test environment.</p>
+<p dir="auto">What should you do to prepare?</p>
+<ul>
+<li dir="auto">In Visual Studio, create a Dynamics 365 deployment package and upload the package to the asset library.</li>
+<li dir="auto">In Azure DevOps, queue a build from the corresponding branch and upload the model to the asset library.</li>
+<li dir="auto">In Azure DevOps, queue a build from the corresponding branch and upload the package to the asset library.</li>
+<li dir="auto">In Azure DevOps, queue a build from the corresponding branch and upload the package to the asset library.</li>
+</ul>
+<p dir="auto"><strong>Explanation:</strong></p>
+<p dir="auto">This option describes the standard, modern, and best-practice Application Lifecycle Management (ALM) process for Dynamics 365 Finance.</p>
+<ol>
+<li dir="auto"><strong>In Azure DevOps, queue a build from the corresponding branch:</strong> Development work is checked into a source control repository (like Git in Azure DevOps). The build pipeline is configured to pull the source code from a specific branch (e.g., a release or main branch), compile it, and package it. This ensures that the package is created from a controlled, official version of the code, not from an individual developer's machine.</li>
+<li dir="auto"><strong>...and upload the package to the asset library:</strong> The primary output of the build pipeline is a <strong>Software Deployable Package</strong>. The build pipeline can be configured with a task to automatically upload this package to the project's Asset Library in Lifecycle Services (LCS). From the Asset Library, the package can then be applied to any test or UAT environment.</li>
+</ol>
+<p dir="auto"><strong>Why the other options are incorrect:</strong></p>
+<ul>
+<li dir="auto"><strong>In Visual Studio, create a Dynamics 365 deployment package and upload the package to the asset library:</strong> While you <em>can</em> create a deployable package directly from Visual Studio, this is not the recommended practice for deploying to shared environments like test or production. It's a manual process that is prone to error (e.g., packaging the wrong code, not having the latest version, forgetting a dependency). The automated build in Azure DevOps is repeatable, reliable, and the industry standard.</li>
+<li dir="auto"><strong>In Azure DevOps, queue a build from the corresponding branch and upload the model to the asset library:</strong> This is incorrect because you do not upload <strong>models</strong> to the LCS Asset Library for deployment. You upload the compiled <strong>Software Deployable Package</strong>. LCS environments consume deployable packages, not source models.</li>
+</ul>
+<hr>
+<p dir="auto">Integrate and manage data solutions</p>
+<p dir="auto">Which of the following enables the exchange of documents or files between Finance and Operations and any third-party application or service?</p>
+<p dir="auto">A.  Excel integration<br>
+B.  Custom service<br>
+C.  Batch data API<br>
+C.  Batch data API</p>
+<table>
+<thead>
+<tr>
+<th><strong>Option</strong></th>
+<th><strong>Supports File/Document Exchange?</strong></th>
+<th><strong>Usage Type</strong></th>
+<th><strong>Custom Development Required?</strong></th>
+<th><strong>Best Use Case</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. Excel Integration</strong></td>
+<td>❌ No</td>
+<td>User-driven, manual data access</td>
+<td>No</td>
+<td>Quick manual data view/edit by users via Excel</td>
+</tr>
+<tr>
+<td><strong>B. Custom Service</strong></td>
+<td>⚠️ Possible (with effort)</td>
+<td>Real-time, API-based integration</td>
+<td>✅ Yes</td>
+<td>Custom logic/APIs where standard tools don't suffice</td>
+</tr>
+<tr>
+<td><strong>C. Batch Data API</strong></td>
+<td>✅ Yes</td>
+<td>File-based, asynchronous integration</td>
+<td>❌ No</td>
+<td>Scheduled or triggered file(XML, CSV, Excel)/data exchange via DMF</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p dir="auto">text<br>
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.<br>
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.</p>
+<p dir="auto">You create a new form in a project.<br>
+You need to display tabs in a vertical alignment.<br>
+Solution: Apply the Operational Workspaces pattern.<br>
+Does the solution meet the goal?</p>
+<ul>
+<li dir="auto">Yes</li>
+<li dir="auto">No<br>
+<strong>No</strong></li>
+</ul>
+<p dir="auto">In Microsoft Dynamics 365 Finance and Operations (F&amp;O):</p>
+<ul>
+<li dir="auto">The Operational Workspaces pattern is designed for creating dashboard-style pages with analytics, quick actions, tiles, and lists — not specifically for displaying tabs in vertical alignment.</li>
+<li dir="auto">It organizes content using tiles, lists, and links, usually laid out horizontally or in sections, not with vertical tabs.</li>
+</ul>
+<hr>
+<p dir="auto">Design and develop AOT elements</p>
+<p dir="auto">You need to add an element to your workspace to quickly see sales orders that have been marked as Pending confirmation. Normally, you filter the Sales order list page to find if you have any orders that are waiting for confirmation. What workspace element would help you quickly identify the pending confirmation orders that you must process?</p>
+<p dir="auto">Options:<br>
+A.  Power BI line chart<br>
+B.  Power BI pie chart<br>
+C.  Link<br>
+D.  Tile<br>
+D.  Tile</p>
+<h3 data-heading="Explanation" dir="auto">Explanation</h3>
+<ul>
+<li dir="auto"><strong>D. Tile:</strong>&nbsp;Tiles are a fundamental element of Dynamics 365 workspaces. They are specifically designed for this exact scenario. A tile can be configured to display a&nbsp;<strong>count</strong>&nbsp;of records that match a specific query (in this case, sales orders where the status is&nbsp;Pending confirmation). The tile then acts as a hyperlink; clicking it takes the user directly to the filtered list page showing only those specific orders. This provides the "at-a-glance" count and the quick navigation the user needs.</li>
+<li dir="auto"><strong>A. Power BI line chart &amp; B. Power BI pie chart:</strong>&nbsp;While Power BI elements can be embedded in workspaces, they are designed for more complex data visualization and business intelligence, such as showing trends over time (line chart) or proportions of a whole (pie chart). Using Power BI for a simple record count is overly complex and not the intended use of this feature.</li>
+<li dir="auto"><strong>C. Link:</strong>&nbsp;A simple link could take the user to the sales order list page, but it would not display the count of pending orders directly on the workspace. The user would still have to click the link to see if there is anything to process, which doesn't solve their problem of "quickly identifying" if work is waiting.</li>
+</ul>
+<hr>
+<p dir="auto">Skill: Integrate and manage data solutions</p>
+<p dir="auto">Which of the following are used to enable the flow of data between Finance and Operations and other Dynamics 365 applications?</p>
+<p dir="auto">Options:<br>
+A.  Microsoft Flow<br>
+B.  Common Data Service<br>
+C.  Data entities<br>
+D.  Data management workspace<br>
+Correct Answer</p>
+<p dir="auto">B.  Common Data Service</p>
+<hr>
+<p dir="auto">A company plans to migrate purchase orders from an older system into Dynamics 365 Finance.</p>
+<p dir="auto">You need to generate field mapping between the source and the target data structures.</p>
+<p dir="auto">What should you do? To answer, select the appropriate options in the answer area.</p>
+<ol>
+<li dir="auto">
+<p>Create this type of project in the data management workspace</p>
+<ul>
+<li dir="auto">Options:
+<ul>
+<li dir="auto">Import</li>
+<li dir="auto">Export</li>
+<li dir="auto">View map</li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="auto">
+<p>Open the project and select</p>
+<ul>
+<li dir="auto">Options:
+<ul>
+<li dir="auto">Define an XML manifest</li>
+<li dir="auto">Manage</li>
+<li dir="auto">Download</li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="auto">
+<p>Select this UI option</p>
+<ul>
+<li dir="auto">Options:<br>
+- Generate mapping<br>
+- Generate integration<br>
+- Modify target mapping<br>
+Correct Answer</li>
+</ul>
+</li>
+<li dir="auto">
+<p>Import</p>
+</li>
+<li dir="auto">
+<p>Manage</p>
+</li>
+<li dir="auto">
+<p>Modify target mapping</p>
+</li>
+</ol>
+<hr>
+<p dir="auto">HOTSPOT -<br>
+A user reports that a form takes a long time to load. You suspect that the issue relates to a display method.<br>
+You need to resolve the issue.<br>
+Which actions should you perform? To answer, select the appropriate options in the answer area.<br>
+NOTE: Each correct selection is worth one point.<br>
+Hot Area:</p>
+<p dir="auto">Here are the listed items from the image:</p>
+<hr>
+<p dir="auto"><strong>Action: Select True/False</strong></p>
+<ol>
+<li dir="auto">Add the following attribute to the display method:<br>
+[SysClientCacheDataMethodAttribute(true)]</li>
+<li dir="auto">Set the value of the <strong>Enabled</strong> property to <strong>No</strong> for any display fields that are not needed.</li>
+<li dir="auto">Set the value of the <strong>Visible</strong> property to <strong>No</strong> for any display fields that are not needed.</li>
+<li dir="auto">Set the value of the <strong>Skip</strong> property to <strong>Yes</strong> for any display fields that are not needed.<br>
+<strong>Answer Description</strong><br>
+Box 1: Yes -<br>
+The caching will avoid executing the display method unnecessarily.<br>
+To improve the performance of a display method, you can cache the method.</li>
+</ol>
+<p dir="auto">Box 2: No -</p>
+<p dir="auto">Box 3: No -</p>
+<p dir="auto">Box 4: No -<br>
+Reference:<br>
+<a rel="noopener nofollow" class="external-link" href="https://docs.microsoft.com/en-us/dynamicsax-2012/developer/using-the-display-method-modifier" target="_blank">https://docs.microsoft.com/en-us/dynamicsax-2012/developer/using-the-display-method-modifier</a></p>
+<hr>
+<p dir="auto">You are developing a model extension for Dynamics 365 Finance that extends objects from the Application Foundation package.<br>
+You need to create and configure a new model for the extension.<br>
+Which two actions should you perform? Each correct answer presents part of the solution.<br>
+NOTE: Each correct selection is worth one point.</p>
+<ul>
+<li dir="auto">Create an extension class that references the Application Foundation.</li>
+<li dir="auto">Assign the model to the USR layer.</li>
+<li dir="auto">Reference the Application Foundation package when creating the extension model.</li>
+<li dir="auto">Create a new model that builds into its own separate assembly.</li>
+<li dir="auto">Create a new model that is part of an existing package.<br>
+<strong>C. Reference the Application Foundation package when creating the extension model.</strong><br>
+<strong>D. Create a new model that builds into its own separate assembly.</strong></li>
+</ul>
+<hr>
+<h3 data-heading="**Explanation**" dir="auto"><strong>Explanation</strong></h3>
+<p dir="auto">When you create a new solution in Dynamics 365 Finance, you place your customizations in a new <strong>model</strong>, which belongs to a <strong>package</strong>.</p>
+<ol>
+<li dir="auto">
+<p><strong>Create a new model that builds into its own separate assembly (Create new package).</strong><br>
+This is the fundamental first step. For new customizations, you should always create a new package to contain your model. This isolates your code from standard Microsoft code and other ISV solutions. A package compiles into its own DLL (assembly), which makes your solution self-contained, easier to manage, deploy, and upgrade. In the "Create model" wizard, this corresponds to selecting the <strong>"Create new package"</strong> option.</p>
+</li>
+<li dir="auto">
+<p><strong>Reference the Application Foundation package when creating the extension model.</strong><br>
+This is a critical configuration step. Your code cannot "see" or interact with objects (like tables, classes, or forms) from another package unless your model explicitly references that package. Since the requirement is to extend objects from the Application Foundation package, you must add a reference to it. In the "Create model" wizard, after creating the new package, you proceed to the "Select referenced packages" screen and check the box next to Application Foundation.</p>
+</li>
+</ol>
+<h3 data-heading="**Why the Other Options are Incorrect**" dir="auto"><strong>Why the Other Options are Incorrect</strong></h3>
+<ul>
+<li dir="auto">
+<p><strong>A. Create an extension class that references the Application Foundation.</strong><br>
+This is an action you perform <em>after</em> the model has been created and configured. It's a coding step, not a model setup step.</p>
+</li>
+<li dir="auto">
+<p><strong>B. Assign the model to the USR layer.</strong><br>
+This is incorrect best practice. The USR layer is the highest layer and is generally reserved for user-level personalizations. For formal development and customization, you should create your model in a lower layer, typically the <strong>CUS (Customer)</strong> or <strong>VAR (Value Added Reseller)</strong> layer.</p>
+</li>
+<li dir="auto">
+<p><strong>E. Create a new model that is part of an existing package.</strong><br>
+This is the opposite of the correct approach. You should not add your custom model to an existing standard package (like Application Suite or Application Foundation). This would tightly couple your code to the standard code, making maintenance and upgrades much more difficult. The goal of the extension model is to keep your customizations separate.</p>
+</li>
+</ul>
+<hr>
+<p dir="auto">You create a new interface class in Dynamics 365 Finance. The class has two methods.</p>
+<p dir="auto">You need to create a valid interface class.</p>
+<p dir="auto">Which two actions should you perform? Each correct answer presents a complete solution.</p>
+<p dir="auto">NOTE: Each correct selection is worth one point.</p>
+<ul>
+<li dir="auto">Declare the class and all its methods as public.</li>
+<li dir="auto">Implement only some methods in the classes that implement the interface.</li>
+<li dir="auto">Implement the class as abstract.</li>
+<li dir="auto">Declare all methods in the classes that implement the interface.<br>
+<strong>A. Declare the class and all its methods as public.</strong><br>
+<strong>D. Declare all methods in the classes that implement the interface.</strong></li>
+</ul>
+<hr>
+<h3 data-heading="**Explanation**" dir="auto"><strong>Explanation</strong></h3>
+<p dir="auto">An interface in X++ (and object-oriented programming in general) is a contract. It defines a set of method signatures without providing any implementation. For the interface and its implementation to be valid, certain rules must be followed.</p>
+<ol>
+<li dir="auto">
+<p><strong>Declare the class and all its methods as public.</strong></p>
+<ul>
+<li dir="auto">An interface is declared using the interface keyword (e.g., public interface MyInterface). It is intended to be a public contract.</li>
+<li dir="auto">Crucially, all method signatures defined <em>within</em> the interface must be declared as public. They contain no code body. For example: public void myMethod1();. This is a requirement of the X++ compiler.</li>
+</ul>
+</li>
+<li dir="auto">
+<p><strong>Declare all methods in the classes that implement the interface.</strong></p>
+<ul>
+<li dir="auto">This is the core principle of an interface contract. Any class that states it implements an interface <em>must</em> provide a concrete, public implementation for <strong>every single method</strong> defined in that interface.</li>
+<li dir="auto">If a class implements the interface but fails to provide an implementation for even one of its methods, the code will not compile. This ensures that any object of the implementing class will respond to all the methods promised by the interface. <em>(Note: The option is slightly misworded; it should say "Implement all methods...", but it conveys the correct requirement).</em></li>
+</ul>
+</li>
+</ol>
+<h3 data-heading="**Why the Other Options are Incorrect**" dir="auto"><strong>Why the Other Options are Incorrect</strong></h3>
+<ul>
+<li dir="auto">
+<p><strong>B. Implement only some methods in the classes that implement the interface.</strong></p>
+<ul>
+<li dir="auto">This is incorrect. It directly violates the contract of the interface. A class must implement <strong>all</strong> methods, not just some of them.</li>
+</ul>
+</li>
+<li dir="auto">
+<p><strong>C. Implement the class as abstract.</strong></p>
+<ul>
+<li dir="auto">This is incorrect terminology. You do not "implement a class as abstract" to create an interface. You declare an interface using the interface keyword. An interface is inherently abstract by its very nature; it cannot be instantiated and contains no implementation. While an <em>abstract class</em> can implement an interface (and can choose to leave the interface methods abstract for its children to implement), this is not a requirement for creating the interface itself.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p dir="auto">Plan the architecture and solution design</p>
+<p dir="auto">You are a Dynamics 365 Finance and Operations developer.<br>
+You need to monitor system performance.</p>
+<p dir="auto">Which tools should you use? To answer, select the appropriate option in the answer area.</p>
+<ol>
+<li dir="auto">
+<p>Review overall health of the system, as well as currently running processes and historical data</p>
+<ul>
+<li dir="auto">Options:
+<ul>
+<li dir="auto">LCS Environment Monitoring tool</li>
+<li dir="auto">Fiddler</li>
+<li dir="auto">Trace Parser</li>
+<li dir="auto">SQL Profiler</li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="auto">
+<p>Review the load time and latency of different forms.</p>
+<ul>
+<li dir="auto">Options:
+<ul>
+<li dir="auto">LCS Environment Monitoring tool</li>
+<li dir="auto">Fiddler</li>
+<li dir="auto">Trace Parser</li>
+<li dir="auto">SQL Profiler</li>
+</ul>
+</li>
+</ul>
+</li>
+<li dir="auto">
+<p>Review a single process and see the code and SQL statements that are being run</p>
+<ul>
+<li dir="auto">Options:<br>
+- LCS Environment Monitoring tool<br>
+- Fiddler<br>
+- Trace Parser<br>
+- SQL Profiler<br>
+|<strong>Scenario</strong>|<strong>Tool</strong>|<br>
+|---|---|<br>
+|Review overall health of the system, as well as currently running processes and historical data|LCS Environment Monitoring tool|<br>
+|Review the load time and latency of different forms|Fiddler|<br>
+|Review a single process and see the code and SQL statements that are being run|Trace Parser|<br>
+<strong>Scenario 1:</strong> Review overall health of the system, as well as currently running processes and historical data<br>
+<strong>Tool:</strong> <strong>LCS Environment Monitoring tool</strong></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li dir="auto"><strong>Explanation:</strong> The Monitoring and diagnostics portal in Lifecycle Services (LCS) is the primary, high-level tool for this purpose. It provides dashboards and tools to view the health of AOS nodes, analyze SQL performance (index analysis, long-running queries), monitor batch jobs, and review historical performance data to identify trends.</li>
+</ul>
+<hr>
+<p dir="auto"><strong>Scenario 2:</strong> Review the load time and latency of different forms.<br>
+<strong>Tool:</strong> <strong>Fiddler</strong></p>
+<ul>
+<li dir="auto"><strong>Explanation:</strong> Fiddler is a web debugging proxy that captures HTTP(S) traffic between the user's browser and the Dynamics 365 server. When a form loads, it makes several requests to the server to fetch data and metadata. Fiddler allows you to see each of these requests, how long they take (latency), and the amount of data transferred. This makes it an excellent tool for identifying which specific server call is causing a form to load slowly.</li>
+</ul>
+<hr>
+<p dir="auto"><strong>Scenario 3:</strong> Review a single process and see the code and SQL statements that are being run<br>
+<strong>Tool:</strong> <strong>Trace Parser</strong></p>
+<ul>
+<li dir="auto"><strong>Explanation:</strong> The Trace Parser is a deep diagnostic tool. You first capture a trace of a specific process (like a sales order posting). Then, you use the Trace Parser to analyze this file. It provides a complete, hierarchical call stack of all the X++ methods that were executed, along with the exact SQL statements that were generated by the code. It's the most powerful tool for understanding the "why" behind a slow process by examining the code and database interaction step-by-step.</li>
+</ul>
+<hr>
+<ol>
+<li dir="auto">Topic 1, First Up Consultants</li>
+</ol>
+<p dir="auto">Overview</p>
+<p dir="auto">This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case. However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to complete all questions included on this exam in the time provided.</p>
+<p dir="auto">To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studios might contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is independent of the other questions in this case study.</p>
+<p dir="auto">At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you move to the next section of the exam. After you begin a new section, you cannot return to this section.</p>
+<p dir="auto">To start the case study</p>
+<p dir="auto">To display the first question in this case study, click the Next button. Use the buttons m the left pane to explore the content of the case study before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and problem statements. When you are ready to answer a question, click the Question button to return to the question.</p>
+<p dir="auto">Background</p>
+<p dir="auto">First Up Consultants provides Commercial Cleaning services to its clients. The company purchases all its cleaning supplies from Best For You Organics Company.</p>
+<p dir="auto">First Up Consultants is using a cloud-based Dynamics 365 Finance instance. The system has a foundation table named CashDisc that contains one cash discount record for each cash discount type.</p>
+<p dir="auto">Best for You Organics Company invoices First Up Consultants and allows cash discounts based on how fast an invoice is paid. First Up Consultants is entitled to a two percent discount from Best for You Organics for any invoice that is paid within 10 days and has a minimum invoice amount of $2,500.</p>
+<p dir="auto">Business requirements</p>
+<p dir="auto">All new and extended objects must be located in an existing model named FinanceExt. The creation of new models is not permitted.</p>
+<p dir="auto">Best For You Organics Company requires that First Up Consultants apply specific minimum invoice amounts to each cash discount record. A cash discount may only be applied when the minimum invoice amount requirement has been met. The new field must be added to the CashDisc form grid with the allowable visible number of characters set to 10.</p>
+<p dir="auto">First Up Consultants must retrieve the required Cash Discount methods and corresponding minimum invoice amounts directly from Best For You Organics Company's enterprise resource planning (ERP) system.</p>
+<p dir="auto">The Chief Financial Officer (CFO) requires the following reports:</p>
+<ul>
+<li dir="auto">
+<p>A report that shows all outstanding invoices, their cash discount types including the new minimum threshold applicable, and the amount of the discount. The report must only be accessed by users who are members of the Accounts Payable Manager role.</p>
+</li>
+<li dir="auto">
+<p>You must create a Microsoft Excel workbook that lists unpaid invoices to Best For You Organics Company that have a due date earlier than 5/1/2019 and an Invoice Amount between $20,000 and $100,000.</p>
+</li>
+</ul>
+<p dir="auto">Cash discounts for unpaid invoices must be updated with the new minimum invoice amounts.</p>
+<p dir="auto">Technical requirements</p>
+<p dir="auto">Vendor Invoices Past Due form</p>
+<p dir="auto">You must be able to filter the grid on the Vendor Invoices Past Due form. By default, you must filter the form based on the Due Date, Invoice Amount, and Vendor columns. Users must be able to apply reusable user-specific filters to a page using multiple fields.</p>
+<p dir="auto">CashDisc form</p>
+<p dir="auto">You must extend the CashDisc form to add a new field named MinimumlnvoiceAmount to the form. You must add a new Extended Data Type to the extension model for the new field. The new field must be added above the discount method field. The field must display 10 characters.</p>
+<p dir="auto">The accounts payable manager and the accounts payable clerk have Delete access to the form. You</p>
+<p dir="auto">must alter permissions to limit accounts payable clerks to have only View access to the form. Cash</p>
+<p dir="auto">Discount Records report</p>
+<p dir="auto">You must create a report that shows a list of CashDisc records. You must include the MinimumlnvoiceAmount field and filtered data by using the CashDisc.DiscMethod field. Applicable security objects must be created in the existing "FinanceExt" model and configured so the report is accessible by those users mapped to the accounts payable role.</p>
+<p dir="auto">Batch jobs</p>
+<p dir="auto">You must create a batch job that runs on the last day of each month to update the current unpaid invoices with changes in the minimum invoice amount.</p>
+<p dir="auto">The job must meet the following requirements:</p>
+<p dir="auto">• Accept the following parameters: Vendor, DueDate.<br>
+• Be callable by an Action menu item.<br>
+• Allow users to specify vendors to include in the job.</p>
+<p dir="auto">You must create a batch job to identify modified CashDisk MinimumInvoiceAmount values and apply these to open Purchase Lines.</p>
+<hr>
+<p dir="auto">You need to configure security for the CashDisc form. What changes should you make?</p>
+<p dir="auto"><strong>Accounts payable</strong><br>
+Select Option</p>
+<ul>
+<li dir="auto">Duplicate the role and modify the existing privilege entry point access</li>
+<li dir="auto">Create a new duty and privilege and add both to the role</li>
+<li dir="auto">Run the security tool and validate access for the role</li>
+</ul>
+<p dir="auto"><strong>Accounts unpayable</strong><br>
+Select Option</p>
+<ul>
+<li dir="auto">Create a new privilege and add the privilege to new duty. Add the new duty to the role</li>
+<li dir="auto">Create a new duty and add the existing privilege and add duty to the role</li>
+<li dir="auto">Run the security tool and validate access for the role<br>
+1: Accounts Payable Manager - C. Run the security tool and validate access for the role. : Running the security tool ensures that the Accounts Payable Manager role has the appropriate permissions (including Delete access) for the CashDisc form, as required. Duplicating the role or creating new duties/privileges is unnecessary since the existing role already has the correct access level.</li>
+</ul>
+<p dir="auto">2: Accounts Payable Clerk - A. Create a new role for the AP clerk and restrict delete access for the CashDisc form. : Creating a new role allows you to define a specific privilege for the CashDisc form with View access only, ensuring that Accounts Payable Clerks cannot delete records. Adding a new duty with the existing privilege (which likely includes Delete access) would not meet the requirement to restrict access to View only.</p>
+<hr>
+<p dir="auto">You need to meet the requirements for the purchase order creation form. What are two possible ways to achieve this goal?</p>
+<p dir="auto">Options:<br>
+A.  Create a class and add a form data source event handler method to the class<br>
+B.  In Application Explorer, create a table extension and implement validation<br>
+C.  In Application Explorer, create a form extension and implement validation<br>
+D.  Implement Chain of Command (CoC) and method wrapping by creating a form extension class<br>
+Correct Answer</p>
+<p dir="auto">C.  In Application Explorer, create a form extension and implement validation<br>
+D.  Implement Chain of Command (CoC) and method wrapping by creating a form extension class</p>
+<hr>
+<p dir="auto">A company uses Dynamics 365 Finance. You are customizing elements for the extended data types (EDTs) shown in the following table.</p>
+<table>
+<thead>
+<tr>
+<th><strong>EDT name</strong></th>
+<th><strong>Comment</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CalendarID</td>
+<td>root EDT</td>
+</tr>
+<tr>
+<td>CalendarName</td>
+<td>root EDT</td>
+</tr>
+<tr>
+<td>BasicCalendarID</td>
+<td>derives from CalendarID</td>
+</tr>
+</tbody>
+</table>
+<p dir="auto">You have a table named WorkCalendar. The table has a column named BasicCalendailD that uses the BasicCalendarlD EDT. You need to increase the length of the column by using an extension.</p>
+<p dir="auto">Solution: Create an extension for CalendarName.</p>
+<p dir="auto">Does the solution meet the goal?</p>
+<p dir="auto">Options:<br>
+A.  Yes<br>
+B.  No<br>
+No</p>
+<p dir="auto"><strong>Explanation:</strong></p>
+<p dir="auto">The goal is to increase the length of the WorkCalendar.BasicCalendarID column. The properties of this column are controlled by its Extended Data Type (EDT), which is BasicCalendarID.</p>
+<p dir="auto">The problem states the following hierarchy:</p>
+<ul>
+<li dir="auto">BasicCalendarID <strong>derives from</strong> CalendarID.</li>
+</ul>
+<p dir="auto">This means that to change the length of BasicCalendarID, you must modify either BasicCalendarID itself or its parent, CalendarID.</p>
+<p dir="auto">The proposed solution is to create an extension for <strong>CalendarName</strong>. According to the table, CalendarName is a separate, unrelated root EDT. It has no inheritance relationship with CalendarID or BasicCalendarID.</p>
+<p dir="auto">Therefore, creating an extension for CalendarName will have no effect on the BasicCalendarID EDT and, consequently, will not change the length of the column in the WorkCalendar table. The solution does not meet the goal.</p>
+<hr>
+<p dir="auto">text<br>
+Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.<br>
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.</p>
+<p dir="auto">You have an enumeration named truckStatus that has the following statuses:</p>
+<ul>
+<li dir="auto">Empty</li>
+<li dir="auto">Loaded</li>
+<li dir="auto">Completed<br>
+You have the following code:</li>
+</ul>
+<p dir="auto">text<br>
+switch (trunkTable.TruckStatus)<br>
+{<br>
+case TruckStatus::Empty:<br>
+Info("1");<br>
+break;<br>
+case TruckStatus::Loaded:<br>
+Info("2");<br>
+break;<br>
+case TruckStatus::Completed:<br>
+Info("3");<br>
+break;<br>
+}</p>
+<p dir="auto">You need to extend this enumeration and add the following statuses to the enumeration: Quarantine, InTransit. You must then modify code that validates the switch statement.</p>
+<p dir="auto">Solution: Add a post handler to the method that checks the enumeration and logic for your new enumeration values using the integer value of the enumeration.</p>
+<p dir="auto">Does the solution meet the goal?</p>
+<ul>
+<li dir="auto">Yes</li>
+<li dir="auto">No<br>
+<strong>No</strong></li>
+</ul>
+<p dir="auto">When extending an enumeration (like truckStatus) and modifying logic such as a switch statement that uses it, you <strong>should not</strong> rely on the <strong>integer value</strong> of the enumeration in a post-handler.</p>
+<hr>
+<p dir="auto">To run a single ER format configuration to import data from an incoming electronic document, you must identify the desired mapping of a format configuration and also the integration point of a model mapping. Which one of the following is the correct option when you configure ER?</p>
+<p dir="auto">Options:<br>
+A.  The same model mapping and destinations with different formats for different types of incoming documents<br>
+B.  Different model mappings and destinations with different formats for different types of incoming documents<br>
+C.  The same model mapping and destinations with different formats for the same type of incoming documents<br>
+Correct Answer</p>
+<p dir="auto">A.  The same model mapping and destinations with different formats for different types of incoming documents</p>
+<hr>
+<p dir="auto">You need to apply a form pattern to the Vendor exclusion list. Which pattern should you use?</p>
+<p dir="auto">Options:<br>
+A.  Workspace<br>
+B.  Simple List<br>
+C.  List Page<br>
+D.  List View<br>
+Correct Answer</p>
+<p dir="auto">C.  List Page</p>
+<hr>
+<p dir="auto">You are building analytical components for users in Dynamics 365.</p>
+<p dir="auto">You need to determine the appropriate component to use for several scenarios.</p>
+<p dir="auto">Which component should you use for each scenario? To answer, select the appropriate options in the answer area.</p>
+<p dir="auto">NOTE: Each correct selection is worth one point.</p>
+<p dir="auto"><strong>1. Scenario:</strong><br>
+Users need to see updated information in an object that can be pinned on their workspace.<br>
+<strong>Which component should be used?</strong></p>
+<ul>
+<li dir="auto">A. Tile</li>
+<li dir="auto">B. Enumeration</li>
+<li dir="auto">C. Dashboard<br>
+</li>
+</ul>
+<p dir="auto"><strong>2. Scenario:</strong><br>
+A default homepage must be based on a user’s security role.<br>
+<strong>Which component should be used?</strong></p>
+<ul>
+<li dir="auto">A. Dashboard</li>
+<li dir="auto">B. Self-service BI</li>
+<li dir="auto">C. Tile<br>
+</li>
+</ul>
+<p dir="auto"><strong>3. Scenario:</strong><br>
+Users must be able to modify or create new analytic content.<br>
+<strong>Which component should be used?</strong></p>
+<ul>
+<li dir="auto">A. Embedded BI</li>
+<li dir="auto">B. Contextual BI</li>
+<li dir="auto">C. Self-service BI<br>
+|<strong>Scenario No.</strong>|<strong>Scenario Description</strong>|<strong>Chosen Component</strong>|<strong>Type in Dashboard / Explanation</strong>|<br>
+|---|---|---|---|<br>
+|1|Users need to see updated information in an object that can be pinned on their workspace|A. Tile|<strong>Tile</strong> – Small rectangular components that show live or regularly updated data (e.g., KPIs, counts), and can be pinned to workspaces for personalized dashboards.|<br>
+|2|A default homepage must be based on a user’s security role|A. Dashboard|<strong>Dashboard</strong> – Acts as the homepage for users; configurable based on security roles to show relevant information and workspaces when users log in.|<br>
+|3|Users must be able to modify or create new analytic content|C. Self-service BI|<strong>Self-service BI</strong> – Enables end-users to create and modify analytics (e.g., using Power BI), supporting customized reporting and visualization without developer involvement.|</li>
+</ul>
+<hr>
+<h2 data-heading="DRAG DROP" dir="auto">DRAG DROP</h2>
+<p dir="auto">You are working on a project in Dynamics 365 Finance.</p>
+<p dir="auto">You use abstract and interface classes to implement the following requirements for the project:</p>
+<p dir="auto">• Child classes must have common private and public methods.<br>
+• All methods must be implemented in the child classes.<br>
+• You must be able to implement the methods of the parent class.</p>
+<p dir="auto">You need to select the type of class to use for each requirement.</p>
+<p dir="auto">Which class types should you use? To answer, drag the appropriate class types to the correct requirements. Each class type may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.</p>
+<p dir="auto">NOTE: Each correct selection is worth one point.</p>
+<h4 data-heading="**Class types:**" dir="auto"><strong>Class types:</strong></h4>
+<ul>
+<li dir="auto">Abstract</li>
+<li dir="auto">Interface</li>
+<li dir="auto">Public class</li>
+<li dir="auto">Final class</li>
+</ul>
+<hr>
+<h4 data-heading="**Requirements:**" dir="auto"><strong>Requirements:</strong></h4>
+<ol>
+<li dir="auto">Ensure that child classes have common private and public methods.</li>
+<li dir="auto">Implement all methods in the child classes.</li>
+<li dir="auto">Implement the methods of the parent class.<br>
+| <strong>Requirement</strong>                                                  | <strong>Correct Class Type</strong> |<br>
+| ---------------------------------------------------------------- | ---------------------- |<br>
+| Ensure that child classes have common private and public methods | Abstract               |<br>
+| Implement all methods in the child classes                       | Interface              |<br>
+| Implement the methods of the parent class                        | Abstract               |</li>
+</ol>
+<h3 data-heading="**Requirements and Correct Class Types:**" dir="auto"><strong>Requirements and Correct Class Types:</strong></h3>
+<p dir="auto"><strong>1. Requirement:</strong> Ensure that child classes have common private and public methods.</p>
+<ul>
+<li dir="auto"><strong>Correct Class Type:</strong> <strong>Abstract</strong>
+<ul>
+<li dir="auto"><strong>Explanation:</strong> An abstract class can contain member variables (state) and methods with any access modifier (public, protected, private). This allows you to create a common base with shared private logic and a public structure for all child classes. Interfaces can only define public methods.</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><strong>2. Requirement:</strong> Implement all methods in the child classes.</p>
+<ul>
+<li dir="auto"><strong>Correct Class Type:</strong> <strong>Interface</strong>
+<ul>
+<li dir="auto"><strong>Explanation:</strong> An interface acts as a pure contract. It only defines the signatures of the methods, but contains no implementation. Any class that implements the interface is required to provide an implementation for <em>all</em> the methods defined in that interface.</li>
+</ul>
+</li>
+</ul>
+<p dir="auto"><strong>3. Requirement:</strong> Implement the methods of the parent class.</p>
+<ul>
+<li dir="auto"><strong>Correct Class Type:</strong> <strong>Abstract</strong>
+<ul>
+<li dir="auto"><strong>Explanation:</strong> This requirement implies that the parent class itself can contain implemented methods (a base implementation) which can be inherited and used by child classes. An abstract class supports this by allowing both abstract methods (which must be implemented by the child) and concrete methods (which have an implementation in the parent class). This distinguishes it from an interface, where no implementation is allowed.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p dir="auto">Develop and test code</p>
+<p dir="auto">You need to run a process in parallel. There are around 1,000 work items that would need to run with a bundle size of 100. You know that the run time for each work item will vary. What approach should you take to run this process?</p>
+<p dir="auto">Options:<br>
+A.  Individual task modeling<br>
+B.  Batch bundling<br>
+C.  Top picking<br>
+C.  Top picking</p>
+<h3 data-heading="Explanation" dir="auto">Explanation</h3>
+<p dir="auto">This question assesses your knowledge of common parallel processing patterns in Dynamics 365, specifically within the SysOperation framework. The key piece of information is that <strong>"the run time for each work item will vary."</strong> This makes the choice of pattern critical for efficiency.</p>
+<ul>
+<li dir="auto"><strong>A. Individual task modeling:</strong> This involves creating a separate batch task for every single work item (1,000 tasks in this case). While this provides the most granular level of parallelism and would handle varying run times very well (a free thread would just pick the next single item), it creates a huge amount of overhead. Managing 1,000 tasks in the batch job system is inefficient and can bloat the batch history tables. It's generally not a recommended practice for this volume.</li>
+<li dir="auto"><strong>B. Batch bundling:</strong> This approach involves pre-dividing the 1,000 items into 10 static bundles (10 tasks, each with 100 items). This is the <em>least</em> efficient method for this scenario. If one bundle happens to contain a few very long-running items, the entire task for that bundle will be slow. Meanwhile, other batch threads might finish their "easy" bundles quickly and then sit idle, waiting for the slow task to complete. This creates a significant bottleneck.</li>
+<li dir="auto"><strong>C. Top picking:</strong> This is the recommended best practice for this scenario. The pattern works as follows:
+<ol>
+<li dir="auto">A main controller creates a set number of identical, generic tasks (e.g., 8 tasks to run on 8 threads).</li>
+<li dir="auto">All 1,000 work items are stored in a central staging table, marked as "Not processed".</li>
+<li dir="auto">When a batch task starts, it queries the staging table for the TOP 100 unprocessed items, marks them as "In process" (to prevent other tasks from grabbing them), and then begins its work.</li>
+<li dir="auto">As soon as a task finishes its bundle of 100, it immediately goes back to the staging table and "picks" the next available TOP 100.</li>
+</ol>
+</li>
+</ul>
+<p dir="auto">This approach combines the low overhead of managing a small number of tasks with the flexibility needed for varying run times. A thread that gets an "easy" bundle will finish quickly and go back for more work, ensuring that all available batch threads are kept as busy as possible, maximizing throughput and overall efficiency.</p>
+<h3 data-heading="Summary Table" dir="auto">Summary Table</h3>
+<table>
+<thead>
+<tr>
+<th align="left">Feature</th>
+<th align="left">Batch Bundling</th>
+<th align="left">Top Picking</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>Work Assignment</strong></td>
+<td align="left"><strong>Static.</strong> Work is pre-assigned to tasks before they run.</td>
+<td align="left"><strong>Dynamic.</strong> Tasks pull work from a shared queue when they are ready.</td>
+</tr>
+<tr>
+<td align="left"><strong>Efficiency</strong></td>
+<td align="left"><strong>Low</strong> when work items have varying run times. Prone to bottlenecks.</td>
+<td align="left"><strong>High.</strong> Automatically balances the workload, keeping all threads busy.</td>
+</tr>
+<tr>
+<td align="left"><strong>System View (Tasks)</strong></td>
+<td align="left">Multiple distinct tasks, each with different parameters (lists of item IDs).</td>
+<td align="left">Multiple identical tasks. Parameters are the same for all of them.</td>
+</tr>
+<tr>
+<td align="left"><strong>Key Component</strong></td>
+<td align="left">The controller class pre-builds the bundles.</td>
+<td align="left">A central staging/queue table that holds the work items.</td>
+</tr>
+<tr>
+<td align="left"><strong>Best For...</strong></td>
+<td align="left">Scenarios where all work items take a predictable, similar amount of time to process.</td>
+<td align="left"><strong>Scenarios where work item processing time is unpredictable or varies widely.</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p dir="auto">Plan the architecture and solution design</p>
+<p dir="auto">You have just used Get Latest Version to bring updated files from source control into Visual Studio, and you suspect that local changes you wanted to keep were removed during an auto-merge. Which of the following can you do to troubleshoot the issue?</p>
+<p dir="auto">A.  Roll back the change sets that you pulled from source control.<br>
+B.  Go to Pending Changes in Team Explorer for a list of differences between your workspace and source control<br>
+C.  Use the Undo button to restore the changes that you wanted to keep<br>
+D.  Check the Output window in Visual Studio for logs of which files were auto merged<br>
+D.  Check the Output window in Visual Studio for logs of which files were auto merged</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Correct?</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. Roll back the change sets</strong></td>
+<td>❌</td>
+<td>Rolling back changesets affects the entire team and might undo others' changes. It's risky and not appropriate just for investigating a merge issue.</td>
+</tr>
+<tr>
+<td><strong>B. Go to Pending Changes</strong></td>
+<td>❌</td>
+<td>This shows what’s pending <strong>in your local workspace</strong>, but <strong>after the auto-merge</strong>, your changes may already have been overwritten or merged. It doesn't show a clear audit trail of the auto-merge.</td>
+</tr>
+<tr>
+<td><strong>C. Use the Undo button</strong></td>
+<td>❌</td>
+<td>Undo will discard <strong>local pending changes</strong>, not restore previous local work lost during auto-merge. It’s for reverting edits, not for recovering overwritten changes.</td>
+</tr>
+<tr>
+<td><strong>D. Check the Output window</strong></td>
+<td>✅</td>
+<td>The <strong>Output window</strong> in Visual Studio logs details about file conflicts, resolutions, and auto-merges during Get Latest operations. This is where you can see <strong>which files were merged</strong> and potentially identify if/where your changes were lost.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p dir="auto">Design and develop AOT elements</p>
+<p dir="auto">Your company wants to create an extension from an element in the AOT. What must you verify to create this extension?</p>
+<p dir="auto">Options:<br>
+A.  Ensure that the Sync database on build property is set to True<br>
+B.  Check that you are referencing the model that houses the element that you want to extend<br>
+C.  Verify that the AOT is set to Model view instead of Classic view<br>
+Correct Answer</p>
+<p dir="auto">B.  Check that you are referencing the model that houses the element that you want to extend</p>
+<hr>
+<p dir="auto">Integrate and manage data solutions</p>
+<p dir="auto">Which one of the following options in the Bank management workspace represents the current balance minus the bridged, or pending transactions?</p>
+<p dir="auto">Options:<br>
+A.  Bridged transactions amount<br>
+B.  Summary accounts<br>
+C.  Pending balance amount<br>
+C.  Pending balance amount</p>
+<h3 data-heading="Explanation:" dir="auto">Explanation:</h3>
+<p dir="auto">In the <strong>Bank management workspace</strong>, the <strong>Pending balance amount</strong> represents:</p>
+<blockquote dir="auto">
+<p><strong>The current bank balance minus the bridged (or pending) transactions</strong>.</p>
+</blockquote>
+<p dir="auto">This gives a more accurate picture of <strong>available funds</strong>, taking into account transactions that have been initiated but not yet cleared or fully processed.</p>
+<h3 data-heading="Clarification of Other Options:" dir="auto">Clarification of Other Options:</h3>
+<ul>
+<li dir="auto"><strong>A. Bridged transactions amount</strong>: This reflects the total of pending transactions awaiting reconciliation — it does <strong>not</strong> represent the adjusted balance.</li>
+<li dir="auto"><strong>B. Summary accounts</strong>: These are financial reporting tools and not used for calculating balances in the Bank management workspace.</li>
+</ul>
+<hr>
+<p dir="auto">Design and develop AOT elements</p>
+<p dir="auto">You need a conditional statement that checks if a variable equal "In progress", "Completed", or "Canceled". Different code needs to run, depending on what the variable equals. A default block of code needs to run if the variable does not equal any of the values. What conditional statement is most appropriate?</p>
+<p dir="auto">Options:<br>
+A.  Error handling<br>
+B.  A ternary operation<br>
+C.  If statement<br>
+D.  Switch statement<br>
+Correct Answer</p>
+<p dir="auto">D.  Switch statement</p>
+<hr>
+<p dir="auto">Design and develop AOT elements</p>
+<p dir="auto">You must extend the class SaleslineType and add a new method that returns the day of week for the system's current date as an integer value.</p>
+<p dir="auto">You need to create a class that extends SalesLineType and adds the new method.</p>
+<p dir="auto">Solution: You create the following code:</p>
+<p dir="auto">text<br>
+[ExtensionOf(classStr(SalesLineType))]<br>
+public class mySalesLineType_Extension<br>
+{<br>
+public static int ExtensionMethodDayofWeek()<br>
+{<br>
+return dayOfUk(systemDateGet());<br>
+}<br>
+}</p>
+<p dir="auto">Does the solution meet the goal?</p>
+<p dir="auto">Options:<br>
+A.  Yes<br>
+B.  No<br>
+<strong>B. No</strong></p>
+<h3 data-heading="**Explanation:**" dir="auto"><strong>Explanation:</strong></h3>
+<p dir="auto">The goal is to extend the SalesLineType class to add a new method. In this context, it is implied that an <strong>instance method</strong> should be added, meaning it could be called from a variable (an object) of the SalesLineType class.</p>
+<p dir="auto">The provided solution defines the new method ExtensionMethodDayofWeek as static.</p>
+<ul>
+<li dir="auto">
+<p><strong>Static Methods in Extensions:</strong> When you define a static method in an extension class, it adds a new <em>static method</em> to the original class. It would be called directly on the class name, like this: SalesLineType::ExtensionMethodDayofWeek().</p>
+</li>
+<li dir="auto">
+<p><strong>Instance Methods in Extensions:</strong> To add a method that can be called on an <em>instance</em> of the class (e.g., mySalesLine.ExtensionMethodDayofWeek()), the method in the extension class must <strong>not</strong> be static.</p>
+</li>
+</ul>
+<p dir="auto">Because the provided code creates a static method, it cannot be called on an object of SalesLineType. It does not add the method to the behavior of an individual instance of the class, which is the standard interpretation and goal of such an extension. Therefore, the solution does not correctly meet the goal.</p>
+<p dir="auto">A correct solution to add an instance method would be:</p>
+<p dir="auto">csharp<br>
+[ExtensionOf(classStr(SalesLineType))]<br>
+public final class mySalesLineType_Extension // 'final' is a best practice<br>
+{<br>
+// The method is not static, making it an instance method.<br>
+public int newMethodDayOfWeek()<br>
+{<br>
+return dayOfWk(systemDateGet());<br>
+}<br>
+}</p>
+<hr>
+<p dir="auto">Plan the architecture and solution design</p>
+<p dir="auto">You are setting up Visual Studio to connect to Azure DevOps on a machine that hosts a Finance and Operations environment. Which of the following should you do?</p>
+<p dir="auto">Options:<br>
+A.  Set the permissions of the workspace to Public Workspace (limited)<br>
+B.  Map the folder for the branch in source control to the local Visual Studio documents Projects folder<br>
+C.  Map the Metadata folder for the branch in source control to the Packages Local Directory folder of the AOS drive<br>
+D.  Set the location of the workspace to Server<br>
+C.  Map the Metadata folder for the branch in source control to the Packages Local Directory folder of the AOS drive</p>
+<h3 data-heading="Explanation" dir="auto">Explanation</h3>
+<p dir="auto">This mapping is a fundamental requirement for a successful development environment setup. The Packages Local Directory, typically found on a dedicated drive (e.g., K:\AOSService\PackagesLocalDirectory on a cloud-hosted development environment), is where the local instance of Finance and Operations reads the application's metadata. By mapping the Azure DevOps Metadata folder to this directory, developers can get the latest versions of packages and models from source control and have their local changes recognized by Visual Studio and the local application instance.</p>
+<p dir="auto"><strong>Detailed Explanation of Options:</strong></p>
+<ul>
+<li dir="auto">
+<p><strong>A. Set the permissions of the workspace to Public Workspace (limited):</strong> While setting the workspace to "Public" is a common practice to allow multiple users on the same machine to use the same workspace mapping, it is the folder mapping that is the most critical aspect of the functional setup. The permission setting alone does not ensure the development environment will work correctly.</p>
+</li>
+<li dir="auto">
+<p><strong>B. Map the folder for the branch in source control to the local Visual Studio documents Projects folder:</strong> The Projects folder in source control, which contains Visual Studio projects and solutions, should be mapped to a local directory. However, mapping it to the generic Documents\Projects folder is not the standard or most critical mapping. The more vital mapping is that of the Metadata folder. Typically, the Projects folder is mapped to a dedicated source code folder on the developer's machine.</p>
+</li>
+<li dir="auto">
+<p><strong>D. Set the location of the workspace to Server:</strong> A workspace location can be set to either "Local" or "Server." For Finance and Operations development, a "Local" workspace is generally recommended. This allows for more offline capabilities and can improve performance for many file operations. A "Server" workspace requires a constant and reliable connection to the Azure DevOps server for most actions. While a valid option in some scenarios, it is not the universally prescribed or most critical setting for a functional development environment. The folder mapping remains paramount regardless of the workspace location.</p>
+</li>
+</ul>
+<p dir="auto">In summary, the precise mapping of the Metadata folder is the cornerstone of a properly configured Visual Studio environment for Finance and Operations development, directly impacting the ability to work with and manage the application's source code.</p>
+<hr>
+<p dir="auto">A company uses Dynamics 365 Finance.</p>
+<p dir="auto">The company requires extended data types (EDTs) that meet the following requirements:</p>
+<ul>
+<li dir="auto">The new EDTs must use primitive base types without extending other EDTs.</li>
+<li dir="auto">One type must track the day that the user receives goods in the warehouse.</li>
+<li dir="auto">One type must track the quantity of items that the user receives.</li>
+</ul>
+<p dir="auto">You need to create the EDTs.</p>
+<p dir="auto">Which EDT types should you use? To answer, drag the appropriate types to the correct requirements. Each type may be used once, more than once, or not at all. You may need to drag the split bar between panes or scroll to view content.</p>
+<p dir="auto">Track the day</p>
+<ul>
+<li dir="auto">Options:
+<ul>
+<li dir="auto">Date</li>
+<li dir="auto">Int</li>
+<li dir="auto">TransDate</li>
+<li dir="auto">Integer</li>
+</ul>
+</li>
+</ul>
+<p dir="auto">Track the quantity</p>
+<ul>
+<li dir="auto">Options:
+<ul>
+<li dir="auto">Date</li>
+<li dir="auto">Int</li>
+<li dir="auto">TransDate</li>
+<li dir="auto">Integer<br>
+|Requirement|EDT Type|<br>
+|---|---|<br>
+|Track the day|<strong>Date</strong>|<br>
+|Track the quantity|<strong>Int</strong>|</li>
+</ul>
+</li>
+</ul>
+<h3 data-heading="✅ **Requirement: Track the day**" dir="auto">✅ <strong>Requirement: Track the day</strong></h3>
+<ul>
+<li dir="auto">
+<p><strong>Correct EDT Type: Date</strong><br>
+<strong>Why?</strong></p>
+<ul>
+<li dir="auto">You are asked to use <strong>primitive types</strong>, not other EDTs like TransDate (which is an EDT that extends Date).</li>
+<li dir="auto">Date is the primitive base type appropriate for storing calendar dates such as when goods are received.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 data-heading="✅ **Requirement: Track the quantity**" dir="auto">✅ <strong>Requirement: Track the quantity</strong></h3>
+<ul>
+<li dir="auto">
+<p><strong>Correct EDT Type: Int</strong></p>
+<p><strong>Why?</strong></p>
+<ul>
+<li dir="auto">Quantities are typically represented as integers.</li>
+<li dir="auto">Int is the <strong>primitive base type</strong>, while Integer is an EDT that extends it.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p dir="auto">Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.<br>
+After you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.</p>
+<hr>
+<p dir="auto">You are adding a new field to the SalesTable form.<br>
+You must use an extension to add a status field onto the form.<br>
+You need to create the extension in the Application Object Tree (AOT) and add the extension to the demoExtensions model.<br>
+Solution: Navigate to the Visual Studio user interface forms extensions section for the SalesTable form and create an extension.<br>
+Does the solution meet the goal?</p>
+<ul>
+<li dir="auto">Yes</li>
+<li dir="auto">No<br>
+No.</li>
+</ul>
+<ol>
+<li dir="auto">Because you should inherit from the base class.</li>
+<li dir="auto">The goal is to extend and add a status field, which was missed in the proposed solution</li>
+</ol>
+<hr>
+<h2 data-heading="HOTSPOT" dir="auto">HOTSPOT</h2>
+<p dir="auto">You are a Dynamics 365 finance developer. You check out elements from version control in order to make modifications.</p>
+<p dir="auto">You need to check in the modified elements to version control.</p>
+<p dir="auto">What should you do? To answer, select the appropriate option in the answer area.</p>
+<p dir="auto">NOTE: Each correct selection is worth one point.</p>
+<p dir="auto">Right-click the modified element and select:</p>
+<ul>
+<li dir="auto">Source Control Annotate</li>
+<li dir="auto">Check out for edit</li>
+<li dir="auto">Get latest version</li>
+<li dir="auto">Add files to source control</li>
+</ul>
+<p dir="auto">In Team Explorer, check in changes using the following option:</p>
+<ul>
+<li dir="auto">Source Control Explorer</li>
+<li dir="auto">Work Items</li>
+<li dir="auto">Pending Changes</li>
+<li dir="auto">Builds<br>
+| Action                                       | Option                          |<br>
+| -------------------------------------------- | ------------------------------- |<br>
+| Right-click the modified element and select: | <strong>Add files to source control</strong> |<br>
+| In Team Explorer, check in changes using:    | <strong>Pending Changes</strong>             |</li>
+</ul>
+<h3 data-heading="Explanation" dir="auto">Explanation</h3>
+<h3 data-heading="**Right-click the modified element and select:**" dir="auto"><strong>Right-click the modified element and select:</strong></h3>
+<p dir="auto">While you typically check out an element before editing, if you create a <strong>new</strong> element as part of your modifications (such as a new class or table extension), it is not yet tracked by source control. You must add it before it can be included in your check-in.</p>
+<p dir="auto">The correct selection is:</p>
+<ul>
+<li dir="auto"><strong>Add files to source control</strong></li>
+</ul>
+<p dir="auto">This action stages newly created files, marking them as "pending add" so they can be committed to the repository along with your other changes.</p>
+<hr>
+<h3 data-heading="**In Team Explorer, check in changes using the following option:**" dir="auto"><strong>In Team Explorer, check in changes using the following option:</strong></h3>
+<p dir="auto">After you have completed all your modifications, including editing existing elements and adding new ones, you finalize the check-in process through the Team Explorer window.</p>
+<p dir="auto">The correct selection is:</p>
+<ul>
+<li dir="auto"><strong>Pending Changes</strong></li>
+</ul>
+<p dir="auto">The <strong>Pending Changes</strong> view is the central hub for managing your changeset. Here, you can review all modified, added, and deleted files, write a descriptive comment for your check-in, associate your changes with specific work items (like tasks or bugs), and execute the final check-in to commit your work to the server's version control repository.</p>
+<hr>
+<h5 data-heading="Case study" dir="auto">Case study</h5>
+<p dir="auto">This is a case study. Case studies are not timed separately. You can use as much exam time as you would like to complete each case. However, there may be additional case studies and sections on this exam. You must manage your time to ensure that you are able to complete all questions included on this exam in the time provided.</p>
+<p dir="auto">To answer the questions included in a case study, you will need to reference information that is provided in the case study. Case studies might contain exhibits and other resources that provide more information about the scenario that is described in the case study. Each question is independent of the other questions in this case study.</p>
+<p dir="auto">At the end of this case study, a review screen will appear. This screen allows you to review your answers and to make changes before you move to the next section of the exam. After you begin a new section, you cannot return to this section.</p>
+<p dir="auto">To start the case study:</p>
+<p dir="auto">To display the first question in this case study, click the Next button. Use the buttons in the left pane to explore the content of the case study before you answer the questions. Clicking these buttons displays information such as business requirements, existing environment, and problem statements. When you are ready to answer a question, click the Question button to return to the question.</p>
+<hr>
+<h5 data-heading="Background:" dir="auto">Background:</h5>
+<p dir="auto">Munson's Pickles and Preserves Farm produces and sells jarred food goods. The organization has several production and warehouse locations across the United States. Each location runs both production and warehousing operations. The company has three locations: East, Central, and West.</p>
+<p dir="auto">The company is upgrading its Dynamics AX 2009 system to Dynamics 365 Finance.</p>
+<h5 data-heading="Current environment." dir="auto">Current environment.</h5>
+<p dir="auto">Munson's Pickles and Preserves Farm plans to migrate customizations, data, and integration from its legacy system into Dynamics 365 finance and operations apps.</p>
+<p dir="auto">The Dynamics 365 finance and operations environment includes:<br>
+• Multiple cloud-hosted development environments using Microsoft Visual Studio 2017<br>
+• A Microsoft Azure DevOps project for source control<br>
+• Two tier 2 environments for user acceptance testing and staging, as well as production</p>
+<p dir="auto">Munson's Pickles and Preserves Farm is currently in the planning and development phase of the upgrade process. The company's internal development team needs additional development resources to address issues. The company already created a project that is set up to use a custom model named GPExtensions.</p>
+<h5 data-heading="Current environment - **Integrations**" dir="auto">Current environment - <strong>Integrations</strong></h5>
+<p dir="auto">Munson's Pickles and Preserves Farm has a new integration for its freight processing information. The internal development team created the secure file transfer protocol (SFTP) site for the source information to be stored and the staging table to house the source information once the data is added to Dynamics 365 Finance. Information from the source will be transferred once a day from the source system and integrated with the target system. More than 10,000 records will be transferred over the integration. The company created an aggregate entity for the integration to minimize the amount of transmitted data.</p>
+<p dir="auto">Munson's Pickles and Preserves Farm has added a new integration for freight processing where all item weights, dimensions, and other factors will be configured in the external portal while planning the loads. Once the load is planned, it will be integrated into Dynamics 365 finance and operations apps for the freight invoice processing to occur.</p>
+<p dir="auto">No duplicate invoices or posting are associated with the freight invoice charges. The integration of this information from the source system is intended only for report creation and compilation purposes.</p>
+<h5 data-heading="Current environment - **Planned changes**" dir="auto">Current environment - <strong>Planned changes</strong></h5>
+<p dir="auto">Munson's Pickles and Preserves Farm wants to change inventory forms to fit its current needs. Any modifications or enhancements must follow the existing functionality for forms in Dynamics 365 Finance.</p>
+<h5 data-heading="Requirements - **Integrations**" dir="auto">Requirements - <strong>Integrations</strong></h5>
+<p dir="auto">All data from integrations have the same format as an existing Dynamics 365 Finance apps field. All enhancements or customizations must use existing assets before creating new functionality.</p>
+<p dir="auto">Munson's Pickles and Preserves Farm wants to change its integration strategy to include real-time data from the freight processing source system. The inventory must update as it is sold from the system. That information will be updated in Dynamics 365 Finance.</p>
+<p dir="auto">The freight processing integration requires the use of an SFTP site to store XML files from the source system. The additional integration will use OData and must be transferred in real time.</p>
+<p dir="auto">A periodic batch job must:<br>
+• Pull data from the SFTP site.<br>
+• Import the data to a staging table used to hold the information from the source system.<br>
+• Map source data to the target table in Dynamics 365 Finance.</p>
+<p dir="auto">The imported Load ID field must be added to the Sales Order header for all processed orders. Additional requirements for integrations, including other integration strategies, may be necessary as the company grows. Existing tables must be changed to include the Load ID. The database will need to be synched before adding the Load ID field.</p>
+<h5 data-heading="Requirements - **Changes**" dir="auto">Requirements - <strong>Changes</strong></h5>
+<p dir="auto">Munson's Pickles and Preserves Farm must change the Inventory Status form to include more columns. It plans to create a table to enter the data for the Inventory Status form as a new data source. The company wants to add both the Product Name field and Batch ID field to this new table. The current form includes the item number, location, license plate, product inventory dimensions, and quantity.</p>
+<p dir="auto">The grid on the Inventory Status form must include the product name by using the item number and legal entity. The user interface must be created to include the new columns and the data must be available to add to the grid. The form must have only an Action Pane, a Navigation List, a List Style Grid, a Details Header, and a Details Tab in the design and include the Load ID field.</p>
+<p dir="auto">Munson's Pickles and Preserves Farm is currently in the process of adding the other required fields: one for Product Name and one for Batch ID. The new fields must be related to extended data types for the original fields on the existing data source for the Inventory Status form. Munson's Pickles and Preserves Farm plans to add the EcoResProductName and Batch ID data to the extended table for WHSTmpStatusChange. The fields on the table extension must be populated with data and visible on the Inventory Status form on insert.</p>
+<h5 data-heading="Issues" dir="auto">Issues</h5>
+<p dir="auto">• The internal development team has created the SFTP site connections, the staging table, and the batch jobs for the new integration for freight processing. The development team needs to map the source data to the target table and the data management workspace. The development team notices errors with mapping target fields in the data management workspace. The team needs another developer to configure the table extensions, class extensions, and form extensions that are required for the planned changes.<br>
+• The internal development team has issues adding the required fields to the Inventory Status standard form. The team needs another developer to configure the table extensions, class extensions, and form extensions that are required for the planned changes.</p>
+<hr>
+<p dir="auto">You need to apply a pattern to the newly created form to satisfy the requirements.</p>
+<p dir="auto">Which form pattern should you apply?</p>
+<ul>
+<li dir="auto">Simple List and Details</li>
+<li dir="auto">Table of Contents</li>
+<li dir="auto">List Page</li>
+<li dir="auto">Details Master</li>
+</ul>
+<ul>
+<li dir="auto">Simple List and Details</li>
+</ul>
+<h5 data-heading="Explanation:" dir="auto">Explanation:</h5>
+<p dir="auto">The case study explicitly states the required components for the new form's design: "The form must have only an Action Pane, a Navigation List, a List Style Grid, a Details Header, and a Details Tab..."</p>
+<p dir="auto">This combination of controls directly corresponds to the structure of the Simple List and Details form pattern in Dynamics 365 Finance. This pattern is designed to show a list of records in a grid on one part of the screen and the detailed information for the selected record on another part.</p>
+<h2 data-heading="Eliminate Incorrect Options" dir="auto">Eliminate Incorrect Options</h2>
+<p dir="auto">❌ <strong>Table of Contents</strong></p>
+<ul>
+<li dir="auto">Used in setup or parameter forms, not for data entry or list/detail scenarios.</li>
+</ul>
+<p dir="auto">❌ <strong>List Page</strong></p>
+<ul>
+<li dir="auto">Focused on large lists with preview panes and no details sections.</li>
+<li dir="auto">Does <strong>not</strong> support Details Header or Tab in the same way.</li>
+</ul>
+<p dir="auto">❌ <strong>Details Master</strong></p>
+<ul>
+<li dir="auto">Used for master data forms (like Customers, Vendors) where the main entity is the focus and related data appears in tabs.
+<ul>
+<li dir="auto"><strong>Too heavy</strong> for what's being described.</li>
+</ul>
+</li>
+</ul>
+<hr>
+    </body>
+</html>
